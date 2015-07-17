@@ -1,8 +1,0 @@
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\bin\Debug\MyEBookReader.exe
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\bin\Debug\MyEBookReader.pdb
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\obj\x86\Debug\MyEBookReader.csprojResolveAssemblyReference.cache
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\obj\x86\Debug\MyEBookReader.MainForm.resources
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\obj\x86\Debug\MyEBookReader.Properties.Resources.resources
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\obj\x86\Debug\MyEBookReader.csproj.GenerateResource.Cache
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\obj\x86\Debug\MyEBookReader.exe
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\MyEBookReader\obj\x86\Debug\MyEBookReader.pdb

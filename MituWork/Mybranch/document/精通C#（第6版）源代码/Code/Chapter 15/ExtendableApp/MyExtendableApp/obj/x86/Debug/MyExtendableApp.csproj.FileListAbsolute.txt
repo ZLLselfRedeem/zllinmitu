@@ -1,9 +1,0 @@
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\bin\Debug\MyExtendableApp.exe
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\bin\Debug\MyExtendableApp.pdb
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\bin\Debug\CommonSnappableTypes.dll
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\bin\Debug\CommonSnappableTypes.pdb
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\obj\x86\Debug\MyExtendableApp.MainForm.resources
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\obj\x86\Debug\MyExtendableApp.Properties.Resources.resources
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\obj\x86\Debug\MyExtendableApp.csproj.GenerateResource.Cache
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\obj\x86\Debug\MyExtendableApp.exe
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\MyExtendableApp\obj\x86\Debug\MyExtendableApp.pdb

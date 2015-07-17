@@ -1,8 +1,0 @@
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\bin\Debug\FunWithCSharpAsync.exe
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\bin\Debug\FunWithCSharpAsync.pdb
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\obj\Debug\FunWithCSharpAsync.csprojResolveAssemblyReference.cache
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\obj\Debug\FunWithCSharpAsync.MainForm.resources
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\obj\Debug\FunWithCSharpAsync.Properties.Resources.resources
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\obj\Debug\FunWithCSharpAsync.csproj.GenerateResource.Cache
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\obj\Debug\FunWithCSharpAsync.exe
-D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\FunWithCSharpAsync\obj\Debug\FunWithCSharpAsync.pdb
