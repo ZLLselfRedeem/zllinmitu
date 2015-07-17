@@ -17,4 +17,3 @@ D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\bi
 D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\bin\zh-CHS\YJC.Toolkit.Data.resources.dll
 D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\obj\Debug\Mitu.Account.ManageWeb.dll
 D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\obj\Debug\Mitu.Account.ManageWeb.pdb
-D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\obj\Debug\ManageWeb.csprojResolveAssemblyReference.cache
