@@ -1,0 +1,17 @@
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\WeMenuUtil.exe
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\WeMenuUtil.pdb
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\YJC.Toolkit.MetaData.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\en\YJC.Toolkit.Core.resources.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\zh-CHS\YJC.Toolkit.Core.resources.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\en\YJC.Toolkit.Data.resources.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\zh-CHS\YJC.Toolkit.Data.resources.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\obj\Debug\YJC.Toolkit.Weixin.MenuCreator.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\obj\Debug\YJC.Toolkit.Weixin.MenuCreator.DataString.resources
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\obj\Debug\YJC.Toolkit.Weixin.MenuCreator.csproj.GenerateResource.Cache
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\obj\Debug\WeMenuUtil.exe
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\obj\Debug\WeMenuUtil.pdb
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\YJC.Toolkit.Core.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\YJC.Toolkit.Core.Extension.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\YJC.Toolkit.Data.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\YJC.Toolkit.ToolApp.dll
+D:\ZhouLL\trunk\Work\Weixin\MenuCreator2\bin\Debug\YJC.Toolkit.Weixin.dll

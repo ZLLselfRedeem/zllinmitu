@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><tk:Toolkit xmlns:tk="http://www.qdocuments.net"><Error><Source>Weixin/WeServiceAccount</Source><Page>YJC.Toolkit.Web.Page.WebListXmlPage</Page><Url>http://localhost:29533/Library/WebListXmlPage.tkx?Source=Weixin/WeServiceAccount</Url><DateTime>2015/5/26 9:04:51</DateTime><UserId>1009</UserId><OrgId>1</OrgId></Error><Exception><Message>值不能为 null。
+参数名: virtualPath</Message><ErrorSource>System.Web</ErrorSource><StackTrace>   在 System.Web.VirtualPath.Create(String virtualPath, VirtualPathOptions options)
+   在 System.Web.VirtualPathUtility.IsAppRelative(String virtualPath)
+   在 YJC.Toolkit.Sys.WebUtil.ResolveUrl(String url)
+   在 YJC.Toolkit.Web.HtmlUtil.ParseLinkUrl(Object receiver, String content)
+   在 YJC.Toolkit.Web.BootcssUtil.CreateRowOperators(IEnumerable`1 operators, ObjectContainer container)
+   在 YJC.Toolkit.Razor.Dynamic.drepgitmanagermituworkmituservertestmanagewebxmlrazortemplatebootcsslistobjectlistmaincshtml.Execute()
+   在 YJC.Toolkit.Razor.RazorBaseTemplate.Run(ExecuteContext context)</StackTrace><Type>System.ArgumentNullException</Type><TargetSite>System.Web.VirtualPath Create(System.String, System.Web.VirtualPathOptions)</TargetSite><OtherInfos /></Exception><Exception><Message>值不能为 null。
+参数名: virtualPath</Message><ErrorSource>YJC.Toolkit.Razor</ErrorSource><StackTrace>   在 YJC.Toolkit.Razor.RazorBaseTemplate.Run(ExecuteContext context)
+   在 YJC.Toolkit.Razor.RazorFileTemplate.RenderFile(String basePath, String fileName, Object model)
+   在 YJC.Toolkit.Razor.RazorFileTemplate.RenderLayoutPartial(String fileName, Object model)
+   在 YJC.Toolkit.Razor.RazorFileTemplate.RenderSectionIfDefined(String name, String layoutFileName, Object model)
+   在 YJC.Toolkit.Razor.Dynamic.drepgitmanagermituworkmituservertestmanagewebxmlrazortemplatebootcsslistobjecttemplatecshtml.Execute()
+   在 YJC.Toolkit.Razor.RazorBaseTemplate.Run(ExecuteContext context)</StackTrace><Type>YJC.Toolkit.Razor.RazorRuntimeException</Type><TargetSite>System.String Run(YJC.Toolkit.Razor.ExecuteContext)</TargetSite><ErrorObjType>YJC.Toolkit.Razor.Dynamic.drepgitmanagermituworkmituservertestmanagewebxmlrazortemplatebootcsslistobjectlistmaincshtml</ErrorObjType><ErrorObj>D:\Rep\GitManager\mituwork\MituServer\Test\ManageWeb\Xml\razor\_temp\drepgitmanagermituworkmituservertestmanagewebxmlrazortemplatebootcsslistobjectlistmaincshtml_-470409528.dll</ErrorObj><OtherInfos /></Exception><Exception><Message>值不能为 null。
+参数名: virtualPath</Message><ErrorSource>YJC.Toolkit.WebApp</ErrorSource><StackTrace>   在 YJC.Toolkit.Web.WebBasePage.LoadPage()
+   在 YJC.Toolkit.Web.ToolkitHttpHandler.ProcessRequest(HttpContext context)</StackTrace><Type>YJC.Toolkit.Razor.RazorRuntimeException</Type><TargetSite>Void LoadPage()</TargetSite><ErrorObjType>YJC.Toolkit.Razor.Dynamic.drepgitmanagermituworkmituservertestmanagewebxmlrazortemplatebootcsslistobjecttemplatecshtml</ErrorObjType><ErrorObj>D:\Rep\GitManager\mituwork\MituServer\Test\ManageWeb\Xml\razor\_temp\drepgitmanagermituworkmituservertestmanagewebxmlrazortemplatebootcsslistobjecttemplatecshtml_-42441720.dll</ErrorObj><OtherInfos /></Exception></tk:Toolkit>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<nihao xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" canFly="true" xmlns="http://www.MyCompany.com">
+  <theRadio>
+    <hasTweeters>true</hasTweeters>
+    <hasSubWoofers>false</hasSubWoofers>
+    <stationPresets>
+      <double>89.3</double>
+      <double>105.1</double>
+      <double>97.1</double>
+    </stationPresets>
+    <radioId>XF-552RR6</radioId>
+  </theRadio>
+  <isHatchBack>false</isHatchBack>
+</nihao>

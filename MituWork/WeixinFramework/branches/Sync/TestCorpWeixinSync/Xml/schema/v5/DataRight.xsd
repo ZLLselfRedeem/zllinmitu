@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:include schemaLocation="../bin/CommonElement.xsd"/>
+  <xs:complexType name="DataRightType">
+    <xs:group ref="tk:DataRightGroup"/>
+  </xs:complexType>
+  <xs:group name="DataRightGroup">
+    <xs:choice>
+      <xs:element ref="tk:RegDataRight"/>
+      <xs:element ref="tk:OwnerDataRight"/>
+      <xs:element ref="tk:OwnerOrgDataRight"/>
+      <xs:element ref="tk:CompositeDataRight"/>
+      <xs:element ref="tk:EmptyDataRight"/>
+      <xs:any namespace="##other" processContents="lax"/>
+    </xs:choice>
+  </xs:group>
+  <xs:element name="RegDataRight" type="xs:Name"/>
+  <xs:complexType name="_tk_OwnerRightType">
+    <xs:sequence>
+      <xs:element name="ErrorMessage" type="tk:MultiLanguageType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="NickName" type="xs:Name"/>
+  </xs:complexType>
+  <xs:element name="OwnerDataRight" type="tk:_tk_OwnerRightType"/>
+  <xs:element name="OwnerOrgDataRight" type="tk:_tk_OwnerRightType"/>
+  <xs:element name="EmptyDataRight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ErrorMessage" type="tk:MultiLanguageType" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="AllowAll" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompositeDataRight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RightItem" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:group ref="tk:DataRightGroup"/>
+            <xs:attribute name="Style" type="tk:PageStyleIntf" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="HasRightIfNoItem" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

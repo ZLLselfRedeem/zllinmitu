@@ -1,0 +1,8 @@
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\bin\Debug\DataParallelismWithForEach.exe
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\bin\Debug\DataParallelismWithForEach.pdb
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\obj\x86\Debug\DataParallelismWithForEach.csprojResolveAssemblyReference.cache
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\obj\x86\Debug\DataParallelismWithForEach.MainForm.resources
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\obj\x86\Debug\DataParallelismWithForEach.Properties.Resources.resources
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\obj\x86\Debug\DataParallelismWithForEach.csproj.GenerateResource.Cache
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\obj\x86\Debug\DataParallelismWithForEach.exe
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 19\DataParallelismWithForEach\obj\x86\Debug\DataParallelismWithForEach.pdb

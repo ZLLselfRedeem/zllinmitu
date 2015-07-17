@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_CORP_USER" NameField="Name">
+    <tk:TableDesc>
+      <tk:Content>微信企业用户</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" IsEmpty="false">
+      <tk:FieldName>CU_USER_ID</tk:FieldName>
+      <tk:NickName>UserId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>用户ID</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="10" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field IsKey="true" DataType="string">
+      <tk:FieldName>CU_USER_LOGON_NAME</tk:FieldName>
+      <tk:NickName>UserLogonName</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>账号</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>100</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="20" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CU_NAME</tk:FieldName>
+      <tk:NickName>Name</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>姓名</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>100</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="30" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CU_GENDER</tk:FieldName>
+      <tk:NickName>Gender</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>性别</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>2</tk:Length>
+      <tk:CodeTable RegName="CodeSex"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Combo" Order="40" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="Date">
+      <tk:FieldName>CU_BIRTHDAY</tk:FieldName>
+      <tk:NickName>Birthday</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>出生日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="50" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CU_POSITION</tk:FieldName>
+      <tk:NickName>Position</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>头衔</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>100</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="60" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CU_MOBILE</tk:FieldName>
+      <tk:NickName>Mobile</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>手机号</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>50</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="70" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CU_WEIXIN</tk:FieldName>
+      <tk:NickName>Weixin</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>微信号</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="80" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CU_EMAIL</tk:FieldName>
+      <tk:NickName>Email</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>邮箱</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="90" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="short">
+      <tk:FieldName>CU_VALID_FLAG</tk:FieldName>
+      <tk:NickName>ValidFlag</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>删除标志</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="CheckBox" Order="350" DefaultShow="None"/>
+      <tk:Extension CheckValue="1" UnCheckValue="0"/>
+    </tk:Field>
+    <tk:Field DataType="short">
+      <tk:FieldName>CU_ATTENTION_FLAG</tk:FieldName>
+      <tk:NickName>AttentionFlag</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>关注标志</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="CheckBox" Order="360" DefaultShow="List"/>
+      <tk:Extension CheckValue="1" UnCheckValue="0"/>
+    </tk:Field>
+    <tk:Field DataType="Date">
+      <tk:FieldName>CU_ATTENTION_DATE</tk:FieldName>
+      <tk:NickName>AttentionDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>关注时间</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="370" DefaultShow="List"/>
+    </tk:Field>
+    <tk:Field DataType="Date">
+      <tk:FieldName>CU_UN_ATTENTION_DATE</tk:FieldName>
+      <tk:NickName>UnAttentionDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>取消关注时间</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="380" DefaultShow="List"/>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

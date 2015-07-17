@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/WpfCommonType.xsd"/>
+  <xs:complexType name="LayoutType">
+    <xs:choice>
+      <xs:element ref="FileLayout"/>
+      <xs:element ref="XamlLayout"/>
+      <xs:element ref="OneAreaLayout"/>
+      <xs:element ref="TwoAreaLayout"/>
+      <xs:element ref="ThreeAreaLayout"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="XamlLayout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Xaml" type="xs:anyType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileLayout" type="WpfFileType"/>
+  <xs:element name="OneAreaLayout">
+    <xs:complexType>
+      <xs:attributeGroup ref="AreaAttrGroup"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TwoAreaLayout">
+    <xs:complexType>
+      <xs:attributeGroup ref="AreaAttrGroup"/>
+      <xs:attribute name="ShowSplitter" type="xs:boolean"/>
+      <xs:attribute name="FirstPosition" type="DockType"/>
+      <xs:attribute name="FirstLength" type="LengthRange"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThreeAreaLayout">
+    <xs:complexType>
+      <xs:attributeGroup ref="AreaAttrGroup"/>
+      <xs:attribute name="ShowSplitter">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="None"/>
+            <xs:enumeration value="Vertical"/>
+            <xs:enumeration value="Horizontal"/>
+            <xs:enumeration value="Both"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="BigPosition" type="DockType"/>
+      <xs:attribute name="BigLength" type="LengthRange"/>
+      <xs:attribute name="SmallLength" type="LengthRange"/>
+      <xs:attribute name="AreaPosition">
+        <xs:simpleType>
+          <xs:restriction>
+            <xs:simpleType>
+              <xs:list>
+                <xs:simpleType>
+                  <xs:restriction base="xs:int">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="3"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:list>
+            </xs:simpleType>
+            <xs:length value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="LengthRange">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="Auto|[1-9]\*|[1-9]\d*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="AreaAttrGroup">
+    <xs:attribute name="ShowCommandBar" type="xs:boolean"/>
+    <xs:attribute name="IsCommandBarOnTop" type="xs:boolean"/>
+    <xs:attribute name="IsRoot" type="xs:boolean"/>
+  </xs:attributeGroup>
+</xs:schema>

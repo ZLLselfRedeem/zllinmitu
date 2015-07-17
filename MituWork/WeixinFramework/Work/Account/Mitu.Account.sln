@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManageWeb", "ManageWeb", "{83950EC2-BD61-4E22-8687-F11DE214CF21}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite(6)", "ManageWeb\WebSite\", "{B7A0D2C8-5F52-457A-8587-CB2A5BAE3447}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/WebSite"
+		Debug.AspNetCompiler.PhysicalPath = "ManageWeb\WebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WebSite"
+		Release.AspNetCompiler.PhysicalPath = "ManageWeb\WebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "29533"
+		SlnRelativePath = "ManageWeb\WebSite\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageWeb", "ManageWeb\WebSite\ManageWeb.csproj", "{09A1CE00-DB9D-41A8-A96E-AE82ACBE6DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageWeb.Razor", "ManageWeb\Xml\ManageWeb.Razor.csproj", "{AA63C889-FC8E-4990-B3CB-9E8C25BB5BB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9326C347-228D-4591-9193-F73775C06866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting.Data", "Data\Accounting.Data\Accounting.Data.csproj", "{1D8CDF6F-EC04-49D1-8AE0-7125BAAC89E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YJC.Toolkit.Accounting", "Data\YJC.Toolkit.Accounting\YJC.Toolkit.Accounting.csproj", "{C1C367EF-896C-4D33-8934-3D737FEF8C21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7A0D2C8-5F52-457A-8587-CB2A5BAE3447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A0D2C8-5F52-457A-8587-CB2A5BAE3447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A0D2C8-5F52-457A-8587-CB2A5BAE3447}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A0D2C8-5F52-457A-8587-CB2A5BAE3447}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{09A1CE00-DB9D-41A8-A96E-AE82ACBE6DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A1CE00-DB9D-41A8-A96E-AE82ACBE6DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A1CE00-DB9D-41A8-A96E-AE82ACBE6DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A1CE00-DB9D-41A8-A96E-AE82ACBE6DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA63C889-FC8E-4990-B3CB-9E8C25BB5BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA63C889-FC8E-4990-B3CB-9E8C25BB5BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8CDF6F-EC04-49D1-8AE0-7125BAAC89E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8CDF6F-EC04-49D1-8AE0-7125BAAC89E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8CDF6F-EC04-49D1-8AE0-7125BAAC89E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8CDF6F-EC04-49D1-8AE0-7125BAAC89E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C367EF-896C-4D33-8934-3D737FEF8C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C367EF-896C-4D33-8934-3D737FEF8C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C367EF-896C-4D33-8934-3D737FEF8C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C367EF-896C-4D33-8934-3D737FEF8C21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7A0D2C8-5F52-457A-8587-CB2A5BAE3447} = {83950EC2-BD61-4E22-8687-F11DE214CF21}
+		{09A1CE00-DB9D-41A8-A96E-AE82ACBE6DC6} = {83950EC2-BD61-4E22-8687-F11DE214CF21}
+		{AA63C889-FC8E-4990-B3CB-9E8C25BB5BB0} = {83950EC2-BD61-4E22-8687-F11DE214CF21}
+		{1D8CDF6F-EC04-49D1-8AE0-7125BAAC89E4} = {9326C347-228D-4591-9193-F73775C06866}
+		{C1C367EF-896C-4D33-8934-3D737FEF8C21} = {9326C347-228D-4591-9193-F73775C06866}
+	EndGlobalSection
+EndGlobal

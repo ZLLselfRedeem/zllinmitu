@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\MyDirectoryWatcher\MyDirectoryWatcher\bin\Debug\MyDirectoryWatcher.exe
+D:\ZhouLL\trunk\Study\MyDirectoryWatcher\MyDirectoryWatcher\bin\Debug\MyDirectoryWatcher.pdb
+D:\ZhouLL\trunk\Study\MyDirectoryWatcher\MyDirectoryWatcher\obj\Debug\MyDirectoryWatcher.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\MyDirectoryWatcher\MyDirectoryWatcher\obj\Debug\MyDirectoryWatcher.exe
+D:\ZhouLL\trunk\Study\MyDirectoryWatcher\MyDirectoryWatcher\obj\Debug\MyDirectoryWatcher.pdb

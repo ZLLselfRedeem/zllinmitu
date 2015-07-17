@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="CD_SX">
+    <tk:TableDesc>
+      <tk:Content>省县代码</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="string" IsKey="true" IsEmpty="false">
+      <tk:FieldName>CODE_VALUE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>代码</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>6</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="10" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CODE_NAME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>名称</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>30</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="20" DefaultShow="All"/>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

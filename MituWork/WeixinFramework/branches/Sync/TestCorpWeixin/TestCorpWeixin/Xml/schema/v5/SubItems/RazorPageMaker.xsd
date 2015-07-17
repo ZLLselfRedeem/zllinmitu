@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+	<xs:include schemaLocation="PageMakerCommon.xsd"/>
+	<xs:include schemaLocation="RazorData.xsd"/>
+	<xs:simpleType name="_tk_RazorTemplate">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="BootcssDetail"/>
+			<xs:enumeration value="BootcssEdit"/>
+			<xs:enumeration value="BootcssList"/>
+			<xs:enumeration value="BootcssCustom"/>
+			<xs:enumeration value="NormalList"/>
+			<xs:enumeration value="NormalEdit"/>
+			<xs:enumeration value="NormalDetail"/>
+			<xs:enumeration value="NormalCustom"/>
+			<xs:enumeration value="NormalTree"/>
+			<xs:enumeration value="NormalObjectEdit"/>
+			<xs:enumeration value="NormalMultiEdit"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RazorTemplateType">
+		<xs:union memberTypes="xs:Name tk:_tk_RazorTemplate"/>
+	</xs:simpleType>
+	<xs:complexType name="RazorPageMakerType">
+		<xs:sequence>
+			<xs:element name="RazorData" type="tk:RazorDataType" minOccurs="0"/>
+			<xs:element name="Script" type="tk:UserScriptType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>配置自定义的css以及js文件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RetUrl" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CustomUrl" type="tk:MarcoConfigItem" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="Style" type="tk:PageStyleType" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Template" type="tk:RazorTemplateType" use="required">
+			<xs:annotation>
+				<xs:documentation>Razor基准模板，使用RazorTemplateAttribute注册的注册名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="RazorFile" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>自定义的Razor文件，基准目录是Xml\Razor目录</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="RazorPageMaker" type="tk:RazorPageMakerType">
+		<xs:annotation>
+			<xs:documentation>使用Razor引擎输出Html</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PostRazorPageMaker">
+		<xs:annotation>
+			<xs:documentation>在Get时使用Razor引擎输出Html，在Post时使用PostPageMaker输出Json或者Xml</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="tk:RazorPageMakerType">
+					<xs:sequence>
+						<xs:element name="CustomUrl" type="tk:CustomUrlType" minOccurs="0"/>
+						<xs:element name="AlertMessage" type="tk:MultiLanguageType" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="DestUrl" type="tk:PageStyleType" use="required"/>
+					<xs:attribute name="DataType" type="tk:OutputDataType"/>
+					<xs:attribute name="UseRetUrlFirst" type="xs:boolean" default="true"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ListRazorPageMaker">
+		<xs:annotation>
+			<xs:documentation>针对ListPage，在QueryString中存在GetData=Page时，只输出列表的数据，而非整个html</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="tk:RazorPageMakerType">
+					<xs:attribute name="GetDataTemplate" type="xs:anyURI"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FreeRazorPageMaker">
+		<xs:annotation>
+			<xs:documentation>没有Razor模板的，但使用Razor引擎输出Html。（只能引用Toolkit的dll代码）</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="RazorFile" type="xs:anyURI" use="required"/>
+			<xs:attribute name="Position" type="tk:FilePosition">
+				<xs:annotation>
+					<xs:documentation>文件相对位置，默认为Xml</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SingleRazorPageMaker" type="tk:SingleRazorPageMakerType">
+		<xs:annotation>
+			<xs:documentation>当表新建，修改，删除等综合的RazorPageMaker</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="SingleRazorPageMakerType">
+		<xs:complexContent>
+			<xs:extension base="tk:CompositeRazorPageMakerType">
+				<xs:attribute name="ListDisplay" type="tk:TableDisplayType" default="Striped"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CompositeRazorPageMakerType">
+		<xs:sequence>
+			<xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RazorData" type="tk:RazorDataType" minOccurs="0"/>
+						<xs:element name="Script" type="tk:UserScriptType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>配置自定义的css以及js文件</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CustomUrl" type="tk:CustomUrlType" minOccurs="0"/>
+						<xs:element name="AlertMessage" type="tk:MultiLanguageType" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="Style" type="tk:PageStyleIntf" use="required"/>
+					<xs:attribute name="DestUrl" type="tk:PageStyleType"/>
+					<xs:attribute name="DataType" type="tk:OutputDataType"/>
+					<xs:attribute name="UseRetUrlFirst" type="xs:boolean" default="true"/>
+					<xs:attribute name="Template" type="tk:RazorTemplateType">
+						<xs:annotation>
+							<xs:documentation>Razor基准模板，使用RazorTemplateAttribute注册的注册名</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="RazorFile" type="xs:anyURI">
+						<xs:annotation>
+							<xs:documentation>自定义的Razor文件，基准目录是Xml\Razor目录</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SingleDialogRazorPageMaker" type="tk:SingleRazorPageMakerType">
+		<xs:annotation>
+			<xs:documentation>当表新建，修改，删除等综合的RazorPageMaker，新建修改等操作为Dialog界面</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="SingleTreeRazorPageMakerType">
+		<xs:complexContent>
+			<xs:extension base="tk:CompositeRazorPageMakerType">
+				<xs:attributeGroup ref="tk:TreeDataAttrGrp"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SingleDialogTreeRazorPageMaker" type="tk:SingleTreeRazorPageMakerType">
+		<xs:annotation>
+			<xs:documentation>当表新建，修改，删除等综合的TreeRazorPageMaker，新建修改等操作为Dialog界面</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MasterDetailRazorPageMaker" type="tk:SingleRazorPageMakerType">
+		<xs:annotation>
+			<xs:documentation>主从表新建，修改，删除等综合的RazorPageMaker</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

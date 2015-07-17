@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>设置</tk:Content>
+    </tk:Title>
+    <tk:Source>
+      <tk:StaticSource><![CDATA[
+ {
+	"EasySearch": [
+		{
+			"Name": "拉菲尔·纳达尔",
+			"Value": "1001",
+			"Data": {
+				"ROWNUMBER_": "1",
+				"Value": "1001",
+				"PlayerType": "ATP",
+				"Name": "拉菲尔·纳达尔",
+				"Ename": "Rafael Nadal",
+				"Gender": "M",
+				"Birthday": "1983/6/3 0:00:00",
+				"CountryId": "ESP",
+				"Birthplace": "西班牙，马略卡，马纳科尔",
+				"Residence": "西班牙，马略卡，马纳科尔",
+				"Height": "185",
+				"Bodyweight": "85",
+				"Technique": "左手持拍",
+				"Ident": "职业（2001）",
+				"Intro": "",
+				"AvatarId": "5486",
+				"ShortPicId": "5487",
+				"PrevPicId": "5488",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1",
+				"AccessCount": "6"
+			}
+		}, {
+			"Name": "诺瓦克·德约科维奇",
+			"Value": "1002",
+			"Data": {
+				"ROWNUMBER_": "2",
+				"Value": "1002",
+				"PlayerType": "ATP",
+				"Name": "诺瓦克·德约科维奇",
+				"Ename": "Novak Djokovic",
+				"Gender": "M",
+				"Birthday": "1987/5/22 0:00:00",
+				"CountryId": "SRB",
+				"Birthplace": "塞尔维亚，贝尔格莱德",
+				"Residence": "摩纳哥，蒙特卡洛",
+				"Height": "188",
+				"Bodyweight": "80",
+				"Technique": "右手持拍",
+				"Ident": "职业（2003）",
+				"Intro": "",
+				"AvatarId": "5489",
+				"ShortPicId": "5490",
+				"PrevPicId": "5491",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1",
+				"AccessCount": "1"
+			}
+		}, {
+			"Name": "大卫·费雷尔",
+			"Value": "1003",
+			"Data": {
+				"ROWNUMBER_": "3",
+				"Value": "1003",
+				"PlayerType": "ATP",
+				"Name": "大卫·费雷尔",
+				"Ename": "David Ferrer",
+				"Gender": "M",
+				"Birthday": "1982/4/2 0:00:00",
+				"CountryId": "ESP",
+				"Birthplace": "西班牙，加维亚",
+				"Residence": "西班牙，瓦伦西亚",
+				"Height": "175",
+				"Bodyweight": "73",
+				"Technique": "右手持拍",
+				"Ident": "职业（2000）",
+				"Intro": "",
+				"AvatarId": "5492",
+				"ShortPicId": "5493",
+				"PrevPicId": "5494",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "安迪·穆雷",
+			"Value": "1004",
+			"Data": {
+				"ROWNUMBER_": "4",
+				"Value": "1004",
+				"PlayerType": "ATP",
+				"Name": "安迪·穆雷",
+				"Ename": "Andy Murray",
+				"Gender": "M",
+				"Birthday": "1987/5/15 0:00:00",
+				"CountryId": "GBR",
+				"Birthplace": "苏格兰，邓布兰",
+				"Residence": "英国，伦敦",
+				"Height": "190",
+				"Bodyweight": "84",
+				"Technique": "右手持拍",
+				"Ident": "职业（2005）",
+				"Intro": "",
+				"AvatarId": "5495",
+				"ShortPicId": "5496",
+				"PrevPicId": "5497",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "胡安·马丁·德尔波特罗",
+			"Value": "1005",
+			"Data": {
+				"ROWNUMBER_": "5",
+				"Value": "1005",
+				"PlayerType": "ATP",
+				"Name": "胡安·马丁·德尔波特罗",
+				"Ename": "Juan Martin DelPotro",
+				"Gender": "M",
+				"Birthday": "1988/9/23 0:00:00",
+				"CountryId": "ARG",
+				"Birthplace": "阿根廷，坦迪尔",
+				"Residence": "阿根廷，坦迪尔",
+				"Height": "198",
+				"Bodyweight": "97",
+				"Technique": "右手持拍",
+				"Ident": "职业（2005）",
+				"Intro": "",
+				"AvatarId": "5498",
+				"ShortPicId": "5499",
+				"PrevPicId": "5500",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "罗杰·费德勒",
+			"Value": "1006",
+			"Data": {
+				"ROWNUMBER_": "6",
+				"Value": "1006",
+				"PlayerType": "ATP",
+				"Name": "罗杰·费德勒",
+				"Ename": "Roger Federer",
+				"Gender": "M",
+				"Birthday": "1981/8/8 0:00:00",
+				"CountryId": "SUI",
+				"Birthplace": "瑞士，巴塞尔",
+				"Residence": "瑞士，巴塞尔",
+				"Height": "185",
+				"Bodyweight": "85",
+				"Technique": "右手持拍",
+				"Ident": "职业（1998）",
+				"Intro": "",
+				"AvatarId": "5501",
+				"ShortPicId": "5502",
+				"PrevPicId": "5503",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "托马斯·伯蒂奇",
+			"Value": "1007",
+			"Data": {
+				"ROWNUMBER_": "7",
+				"Value": "1007",
+				"PlayerType": "ATP",
+				"Name": "托马斯·伯蒂奇",
+				"Ename": "Tomas Berdych",
+				"Gender": "M",
+				"Birthday": "1985/9/17 0:00:00",
+				"CountryId": "CZE",
+				"Birthplace": "捷克，瓦拉什斯凯梅济日奇",
+				"Residence": "摩纳哥，蒙特卡洛",
+				"Height": "196",
+				"Bodyweight": "91",
+				"Technique": "右手持拍",
+				"Ident": "职业（2002）",
+				"Intro": "",
+				"AvatarId": "5504",
+				"ShortPicId": "5505",
+				"PrevPicId": "5506",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "斯坦尼斯拉斯·瓦林卡",
+			"Value": "1008",
+			"Data": {
+				"ROWNUMBER_": "8",
+				"Value": "1008",
+				"PlayerType": "ATP",
+				"Name": "斯坦尼斯拉斯·瓦林卡",
+				"Ename": "Stanislas Wawrinka",
+				"Gender": "M",
+				"Birthday": "1985/3/28 0:00:00",
+				"CountryId": "SUI",
+				"Birthplace": "瑞士，Lausanne",
+				"Residence": "瑞士，St. Barthelemy",
+				"Height": "183",
+				"Bodyweight": "81",
+				"Technique": "右手持拍",
+				"Ident": "职业（2002）",
+				"Intro": "",
+				"AvatarId": "5507",
+				"ShortPicId": "5508",
+				"PrevPicId": "5509",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "理查德·加斯奎特",
+			"Value": "1009",
+			"Data": {
+				"ROWNUMBER_": "9",
+				"Value": "1009",
+				"PlayerType": "ATP",
+				"Name": "理查德·加斯奎特",
+				"Ename": "Richard Gasquet",
+				"Gender": "M",
+				"Birthday": "1986/6/18 0:00:00",
+				"CountryId": "FRA",
+				"Birthplace": "法国，Beziers",
+				"Residence": "瑞士，Neuchatel",
+				"Height": "185",
+				"Bodyweight": "75",
+				"Technique": "右手持拍",
+				"Ident": "职业（2002）",
+				"Intro": "",
+				"AvatarId": "5510",
+				"ShortPicId": "5511",
+				"PrevPicId": "5512",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "乔·维尔弗雷德·特松加",
+			"Value": "1010",
+			"Data": {
+				"ROWNUMBER_": "10",
+				"Value": "1010",
+				"PlayerType": "ATP",
+				"Name": "乔·维尔弗雷德·特松加",
+				"Ename": "Jo Wilfried Tsonga",
+				"Gender": "M",
+				"Birthday": "1985/4/17 0:00:00",
+				"CountryId": "FRA",
+				"Birthplace": "法国，勒芒",
+				"Residence": "瑞士，La Rippe",
+				"Height": "188",
+				"Bodyweight": "91",
+				"Technique": "右手持拍",
+				"Ident": "职业（2004）",
+				"Intro": "",
+				"AvatarId": "5513",
+				"ShortPicId": "5514",
+				"PrevPicId": "5515",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "米洛斯·拉奥尼奇",
+			"Value": "1011",
+			"Data": {
+				"ROWNUMBER_": "11",
+				"Value": "1011",
+				"PlayerType": "ATP",
+				"Name": "米洛斯·拉奥尼奇",
+				"Ename": "Milos Raonic",
+				"Gender": "M",
+				"Birthday": "1990/12/27 0:00:00",
+				"CountryId": "CAN",
+				"Birthplace": "黑山，Podgorica",
+				"Residence": "加拿大，Thornhill",
+				"Height": "196",
+				"Bodyweight": "88",
+				"Technique": "右手持拍",
+				"Ident": "职业（2008）",
+				"Intro": "",
+				"AvatarId": "5570",
+				"ShortPicId": "5571",
+				"PrevPicId": "5572",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "托米·哈斯",
+			"Value": "1012",
+			"Data": {
+				"ROWNUMBER_": "12",
+				"Value": "1012",
+				"PlayerType": "ATP",
+				"Name": "托米·哈斯",
+				"Ename": "Tommy Haas",
+				"Gender": "M",
+				"Birthday": "1978/4/3 0:00:00",
+				"CountryId": "GER",
+				"Birthplace": "Hamburg, Germany",
+				"Residence": "Bradenton, Florida - LA, CA",
+				"Height": "188",
+				"Bodyweight": "84",
+				"Technique": "右手持拍",
+				"Ident": "职业（1996）",
+				"Intro": "",
+				"AvatarId": "5573",
+				"ShortPicId": "5574",
+				"PrevPicId": "5575",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "尼古拉斯·阿尔玛格洛",
+			"Value": "1013",
+			"Data": {
+				"ROWNUMBER_": "13",
+				"Value": "1013",
+				"PlayerType": "ATP",
+				"Name": "尼古拉斯·阿尔玛格洛",
+				"Ename": "Nicolas Almagro",
+				"Gender": "M",
+				"Birthday": "1985/8/21 0:00:00",
+				"CountryId": "ESP",
+				"Birthplace": "西班牙，Murcia",
+				"Residence": "西班牙，Murcia",
+				"Height": "183",
+				"Bodyweight": "84",
+				"Technique": "右手持拍",
+				"Ident": "职业（2003）",
+				"Intro": "",
+				"AvatarId": "5576",
+				"ShortPicId": "5577",
+				"PrevPicId": "5578",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "约翰·伊斯内尔",
+			"Value": "1014",
+			"Data": {
+				"ROWNUMBER_": "14",
+				"Value": "1014",
+				"PlayerType": "ATP",
+				"Name": "约翰·伊斯内尔",
+				"Ename": "John Isner",
+				"Gender": "M",
+				"Birthday": "1985/4/26 0:00:00",
+				"CountryId": "USA",
+				"Birthplace": "Greensboro,North Carolina USA",
+				"Residence": "Tampa, Florida, USA",
+				"Height": "208",
+				"Bodyweight": "108",
+				"Technique": "右手持拍",
+				"Ident": "职业（2007）",
+				"Intro": "",
+				"AvatarId": "5579",
+				"ShortPicId": "5580",
+				"PrevPicId": "5581",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}, {
+			"Name": "米哈伊尔·尤兹尼",
+			"Value": "1015",
+			"Data": {
+				"ROWNUMBER_": "15",
+				"Value": "1015",
+				"PlayerType": "ATP",
+				"Name": "米哈伊尔·尤兹尼",
+				"Ename": "Mikhail Youzhny",
+				"Gender": "M",
+				"Birthday": "1982/6/25 0:00:00",
+				"CountryId": "RUS",
+				"Birthplace": "俄罗斯，莫斯科",
+				"Residence": "俄罗斯，莫斯科",
+				"Height": "183",
+				"Bodyweight": "73",
+				"Technique": "右手持拍",
+				"Ident": "职业（1999）",
+				"Intro": "",
+				"AvatarId": "5582",
+				"ShortPicId": "5583",
+				"PrevPicId": "5584",
+				"HasOtherPic": "0",
+				"VerifyFlag": "1"
+			}
+		}
+	]
+}]]></tk:StaticSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SourceOutputPageMaker ContentType="application/json"/>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

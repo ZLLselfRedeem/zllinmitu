@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><tk:Toolkit xmlns:tk="http://www.qdocuments.net"><Error><Page>YJC.Toolkit.Weixin.Web.WebWePage</Page><Url>http://localhost:47545/Library/We.tkx</Url><DateTime>2015/1/13 10:39:30</DateTime></Error><Exception><Message>未将对象引用设置到对象的实例。</Message><ErrorSource>YJC.Toolkit.Weixin.Data</ErrorSource><StackTrace>   在 YJC.Toolkit.Weixin.Rule.XmlConfigRule.Reply(ReceiveMessage message)
+   在 YJC.Toolkit.Weixin.Rule.MessageEngine.Reply(ReceiveMessage message, BaseSendMessage&amp; replyMessage)
+   在 YJC.Toolkit.Weixin.WeixinToolkitSettings.NormalReply(ReceiveMessage message)
+   在 YJC.Toolkit.Weixin.WeixinSource.DoAction(IInputData input)
+   在 YJC.Toolkit.Web.InternalWebUtil.CreateOutputData(IMetaData metaData, ISource source, IPageStyle style, IPageData inputData)
+   在 YJC.Toolkit.Web.WebBaseContentPage.DoAction()
+   在 YJC.Toolkit.Web.WebBaseContentPage.DoPost()
+   在 YJC.Toolkit.Web.WebBasePage.Post()
+   在 YJC.Toolkit.Web.WebBasePage.LoadPage()
+   在 YJC.Toolkit.Web.ToolkitHttpHandler.ProcessRequest(HttpContext context)</StackTrace><Type>System.NullReferenceException</Type><TargetSite>YJC.Toolkit.Weixin.Message.BaseSendMessage Reply(YJC.Toolkit.Weixin.Message.ReceiveMessage)</TargetSite><OtherInfos /></Exception></tk:Toolkit>

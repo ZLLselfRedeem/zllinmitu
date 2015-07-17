@@ -1,0 +1,8 @@
+D:\ZhouLL\trunk\Work\Csharp\Csharp\bin\Debug\Csharp.exe
+D:\ZhouLL\trunk\Work\Csharp\Csharp\bin\Debug\Csharp.pdb
+D:\ZhouLL\trunk\Work\Csharp\Csharp\obj\Debug\Csharp.exe
+D:\ZhouLL\trunk\Work\Csharp\Csharp\obj\Debug\Csharp.pdb
+D:\ZhouLL\trunk\Work\WeixinCodeCsharp\Csharp\obj\Debug\Csharp.exe
+D:\ZhouLL\trunk\Work\WeixinCodeCsharp\Csharp\obj\Debug\Csharp.pdb
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\WeixinCodeCsharp\Csharp\obj\Debug\Csharp.exe
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\WeixinCodeCsharp\Csharp\obj\Debug\Csharp.pdb

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Administrator (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:import namespace="http://www.qdocuments.net" schemaLocation="ModuleItem.xsd"/>
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:include schemaLocation="DataModule.xsd"/>
+  <xs:include schemaLocation="UIElement.xsd"/>
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tk:Module"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" fixed="4.0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataModule" type="DataModuleType"/>
+  <xs:element name="UIElement" type="UIElementType"/>
+</xs:schema>

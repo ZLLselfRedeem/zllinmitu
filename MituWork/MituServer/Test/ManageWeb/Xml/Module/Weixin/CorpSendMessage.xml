@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>发送消息</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleClassMetaData ClassRegName="CorpMessageSender" JsonDataType="Object"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:InsertObjectSource UseMetaData="true" ObjectName="CorpMessageSender">
+        <tk:ObjectSource>
+          <tk:RegNameObjectSource>CorpMessage</tk:RegNameObjectSource>
+        </tk:ObjectSource>
+      </tk:InsertObjectSource>
+    </tk:Source>
+    <tk:PostObjectCreator>
+      <tk:CustomJsonObjectCreator RegTypeName="CorpMessageSender" LocalName="CorpMessageSender"/>
+    </tk:PostObjectCreator>
+    <tk:PageMaker>
+      <tk:PostRazorPageMaker DestUrl="Custom" Template="NormalObjectEdit">
+        <tk:RazorData>
+          <tk:NormalEditData InsertFormat="{0}" DialogMode="true" SaveButtonCaption="发送" ShowTitle="false"/>
+        </tk:RazorData>
+        <tk:Script>userjs/weixin/sendmessage.js</tk:Script>
+        <tk:CustomUrl>CloseDialogAndRefresh</tk:CustomUrl>
+        <tk:AlertMessage>
+          <tk:Content>消息已发送</tk:Content>
+        </tk:AlertMessage>
+      </tk:PostRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

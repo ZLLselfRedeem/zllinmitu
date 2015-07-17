@@ -1,0 +1,1 @@
+<%@ Page language="c#" Codebehind="WebDeleteXmlServlet.cs" AutoEventWireup="false" Inherits="YJC.Toolkit.Web.Page.WebDeleteXmlServlet, YJC.Toolkit.WebApp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=DCD89483EE33CB8F" %>

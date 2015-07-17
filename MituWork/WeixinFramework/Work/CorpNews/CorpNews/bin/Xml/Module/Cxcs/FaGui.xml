@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>法规文件</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Document.xml"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbDetailListSource UseMetaData="false" DisablePage="Insert Update Delete" OrderBy="ORDER BY DOC_ORGIN_DATE DESC" FillDetailData="true">
+        <tk:Resolver>
+          <tk:RegResolver>TaxDocument</tk:RegResolver>
+        </tk:Resolver>
+        <tk:FilterSql>DOC_CATELOG='04'</tk:FilterSql>
+        <tk:ChildTable>
+          <tk:Resolver>
+            <tk:RegResolver>DocAttachment</tk:RegResolver>
+          </tk:Resolver>
+          <tk:Relation>
+            <tk:MasterFields>DocId</tk:MasterFields>
+            <tk:DetailFields>DocId</tk:DetailFields>
+          </tk:Relation>
+        </tk:ChildTable>
+      </tk:SingleDbDetailListSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:CompositePageMaker>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="List"/>
+          <tk:ListRazorPageMaker Template="BootcssList" RazorFile="CXCS/FaGuiList.cshtml">
+            <tk:RazorData>
+              <tk:BootcssListData QueryResolverName="TaxDocument" QueryFieldName="Title" QueryTitle="关键字" ShowBorder="false" PageNumberCount="5">
+                <tk:RazorField NickName="DocId" ContentType="Text"><![CDATA[<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam text-left f20 ph3">●</div>]]></tk:RazorField>
+                <tk:RazorField NickName="Title" ContentType="RazorFile">FaiGuiTitleField.cshtml</tk:RazorField>
+                <tk:ListField NickName="DocId" Col="1" />
+                <tk:ListField NickName="Title" Col="10" Class="pv1"/>
+              </tk:BootcssListData>
+            </tk:RazorData>
+            <tk:Script>usercss/docList.css</tk:Script>
+          </tk:ListRazorPageMaker>
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="Detail"/>
+          <tk:FreeRazorPageMaker RazorFile="Razor/CXCS/DocumentDetail.cshtml"/>
+        </tk:Item>
+      </tk:CompositePageMaker>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

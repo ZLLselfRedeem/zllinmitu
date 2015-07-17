@@ -1,0 +1,13 @@
+<project xmlns="http://nant.sf.net/release/0.91/nant.xsd" name="Hello" default="run" >
+  <property name="SourceDir" value="../Mitu.CXCS/ManageWeb"/>
+  <property name="DestDir" value="ManageWeb"/>
+  <target name="run">
+    <copy overwrite="true" todir="${DestDir}/Xml">
+      <fileset basedir="${SourceDir}/Xml">
+        <include name="schema\**.xsd"/>
+        <include name="razortemplate\**.cshtml"/>
+      </fileset>
+    </copy>
+  </target>
+</project>
+

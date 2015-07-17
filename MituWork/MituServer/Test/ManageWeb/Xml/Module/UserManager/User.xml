@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>用户</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="UserManager/User.xml"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource>
+        <tk:Resolver>
+          <tk:RegResolver>User</tk:RegResolver>
+        </tk:Resolver>
+        <tk:Operators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:EmptyOperateRight/>
+            </tk:Right>
+            <tk:InsertOperator/>
+            <tk:UpdateOperator/>
+            <tk:DeleteOperator/>
+            <tk:Operator Position="Row" Id="Password" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>重置密码</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebUpdateXmlPage.tkx?Source=UserManager/ChangeUserPasswd&amp;UserId=*Id*&amp;UserName=*Name*</tk:Content>
+            </tk:Operator>
+            <tk:Operator Position="Row" Id="Part" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>设置角色</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebUpdateXmlPage.tkx?Source=UserManager/UserPart&amp;UserId=*Id*</tk:Content>
+            </tk:Operator>
+          </tk:StandardOperators>
+        </tk:Operators>
+        <tk:DetailOperators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:EmptyOperateRight/>
+            </tk:Right>
+            <tk:UpdateOperator/>
+<!--            <tk:InsertOperator/>
+            <tk:DeleteOperator/>-->
+            <tk:Operator Position="Global" Id="Password" Info="Dialog" IconClass="icon-key">
+              <tk:Caption>
+                <tk:Content>重置密码</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebUpdateXmlPage.tkx?Source=UserManager/ChangeUserPasswd&amp;UserId=*Id*&amp;UserName=*Name*</tk:Content>
+            </tk:Operator>
+            <tk:Operator Position="Row" Id="Part" Info="Dialog" IconClass="icon-group">
+              <tk:Caption>
+                <tk:Content>设置角色</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebUpdateXmlPage.tkx?Source=UserManager/UserPart&amp;UserId=*Id*</tk:Content>
+            </tk:Operator>
+          </tk:StandardOperators>
+        </tk:DetailOperators>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SingleRazorPageMaker ListDisplay="Striped">
+        <tk:Item Style="List">
+          <tk:RazorData>
+            <tk:NormalListData OperatorWidth="100" SearchCheckBox="Like"/>
+          </tk:RazorData>
+        </tk:Item>
+      </tk:SingleRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

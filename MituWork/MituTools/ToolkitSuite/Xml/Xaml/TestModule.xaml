@@ -1,0 +1,24 @@
+<tk:Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:tk="http://www.qdocuments.net" xmlns:sys="clr-namespace:System;assembly=mscorlib" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" Title="CommandPage">
+  <Page.Resources>
+    <sys:String x:Key="CloseJson">{"Close":{}}</sys:String>
+    <sys:String x:Key="CloseModuleJson">{"CloseModule":{}}</sys:String>
+    <sys:String x:Key="CloseModuleXml"><![CDATA[<CloseModule><Name>Hello Page</Name></CloseModule>]]></sys:String>
+    <sys:String x:Key="MessageBoxXml"><![CDATA[<MessageBox><Text>{0}</Text><Caption>{1}</Caption><Button>{2}</Button><Icon>{3}</Icon><DefaultResult>{4}</DefaultResult><Options>{5}</Options></MessageBox>]]></sys:String>
+  </Page.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Label Content="Good Good Study" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+    <Button Content="Close Me" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{tk:Command Data={StaticResource CloseModuleJson}}"/>
+    <Button Content="Close 你好" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{tk:Command Data={StaticResource CloseModuleXml}, DataType=Xml}"/>
+    <!--Button Content="Message Box" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{tk:Command Parameter=Hello world|Hello||Information|OK|, StringFormat={StaticResource MessageBoxXml}, DataType=Xml}"/-->
+  </Grid>
+</tk:Page>

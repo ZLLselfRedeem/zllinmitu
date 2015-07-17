@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/suite/CodeSuite.xsd">
+	<CodeGenerator CompatibleType="Both" ToolkitVer="Tk50" StudioVer="VS2005 VS2008 VS2010 VS2012" RegName="Tk5AssemblyInfo" Author="YJC" BaseClass="Table" CreateDate="2014-11-05" Description="Toolkit5的AssemblyInfo.cs生成">
+		<FileName Extension="cs" Catalog="Resolver" UseProjectName="true">
+			<MainName>Properties\AssemblyInfo</MainName>
+		</FileName>
+		<RazorFile>CodeSuite/Tk5/VSAssembly.cshtml</RazorFile>
+	</CodeGenerator>
+</Toolkit>

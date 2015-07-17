@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\schema\v4\Theme.xsd">
+	<Theme RegName="RainierOrange">
+		<ResourceDictionary>../Normal/Theme.xaml</ResourceDictionary>
+		<ResourceDictionary>Theme.xaml</ResourceDictionary>
+	</Theme>
+</Toolkit>

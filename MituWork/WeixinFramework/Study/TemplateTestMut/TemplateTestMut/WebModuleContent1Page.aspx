@@ -1,0 +1,1 @@
+<%@ Page language="c#" Codebehind="WebModuleContent1Servlet.cs" AutoEventWireup="false" Inherits="YJC.Toolkit.Web.Page.WebModuleContent1Servlet, YJC.Toolkit.WebApp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=DCD89483EE33CB8F" %>

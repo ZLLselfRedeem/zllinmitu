@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen (eb) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:complexType name="DataModuleType">
+    <xs:choice>
+      <xs:element ref="RegDataModule"/>
+      <xs:element ref="XamlDataModule"/>
+      <xs:element ref="SingleDataModule"/>
+      <xs:element ref="MDDataModule"/>
+      <xs:element ref="TreeDataModule"/>
+      <xs:element name="NormalDataModule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ViewListCreatorXaml" type="xs:anyType"/>
+            <xs:element name="DefaultOrder" type="xs:string" minOccurs="0"/>
+            <xs:element name="FilterSql" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+          <xs:attribute name="BlockSize" type="xs:int"/>
+          <xs:attribute name="MaxBlockCount" type="xs:int"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="XamlDataModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Xaml" type="xs:anyType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegDataModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RegName" type="xs:Name"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MDDataModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FactoryXaml" type="xs:anyType"/>
+        <xs:element name="DefaultOrder" type="xs:string" minOccurs="0"/>
+        <xs:element name="FilterSql" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="BlockSize" type="xs:int"/>
+      <xs:attribute name="MaxBlockCount" type="xs:int"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SingleDataModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FactoryXaml" type="xs:anyType"/>
+        <xs:element name="DefaultOrder" type="xs:string" minOccurs="0"/>
+        <xs:element name="FilterSql" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="BlockSize" type="xs:int"/>
+      <xs:attribute name="MaxBlockCount" type="xs:int"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreeDataModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TreeXaml" type="xs:anyType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

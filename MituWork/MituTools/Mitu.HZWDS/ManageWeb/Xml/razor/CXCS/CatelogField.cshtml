@@ -1,0 +1,15 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssListTemplate
+@using System.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{ 
+    DataRow row = (DataRow)(Model.Row);
+    string sourceId = row.GetString("SourceId");
+}
+<td>@row.GetString("Catelog_Name")
+    @if (!string.IsNullOrEmpty(sourceId))
+    {
+        <img src="@("pic/sys/copy.jpg".AppVirutalPath())" style="width:16px;margin-left:1px" />
+    }
+</td>
+

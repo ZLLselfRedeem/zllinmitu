@@ -1,0 +1,28 @@
+@using System.Text;
+@using Toolkit.Suite
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@{
+    GeneratorItemEventArgs e = @Model as GeneratorItemEventArgs;
+    TableInfo table = e.Table;
+    string normalName = StringUtil.GetSignName(table.TableName);
+}
+using System;
+using YJC.Toolkit.Sys;
+
+namespace @e.Setting.Namespace
+{
+    public class @(normalName)Class
+    {
+@{
+    int index = 0;
+    foreach (var field in table.Fields)
+    {
+        @:[SimpleElement(Order = @(++index * 10))]
+        @:public @RazorUtil.GetCSharpType(field.DataType) @StringUtil.GetSignName(field.FieldName) { get; private set; }
+@: 
+    }
+}
+    }
+}

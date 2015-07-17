@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\CloneablePoint\CloneablePoint\bin\Debug\CloneablePoint.exe
+D:\ZhouLL\trunk\Study\CloneablePoint\CloneablePoint\bin\Debug\CloneablePoint.pdb
+D:\ZhouLL\trunk\Study\CloneablePoint\CloneablePoint\obj\Debug\CloneablePoint.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\CloneablePoint\CloneablePoint\obj\Debug\CloneablePoint.exe
+D:\ZhouLL\trunk\Study\CloneablePoint\CloneablePoint\obj\Debug\CloneablePoint.pdb

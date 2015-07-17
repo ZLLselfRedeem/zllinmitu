@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\BoWenXuexiDelegate\BoWenXuexiDelegate\obj\Debug\BoWenXuexiDelegate.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\BoWenXuexiDelegate\BoWenXuexiDelegate\bin\Debug\BoWenXuexiDelegate.exe
+D:\ZhouLL\trunk\Study\BoWenXuexiDelegate\BoWenXuexiDelegate\bin\Debug\BoWenXuexiDelegate.pdb
+D:\ZhouLL\trunk\Study\BoWenXuexiDelegate\BoWenXuexiDelegate\obj\Debug\BoWenXuexiDelegate.exe
+D:\ZhouLL\trunk\Study\BoWenXuexiDelegate\BoWenXuexiDelegate\obj\Debug\BoWenXuexiDelegate.pdb

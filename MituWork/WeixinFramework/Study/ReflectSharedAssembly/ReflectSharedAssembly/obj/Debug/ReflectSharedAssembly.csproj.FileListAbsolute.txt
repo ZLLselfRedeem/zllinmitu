@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ReflectSharedAssembly\ReflectSharedAssembly\bin\Debug\ReflectSharedAssembly.exe
+D:\ZhouLL\trunk\Study\ReflectSharedAssembly\ReflectSharedAssembly\bin\Debug\ReflectSharedAssembly.pdb
+D:\ZhouLL\trunk\Study\ReflectSharedAssembly\ReflectSharedAssembly\obj\Debug\ReflectSharedAssembly.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ReflectSharedAssembly\ReflectSharedAssembly\obj\Debug\ReflectSharedAssembly.exe
+D:\ZhouLL\trunk\Study\ReflectSharedAssembly\ReflectSharedAssembly\obj\Debug\ReflectSharedAssembly.pdb

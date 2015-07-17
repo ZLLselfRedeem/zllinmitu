@@ -1,0 +1,8 @@
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\bin\Debug\DataParallelismWithForEach.exe
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\bin\Debug\DataParallelismWithForEach.pdb
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\obj\Debug\DataParallelismWithForEach.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\obj\Debug\DataParallelismWithForEach.Properties.Resources.resources
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\obj\Debug\DataParallelismWithForEach.csproj.GenerateResource.Cache
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\obj\Debug\DataParallelismWithForEach.exe
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\obj\Debug\DataParallelismWithForEach.pdb
+D:\ZhouLL\trunk\Study\DataParallelismWithForEach\DataParallelismWithForEach\obj\Debug\DataParallelismWithForEach.MainForm.resources

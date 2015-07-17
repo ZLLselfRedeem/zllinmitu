@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\SerializationAll\SerializationAll\bin\Debug\SerializationAll.exe
+D:\ZhouLL\trunk\Study\SerializationAll\SerializationAll\bin\Debug\SerializationAll.pdb
+D:\ZhouLL\trunk\Study\SerializationAll\SerializationAll\obj\Debug\SerializationAll.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\SerializationAll\SerializationAll\obj\Debug\SerializationAll.exe
+D:\ZhouLL\trunk\Study\SerializationAll\SerializationAll\obj\Debug\SerializationAll.pdb

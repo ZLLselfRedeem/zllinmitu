@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>角色</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="UserManager/Part.xml" ColumnCount="1" DisableAutoDetailLink="true"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource>
+        <tk:Resolver>
+          <tk:RegResolver>Part</tk:RegResolver>
+        </tk:Resolver>
+        <tk:Operators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:EmptyOperateRight/>
+            </tk:Right>
+            <tk:InsertOperator IsDialog="true"/>
+            <tk:UpdateOperator IsDialog="true"/>
+            <tk:DeleteOperator/>
+            <tk:Operator Id="Right" Position="Row" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>设置权限</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebModuleContentPage.tkx?Source=UserManager/PartRight&amp;Id=*Id*</tk:Content>
+            </tk:Operator>
+          </tk:StandardOperators>
+        </tk:Operators>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SingleDialogRazorPageMaker ListDisplay="Striped">
+        <tk:Item Style="List">
+          <tk:RazorData>
+            <tk:NormalListData OperatorWidth="100"/>
+          </tk:RazorData>
+        </tk:Item>
+      </tk:SingleDialogRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

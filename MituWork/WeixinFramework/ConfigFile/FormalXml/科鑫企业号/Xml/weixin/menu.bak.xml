@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\schema\v5\WeixinMenu.xsd">
+  <tk:Menu>
+    <tk:Button>
+      <tk:Caption>
+        <tk:Content>办税指南</tk:Content>
+      </tk:Caption>
+      <tk:ClickButton>
+        <tk:Caption>
+          <tk:Content>通知公告</tk:Content>
+        </tk:Caption>
+        <!--<tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/TongZhi</tk:Url>-->
+        <tk:Key>TongZhi</tk:Key>
+      </tk:ClickButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>办税流程</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/BanShui</tk:Url>
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>纳税辅导</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/NaShui</tk:Url>
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>法规文件</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/FaGuiIndex</tk:Url>
+        <!--<tk:Url Base="cxcs">userhtml/fagui.html</tk:Url>-->
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>个人相关查询</tk:Content>
+        </tk:Caption>
+        <tk:AuthUrl State="Personal" Base="wxtest"/>
+      </tk:ViewButton>
+    </tk:Button>
+    <tk:Button>
+      <tk:Caption>
+        <tk:Content>在线服务</tk:Content>
+      </tk:Caption>
+      <!--<tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>消息提醒</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">1.html</tk:Url>
+      </tk:ViewButton>-->
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>消息提醒</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">1.html</tk:Url>
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>业务咨询</tk:Content>
+        </tk:Caption>
+        <tk:AuthUrl State="Consult" Base="cxcs"/>
+        <!--<tk:Url Base="cxcs">2.html</tk:Url>-->
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>意见与投诉</tk:Content>
+        </tk:Caption>
+        <tk:AuthUrl State="Suggestion" Base="cxcs"/>
+        <!--<tk:Url Base="cxcs">3.html</tk:Url>-->
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>账户绑定</tk:Content>
+        </tk:Caption>
+        <tk:AuthUrl State="Binding" Base="cxcs"/>
+        <!--<tk:Url Base="cxcs">4.html</tk:Url>-->
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>个税计算器</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/GeShui</tk:Url>
+      </tk:ViewButton>
+    </tk:Button>
+    <tk:ViewButton>
+      <tk:Caption>
+        <tk:Content>联系我们</tk:Content>
+      </tk:Caption>
+      <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/Lianxi</tk:Url>
+    </tk:ViewButton>
+  </tk:Menu>
+</tk:Toolkit>

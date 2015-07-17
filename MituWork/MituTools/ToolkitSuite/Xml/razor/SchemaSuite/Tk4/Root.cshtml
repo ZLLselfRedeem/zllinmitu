@@ -1,0 +1,167 @@
+﻿@using System.Linq;
+@using Toolkit.Suite
+@using Toolkit.SchemaSuite;
+@using Toolkit.SchemaSuite.Schema;
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Xml;
+@{
+    
+    SchemaRazorData e = @Model as SchemaRazorData;
+    ElementNode node = e.Node as ElementNode;
+    SchemaSuiteData data = e.SuiteData;
+    ElementNode[] multipleNodes = (from eleNode in node.Elements where eleNode.IsMultiple && eleNode.IsChecked != false select eleNode).ToArray();
+    bool hasMultipleNodes = multipleNodes.Length > 0;
+}
+using System;
+@{
+    if (hasMultipleNodes)
+    {
+@:using System.Collections.Generic;    
+    }
+    foreach (var item in e.Namespaces)
+    {
+@:using @item;        
+    }
+}
+using YJC.Toolkit.Xml;
+
+namespace @data.Namespace
+{
+    @data.ClassScope.ToString().ToLower() class @node.TypeName : ToolkitConfigXml
+    {
+@{
+    if (hasMultipleNodes)
+    {
+        foreach (var eleNode in multipleNodes)
+        {
+            string type = SchemaSuiteUtil.GetType(eleNode, e.RegTypes);
+        @:private List<@type> @("f" + eleNode.PascalName + "List");
+        }
+@:
+        @:public @(node.TypeName + "()")
+        @:{
+            foreach (var eleNode in multipleNodes)
+            {
+                string type = SchemaSuiteUtil.GetType(eleNode, e.RegTypes);
+            @:@("f" + eleNode.PascalName)List = new List<@type>();
+            }
+        @:}
+    }
+    foreach (AttributeNode attrNode in node.Attributes) 
+    {
+        if (attrNode.IsChecked == false)
+            continue;
+        string attrString = string.Empty;
+        if (!string.IsNullOrEmpty(attrNode.DefaultValue))
+        {
+            if (SchemaSuiteUtil.IsNumericType(attrNode.TypeCode))
+            {
+                attrString = string.Format("DefaultValue = {0}", attrNode.DefaultValue);
+            }
+            else
+            {
+                attrString = string.Format("DefaultValue = \"{0}\"", attrNode.DefaultValue);
+            }
+        }
+        if (attrNode.IsCamel)
+        {
+            if (string.IsNullOrEmpty(attrString))
+                attrString = "NamingRule = NamingRule.Camel";
+            else
+                attrString += ", NamingRule = NamingRule.Camel";
+        }
+        if (!string.IsNullOrEmpty(attrString))
+        {
+            attrString = "(" + attrString + ")";
+        }
+@:
+        @:[XmlAttribute@(attrString)]
+        string type = SchemaSuiteUtil.GetType(attrNode, e.RegTypes);
+        @:@data.MethodScope.ToString().ToLower() @type @attrNode.PascalName { get; private set; }
+    }
+    if (node.HasContent) 
+    {
+@:
+        @:[XmlContent]
+        @:@data.MethodScope.ToString().ToLower() string Content { get; private set; }
+    }
+    foreach (ElementNode elemNode in node.Elements)
+    {
+        if (elemNode.IsChecked == false)
+            continue;
+        string attrName;
+        string type = SchemaSuiteUtil.GetType(elemNode, e.RegTypes);
+        if (elemNode.SimpleType)
+        {
+            attrName = "XmlElement";
+        }
+        else 
+        {
+            attrName = "ObjectXmlElement";
+        }
+        string propString;
+        string attrString = string.Empty;
+        string propName = elemNode.PascalName;
+        if (elemNode.IsMultiple)
+        {
+            attrString = string.Format("IsMultiple = true, ObjectType = typeof({0}), LocalName = \"{1}\"",
+                type, elemNode.PascalName);
+            propString = string.Empty;
+            type = string.Format("List<{0}>", type);
+            propName = propName + "List";
+        }
+        else
+        {
+            propString = "{ get; private set; }";
+        }
+        if (elemNode.NamespaceType != NamespaceType.None)
+        {
+            string nsData = string.Format("NamespaceType.{0}", elemNode.NamespaceType);
+            if (elemNode.NamespaceType == NamespaceType.Namespace)
+                nsData = string.Format("{0}, NamespaceUri = \"{1}\"", nsData, elemNode.NamespaceUri);
+            if (string.IsNullOrEmpty(attrString))
+                attrString = nsData;
+            else
+                attrString = nsData + ", " + attrString;
+        }
+        if (elemNode.SimpleType && !string.IsNullOrEmpty(elemNode.DefaultValue))
+        {
+            string defaultValue;
+            if (SchemaSuiteUtil.IsNumericType(elemNode.TypeCode))
+                defaultValue = string.Format("DefaultValue = {0}", elemNode.DefaultValue);
+            else
+                defaultValue = string.Format("DefaultValue = \"{0}\"", elemNode.DefaultValue);
+            if (string.IsNullOrEmpty(attrString))
+                attrString = defaultValue;
+            else
+                attrString += ", " + defaultValue;
+        }
+        if (elemNode.IsCamel)
+        {
+            if (string.IsNullOrEmpty(attrString))
+                attrString = "NamingRule = NamingRule.Camel";
+            else
+                attrString += ", NamingRule = NamingRule.Camel";
+        }
+        if (!string.IsNullOrEmpty(attrString))
+        {
+            attrString = "(" + attrString + ")";
+        }
+@:
+        @:[@(attrName + attrString)]
+        @:@data.MethodScope.ToString().ToLower() @type @propName @propString
+        if (elemNode.IsMultiple)
+        {
+        @:{
+            @:get
+            @:{
+                @:return @("f" + elemNode.PascalName)List;
+            @:}
+        @:}     
+        }
+    }
+}
+    }
+}

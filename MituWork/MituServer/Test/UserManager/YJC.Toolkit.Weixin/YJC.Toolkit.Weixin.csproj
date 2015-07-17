@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B76E1752-F2DA-44F1-BCFC-8F641323546B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YJC.Toolkit.Weixin</RootNamespace>
+    <AssemblyName>YJC.Toolkit.Weixin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_lib\tk5\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\Toolkit.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>YJC.Toolkit2.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YJC.Toolkit.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core.Extension, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Core.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.MetaData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.MetaData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessToken.cs" />
+    <Compile Include="BaseAccessToken.cs" />
+    <Compile Include="Card\CardDateType.cs" />
+    <Compile Include="Card\CardEvent.cs" />
+    <Compile Include="Card\CardStatus.cs" />
+    <Compile Include="Card\CardType.cs" />
+    <Compile Include="Card\CardUrlType.cs" />
+    <Compile Include="Card\CodeType.cs" />
+    <Compile Include="Card\ListType.cs" />
+    <Compile Include="Card\WeApiTicket.cs" />
+    <Compile Include="Card\WeBatchAddCard.cs" />
+    <Compile Include="Card\WeBatchAddCardResponse.cs" />
+    <Compile Include="Card\WeBatchCardInfo.cs" />
+    <Compile Include="Card\WeBoardingPass.cs" />
+    <Compile Include="Card\WeBoardingPassCheckin.cs" />
+    <Compile Include="Card\WeCard.cs" />
+    <Compile Include="Card\WeCardBaseInfo.cs" />
+    <Compile Include="Card\WeCardBatch.cs" />
+    <Compile Include="Card\WeCardColor.cs" />
+    <Compile Include="Card\WeCardConst.cs" />
+    <Compile Include="Card\WeCardDelEvent.cs" />
+    <Compile Include="Card\WeCardExt.cs" />
+    <Compile Include="Card\WeCardGetEvent.cs" />
+    <Compile Include="Card\WeCardId.cs" />
+    <Compile Include="Card\WeCardInfo.cs" />
+    <Compile Include="Card\WeCardList.cs" />
+    <Compile Include="Card\WeCardLogoUrl.cs" />
+    <Compile Include="Card\WeCardModifyStock.cs" />
+    <Compile Include="Card\WeCardPassEvent.cs" />
+    <Compile Include="Card\WeCardTypeConverter.cs" />
+    <Compile Include="Card\WeCardUpdate.cs" />
+    <Compile Include="Card\WeCardUploadImg.cs" />
+    <Compile Include="Card\WeCardvalidityTime.cs" />
+    <Compile Include="Card\WeCash.cs" />
+    <Compile Include="Card\WeChooseCard.cs" />
+    <Compile Include="Card\WeChooseCardInfo.cs" />
+    <Compile Include="Card\WeChoosecardResponse.cs" />
+    <Compile Include="Card\WeCode.cs" />
+    <Compile Include="Card\WeCodeConsume.cs" />
+    <Compile Include="Card\WeCodeConsumeResponse.cs" />
+    <Compile Include="Card\WeCodeDecrypt.cs" />
+    <Compile Include="Card\WeCodeResponse.cs" />
+    <Compile Include="Card\WeCodeUnavailable.cs" />
+    <Compile Include="Card\WeCodeUpdate.cs" />
+    <Compile Include="Card\WeColors.cs" />
+    <Compile Include="Card\WeDateInfo.cs" />
+    <Compile Include="Card\WeDiscountCard.cs" />
+    <Compile Include="Card\WeGeneralCoupon.cs" />
+    <Compile Include="Card\WeGift.cs" />
+    <Compile Include="Card\WeGroupon.cs" />
+    <Compile Include="Card\WeLocationBatch.cs" />
+    <Compile Include="Card\WeLocationBatchAdd.cs" />
+    <Compile Include="Card\WeLocationBatchGet.cs" />
+    <Compile Include="Card\WeLocationId.cs" />
+    <Compile Include="Card\WeLocationInfo.cs" />
+    <Compile Include="Card\WeLocationInit.cs" />
+    <Compile Include="Card\WeLogoUrl.cs" />
+    <Compile Include="Card\WeLuckyMoney.cs" />
+    <Compile Include="Card\WeLuckyMoneyUpdate.cs" />
+    <Compile Include="Card\WeMeetingTicket.cs" />
+    <Compile Include="Card\WeMeetingTicketUpdate.cs" />
+    <Compile Include="Card\WeMemberCard.cs" />
+    <Compile Include="Card\WeMembercardActivate.cs" />
+    <Compile Include="Card\WeMembercardUpdate.cs" />
+    <Compile Include="Card\WeMembercardUpdateResponse.cs" />
+    <Compile Include="Card\WeMovieTicket.cs" />
+    <Compile Include="Card\WeMovieTicketUpdate.cs" />
+    <Compile Include="Card\WeQrcodeCreate.cs" />
+    <Compile Include="Card\WeQrcodeInfo.cs" />
+    <Compile Include="Card\WeQrcodeTicket.cs" />
+    <Compile Include="Card\WeScenicTicket.cs" />
+    <Compile Include="Card\WeTestWhiteList.cs" />
+    <Compile Include="Card\_POI\AvailableState.cs" />
+    <Compile Include="Card\_POI\AvailableStateConverter.cs" />
+    <Compile Include="Card\_POI\OffsetType.cs" />
+    <Compile Include="Card\_POI\OffsetTypeConverter.cs" />
+    <Compile Include="Card\_POI\PoiResult.cs" />
+    <Compile Include="Card\_POI\UpdateStatus.cs" />
+    <Compile Include="Card\_POI\UpdateStatusConverter.cs" />
+    <Compile Include="Card\_POI\WeBusinessInfo.cs" />
+    <Compile Include="Card\_POI\WePhotoUrl.cs" />
+    <Compile Include="Card\_POI\WePoi.cs" />
+    <Compile Include="Card\_POI\WePoiBaseInfo.cs" />
+    <Compile Include="Card\_POI\WePoiCheckEvent.cs" />
+    <Compile Include="Card\_POI\WePoiId.cs" />
+    <Compile Include="Card\_POI\WePoiInfoList.cs" />
+    <Compile Include="Card\_POI\WePoiQuery.cs" />
+    <Compile Include="Card\_POI\WePoiUtil.cs" />
+    <Compile Include="CorpAccessToken.cs" />
+    <Compile Include="CorpAccessTokenList.cs" />
+    <Compile Include="Corporation\CorpAppUpdateInfo.cs" />
+    <Compile Include="Corporation\CorpAppSimpleInfo.cs" />
+    <Compile Include="Corporation\CorpApp.cs" />
+    <Compile Include="Corporation\CorpAppList.cs" />
+    <Compile Include="Corporation\CorpAuthToken.cs" />
+    <Compile Include="Corporation\CorpDetailUserList.cs" />
+    <Compile Include="Corporation\CorpTagMembers.cs" />
+    <Compile Include="Corporation\CorpUserIdList.cs" />
+    <Compile Include="Corporation\InviteType.cs" />
+    <Compile Include="Corporation\WeixinCorpCodeTable.cs" />
+    <Compile Include="Corporation\CorpPostTagUser.cs" />
+    <Compile Include="Corporation\CorpSex.cs" />
+    <Compile Include="Corporation\CorpSimpleUser.cs" />
+    <Compile Include="Corporation\CorpTagList.cs" />
+    <Compile Include="Corporation\CorpTagUserResult.cs" />
+    <Compile Include="Corporation\CorpUserList.cs" />
+    <Compile Include="Corporation\ExtAttribute.cs" />
+    <Compile Include="Corporation\UserStatus.cs" />
+    <Compile Include="Corporation\CorpInviteRequest.cs" />
+    <Compile Include="Corporation\CorpInviteResult.cs" />
+    <Compile Include="Cube\CountIntervalLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\DataMessage.cs" />
+    <Compile Include="Cube\SceneType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\UserSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeArticleDetails.cs" />
+    <Compile Include="Cube\WeArticleSummary.cs" />
+    <Compile Include="Cube\WeArticleTotal.cs" />
+    <Compile Include="Cube\WeCubeUtility.cs" />
+    <Compile Include="Cube\WeCumulate.cs" />
+    <Compile Include="Cube\WeDataArticleSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataArticleTotal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataConst.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataInterfaceSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataInterfaceSummaryHour.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataTimespan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUpStreamMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUpStreamMsgDist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUpStreamMsgHour.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUserCumulate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUserRead.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUserReadHour.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUserShare.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUserShareHour.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeDataUserSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cube\WeInterfaceSummary.cs" />
+    <Compile Include="Cube\WeInterfaceSummaryHour.cs" />
+    <Compile Include="Cube\WeNewsBase.cs" />
+    <Compile Include="Cube\WeSummaryUser.cs" />
+    <Compile Include="Cube\WeUpStreamMsg.cs" />
+    <Compile Include="Cube\WeUpStreamMsgDist.cs" />
+    <Compile Include="Cube\WeUpStreamMsgHour.cs" />
+    <Compile Include="Cube\WeUserRead.cs" />
+    <Compile Include="Cube\WeUserReadHour.cs" />
+    <Compile Include="Cube\WeUserShare.cs" />
+    <Compile Include="Cube\WeUserShareHour.cs" />
+    <Compile Include="Material\WeBaseMaterial.cs" />
+    <Compile Include="Material\WeImageMaterial.cs" />
+    <Compile Include="Material\WeMaterialConst.cs" />
+    <Compile Include="Material\WeMaterialCount.cs" />
+    <Compile Include="Material\WeMaterialItem.cs" />
+    <Compile Include="Material\WeMaterialPageData.cs" />
+    <Compile Include="Material\WeMaterialQueryCondition.cs" />
+    <Compile Include="Material\WeMediaId.cs" />
+    <Compile Include="Material\WeNewsMaterial.cs" />
+    <Compile Include="Material\WeNewsUpdate.cs" />
+    <Compile Include="Material\WeOtherMaterial.cs" />
+    <Compile Include="Material\WeVideoDescription.cs" />
+    <Compile Include="Material\WeVideoMaterial.cs" />
+    <Compile Include="Material\WeVoiceMaterial.cs" />
+    <Compile Include="Menu\MenuMpNewsArticle.cs" />
+    <Compile Include="Menu\WeSelfMenu.cs" />
+    <Compile Include="Menu\WeSelfButton.cs" />
+    <Compile Include="Message\_AutoReply\KeywordMatch.cs" />
+    <Compile Include="Message\_AutoReply\ReplyType.cs" />
+    <Compile Include="Message\_AutoReply\SimpleReplyInfo.cs" />
+    <Compile Include="Message\_AutoReply\NewsReplyInfo.cs" />
+    <Compile Include="Message\_AutoReply\KeywordInfo.cs" />
+    <Compile Include="Message\_AutoReply\KeywordRuleInfo.cs" />
+    <Compile Include="Message\_AutoReply\WeNewsInfo.cs" />
+    <Compile Include="Message\_AutoReply\AutoReplyRule.cs" />
+    <Compile Include="Message\_Reply\ServiceSendMessage.cs" />
+    <Compile Include="Service\InternalAccount.cs" />
+    <Compile Include="Service\ServiceAccount.cs" />
+    <Compile Include="Service\ServiceAccountList.cs" />
+    <Compile Include="Pay\BasePayData.cs" />
+    <Compile Include="Pay\BasePayResponse.cs" />
+    <Compile Include="Pay\PayErrorCode.cs" />
+    <Compile Include="Pay\WeMicroPayRequest.cs" />
+    <Compile Include="Pay\WeMicroPayResponse.cs" />
+    <Compile Include="Pay\WePayUtil.cs" />
+    <Compile Include="Pay\WeReverseRequest.cs" />
+    <Compile Include="Pay\WeReverseResponse.cs" />
+    <Compile Include="Semantic\AppServerSort.cs" />
+    <Compile Include="Semantic\CarPosition.cs" />
+    <Compile Include="Semantic\CouponSort.cs" />
+    <Compile Include="Semantic\CouponType.cs" />
+    <Compile Include="Semantic\FlightSort.cs" />
+    <Compile Include="Semantic\LocType.cs" />
+    <Compile Include="Semantic\MapSort.cs" />
+    <Compile Include="Semantic\MovieSort.cs" />
+    <Compile Include="Semantic\MusicSort.cs" />
+    <Compile Include="Semantic\NovelSort.cs" />
+    <Compile Include="Semantic\RemindType.cs" />
+    <Compile Include="Semantic\RestaurantSort.cs" />
+    <Compile Include="Semantic\TimeType.cs" />
+    <Compile Include="Semantic\TravelCategory.cs" />
+    <Compile Include="Semantic\VideoSort.cs" />
+    <Compile Include="Semantic\WeAppServerDetail.cs" />
+    <Compile Include="Semantic\WeBaikeDetail.cs" />
+    <Compile Include="Semantic\WeCarInstructionDetail.cs" />
+    <Compile Include="Semantic\WeCookbookDetail.cs" />
+    <Compile Include="Semantic\WeCouponDetail.cs" />
+    <Compile Include="Semantic\WeDateTime.cs" />
+    <Compile Include="Semantic\WeFlightDetail.cs" />
+    <Compile Include="Semantic\WeHotelDetail.cs" />
+    <Compile Include="Semantic\WeInstructionDetail.cs" />
+    <Compile Include="Semantic\WeLocation.cs" />
+    <Compile Include="Semantic\WeMapDetail.cs" />
+    <Compile Include="Semantic\WeMovieDetail.cs" />
+    <Compile Include="Semantic\WeMusicDetail.cs" />
+    <Compile Include="Semantic\WeNearbyDetail.cs" />
+    <Compile Include="Semantic\WeNewsDetail.cs" />
+    <Compile Include="Semantic\WeNovelDetail.cs" />
+    <Compile Include="Semantic\WeNumber.cs" />
+    <Compile Include="Semantic\WeRemindDetail.cs" />
+    <Compile Include="Semantic\WeRestaurantDetail.cs" />
+    <Compile Include="Semantic\WeSearchDetail.cs" />
+    <Compile Include="Semantic\WeSemanticBase.cs" />
+    <Compile Include="Semantic\WeSemanticRequest.cs" />
+    <Compile Include="Semantic\WeSemanticsUtility.cs" />
+    <Compile Include="Semantic\WeSematicTemplate.cs" />
+    <Compile Include="Semantic\WeServer.cs" />
+    <Compile Include="Semantic\WeStock.cs" />
+    <Compile Include="Semantic\WeStockDetail.cs" />
+    <Compile Include="Semantic\WeStockResult.cs" />
+    <Compile Include="Semantic\WeStockSemantic.cs" />
+    <Compile Include="Semantic\WeTelephoneDetail.cs" />
+    <Compile Include="Semantic\WeTrainDetail.cs" />
+    <Compile Include="Semantic\WeTravelDetail.cs" />
+    <Compile Include="Semantic\WeTvDetail.cs" />
+    <Compile Include="Semantic\WeTvInstructionDetail.cs" />
+    <Compile Include="Semantic\WeVideoDetail.cs" />
+    <Compile Include="Semantic\WeWeatherDetail.cs" />
+    <Compile Include="Semantic\WeWebsiteDetail.cs" />
+    <Compile Include="Service\ServiceInfo.cs" />
+    <Compile Include="Service\ServiceInfoList.cs" />
+    <Compile Include="Service\ServiceStatus.cs" />
+    <Compile Include="Service\_Session\RecordInfo.cs" />
+    <Compile Include="Service\_Session\RecordQuery.cs" />
+    <Compile Include="Service\_Session\ServiceSession.cs" />
+    <Compile Include="Service\_Session\ServiceSessionList.cs" />
+    <Compile Include="Service\_Session\SessionConnection.cs" />
+    <Compile Include="Service\_Session\SessionEvent.cs" />
+    <Compile Include="Service\_Session\SessionRecord.cs" />
+    <Compile Include="Service\_Session\SessionStatus.cs" />
+    <Compile Include="Service\_Session\SessionSwitch.cs" />
+    <Compile Include="Service\_Session\WaitSessionList.cs" />
+    <Compile Include="Service\_Session\WeSessionConst.cs" />
+    <Compile Include="Shop\_Bill\BillStatusConverter.cs" />
+    <Compile Include="Shop\_Bill\NullDateTimeConverter.cs" />
+    <Compile Include="Shop\_Bill\WeBillOrder.cs" />
+    <Compile Include="Shop\_Bill\WeDeliveryCompany.cs" />
+    <Compile Include="WeixinCryptoException.cs" />
+    <Compile Include="JsAccessToken.cs" />
+    <Compile Include="Message\MassMsgUtil.cs" />
+    <Compile Include="Message\ServiceQueryCondition.cs" />
+    <Compile Include="Message\_MassSend\DelMassMessage.cs" />
+    <Compile Include="Message\_MassSend\GroupTextMassMessage.cs" />
+    <Compile Include="Message\_MassSend\MpNewsMassMessage.cs" />
+    <Compile Include="Message\_MassSend\UserTextMassMessage.cs" />
+    <Compile Include="Message\_MassSend\GroupMassMessage.cs" />
+    <Compile Include="Message\_MassSend\GroupVideoMassMessage.cs" />
+    <Compile Include="Message\_MassSend\UserMassMessage.cs" />
+    <Compile Include="Message\_MassSend\UserVideoMassMessage.cs" />
+    <Compile Include="Message\_MassSend\GroupVoiceMassMessage.cs" />
+    <Compile Include="Message\_MassSend\UserVoiceMassMessage.cs" />
+    <Compile Include="Message\_MassSend\UserMpNewsMassMessage.cs" />
+    <Compile Include="Message\_MassSend\GroupMpNewsMassMessage.cs" />
+    <Compile Include="Message\_MassSend\UserImageMassMessage.cs" />
+    <Compile Include="Message\_MassSend\GroupImageMassMessage.cs" />
+    <Compile Include="Message\_MassSend\BaseMassMessage.cs" />
+    <Compile Include="Message\_Template\ColorTypeConverter.cs" />
+    <Compile Include="Message\EncodeReceiveMessage.cs" />
+    <Compile Include="Message\_Template\TemplateKeyData.cs" />
+    <Compile Include="Message\_Template\TemplateMessage.cs" />
+    <Compile Include="Message\_MassSend\MassMessageResult.cs" />
+    <Compile Include="Message\_Corp\BaseCorpMessage.cs" />
+    <Compile Include="Message\BaseJsonMessage.cs" />
+    <Compile Include="Message\_Corp\CorpMessageResult.cs" />
+    <Compile Include="Message\_Corp\FileCorpMessage.cs" />
+    <Compile Include="Message\_Corp\ImageCorpMessage.cs" />
+    <Compile Include="Message\_Corp\MpNewsArticle.cs" />
+    <Compile Include="Message\_Corp\MpNewsConfigItem.cs" />
+    <Compile Include="Message\_Corp\MpNewsCorpMessage.cs" />
+    <Compile Include="Message\_Corp\NewsCorpMessage.cs" />
+    <Compile Include="Message\_Corp\TextCorpMessage.cs" />
+    <Compile Include="Message\_Corp\VideoCorpMessage.cs" />
+    <Compile Include="Message\_Corp\VoiceCorpMessage.cs" />
+    <Compile Include="Message\_Template\TemplateMessageResult.cs" />
+    <Compile Include="Pay\WeCloseOrderRequest.cs" />
+    <Compile Include="Pay\WeDownloadBillRequest.cs" />
+    <Compile Include="Pay\WePayDefaultResponse.cs" />
+    <Compile Include="Pay\WeJsApiRequest.cs" />
+    <Compile Include="Pay\WeNativeParamRequest.cs" />
+    <Compile Include="Pay\WeInputNativeRequest.cs" />
+    <Compile Include="Pay\WeNativeResponse.cs" />
+    <Compile Include="Pay\WeNoticeBack.cs" />
+    <Compile Include="Pay\OrderType.cs" />
+    <Compile Include="Pay\WeOrderQueryResponse.cs" />
+    <Compile Include="Pay\WePayConst.cs" />
+    <Compile Include="Pay\BasePayRequest.cs" />
+    <Compile Include="Pay\BillType.cs" />
+    <Compile Include="Pay\WePaymentRequest.cs" />
+    <Compile Include="Pay\WePaymentResponse.cs" />
+    <Compile Include="Pay\PayResult.cs" />
+    <Compile Include="Pay\TradeType.cs" />
+    <Compile Include="Pay\RefundChannel.cs" />
+    <Compile Include="Pay\WeRefundQueryRequest.cs" />
+    <Compile Include="Pay\WeRefundQueryResponse.cs" />
+    <Compile Include="Pay\WeRefundRequest.cs" />
+    <Compile Include="Pay\WeRefundResponse.cs" />
+    <Compile Include="Pay\RefundStatus.cs" />
+    <Compile Include="Pay\WeReportRequest.cs" />
+    <Compile Include="Pay\WeShortUrlRequest.cs" />
+    <Compile Include="Pay\WeShortUrlResponse.cs" />
+    <Compile Include="Pay\TradeState.cs" />
+    <Compile Include="Shop\WeShopConst.cs" />
+    <Compile Include="Shop\_Bill\WeBill.cs" />
+    <Compile Include="Shop\_Bill\WeBillDelivery.cs" />
+    <Compile Include="Shop\_Bill\WeBillId.cs" />
+    <Compile Include="Shop\_Bill\WeBillList.cs" />
+    <Compile Include="Shop\_Bill\WeBillStatus.cs" />
+    <Compile Include="Shop\_Bill\BillStatus.cs" />
+    <Compile Include="Shop\_Delivery\AssumeType.cs" />
+    <Compile Include="Shop\_Delivery\CustomFeeMethod.cs" />
+    <Compile Include="Shop\_Delivery\DeliveryFee.cs" />
+    <Compile Include="Shop\_Delivery\ExpressTemplate.cs" />
+    <Compile Include="Shop\_Delivery\ExpressType.cs" />
+    <Compile Include="Shop\_Delivery\NormalFeeMethod.cs" />
+    <Compile Include="Shop\_Delivery\ValuationType.cs" />
+    <Compile Include="Shop\_Delivery\WeDeliveryTemplate.cs" />
+    <Compile Include="Shop\_Delivery\WeTemplateId.cs" />
+    <Compile Include="Shop\_Delivery\WeTemplateInfo.cs" />
+    <Compile Include="Shop\_Delivery\WeTemplateInfoList.cs" />
+    <Compile Include="Shop\_Group\GroupAction.cs" />
+    <Compile Include="Shop\_Group\WeMerchantGroup.cs" />
+    <Compile Include="Shop\_Group\WeMerchantGroupFetchData.cs" />
+    <Compile Include="Shop\_Group\WeGroupId.cs" />
+    <Compile Include="Shop\_Group\WeMerchantGroupList.cs" />
+    <Compile Include="Shop\_Group\WeGroupProductAction.cs" />
+    <Compile Include="Shop\_Group\WeGroupProductActionList.cs" />
+    <Compile Include="Shop\_Product\Attrex.cs" />
+    <Compile Include="Shop\_Product\DeliveryInfo.cs" />
+    <Compile Include="Shop\_Product\DeliveryType.cs" />
+    <Compile Include="Shop\_Product\Express.cs" />
+    <Compile Include="Shop\_Product\Location.cs" />
+    <Compile Include="Shop\_Product\SkuInfo.cs" />
+    <Compile Include="Shop\_Product\SkuListElement.cs" />
+    <Compile Include="Shop\_Product\StatusTypeConverter.cs" />
+    <Compile Include="Shop\_Product\WeProduct.cs" />
+    <Compile Include="Shop\_Product\WeProductBase.cs" />
+    <Compile Include="Shop\_Product\WeProductDetail.cs" />
+    <Compile Include="Shop\_Product\WeProductId.cs" />
+    <Compile Include="Shop\_Product\WeProductList.cs" />
+    <Compile Include="Shop\_Product\WeProductModStatus.cs" />
+    <Compile Include="Shop\_Product\WeProductProperty.cs" />
+    <Compile Include="Shop\_Product\WeProductStatus.cs" />
+    <Compile Include="Shop\_Product\ProductStatus.cs" />
+    <Compile Include="Shop\_Shelf\GroupInfo.cs" />
+    <Compile Include="Shop\_Shelf\GroupInfo1.cs" />
+    <Compile Include="Shop\_Shelf\GroupInfo2.cs" />
+    <Compile Include="Shop\_Shelf\GroupInfo3.cs" />
+    <Compile Include="Shop\_Shelf\GroupInfo4.cs" />
+    <Compile Include="Shop\_Shelf\GroupInfo5.cs" />
+    <Compile Include="Shop\_Shelf\GroupInfos.cs" />
+    <Compile Include="Shop\_Shelf\ShelfControl1.cs" />
+    <Compile Include="Shop\_Shelf\ShelfControl2.cs" />
+    <Compile Include="Shop\_Shelf\ShelfControl3.cs" />
+    <Compile Include="Shop\_Shelf\ShelfControl4.cs" />
+    <Compile Include="Shop\_Shelf\ShelfControl5.cs" />
+    <Compile Include="Shop\_Shelf\AllShelfControlInfo.cs" />
+    <Compile Include="Shop\_Shelf\ShelfControlFilter.cs" />
+    <Compile Include="Shop\_Shelf\ShelfControlList.cs" />
+    <Compile Include="Shop\_Shelf\WeBaseShelfControl.cs" />
+    <Compile Include="Shop\_Shelf\WeShelf.cs" />
+    <Compile Include="Shop\_Shelf\WeShelfControlInfos.cs" />
+    <Compile Include="Shop\_Shelf\WeShelfGroupId.cs" />
+    <Compile Include="Shop\_Shelf\WeShelfId.cs" />
+    <Compile Include="Shop\_Shelf\WeShelfInfo.cs" />
+    <Compile Include="Shop\_Shelf\WeShelves.cs" />
+    <Compile Include="Shop\_Stock\SkuTypeConverter.cs" />
+    <Compile Include="Shop\_Stock\WeStock.cs" />
+    <Compile Include="Shop\_SubCategory\SubSkuTable.cs" />
+    <Compile Include="Shop\_SubCategory\WeCategoryId.cs" />
+    <Compile Include="Shop\_SubCategory\WeSkuList.cs" />
+    <Compile Include="Shop\_SubCategory\WeSubCategoryList.cs" />
+    <Compile Include="Shop\_SubCategory\WeCategoryProperty.cs" />
+    <Compile Include="Shop\_Upload\UploadImg.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAgent.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAgentSet.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAllowUserInfo.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAuth.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAuthCorp.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAuthInfosResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyConst.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyCorpTokenResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyCorpType.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyDepartment.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyGetAgentRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyGetAgentResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyLocationFlag.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPartyids.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPermanentCodeRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPermanentCodeResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPreAuthCodeRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPreAuthCodeResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartySetAgentRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartySuiteTokenRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartySuiteTokenResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyTagids.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyUser.cs" />
+    <Compile Include="ThirdParty\WeThitdPartyAgentSet.cs" />
+    <Compile Include="WeIpList.cs" />
+    <Compile Include="WeixinBoolTypeConverter.cs" />
+    <Compile Include="WeixinStringComparer.cs" />
+    <Compile Include="_App\CorpSecretConfig.cs" />
+    <Compile Include="_App\PaymentConfigItem.cs" />
+    <Compile Include="_App\WeixinServiceConfigItem.cs" />
+    <Compile Include="_App\WeixinTemplateMessageCodeTable.cs" />
+    <Compile Include="_App\CodeItem.cs" />
+    <Compile Include="_App\TemplateMessageConfig.cs" />
+    <Compile Include="_ShortUrl\ShortUrlInput.cs" />
+    <Compile Include="_ShortUrl\ShortUrlResult.cs" />
+    <Compile Include="User\WeUserRemark.cs" />
+    <Compile Include="WeCorpConst.cs" />
+    <Compile Include="Corporation\CorpDepartment.cs" />
+    <Compile Include="Corporation\CorpDepartmentCollection.cs" />
+    <Compile Include="Corporation\CorpTag.cs" />
+    <Compile Include="Corporation\CorpUser.cs" />
+    <Compile Include="Message\CorpEncodeReceiveMessage.cs" />
+    <Compile Include="Message\EncodeReplyMessage.cs" />
+    <Compile Include="Corporation\Cryptography.cs" />
+    <Compile Include="DownloadMediaData.cs" />
+    <Compile Include="MediaId.cs" />
+    <Compile Include="MediaType.cs" />
+    <Compile Include="Menu\AuthUrlConfigItem.cs" />
+    <Compile Include="Menu\CorpAuthUrlConfigItem.cs" />
+    <Compile Include="Menu\KeyButtonConfigItem.cs" />
+    <Compile Include="Menu\LocationSelectConfigItem.cs" />
+    <Compile Include="Menu\PicPhotoAlbumConfigItem.cs" />
+    <Compile Include="Menu\PicSysPhotoConfigItem.cs" />
+    <Compile Include="Menu\PicWeixinConfigItem.cs" />
+    <Compile Include="Menu\QueryMenuData.cs" />
+    <Compile Include="Menu\ScanCodePushConfigItem.cs" />
+    <Compile Include="Menu\ScanCodeWaitmsgConfigItem.cs" />
+    <Compile Include="Message\_Receive\PicItem.cs" />
+    <Compile Include="Message\_Receive\ScanCodeInfo.cs" />
+    <Compile Include="Message\_Receive\LocationInfo.cs" />
+    <Compile Include="Message\_Receive\PicsInfo.cs" />
+    <Compile Include="UrlConfigItem.cs" />
+    <Compile Include="Message\_Service\ImageServiceMessage.cs" />
+    <Compile Include="Message\_Service\MusicServiceMessage.cs" />
+    <Compile Include="Message\_Service\NewsServiceMessage.cs" />
+    <Compile Include="Message\_Service\TextServiceMessage.cs" />
+    <Compile Include="Message\_Service\VideoServiceMessage.cs" />
+    <Compile Include="Message\_Service\VoiceServiceMessage.cs" />
+    <Compile Include="Message\VideoServiceMediaType.cs" />
+    <Compile Include="Message\_Service\MusicServiceMediaType.cs" />
+    <Compile Include="_QRCode\QRAction.cs" />
+    <Compile Include="_QRCode\QRCodeInputData.cs" />
+    <Compile Include="_QRCode\QRCodeResult.cs" />
+    <Compile Include="_QRCode\QRScene.cs" />
+    <Compile Include="User\AuthToken.cs" />
+    <Compile Include="User\AuthType.cs" />
+    <Compile Include="User\SexType.cs" />
+    <Compile Include="User\WeGroup.cs" />
+    <Compile Include="User\WeGroupCollection.cs" />
+    <Compile Include="User\WeGroupData.cs" />
+    <Compile Include="User\WeGroupId.cs" />
+    <Compile Include="User\WeGroupUser.cs" />
+    <Compile Include="WeCorpUtil.cs" />
+    <Compile Include="WeixinException.cs" />
+    <Compile Include="_App\BaseItemConfig.cs" />
+    <Compile Include="_App\MessageMode.cs" />
+    <Compile Include="_App\WeixinCorpConfig.cs" />
+    <Compile Include="WeixinDateTimeConverter.cs" />
+    <Compile Include="_App\WeixinNormalConfig.cs" />
+    <Compile Include="_App\WeixinMode.cs" />
+    <Compile Include="_App\WeixinConfigItem.cs" />
+    <Compile Include="_App\WeixinMenuConfigItem.cs" />
+    <Compile Include="_App\WeixinXml.cs" />
+    <Compile Include="Menu\ButtonConfigItem.cs" />
+    <Compile Include="Menu\ButtonType.cs" />
+    <Compile Include="Menu\ClickButtonConfigItem.cs" />
+    <Compile Include="Menu\WeMenu.cs" />
+    <Compile Include="Menu\MenuConfigItem.cs" />
+    <Compile Include="Menu\ViewButtonConfigItem.cs" />
+    <Compile Include="Menu\WeixinMenuXml.cs" />
+    <Compile Include="Message\_Receive\EventType.cs" />
+    <Compile Include="Message\Article.cs" />
+    <Compile Include="Message\BaseMessage.cs" />
+    <Compile Include="Message\_Reply\BaseSendMessage.cs" />
+    <Compile Include="Message\_Service\BaseServiceMessage.cs" />
+    <Compile Include="WeixinResult.cs" />
+    <Compile Include="Message\_Reply\ImageSendMessage.cs" />
+    <Compile Include="Message\_Reply\NewsSendMessage.cs" />
+    <Compile Include="Message\_Reply\MusicSendMessage.cs" />
+    <Compile Include="Message\MessageType.cs" />
+    <Compile Include="Message\_Reply\MusicMediaType.cs" />
+    <Compile Include="Message\_Receive\ReceiveMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Message\_Reply\TextSendMessage.cs" />
+    <Compile Include="Message\_Reply\VideoMediaType.cs" />
+    <Compile Include="Message\_Reply\VideoSendMessage.cs" />
+    <Compile Include="Message\_Reply\VoiceSendMessage.cs" />
+    <Compile Include="_App\WeixinInitialization.cs" />
+    <Compile Include="Menu\MenuButton.cs" />
+    <Compile Include="User\WeFanContainter.cs" />
+    <Compile Include="WeConst.cs" />
+    <Compile Include="_App\WeixinSettings.cs" />
+    <Compile Include="User\WeUser.cs" />
+    <Compile Include="WeUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="YJC.Toolkit2.pfx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\schema\v5\WeixinMenu.xsd">
+  <tk:Menu>
+    <tk:Button>
+      <tk:Caption>
+        <tk:Content>菜单1</tk:Content>
+      </tk:Caption>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>法规文件</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/FaGuiIndex</tk:Url>
+        <!--<tk:Url Base="cxcs">userhtml/fagui.html</tk:Url>-->
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>身份识别</tk:Content>
+        </tk:Caption>
+        <tk:CorpAuthUrl State="Test" Base="wxcorptest"/>
+      </tk:ViewButton>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>个税计算器</tk:Content>
+        </tk:Caption>
+        <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/GeShui</tk:Url>
+      </tk:ViewButton>
+    </tk:Button>
+    <tk:Button>
+      <tk:Caption>
+        <tk:Content>新功能</tk:Content>
+      </tk:Caption>
+      <tk:PicSysPhoto>
+        <tk:Caption>
+          <tk:Content>系统拍照</tk:Content>
+        </tk:Caption>
+        <tk:Key>pic_sysphoto</tk:Key>
+      </tk:PicSysPhoto>
+      <tk:PicPhotoAlbum>
+        <tk:Caption>
+          <tk:Content>拍照或相册</tk:Content>
+        </tk:Caption>
+        <tk:Key>pic_photo_or_album</tk:Key>
+      </tk:PicPhotoAlbum>
+      <tk:PicWeixin>
+        <tk:Caption>
+          <tk:Content>微信相册</tk:Content>
+        </tk:Caption>
+        <tk:Key>pic_weixin</tk:Key>
+      </tk:PicWeixin>
+      <tk:LocationSelect>
+        <tk:Caption>
+          <tk:Content>地理位置</tk:Content>
+        </tk:Caption>
+        <tk:Key>location_select</tk:Key>
+      </tk:LocationSelect>
+    </tk:Button>
+    <tk:Button>
+      <tk:Caption>
+        <tk:Content>扫码</tk:Content>
+      </tk:Caption>
+      <tk:ScanCodePush>
+        <tk:Caption>
+          <tk:Content>扫码推事件</tk:Content>
+        </tk:Caption>
+        <tk:Key>scancode_push</tk:Key>
+      </tk:ScanCodePush>
+      <tk:ScanCodeWaitmsg>
+        <tk:Caption>
+          <tk:Content>扫码等事件</tk:Content>
+        </tk:Caption>
+        <tk:Key>scancode_waitmsg</tk:Key>
+      </tk:ScanCodeWaitmsg>
+    </tk:Button>
+  </tk:Menu>
+</tk:Toolkit>

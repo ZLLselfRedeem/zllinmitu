@@ -1,0 +1,3 @@
+D:\ZhouLL\branches\Console\YJC.Toolkit.Weixin.MenuCreator2\obj\Debug\YJC.Toolkit.Weixin.MenuCreator.csprojResolveAssemblyReference.cache
+D:\ZhouLL\branches\Console\YJC.Toolkit.Weixin.MenuCreator2\obj\Debug\YJC.Toolkit.Weixin.MenuCreator.DataString.resources
+D:\ZhouLL\branches\Console\YJC.Toolkit.Weixin.MenuCreator2\obj\Debug\YJC.Toolkit.Weixin.MenuCreator.csproj.GenerateResource.Cache

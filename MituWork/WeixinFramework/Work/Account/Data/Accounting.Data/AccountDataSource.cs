@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using Mitu.Accounting;
+using YJC.Toolkit.Data;
+using YJC.Toolkit.MetaData;
+using YJC.Toolkit.Sys;
+
+namespace YJC.Toolkit.Accounting
+{
+    [Source]
+    internal class AccountDataSource : BaseDbSource
+    {
+        public override OutputData DoAction(IInputData input)
+        {
+            PageStyle style = input.Style.Style;
+            if (input.IsPost)
+            {
+                BasePostObject obj = input.PostObject.Convert<BasePostObject>();
+
+                using (ReportDataResolver resolver = new ReportDataResolver(this))
+                {
+                    UpdateKind kind = style == PageStyle.Insert ? UpdateKind.Insert : UpdateKind.Update;
+                    DataRow row = resolver.UpdateRow(obj, kind);
+                    return OutputData.CreateToolkitObject(new KeyData("Company", row["Company"].ToString()));
+                }
+            }
+            else
+            {
+                ReportObjectData obj = null;
+                switch (style)
+                {
+                    case PageStyle.Insert:
+                        obj = new ReportObjectData(input.QueryString["Company"], input.QueryString["ReportName"]);
+                        break;
+                    case PageStyle.Update:
+                        using (ReportDataResolver resolver = new ReportDataResolver(this))
+                        {
+                            obj = resolver.ReadRow(input);
+                        }
+                        break;
+                }
+                input.CallerInfo.AddInfo(obj.CallerInfo);
+
+                return OutputData.CreateObject(obj);
+            }
+        }
+    }
+}

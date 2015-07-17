@@ -1,0 +1,4 @@
+D:\ZhouLL\trunk\Study\ExternalAssemblyReflector\ExternalAssemblyReflector\bin\Debug\ExternalAssemblyReflector.exe
+D:\ZhouLL\trunk\Study\ExternalAssemblyReflector\ExternalAssemblyReflector\bin\Debug\ExternalAssemblyReflector.pdb
+D:\ZhouLL\trunk\Study\ExternalAssemblyReflector\ExternalAssemblyReflector\obj\Debug\ExternalAssemblyReflector.exe
+D:\ZhouLL\trunk\Study\ExternalAssemblyReflector\ExternalAssemblyReflector\obj\Debug\ExternalAssemblyReflector.pdb

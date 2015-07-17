@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:include schemaLocation="../bin/CommonElement.xsd"/>
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element name="CodeData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="tk:Row" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attributeGroup ref="tk:RegItem"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required" fixed="5.0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Row">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Value" type="xs:token"/>
+        <xs:element name="Name" type="tk:MultiLanguageType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

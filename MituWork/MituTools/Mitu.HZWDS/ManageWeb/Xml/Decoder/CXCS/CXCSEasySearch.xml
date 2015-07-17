@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\EasySearch.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Tk5EasySearch DataXml="CXCS/Document.xml" RegName="TaxDoc" Author="YJC" CreateDate="2014-10-30" Description="财税文档" OrderBy="ORDER BY DOC_ORGIN_DATE DESC" NameExpression="{Name}{Number` 〔[0]〕 }{OrginDate` - 发文日期：[0:D]}"/>
+</tk:Toolkit>

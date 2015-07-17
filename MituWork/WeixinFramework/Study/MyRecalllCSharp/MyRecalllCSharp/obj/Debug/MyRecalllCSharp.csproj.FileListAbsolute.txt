@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\MyRecalllCSharp\MyRecalllCSharp\bin\Debug\MyRecalllCSharp.exe
+D:\ZhouLL\trunk\Study\MyRecalllCSharp\MyRecalllCSharp\bin\Debug\MyRecalllCSharp.pdb
+D:\ZhouLL\trunk\Study\MyRecalllCSharp\MyRecalllCSharp\obj\Debug\MyRecalllCSharp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\MyRecalllCSharp\MyRecalllCSharp\obj\Debug\MyRecalllCSharp.exe
+D:\ZhouLL\trunk\Study\MyRecalllCSharp\MyRecalllCSharp\obj\Debug\MyRecalllCSharp.pdb

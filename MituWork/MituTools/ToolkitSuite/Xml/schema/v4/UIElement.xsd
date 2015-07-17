@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (CJY) 使用XMLSpy vHello编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen (eb) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/WpfCommonType.xsd"/>
+  <xs:include schemaLocation="Region.xsd"/>
+  <xs:element name="XamlFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Position" type="WpfFilePathPosition"/>
+        <xs:element name="FileName" type="xs:string"/>
+        <xs:element name="BindingFileName" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UIElementType">
+    <xs:choice>
+      <xs:element ref="XamlFile"/>
+      <xs:element ref="ViewModel"/>
+      <xs:element ref="SimpleModel"/>
+      <xs:element ref="SingleModel"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="ViewModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RegionContainer"/>
+        <xs:element ref="Behavior" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>该节点为动态节点</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SingleModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Layout"/>
+        <xs:choice>
+          <xs:element name="XamlType" type="xs:anyType"/>
+          <xs:element name="DataXmlFile"/>
+        </xs:choice>
+        <xs:element ref="BindingFile" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="Model" type="xs:Name"/>
+      <xs:attribute name="HideSearchRegion" type="xs:boolean"/>
+      <xs:attributeGroup ref="NormalAttrGroup"/>
+      <xs:attribute name="UseTabPage" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SimpleModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BindingFile" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="DataName" type="xs:Name" use="required"/>
+      <xs:attribute name="TypeAliasName" type="xs:Name" use="required"/>
+      <xs:attribute name="ImageFileName"/>
+      <xs:attribute name="Model" type="xs:Name"/>
+      <xs:attributeGroup ref="NormalAttrGroup"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

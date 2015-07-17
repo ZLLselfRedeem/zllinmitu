@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\schema\v4\Module.xsd">
+  <tk:Module Category="New" DisplayName="测试单表" RegName="TestSingleModule" Order="50" Author="lzm" CreateDate="2012-04-06" Description="测试单表模型" IconName="Images/png/039审批.png">
+    <DataModule>
+      <!--SingleDataModule>
+        <FactoryXaml>
+          <tk:EntityCollectionFactory xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" x:TypeArguments="ef:baisonOAEntities, ef:UR_USERS"/>
+        </FactoryXaml>
+      </SingleDataModule-->
+      <NormalDataModule>
+        <ViewListCreatorXaml>
+          <tk:SingleWcfViewListCreator xmlns:ef="clr-namespace:BS.TK.UserManager;assembly=UserManager.Client.EF" x:TypeArguments="ef:Part"/>
+        </ViewListCreatorXaml>
+      </NormalDataModule>
+    </DataModule>
+    <UIElement>
+      <!--ViewModel>
+        <RegionContainer>
+          <Layout>
+            <OneAreaLayout IsCommandBarOnTop="true"/>
+          </Layout>
+          <Region>
+            <TabPageContainer>
+              <Page DisplayName="列表" Name="_MainView">
+                <RegionContainer>
+                  <Layout>
+                    <TwoAreaLayout FirstPosition="Top" IsRoot="false" ShowCommandBar="false"/>
+                  </Layout>
+                  <Region>
+                    <TypeSearchRegion>
+                      <Fetchor>
+                        <SimpleDataName>SearchData</SimpleDataName>
+                      </Fetchor>
+                      <XamlType>
+                        <x:Type xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" TypeName="ef:UR_USERS"/>
+                      </XamlType>
+                    </TypeSearchRegion>
+                  </Region>
+                  <Region>
+                    <TableTypeRegion ControlName="ListGrid" CanGroup="false">
+                      <Fetchor>
+                        <SimpleDataName>List</SimpleDataName>
+                      </Fetchor>
+                      <XamlType>
+                        <x:Type xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" TypeName="ef:UR_USERS"/>
+                      </XamlType>
+                    </TableTypeRegion>
+                  </Region>
+                </RegionContainer>
+              </Page>
+              <Page DisplayName="主数据" Name="_EditView">
+                <RegionContainer>
+                  <Layout>
+                    <OneAreaLayout ShowCommandBar="false" IsRoot="false"/>
+                  </Layout>
+                  <Region>
+                    <NormalTypeRegion ColumnCount="2">
+                      <Fetchor>
+                        <BindingName DataName="List" BindingPath="CurrentItem"/>
+                      </Fetchor>
+                      <XamlType>
+                        <x:Type xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" TypeName="ef:UR_USERS"/>
+                      </XamlType>
+                    </NormalTypeRegion>
+                  </Region>
+                </RegionContainer>
+              </Page>
+            </TabPageContainer>
+          </Region>
+          <Region IsCommandRegion="true">
+            <SingleToolBar/>
+          </Region>
+        </RegionContainer>
+        <Behavior>
+          <SingleCommandBehavior/>
+          <SearchCommandBehavior/>
+        </Behavior>
+      </ViewModel-->
+      <SingleModel>
+        <Layout>
+          <TwoAreaLayout ShowSplitter="true" FirstPosition="Left" FirstLength="6*" IsCommandBarOnTop="true"/>
+        </Layout>
+        <XamlType>
+          <x:Type xmlns:ef="clr-namespace:BS.TK.UserManager;assembly=UserManager.Client.EF" TypeName="ef:Part"/>
+        </XamlType>
+      </SingleModel>
+      <!--ViewModel>
+        <RegionContainer>
+          <Layout>
+            <TwoAreaLayout ShowSplitter="true" FirstPosition="Left" FirstLength="6*" IsCommandBarOnTop="true"/>
+          </Layout>
+          <Region>
+            <TableTypeRegion ControlName="ListGrid">
+              <Fetchor>
+                <SimpleDataName>List</SimpleDataName>
+              </Fetchor>
+              <XamlType>
+                <x:Type xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" TypeName="ef:UR_USERS"/>
+              </XamlType>
+            </TableTypeRegion>
+          </Region>
+          <Region>
+            <TypeSearchRegion ColumnCount="4">
+              <Fetchor>
+                <SimpleDataName>SearchData</SimpleDataName>
+              </Fetchor>
+              <XamlType>
+                <x:Type xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" TypeName="ef:UR_USERS"/>
+              </XamlType>
+            </TypeSearchRegion>
+          </Region>
+          <Region IsCommandRegion="true">
+            <SingleToolBar/>
+          </Region>
+        </RegionContainer>
+        <Behavior>
+          <SingleCommandBehavior/>
+        </Behavior>
+      </ViewModel-->
+    </UIElement>
+  </tk:Module>
+</Toolkit>

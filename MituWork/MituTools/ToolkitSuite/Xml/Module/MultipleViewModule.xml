@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\schema\v4\Module.xsd">
+	<tk:Module Category="New" DisplayName="MultipleView测试1" RegName="MultipleView" Order="50" Author="lzm" CreateDate="2012-03-27" Description="MultipleView测试1" IconName="Images/png/039审批.png">
+    <DataModule>
+      <SingleDataModule>
+        <FactoryXaml>
+          <tk:EntityCollectionFactory xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" x:TypeArguments="ef:baisonOAEntities, ef:OA_BOOK1"/>
+        </FactoryXaml>
+      </SingleDataModule>
+    </DataModule>
+		<UIElement>
+			<XamlFile>
+				<Position>ModuleInterface</Position>
+				<FileName>MultipleViewXaml.xml</FileName>
+				<BindingFileName>MultipleViewBinding.xml</BindingFileName>
+			</XamlFile>
+			<!--FrameXaml Position="Layout">
+				<FrameXamlFile>MultipleViewLayout.xaml</FrameXamlFile>
+				<ContentArea>
+					<ObjectContent Name="BookList">
+						<Layout>
+							<TableLayout ItemsSourcePath="" DataName="List" UIVirualization="true" CanGroup="false" CanInsert="true" CanDelete="true" CanUpdate="true"/>
+						</Layout>
+					</ObjectContent>
+				</ContentArea>
+				<ContentArea>
+					<ObjectContent Name="CurrentBook">
+						<Layout>
+							<NormalLayout ColumnCount="2" DataName="List" BindingPath="CollectionView.CurrentItem"/>
+						</Layout>
+					</ObjectContent>
+				</ContentArea>
+				<CommandArea>
+					<DataModuleCommand/>
+				</CommandArea>
+			</FrameXaml-->
+		</UIElement>
+	</tk:Module>
+</Toolkit>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="TagUser">
+    <tk:TableDesc>
+      <tk:Content>标签人员设定</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="string" IsKey="true" IsEmpty="false">
+      <tk:FieldName>TD_USER_ID</tk:FieldName>
+      <tk:NickName>UserId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>人员</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length>
+      <tk:EasySearch RegName="CorpUser"/>
+      <tk:Layout Layout="PerLine" UnitNum="1"/>
+      <tk:Control Control="EasySearch" Order="10" DefaultShow="All"/>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

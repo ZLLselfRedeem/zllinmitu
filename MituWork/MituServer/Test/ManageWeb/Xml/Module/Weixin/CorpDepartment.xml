@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>微信企业号机构管理</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleClassMetaData ClassRegName="CorpDepartment" JsonDataType="Object" CommitDetail="true"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleTreeObjectSource UseMetaData="true" ObjectName="CorpDepartment">
+        <tk:ObjectSource>
+          <tk:RegNameObjectSource>CorpDepartmentEdit</tk:RegNameObjectSource>
+        </tk:ObjectSource>
+        <tk:Tree>
+          <tk:RegNameTree>CorpDepartment</tk:RegNameTree>
+        </tk:Tree>
+        <tk:DetailOperators>
+          <tk:SimpleTreeDetailObjectOperators DisableRootDelete="true">
+            <tk:Item>
+              <tk:Operator Position="Global" Id="SendMsg" Info="Dialog" IconClass="icon-envelope">
+                <tk:Caption>
+                  <tk:Content>发送消息</tk:Content>
+                </tk:Caption>
+                <tk:Content NeedParse="true">~/Library/WebInsertXmlPage.tkx?Source=Weixin/CorpSimpleSendMsg&amp;Target=Department&amp;DepartmentId=*Id*</tk:Content>
+              </tk:Operator>
+            </tk:Item>
+          </tk:SimpleTreeDetailObjectOperators>
+        </tk:DetailOperators>
+      </tk:SingleTreeObjectSource>
+    </tk:Source>
+    <tk:PostObjectCreator>
+      <tk:CustomJsonObjectCreator RegTypeName="CorpDepartment" LocalName="CorpDepartment" UseConstructor="true"/>
+    </tk:PostObjectCreator>
+    <tk:PageMaker>
+      <tk:SingleDialogObjectTreeRazorPageMaker ShowUpDownButton="false" TreeModelName="Tree"/>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

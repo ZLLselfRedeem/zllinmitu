@@ -1,0 +1,11 @@
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\bin\Debug\VbNetSnapIn.dll
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\bin\Debug\VbNetSnapIn.pdb
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\bin\Debug\VbNetSnapIn.xml
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\bin\Debug\CommonSnappable.dll
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\bin\Debug\CommonSnappable.pdb
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\obj\Debug\VbNetSnapIn.vbprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\obj\Debug\VbNetSnapIn.Resources.resources
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\obj\Debug\VbNetSnapIn.vbproj.GenerateResource.Cache
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\obj\Debug\VbNetSnapIn.dll
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\obj\Debug\VbNetSnapIn.xml
+D:\ZhouLL\trunk\Study\VbNetSnapIn\VbNetSnapIn\obj\Debug\VbNetSnapIn.pdb

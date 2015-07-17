@@ -1,0 +1,17 @@
+<project xmlns="http://nant.sf.net/release/0.91/nant.xsd" name="Hello" default="run" >
+  <property name="SourceDir" value="../Mitu.CXCS/ManageWeb"/>
+  <property name="DestDir" value="ManageWeb"/>
+  <target name="run">
+    <copy overwrite="true" todir="${DestDir}">
+      <fileset basedir="${SourceDir}">
+        <include name="Xml\Data\CXCS\*.xml"/>
+        <!--<include name="Xml\Module\CXCS\*.xml"/>-->
+        <include name="Xml\Decoder\CXCS\*.xml"/>
+        <include name="Xml\Razor\CXCS\*.cshtml"/>
+        <include name="WebSite\usercss\document.css"/>
+        <include name="WebSite\usercss\documentlist.css"/>
+      </fileset>
+    </copy>
+  </target>
+</project>
+

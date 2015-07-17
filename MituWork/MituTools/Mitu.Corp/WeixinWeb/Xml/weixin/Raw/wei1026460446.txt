@@ -1,0 +1,1 @@
+http://localhost:47545/Library/We.tkx<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1348831860</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[2]]></Content><MsgId>1234567890123456</MsgId></xml>

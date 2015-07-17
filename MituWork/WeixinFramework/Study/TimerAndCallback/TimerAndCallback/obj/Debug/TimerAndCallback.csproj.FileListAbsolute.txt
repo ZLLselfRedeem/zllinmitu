@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\TimerAndCallback\TimerAndCallback\bin\Debug\TimerAndCallback.exe.config
+D:\ZhouLL\trunk\Study\TimerAndCallback\TimerAndCallback\bin\Debug\TimerAndCallback.exe
+D:\ZhouLL\trunk\Study\TimerAndCallback\TimerAndCallback\bin\Debug\TimerAndCallback.pdb
+D:\ZhouLL\trunk\Study\TimerAndCallback\TimerAndCallback\obj\Debug\TimerAndCallback.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\TimerAndCallback\TimerAndCallback\obj\Debug\TimerAndCallback.exe
+D:\ZhouLL\trunk\Study\TimerAndCallback\TimerAndCallback\obj\Debug\TimerAndCallback.pdb

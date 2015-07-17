@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="AR_COMPANY">
+    <tk:TableDesc>
+      <tk:Content>公司代码表</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>COM_COMPANY_ID</tk:FieldName>
+      <tk:NickName>CompanyId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>系统代码</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Hidden" Order="10" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>COM_TCODE</tk:FieldName>
+      <tk:NickName>Tcode</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>交易代码</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>20</tk:Length> 
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Text" Order="20" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>COM_TNAME</tk:FieldName>
+      <tk:NickName>Tname</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>名称</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>30</tk:Length> 
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Text" Order="30" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>COM_FULL_NAME</tk:FieldName>
+      <tk:NickName>FullName</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>公司全称</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>120</tk:Length> 
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Text" Order="40" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>COM_REG_ADDR</tk:FieldName>
+      <tk:NickName>RegAddr</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>注册地址</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length> 
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Text" Order="50" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>COM_AREA</tk:FieldName>
+      <tk:NickName>Area</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>所在区域</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>30</tk:Length> 
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Text" Order="60" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>COM_BOARD</tk:FieldName>
+      <tk:NickName>Board</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>市场板块</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>8</tk:Length> 
+      <tk:CodeTable RegName="MarketBoard"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Combo" Order="70" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="Date">
+      <tk:FieldName>COM_LIST_DATE</tk:FieldName>
+      <tk:NickName>ListDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>挂牌日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Date" Order="80" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>COM_TRANS_MODE</tk:FieldName>
+      <tk:NickName>TransMode</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>交易方式</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>8</tk:Length> 
+      <tk:CodeTable RegName="TradeMode"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Combo" Order="90" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_CREATE_ID</tk:FieldName>
+      <tk:NickName>CreateId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>创建人</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length> 
+      <tk:EasySearch RegName="USER"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="EasySearch" Order="100" DefaultShow="Detail"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>RD_CREATE_DATE</tk:FieldName>
+      <tk:NickName>CreateDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>创建日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Text" Order="110" DefaultShow="Detail"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_UPDATE_ID</tk:FieldName>
+      <tk:NickName>UpdateId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>修改人</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length> 
+      <tk:EasySearch RegName="USER"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="EasySearch" Order="120" DefaultShow="Detail"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>RD_UPDATE_DATE</tk:FieldName>
+      <tk:NickName>UpdateDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>修改日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1" />
+      <tk:Control Control="Text" Order="130" DefaultShow="Detail"/>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

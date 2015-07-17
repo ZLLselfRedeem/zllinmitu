@@ -1,0 +1,22 @@
+D:\ZhouLL\trunk\Work\Mitu.Corp\Data\TestData\obj\Debug\TestData.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Work\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.dll
+D:\ZhouLL\trunk\Work\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.pdb
+D:\ZhouLL\trunk\Work\Mitu.Corp\Data\TestData\obj\Debug\TestData.dll
+D:\ZhouLL\trunk\Work\Mitu.Corp\Data\TestData\obj\Debug\TestData.pdb
+D:\C#Internal File\Mitu.Corp\Data\TestData\obj\Debug\TestData.dll
+D:\C#Internal File\Mitu.Corp\Data\TestData\obj\Debug\TestData.pdb
+D:\C#Internal File\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.dll
+D:\C#Internal File\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.pdb
+D:\C#\C#Internal File\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.dll
+D:\C#\C#Internal File\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.pdb
+D:\C#\C#Internal File\Mitu.Corp\Data\TestData\obj\Debug\TestData.csprojResolveAssemblyReference.cache
+D:\C#\C#Internal File\Mitu.Corp\Data\TestData\obj\Debug\TestData.dll
+D:\C#\C#Internal File\Mitu.Corp\Data\TestData\obj\Debug\TestData.pdb
+D:\C#InternalFile\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.dll
+D:\C#InternalFile\Mitu.Corp\WeixinWeb\WebSite\bin\Modules\TestData.pdb
+D:\C#InternalFile\Mitu.Corp\Data\TestData\obj\Debug\TestData.dll
+D:\C#InternalFile\Mitu.Corp\Data\TestData\obj\Debug\TestData.pdb
+D:\C#InternalFile\Mitu.Corp\ManageWeb\WebSite\bin\Modules\TestData.dll
+D:\C#InternalFile\Mitu.Corp\ManageWeb\WebSite\bin\Modules\TestData.pdb
+D:\C#InternalFile\Mitu.HZWDS\ManageWeb\WebSite\bin\Modules\TestData.dll
+D:\C#InternalFile\Mitu.HZWDS\ManageWeb\WebSite\bin\Modules\TestData.pdb

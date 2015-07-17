@@ -1,0 +1,5 @@
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\bin\YJC.Toolkit.Accounting.dll
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\bin\YJC.Toolkit.Accounting.pdb
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\Data\YJC.Toolkit.Accounting\obj\Debug\YJC.Toolkit.Accounting.dll
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\Data\YJC.Toolkit.Accounting\obj\Debug\YJC.Toolkit.Accounting.pdb
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\Data\YJC.Toolkit.Accounting\obj\Debug\YJC.Toolkit.Accounting.csprojResolveAssemblyReference.cache

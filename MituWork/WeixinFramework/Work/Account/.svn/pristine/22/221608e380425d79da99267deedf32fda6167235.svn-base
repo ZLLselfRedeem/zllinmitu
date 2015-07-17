@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="AR_REPORT_DATA">
+    <tk:TableDesc>
+      <tk:Content>报表数据</tk:Content>
+    </tk:TableDesc>
+    <tk:FakeDeleteInfo FieldName="IsDel" Value="1" AllowNull="true"/>
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>RD_REPORT_ID</tk:FieldName>
+      <tk:NickName>ReportId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>ID</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="10" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>RD_COMPANY</tk:FieldName>
+      <tk:NickName>Company</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>单位</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="20" DefaultShow="AllNoList"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_REPORT_NAME</tk:FieldName>
+      <tk:NickName>ReportName</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>报表名</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>20</tk:Length>
+      <tk:CodeTable RegName="ReportName"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Combo" Order="30" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_REPORT_TYPE</tk:FieldName>
+      <tk:NickName>ReportType</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>报表类型</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>2</tk:Length>
+      <tk:CodeTable RegName="ReportType"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Combo" Order="40" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_DATA_TYPE</tk:FieldName>
+      <tk:NickName>DataType</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>数据性质</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>2</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="50" DefaultShow="AllNoList"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_REPORT_DATE</tk:FieldName>
+      <tk:NickName>ReportDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>6</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="60" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="text">
+      <tk:FieldName>RD_REPORT_DATA</tk:FieldName>
+      <tk:NickName>ReportData</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>报表数据</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>0</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="70" DefaultShow="AllNoList"/>
+    </tk:Field>
+    <tk:Field DataType="short">
+      <tk:FieldName>RD_IS_DEL</tk:FieldName>
+      <tk:NickName>IsDel</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>删除标志</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="90" DefaultShow="None"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_CREATE_ID</tk:FieldName>
+      <tk:NickName>CreateId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>创建人</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+      <tk:EasySearch RegName="USER"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="EasySearch" Order="80" DefaultShow="Detail"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>RD_CREATE_DATE</tk:FieldName>
+      <tk:NickName>CreateDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>创建日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="90" DefaultShow="Detail"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>RD_UPDATE_ID</tk:FieldName>
+      <tk:NickName>UpdateId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>修改人</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+      <tk:EasySearch RegName="USER"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="EasySearch" Order="100" DefaultShow="Detail"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>RD_UPDATE_DATE</tk:FieldName>
+      <tk:NickName>UpdateDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>修改日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="110" DefaultShow="Detail"/>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>复制财税文档</tk:Content>
+    </tk:Title>
+    <tk:Source>
+      <tk:RegNameSource>CopyDocument</tk:RegNameSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:PostPageMaker DestUrl="Custom" UseRetUrlFirst="false">
+        <tk:CustomUrl>ListRefresh</tk:CustomUrl>
+        <tk:AlertMessage>
+          <tk:Content>文档已被复制</tk:Content>
+        </tk:AlertMessage>
+      </tk:PostPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

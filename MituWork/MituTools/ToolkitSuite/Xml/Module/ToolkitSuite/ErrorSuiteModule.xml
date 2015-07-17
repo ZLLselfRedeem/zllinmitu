@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkSuite" DisplayName="错误文件分析" RegName="ErrorSuiteModule" Order="10" Author="WDW" CreateDate="2011-03-05" Description="Toolkit错误文件分析" IconName="Images/png/041发出.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>ErrorSuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <ViewModel>
+        <RegionContainer>
+          <Layout>
+            <TwoAreaLayout FirstLength="8*" FirstPosition="Left" ShowSplitter="true"/>
+          </Layout>
+          <Region>
+            <TableTypeRegion ControlName="Error" CanDelete="false" CanInsert="false" CanUpdate="false" CanGroup="true">
+              <Fetchor>
+                <SimpleDataName>ErrorList</SimpleDataName>
+              </Fetchor>
+              <TypeAliasName>Error</TypeAliasName>
+            </TableTypeRegion>
+          </Region>
+          <Region>
+            <NormalTypeRegion>
+              <Fetchor>
+                <SimpleDataName>ErrorData</SimpleDataName>
+              </Fetchor>
+              <TypeAliasName>ErrorSuite</TypeAliasName>
+            </NormalTypeRegion>
+          </Region>
+          <Region IsCommandRegion="true">
+            <DataModuleCommandBar/>
+          </Region>
+        </RegionContainer>
+        <Behavior>
+          <DataModuleCommand/>
+        </Behavior>
+      </ViewModel>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

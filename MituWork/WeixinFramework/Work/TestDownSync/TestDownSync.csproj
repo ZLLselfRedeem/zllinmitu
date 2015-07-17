@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91CD1659-32DD-48B7-A634-AF5C6BBFA8B2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestSemantic</RootNamespace>
+    <AssemblyName>TestCorpWeixin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YJC.Toolkit.AdoData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.AdoData.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.BaiduMap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.BaiduMap.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.ConsoleApp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.ConsoleApp.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core.Extension, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.Core.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.MetaData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.MetaData.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.ToolApp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.ToolApp.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Weixin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.Weixin.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Weixin.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\Tk5\YJC.Toolkit.Weixin.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Xml\Application.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Xml\Weixin.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Xml\schema\bin\AppCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\bin\CommonElement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\bin\CommonType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\AbbreviateHandler.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\Cache.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\CodeData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\CodeTable.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\ConsoleApp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\DataRight.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\DataXml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\EasySearch.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\ExceptionHandler.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\FieldCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\LogConfig.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\MetaData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\MobileDataRight.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\MobileSource.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\Module.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\OperateRight.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\PageMaker.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\PostObjectCreator.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\RazorConfig.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\Redirector.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\Source.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\Cache.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\Constraint.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\DataRight.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\DataXmlCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\ExceptionHandler.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\FieldCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\LogConfig.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\MetaData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\MobileSource.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\OperateRight.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\PageMaker.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\PageMakerCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\PostObjectCreator.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\RazorData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\RazorPageMaker.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\Redirector.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\Scheme.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\Source.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\TableResolver.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\Tree.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\SubItems\UploadProcessor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\TableResolver.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WebApp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\Weixin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WeixinAuth.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WeixinCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WeixinItems\WeixinCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WeixinItems\WeixinMessage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WeixinMenu.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WeixinMessage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xml\schema\v5\WeixinRule.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Xml\schema\v5\RazorItems\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

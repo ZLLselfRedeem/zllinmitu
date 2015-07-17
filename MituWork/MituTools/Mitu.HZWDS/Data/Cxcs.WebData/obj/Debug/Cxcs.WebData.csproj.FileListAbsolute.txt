@@ -1,0 +1,5 @@
+D:\C#InternalFile\Mitu.HZWDS\WeixinWeb\WebSite\bin\Modules\Cxcs.WebData.dll
+D:\C#InternalFile\Mitu.HZWDS\WeixinWeb\WebSite\bin\Modules\Cxcs.WebData.pdb
+D:\C#InternalFile\Mitu.HZWDS\Data\Cxcs.WebData\obj\Debug\Cxcs.WebData.dll
+D:\C#InternalFile\Mitu.HZWDS\Data\Cxcs.WebData\obj\Debug\Cxcs.WebData.pdb
+D:\C#InternalFile\Mitu.HZWDS\Data\Cxcs.WebData\obj\Debug\Cxcs.WebData.csprojResolveAssemblyReference.cache

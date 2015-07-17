@@ -1,0 +1,89 @@
+﻿@using System;
+@using System.Collections.Generic;
+@using Toolkit.Suite
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@{
+    var e = @Model as Tuple<SuiteSetting, List<TableInfo>>;
+    SuiteSetting setting = e.Item1;
+    List<TableInfo> list = e.Item2;
+}
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>@Guid.NewGuid()</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>@setting.Namespace</RootNamespace>
+    <AssemblyName>@setting.ProjectName</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ManageWeb\WebSite\bin\Modules\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ManageWeb\WebSite\bin\Modules\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="YJC.Toolkit.AdoData">
+      <HintPath>..\..\..\_lib\tk5\YJC.Toolkit.AdoData.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core">
+      <HintPath>..\..\..\_lib\tk5\YJC.Toolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core.Extension">
+      <HintPath>..\..\..\_lib\tk5\YJC.Toolkit.Core.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Data">
+      <HintPath>..\..\..\_lib\tk5\YJC.Toolkit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.MetaData">
+      <HintPath>..\..\..\_lib\tk5\YJC.Toolkit.MetaData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+  @{
+      foreach (var table in list) 
+      {
+          string fileName = StringUtil.GetSignName(table.TableName) + "Resolver.cs";
+    @:<Compile Include="@fileName" />          
+      }
+   }
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

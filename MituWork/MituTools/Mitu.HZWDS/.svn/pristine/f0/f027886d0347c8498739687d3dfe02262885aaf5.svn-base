@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>标签</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:DetailMetaData ListStyle="Table">
+        <tk:SingleXmlMetaData DataXml="Weixin/CorpTagUser.xml" ColumnCount="1" JsonDataType="Array"/>
+      </tk:DetailMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:RegNameSource>CorpTagUser</tk:RegNameSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:PostRazorPageMaker DestUrl="Custom" Template="NormalMultiEdit">
+        <tk:RazorData>
+          <tk:NormalEditData ShowTitle="false" DialogMode="true"/>
+        </tk:RazorData>
+        <tk:CustomUrl>CloseDialog</tk:CustomUrl>
+        <tk:AlertMessage>
+          <tk:Content>用户已经设置</tk:Content>
+        </tk:AlertMessage>
+      </tk:PostRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

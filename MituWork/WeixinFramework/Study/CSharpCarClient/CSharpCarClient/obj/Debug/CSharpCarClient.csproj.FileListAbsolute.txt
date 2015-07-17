@@ -1,0 +1,8 @@
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\bin\Debug\CSharpCarClient.exe
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\bin\Debug\CSharpCarClient.pdb
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\bin\Debug\CarLibrary.dll
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\bin\Debug\CarLibrary.pdb
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\obj\Debug\CSharpCarClient.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\obj\Debug\CSharpCarClient.exe
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\obj\Debug\CSharpCarClient.pdb
+D:\ZhouLL\trunk\Study\CSharpCarClient\CSharpCarClient\bin\Debug\CSharpCarClient.exe.config

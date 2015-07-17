@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="1.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ../schema/v5/Import.xsd">
+  <tk:Import>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="UserManager/Part.xml"/>
+    </tk:MetaData>
+    <tk:Resolver>
+      <tk:RegResolver>Import</tk:RegResolver>
+    </tk:Resolver>
+  </tk:Import>
+</tk:Toolkit>

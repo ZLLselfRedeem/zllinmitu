@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>标签</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleClassMetaData ClassRegName="CorpTag" JsonDataType="Object"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleObjectSource DisablePage="Detail">
+        <tk:ObjectSource>
+          <tk:RegNameObjectSource>CorpTagEdit</tk:RegNameObjectSource>
+        </tk:ObjectSource>
+        <tk:ListObjectSource>
+          <tk:RegNameObjectSource>CorpTagList</tk:RegNameObjectSource>
+        </tk:ListObjectSource>
+        <tk:Operators>
+          <tk:StandardObjectOperators>
+            <tk:Right>
+              <tk:EmptyObjectOperateRight/>
+            </tk:Right>
+            <tk:InsertOperator IsDialog="true"/>
+            <tk:UpdateOperator IsDialog="true"/>
+            <tk:DeleteOperator/>
+            <tk:Operator Position="Row" Id="Department" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>设置组织</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebUpdateXmlPage.tkx?Source=Weixin/CorpTagDept&amp;Operation=Dept&amp;TagId=*Id*</tk:Content>
+            </tk:Operator>
+            <tk:Operator Position="Row" Id="User" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>设置用户</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebUpdateXmlPage.tkx?Source=Weixin/CorpTagUser&amp;Operation=User&amp;TagId=*Id*</tk:Content>
+            </tk:Operator>
+            <tk:Operator Position="Row" Id="SendMsg" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>发送消息</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebInsertXmlPage.tkx?Source=Weixin/CorpSimpleSendMsg&amp;Target=Tag&amp;TagId=*Id*</tk:Content>
+            </tk:Operator>
+          </tk:StandardObjectOperators>
+        </tk:Operators>
+      </tk:SingleObjectSource>
+    </tk:Source>
+    <tk:PostObjectCreator>
+      <tk:CustomJsonObjectCreator RegTypeName="CorpTag" LocalName="CorpTag" UseConstructor="true"/>
+    </tk:PostObjectCreator>
+    <tk:PageMaker>
+      <tk:SingleDialogObjectRazorPageMaker ListDisplay="Striped"/>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\LinqOverCustomObjects\LinqOverCustomObjects\bin\Debug\LinqOverCustomObjects.exe
+D:\ZhouLL\trunk\Study\LinqOverCustomObjects\LinqOverCustomObjects\bin\Debug\LinqOverCustomObjects.pdb
+D:\ZhouLL\trunk\Study\LinqOverCustomObjects\LinqOverCustomObjects\obj\Debug\LinqOverCustomObjects.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\LinqOverCustomObjects\LinqOverCustomObjects\obj\Debug\LinqOverCustomObjects.exe
+D:\ZhouLL\trunk\Study\LinqOverCustomObjects\LinqOverCustomObjects\obj\Debug\LinqOverCustomObjects.pdb

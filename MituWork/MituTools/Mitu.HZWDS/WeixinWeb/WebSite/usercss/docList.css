@@ -1,0 +1,40 @@
+﻿.ph3 {
+    padding-left: 3px !important;
+    padding-right: 3px;
+}
+
+.new-row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.doc-title {
+    margin-right: -15px;
+}
+
+.ptpb-8 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.mtpt-0 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.form-control, .list-group-item {
+    border: 1px solid #c7deee;
+}
+
+.bg-title {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    font-size: 16px;
+    color: #146f9a;
+    font-style: italic;
+}

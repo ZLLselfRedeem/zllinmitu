@@ -1,0 +1,4 @@
+D:\C#\代码\ConvertToJson\ShopText\bin\Debug\ShopText.exe
+D:\C#\代码\ConvertToJson\ShopText\bin\Debug\ShopText.pdb
+D:\C#\代码\ConvertToJson\ShopText\obj\Debug\ShopText.exe
+D:\C#\代码\ConvertToJson\ShopText\obj\Debug\ShopText.pdb

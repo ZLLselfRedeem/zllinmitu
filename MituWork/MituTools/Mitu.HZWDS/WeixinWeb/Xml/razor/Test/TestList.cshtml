@@ -1,0 +1,38 @@
+﻿@inherits YJC.Toolkit.Razor.ToolkitTemplate
+@using YJC.Toolkit.Sys;
+@using System.Data;
+@{
+    DataSet ds = (DataSet)Model;
+    string openId = ds.GetFieldValue<string>("QueryString", "OpenId");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap-theme.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/font-awesome.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/style.css?v=1".AppVirutalPath())" />
+    @*<link rel="stylesheet" type="text/css" href="@("usercss/input.css".AppVirutalPath())" />*@
+</head>
+<body id="WebInsertXmlPage" class="tk-dataPage" data-webpath="/WebSite/">
+    <div class="container">
+        <div id="metaData" class="hide" data-toolbar="false" data-option="false"></div>
+        <h1>测试一下</h1>
+        <ul class="list-group">
+            <li class="list-group-item"><a data-ajax-url="WebModuleContentPage.tkx?Source=Test/TestSendMsg&amp;Text=你好世界&amp;OpenId=@openId">发消息1</a></li>
+            <li class="list-group-item"><a data-ajax-url="WebModuleContentPage.tkx?Source=Test/TestSendMsg&amp;Text=你好奇葩&amp;OpenId=@openId">发消息2</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.7.2.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/toolkit.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.page.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.data.js?v=7".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.weixin.js?v=5".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.ui.js".AppVirutalPath())"></script>
+</body>
+</html>

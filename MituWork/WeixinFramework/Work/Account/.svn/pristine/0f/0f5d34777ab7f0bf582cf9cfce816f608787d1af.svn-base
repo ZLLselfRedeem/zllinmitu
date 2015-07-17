@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using Mitu.Accounting;
+using YJC.Toolkit.Data;
+using YJC.Toolkit.Sys;
+
+namespace YJC.Toolkit.Accounting
+{
+    [Source]
+    internal class AccountDataSource : BaseDbSource
+    {
+        public override OutputData DoAction(IInputData input)
+        {
+            if (input.IsPost)
+            {
+                InputObject obj = input.PostObject.Convert<InputObject>();
+
+                using (ReportDataResolver resolver = new ReportDataResolver(this))
+                {
+                    resolver.NewRow(obj);
+                    return OutputData.CreateToolkitObject(resolver.CreateKeyData());
+                }
+            }
+            else
+            {
+                InputObject obj = new InputObject();
+                obj.Info = new ReportInfo { Company = input.QueryString["Company"] };
+
+                return OutputData.CreateToolkitObject(obj);
+            }
+        }
+    }
+}

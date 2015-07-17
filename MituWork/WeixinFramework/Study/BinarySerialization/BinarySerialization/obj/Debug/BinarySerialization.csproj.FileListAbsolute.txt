@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\BinarySerialization\BinarySerialization\bin\Debug\BinarySerialization.exe.config
+D:\ZhouLL\trunk\Study\BinarySerialization\BinarySerialization\bin\Debug\BinarySerialization.exe
+D:\ZhouLL\trunk\Study\BinarySerialization\BinarySerialization\bin\Debug\BinarySerialization.pdb
+D:\ZhouLL\trunk\Study\BinarySerialization\BinarySerialization\obj\Debug\BinarySerialization.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\BinarySerialization\BinarySerialization\obj\Debug\BinarySerialization.exe
+D:\ZhouLL\trunk\Study\BinarySerialization\BinarySerialization\obj\Debug\BinarySerialization.pdb

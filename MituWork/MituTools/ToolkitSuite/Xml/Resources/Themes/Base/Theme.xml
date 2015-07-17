@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\schema\v4\Theme.xsd">
+	<Theme RegName="Base" Type="Base">
+	<ResourceDictionary>Brushes_NormalColor.xaml</ResourceDictionary>
+	<!--ResourceDictionary>Buttons_NormalColor.xaml</ResourceDictionary-->
+		<ResourceDictionary>TimePicker.xaml</ResourceDictionary>
+		<ResourceDictionary>DockPanelSplitter.xaml</ResourceDictionary>
+		<ResourceDictionary>ImageView.xaml</ResourceDictionary>
+		<!--ResourceDictionary>NumericUpDown.xaml</ResourceDictionary-->
+		<ResourceDictionary>ColorCanvas.xaml</ResourceDictionary>
+		<ResourceDictionary>ColorPicker.xaml</ResourceDictionary>
+		<ResourceDictionary>All.xaml</ResourceDictionary>
+    <ResourceDictionary>DataGridWithGroupStyle.xaml</ResourceDictionary>
+	</Theme>
+</Toolkit>

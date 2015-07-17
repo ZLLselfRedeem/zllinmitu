@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\AppConfigReaderApp\AppConfigReaderApp\bin\Debug\AppConfigReaderApp.exe.config
+D:\ZhouLL\trunk\Study\AppConfigReaderApp\AppConfigReaderApp\bin\Debug\AppConfigReaderApp.exe
+D:\ZhouLL\trunk\Study\AppConfigReaderApp\AppConfigReaderApp\bin\Debug\AppConfigReaderApp.pdb
+D:\ZhouLL\trunk\Study\AppConfigReaderApp\AppConfigReaderApp\obj\Debug\AppConfigReaderApp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\AppConfigReaderApp\AppConfigReaderApp\obj\Debug\AppConfigReaderApp.exe
+D:\ZhouLL\trunk\Study\AppConfigReaderApp\AppConfigReaderApp\obj\Debug\AppConfigReaderApp.pdb

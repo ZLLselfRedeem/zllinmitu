@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_GROUP">
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>WG_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>微信组ID</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WG_NAME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>名称</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WG_COUNT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>人数</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_SUBSCRIBE_DATA">
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>SD_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>Id</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>SD_OPEN_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>OpenId</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="Date">
+      <tk:FieldName>SD_SUBSCRIBE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>关注时间</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="short">
+      <tk:FieldName>SD_IS_SUBSCRIBE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>关注/取消</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

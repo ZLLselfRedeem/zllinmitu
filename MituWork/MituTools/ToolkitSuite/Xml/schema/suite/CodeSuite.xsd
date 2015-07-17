@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CodeGenerator"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" fixed="1.0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ToolkitVersion">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Tk30"/>
+      <xs:enumeration value="Tk40"/>
+      <xs:enumeration value="Tk50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StudioVersion">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="VS2005"/>
+      <xs:enumeration value="VS2008"/>
+      <xs:enumeration value="VS2010"/>
+      <xs:enumeration value="VS2012"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CodeGenerator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FileName">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MainName" type="MarcoConfigItem"/>
+            </xs:sequence>
+            <xs:attribute name="Extension" type="xs:token" use="required"/>
+            <xs:attribute name="Catalog" type="xs:string"/>
+            <xs:attribute name="UseProjectName" type="xs:boolean"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RazorFile" type="xs:anyURI"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RegItem"/>
+      <xs:attribute name="BaseClass">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="File"/>
+            <xs:enumeration value="Table"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="CompatibleType" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="None"/>
+            <xs:enumeration value="Toolkit"/>
+            <xs:enumeration value="VisualStudio"/>
+            <xs:enumeration value="Both"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ToolkitVer">
+        <xs:simpleType>
+          <xs:list itemType="ToolkitVersion"/>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="StudioVer">
+        <xs:simpleType>
+          <xs:list itemType="StudioVersion"/>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

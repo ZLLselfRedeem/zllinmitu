@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by lzm (baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import schemaLocation="Data.xsd"/>
+	<xs:element name="Table">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Field" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FieldName" type="xs:string"/>
+							<xs:element name="DisplayName" type="xs:string"/>
+							<xs:element name="Hint" type="xs:string" minOccurs="0"/>
+							<xs:element name="Length" type="xs:int" minOccurs="0"/>
+							<xs:element name="Decoder">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string"/>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<!--xs:element ref="tk:Constraints" minOccurs="0"/-->
+							<xs:element name="Display">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Attribute" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+									<xs:attribute name="Readonly" type="xs:boolean" default="false"/>
+									<xs:attribute name="Format" type="xs:string"/>
+									<xs:attribute name="Align">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="center"/>
+												<xs:enumeration value="left"/>
+												<xs:enumeration value="right"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="DefaultShow">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="None|All|AllNoList|((Insert|Update|List|Detail)((\|)(Insert|Update|List|Detail))*)"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Extension" minOccurs="0">
+								<xs:complexType mixed="true">
+									<xs:complexContent mixed="true">
+										<xs:restriction base="xs:anyType">
+											<xs:attribute name="Search">
+												<xs:simpleType>
+													<xs:restriction base="xs:NMTOKEN">
+														<xs:enumeration value="title"/>
+														<xs:enumeration value="Detail"/>
+														<xs:enumeration value="EasySearchLike"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="EmptyTitle" type="xs:string"/>
+										</xs:restriction>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Control">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="CustomCtrl" minOccurs="0"/>
+										<xs:element ref="Page" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+									<xs:attribute name="CtrlType" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="Text"/>
+												<xs:enumeration value="Label"/>
+												<xs:enumeration value="Date"/>
+												<xs:enumeration value="DateTime"/>
+												<xs:enumeration value="Time"/>
+												<xs:enumeration value="Combo"/>
+												<xs:enumeration value="ListBox"/>
+												<xs:enumeration value="CheckBox"/>
+												<xs:enumeration value="Password"/>
+												<xs:enumeration value="EasySearch"/>
+												<xs:enumeration value="CheckBoxList"/>
+												<xs:enumeration value="RichText"/>
+												<xs:enumeration value="FolderPicker"/>
+												<xs:enumeration value="FilePicker"/>
+												<xs:enumeration value="FontPicker"/>
+												<xs:enumeration value="ColorPicker"/>
+												<xs:enumeration value="Custom"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="Order" type="xs:int" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DefaultValue" type="tk:MarcoConfigItem" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="IsKey" type="xs:boolean" default="false"/>
+						<xs:attribute name="IsEmpty" type="xs:boolean" default="true"/>
+						<xs:attribute name="DataType" type="tk:XmlDataType" use="required"/>
+						<xs:attribute name="CanGroup" type="xs:boolean" default="false"/>
+						<xs:attribute name="CanSort" type="xs:boolean" default="true"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="TableName" type="xs:string" use="required"/>
+			<xs:attribute name="TableDesc" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Constraints">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="CurrentDate" minOccurs="0"/>
+				<xs:element ref="Date" minOccurs="0"/>
+				<xs:element ref="DateRange" minOccurs="0"/>
+				<xs:element ref="StringLength" minOccurs="0"/>
+				<xs:element ref="StringMaxLength" minOccurs="0"/>
+				<xs:element ref="Double" minOccurs="0"/>
+				<xs:element ref="DoubleRange" minOccurs="0"/>
+				<xs:element ref="Email" minOccurs="0"/>
+				<xs:element ref="Int" minOccurs="0"/>
+				<xs:element ref="IntRange" minOccurs="0"/>
+				<xs:element ref="Mobile" minOccurs="0"/>
+				<xs:element ref="NotEmpty" minOccurs="0"/>
+				<xs:element ref="PostCode" minOccurs="0"/>
+				<xs:element ref="SFZ" minOccurs="0"/>
+				<xs:element ref="Regex" minOccurs="0"/>
+				<xs:element ref="FixLength" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="MarcoConfigItem" mixed="true">
+		<xs:choice maxOccurs="unbounded"/>
+		<xs:attribute name="NeedParse" type="xs:boolean" default="false"/>
+		<xs:attribute name="SQLInject" type="xs:boolean" default="true"/>
+		<xs:attribute name="EmptyMarco" type="xs:string"/>
+	</xs:complexType>
+	<xs:simpleType name="XmlDataType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="binary"/>
+			<xs:enumeration value="Date"/>
+			<xs:enumeration value="Decimal"/>
+			<xs:enumeration value="double"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="long"/>
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="Guid"/>
+			<xs:enumeration value="bit"/>
+			<xs:enumeration value="short"/>
+			<xs:enumeration value="xml"/>
+			<xs:enumeration value="money"/>
+			<xs:enumeration value="DateTime"/>
+			<xs:enumeration value="blob"/>
+			<xs:enumeration value="byte"/>
+			<xs:enumeration value="int"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

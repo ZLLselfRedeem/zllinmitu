@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/suite/CodeSuite.xsd">
+	<CodeGenerator CompatibleType="Toolkit" ToolkitVer="Tk40" RegName="Tk4ModuleXml" Author="YJC" CreateDate="2012-10-09" Description="Toolkit4的ModuleXml生成">
+		<FileName Extension="xml" Catalog="Xml\Module" UseProjectName="true">
+			<MainName NeedParse="true">{NormalTableName}</MainName>
+		</FileName>
+		<RazorFile>CodeSuite/Tk4/Tk4ModuleXml.cshtml</RazorFile>
+	</CodeGenerator>
+</Toolkit>

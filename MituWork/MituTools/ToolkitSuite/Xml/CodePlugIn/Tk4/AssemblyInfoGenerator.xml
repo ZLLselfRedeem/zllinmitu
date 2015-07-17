@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/suite/CodeSuite.xsd">
+	<CodeGenerator CompatibleType="VisualStudio" StudioVer="VS2005 VS2008 VS2010 VS2012" RegName="AssemblyInfo" Author="YJC" BaseClass="Table" CreateDate="2012-10-10" Description="Toolkit4的AssemblyInfo.cs生成">
+		<FileName Extension="cs" UseProjectName="true">
+			<MainName>Properties\AssemblyInfo</MainName>
+		</FileName>
+		<RazorFile>CodeSuite/Tk4/VSAssembly.cshtml</RazorFile>
+	</CodeGenerator>
+</Toolkit>

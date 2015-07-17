@@ -1,0 +1,9 @@
+﻿body
+{
+	background-color: #eee;
+	/*margin: 0 auto;
+	font-size: 14px;
+	font-family: "宋体",Arial, Helvetica, sans-serif;
+	color: #363636;*/
+}
+

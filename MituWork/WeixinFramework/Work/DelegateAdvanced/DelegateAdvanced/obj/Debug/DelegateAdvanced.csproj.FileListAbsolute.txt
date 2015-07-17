@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Work\DelegateAdvanced\DelegateAdvanced\bin\Debug\DelegateAdvanced.exe.config
+D:\ZhouLL\trunk\Work\DelegateAdvanced\DelegateAdvanced\bin\Debug\DelegateAdvanced.exe
+D:\ZhouLL\trunk\Work\DelegateAdvanced\DelegateAdvanced\bin\Debug\DelegateAdvanced.pdb
+D:\ZhouLL\trunk\Work\DelegateAdvanced\DelegateAdvanced\obj\Debug\DelegateAdvanced.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Work\DelegateAdvanced\DelegateAdvanced\obj\Debug\DelegateAdvanced.exe
+D:\ZhouLL\trunk\Work\DelegateAdvanced\DelegateAdvanced\obj\Debug\DelegateAdvanced.pdb

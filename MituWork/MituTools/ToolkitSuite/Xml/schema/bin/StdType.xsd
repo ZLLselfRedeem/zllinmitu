@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xt="http://www.qdocuments.net/xmltype" targetNamespace="http://www.qdocuments.net/xmltype" elementFormDefault="qualified">
+  <xs:complexType name="MarcoConfigItem" mixed="true">
+    <xs:choice maxOccurs="unbounded"/>
+    <xs:attribute name="NeedParse" type="xs:boolean" default="false"/>
+    <xs:attribute name="SQLInject" type="xs:boolean" default="true"/>
+    <xs:attribute name="EmptyMarco" type="xs:string"/>
+  </xs:complexType>
+  <xs:simpleType name="XmlDataType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="binary"/>
+      <xs:enumeration value="Date"/>
+      <xs:enumeration value="Decimal"/>
+      <xs:enumeration value="double"/>
+      <xs:enumeration value="text"/>
+      <xs:enumeration value="long"/>
+      <xs:enumeration value="string"/>
+      <xs:enumeration value="Guid"/>
+      <xs:enumeration value="bit"/>
+      <xs:enumeration value="short"/>
+      <xs:enumeration value="xml"/>
+      <xs:enumeration value="money"/>
+      <xs:enumeration value="DateTime"/>
+      <xs:enumeration value="blob"/>
+      <xs:enumeration value="byte"/>
+      <xs:enumeration value="int"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="RegItem">
+    <xs:attribute name="RegName" type="xs:ID" use="required"/>
+    <xs:attribute name="Description" type="xs:string"/>
+    <xs:attribute name="Author" type="xs:string"/>
+    <xs:attribute name="CreateDate" type="xs:date"/>
+  </xs:attributeGroup>
+  <xs:complexType name="FieldItem" mixed="true">
+    <xs:choice maxOccurs="unbounded"/>
+    <xs:attribute name="DataType" type="xt:XmlDataType" default="string"/>
+  </xs:complexType>
+  <xs:complexType name="ActiveFieldItem" mixed="true">
+    <xs:choice maxOccurs="unbounded"/>
+    <xs:attribute name="DataType" type="xt:XmlDataType" default="string"/>
+    <xs:attribute name="Value" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="ExtensionType" mixed="true">
+    <xs:complexContent mixed="true">
+      <xs:restriction base="xs:anyType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TimeType">
+    <xs:attribute name="Span" type="xs:string"/>
+    <xs:attribute name="SystemConfiged" type="xs:boolean"/>
+  </xs:complexType>
+  <xs:simpleType name="FilePosition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Solution"/>
+      <xs:enumeration value="Application"/>
+      <xs:enumeration value="Xml"/>
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="AbsolutePath"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

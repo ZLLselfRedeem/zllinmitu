@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\TimerApp\TimerApp\bin\Debug\TimerApp.exe
+D:\ZhouLL\trunk\Study\TimerApp\TimerApp\bin\Debug\TimerApp.pdb
+D:\ZhouLL\trunk\Study\TimerApp\TimerApp\obj\Debug\TimerApp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\TimerApp\TimerApp\obj\Debug\TimerApp.exe
+D:\ZhouLL\trunk\Study\TimerApp\TimerApp\obj\Debug\TimerApp.pdb

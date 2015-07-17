@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:tk="http://www.qdocuments.net" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" tk:ControlHelper.EnterAsTab="True" KeyboardNavigation.TabNavigation="Cycle">
+  <DockPanel>
+    <Image DockPanel.Dock="Top" Source="{Binding Mode=OneTime, Source={tk:Resource Path=Images/png/logo.png}}" />
+    <ContentControl DockPanel.Dock="Bottom">
+      <wpf:StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,10" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:tk="http://www.qdocuments.net" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+        <wpf:Button Name="Create" Padding="0,10" Margin="10, 5, 10, 5">
+          <wpf:StackPanel Orientation="Horizontal" Margin="10, 0, 20, 0">
+            <wpf:Image Margin="10,0" Stretch="None" Source="{wpf:Binding Mode=OneTime, Source={tk:Resource Path=Images/png/006保存.png}}" />
+            <wpf:TextBlock>生成</wpf:TextBlock>
+          </wpf:StackPanel>
+        </wpf:Button>
+        <wpf:Button Name="Close" Padding="0,10" Margin="10,5,10,5">
+          <wpf:StackPanel Orientation="Horizontal" Margin="10, 0, 20, 0">
+            <wpf:Image Margin="10,0" Stretch="None" Source="{wpf:Binding Mode=OneTime, Source={tk:Resource Path=Images/png/008删除.png}}" />
+            <wpf:TextBlock>关闭</wpf:TextBlock>
+          </wpf:StackPanel>
+        </wpf:Button>
+      </wpf:StackPanel>
+    </ContentControl>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+      <wpf:ScrollViewer VerticalScrollBarVisibility="Auto" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:tk="http://www.qdocuments.net" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+        <wpf:Grid Margin="40,40,40,40" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+          <i:Interaction.Behaviors>
+            <tk:FetchDataBehavior DataName="DeploySuite" />
+          </i:Interaction.Behaviors>
+          <wpf:Grid.RowDefinitions>
+            <wpf:RowDefinition Height="Auto" />
+            <wpf:RowDefinition Height="Auto" />
+            <wpf:RowDefinition Height="Auto" />
+            <wpf:RowDefinition Height="Auto" />
+            <wpf:RowDefinition Height="Auto" />
+            <wpf:RowDefinition Height="Auto" />
+          </wpf:Grid.RowDefinitions>
+          <wpf:Grid.ColumnDefinitions>
+            <wpf:ColumnDefinition Width="*" />
+            <wpf:ColumnDefinition Width="3*" />
+          </wpf:Grid.ColumnDefinitions>
+          <wpf:TextBlock Padding="0, 5, 2, 5" Text="Toolkit版本:" wpf:Grid.Row="0" wpf:Grid.Column="0" TextAlignment="Right" />
+          <wpf:ComboBox wpf:Grid.Row="0" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="ToolkitVer" SelectedValue="{wpf:Binding Path=ToolkitVer, Mode=TwoWay}" ToolTip="请选择Toolkit版本">
+            <i:Interaction.Behaviors>
+              <tk:CodeTableBehavior CodeTable="RegName=ToolkitVersion" />
+            </i:Interaction.Behaviors>
+          </wpf:ComboBox>
+          <wpf:TextBlock Padding="0, 5, 2, 5" Text="数据库类型:" wpf:Grid.Row="1" wpf:Grid.Column="0" TextAlignment="Right" />
+          <wpf:ComboBox wpf:Grid.Row="1" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="DatabaseType" SelectedValue="{wpf:Binding Path=DatabaseType, Mode=TwoWay}" ToolTip="请选择数据库类型">
+            <i:Interaction.Behaviors>
+              <tk:CodeTableBehavior CodeTable="RegName=DatabaseType" />
+            </i:Interaction.Behaviors>
+          </wpf:ComboBox>
+          <wpf:TextBlock Padding="0, 5, 2, 5" Text="数据库连接串:" wpf:Grid.Row="2" wpf:Grid.Column="0" TextAlignment="Right" />
+          <wpf:TextBox wpf:Grid.Row="2" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="ConnectionString" ToolTip="请填写数据库连接串">
+            <wpf:TextBox.Text>
+              <wpf:Binding Path="ConnectionString" Mode="TwoWay">
+                <wpf:Binding.ValidationRules />
+              </wpf:Binding>
+            </wpf:TextBox.Text>
+          </wpf:TextBox>
+          <wpf:TextBlock Padding="0, 5, 2, 5" Text="保存路径:" wpf:Grid.Row="3" wpf:Grid.Column="0" TextAlignment="Right" />
+          <tk:FolderPicker wpf:Grid.Row="3" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="BaseSolutionPath" ToolTip="请选择保存路径" FolderName="{wpf:Binding BaseSolutionPath, Mode=TwoWay}" />
+          <wpf:TextBlock Padding="0, 5, 2, 5" Text="选择要分发的模块:" wpf:Grid.Row="4" wpf:Grid.Column="0" TextAlignment="Right" />
+          <tk:CheckBoxList wpf:Grid.Row="4" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="CurrentZipFiles" ToolTip="请选择所需模块" ItemsSource="{wpf:Binding CurrentZipFiles}" />
+        </wpf:Grid>
+      </wpf:ScrollViewer>
+    </ScrollViewer>
+  </DockPanel>
+</Page>

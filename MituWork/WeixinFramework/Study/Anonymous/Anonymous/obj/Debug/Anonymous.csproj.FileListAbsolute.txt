@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\Anonymous\Anonymous\bin\Debug\Anonymous.exe
+D:\ZhouLL\trunk\Study\Anonymous\Anonymous\bin\Debug\Anonymous.pdb
+D:\ZhouLL\trunk\Study\Anonymous\Anonymous\obj\Debug\Anonymous.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\Anonymous\Anonymous\obj\Debug\Anonymous.exe
+D:\ZhouLL\trunk\Study\Anonymous\Anonymous\obj\Debug\Anonymous.pdb

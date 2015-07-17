@@ -1,0 +1,5 @@
+D:\C#InternalFile\Mitu.HZWDS\ManageWeb\WebSite\bin\Modules\TestExcel.dll
+D:\C#InternalFile\Mitu.HZWDS\ManageWeb\WebSite\bin\Modules\TestExcel.pdb
+D:\C#InternalFile\Mitu.HZWDS\Data\TestExcel\obj\Debug\TestExcel.dll
+D:\C#InternalFile\Mitu.HZWDS\Data\TestExcel\obj\Debug\TestExcel.pdb
+D:\C#InternalFile\Mitu.HZWDS\Data\TestExcel\obj\Debug\TestExcel.csprojResolveAssemblyReference.cache

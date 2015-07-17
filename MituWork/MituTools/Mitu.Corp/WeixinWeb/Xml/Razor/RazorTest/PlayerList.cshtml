@@ -1,0 +1,23 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssListTemplate
+@using YJC.Toolkit.Razor;
+@{
+    BootcssListData pageData = ViewBag.PageData;
+    pageData.UseGetMoreButton = true;
+    //pageData.ShowListHeader = true;
+    //pageData.Direction = DataDirection.Head;
+    pageData.QueryResolverName = "Player";
+    pageData.QueryFieldName = "Cname";
+    pageData.PageNumberCount = 4;
+    pageData.AddListField("AvatarId", 2);
+    pageData.AddListField("Cname", 8);
+    pageData.AddListField("CountryId", 2, "pv1 mr5");
+    //pageData.SetRowDisplayFile("PlayerRow.cshtml");
+    pageData.AddDisplayFieldFile("AvatarId", "AvatarId.cshtml");
+    pageData.AddDisplayFieldFile("CountryId", "CountryId.cshtml");
+}
+@section Header {
+    <div>
+        <h1>@ViewBag.Title</h1>
+    </div>
+}
+

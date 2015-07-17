@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen (YJC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:complexType name="LogConfigType">
+    <xs:choice>
+      <xs:element ref="ModuleXml"/>
+      <xs:element ref="SingleData"/>
+      <xs:any namespace="##other" processContents="lax" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute name="LogRegName" type="xs:token" use="required"/>
+  </xs:complexType>
+  <xs:element name="ModuleXml" type="EmptyType"/>
+  <xs:element name="SingleData">
+    <xs:complexType>
+      <xs:attribute name="TableName" type="xs:Name" use="required"/>
+      <xs:attribute name="KeyField" type="xs:Name" use="required"/>
+      <xs:attribute name="NameField" type="xs:Name"/>
+      <xs:attribute name="OtherField1" type="xs:Name"/>
+      <xs:attribute name="OtherField2" type="xs:Name"/>
+      <xs:attribute name="UserData" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

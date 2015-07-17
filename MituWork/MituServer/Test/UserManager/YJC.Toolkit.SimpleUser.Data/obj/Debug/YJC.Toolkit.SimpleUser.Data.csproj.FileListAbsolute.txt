@@ -1,0 +1,15 @@
+D:\Rep\GitManager\mituwork\MituServer\Test\ManageWeb\WebSite\bin\Modules\YJC.Toolkit.SimpleUser.Data.dll
+D:\Rep\GitManager\mituwork\MituServer\Test\ManageWeb\WebSite\bin\Modules\YJC.Toolkit.SimpleUser.Data.pdb
+D:\Rep\GitManager\mituwork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.csprojResolveAssemblyReference.cache
+D:\Rep\GitManager\mituwork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.dll
+D:\Rep\GitManager\mituwork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.pdb
+D:\Rep\MyGitRep\MituWork\MituServer\Test\ManageWeb\WebSite\bin\Modules\YJC.Toolkit.SimpleUser.Data.dll
+D:\Rep\MyGitRep\MituWork\MituServer\Test\ManageWeb\WebSite\bin\Modules\YJC.Toolkit.SimpleUser.Data.pdb
+D:\Rep\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.csprojResolveAssemblyReference.cache
+D:\Rep\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.dll
+D:\Rep\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.pdb
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\ManageWeb\WebSite\bin\Modules\YJC.Toolkit.SimpleUser.Data.dll
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\ManageWeb\WebSite\bin\Modules\YJC.Toolkit.SimpleUser.Data.pdb
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.csprojResolveAssemblyReference.cache
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.dll
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.SimpleUser.Data\obj\Debug\YJC.Toolkit.SimpleUser.Data.pdb

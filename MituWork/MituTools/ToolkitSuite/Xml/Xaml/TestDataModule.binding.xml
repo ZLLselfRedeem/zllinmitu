@@ -1,0 +1,30 @@
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\schema\v4\CommandBinding.xsd" version="4.0">
+  <Module SearchPattern="Logical">
+    <Commands>
+      <Command Name="Create">
+        <DataModule>
+          <Action>Create</Action>
+        </DataModule>
+      </Command>
+      <Command Name="Update">
+        <DataModule>
+          <Action>Update</Action>
+        </DataModule>
+      </Command>
+      <Command Name="Delete">
+        <DataModule>
+          <Action>Delete</Action>
+        </DataModule>
+      </Command>
+      <Command Name="Close">
+        <CloseModule/>
+      </Command>
+    </Commands>
+    <CommandBindings>
+      <CommandBinding CommandName="Close" ElementName="btnClose"/>
+      <CommandBinding CommandName="Create" ElementName="btnCreate"/>
+      <CommandBinding CommandName="Update" ElementName="btnUpdate"/>
+      <CommandBinding CommandName="Delete" ElementName="btnDelete"/>
+    </CommandBindings>
+  </Module>
+</Toolkit>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net schema\v5\Weixin.xsd">
+  <!--测试号-->
+  <tk:Weixin AppId="wxbecc5c76d695d14e" LogRawMessage="true">
+    <tk:Normal Token="mitu2014" Secret="ebd50d296451210d3382c4e95473ca64" OpenId="gh_45677552d1de" EncodingAESKey="D2jZkkUx5U9iO0kN1oz1TO7QgPI6SFVlcoavVt1X3vi" MessageMode="Secure">
+      <!--杭州湾地税-->
+      <!--<tk:Weixin AppId="wx8210c2514e8f0364" LogRawMessage="true">
+    <tk:Normal Token="mitu2014" Secret="c7a8619f07039efdc7264856e0b4580b" OpenId="gh_ea78033b1925" EncodingAESKey="D2jZkkUx5U9iO0kN1oz1TO7QgPI6SFVlcoavVt1X3vi" MessageMode="Secure">-->
+      <tk:Menu FileName="weixin/menu.bak.xml"/>
+      <tk:DefaultMessage>
+        <tk:Global>
+          <tk:TextMessage>
+            <tk:Content>
+              <tk:Content><![CDATA[更多功能请轻触屏幕左下角小图标，切换到菜单进行操作]]></tk:Content>
+            </tk:Content>
+          </tk:TextMessage>
+        </tk:Global>
+      </tk:DefaultMessage>
+    </tk:Normal>
+    <tk:MessageLog>
+      <tk:DbMessageLog/>
+    </tk:MessageLog>
+  </tk:Weixin>
+</tk:Toolkit>

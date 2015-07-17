@@ -1,0 +1,5 @@
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\_lib\tk5\YJC.Toolkit.Web.Excel.dll
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\_lib\tk5\YJC.Toolkit.Web.Excel.pdb
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Excel.Web\obj\Debug\YJC.Toolkit.Web.Excel.csprojResolveAssemblyReference.cache
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Excel.Web\obj\Debug\YJC.Toolkit.Web.Excel.dll
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Excel.Web\obj\Debug\YJC.Toolkit.Web.Excel.pdb

@@ -1,0 +1,16 @@
+﻿@inherits YJC.Toolkit.Razor.NormalListTemplate
+@using System.Data;
+@using YJC.Toolkit.Web;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Razor;
+@{
+    DataSet dataSet = (DataSet)Model;
+    string companyName = dataSet.GetFieldValue("CompanyName", "COM_FULL_NAME").ToString();
+    string title = ViewBag.Title;
+    if (!string.IsNullOrEmpty(companyName)) {
+        title = companyName + "的" + title;
+    }
+}
+@section Header {
+    <h1>@title</h1>
+}

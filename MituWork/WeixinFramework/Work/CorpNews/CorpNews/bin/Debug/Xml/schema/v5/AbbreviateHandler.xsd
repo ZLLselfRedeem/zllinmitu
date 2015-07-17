@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Abbreviate" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Head" type="xs:ID" use="required"/>
+            <xs:attribute name="Path" type="xs:anyURI" use="required"/>
+            <xs:attribute name="IdName" type="xs:Name"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required" fixed="5.0"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\TemplateTestMut\TemplateTestMut\bin\Debug\TemplateTestMut.exe
+D:\ZhouLL\trunk\Study\TemplateTestMut\TemplateTestMut\bin\Debug\TemplateTestMut.pdb
+D:\ZhouLL\trunk\Study\TemplateTestMut\TemplateTestMut\obj\Debug\TemplateTestMut.exe
+D:\ZhouLL\trunk\Study\TemplateTestMut\TemplateTestMut\obj\Debug\TemplateTestMut.pdb
+D:\ZhouLL\trunk\Study\TemplateTestMut\TemplateTestMut\obj\Debug\TemplateTestMut.csprojResolveAssemblyReference.cache

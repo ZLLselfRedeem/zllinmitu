@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\AccountDataXml.xsd">
+  <tk:Table IdName="BalanceSheet">
+    <tk:TableDesc>
+      <tk:Content>资产负债表</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>流动资产</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>流动资产：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="10">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="1">
+      <tk:FieldName>货币资金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>货币资金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="20">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="2">
+      <tk:FieldName>短期投资</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>短期投资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="30">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="3">
+      <tk:FieldName>应收票据</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应收票据</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="40">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="4">
+      <tk:FieldName>应收股利</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应收股利</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="50">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="5">
+      <tk:FieldName>应收利息</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应收利息</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="60">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="6">
+      <tk:FieldName>应收账款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应收账款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="70">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="7">
+      <tk:FieldName>其他应收款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他应收款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="80">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="8">
+      <tk:FieldName>预付账款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>预付账款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="90">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="9">
+      <tk:FieldName>应收补贴款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应收补贴款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="100">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="10">
+      <tk:FieldName>存货</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>存货</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="110">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="11">
+      <tk:FieldName>待摊费用</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>待摊费用</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="120">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="21">
+      <tk:FieldName>年内到期长期债权</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>一年内到期的长期债权投资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="130">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="24">
+      <tk:FieldName>其他流动资产</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他流动资产</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="140">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="31" Style="Sum">
+      <tk:FieldName>流动资产合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>流动资产合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="150">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>长期投资</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期投资：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="160">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="32">
+      <tk:FieldName>长期期权投资</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期期权投资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="170">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="34">
+      <tk:FieldName>长期债权投资</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期债权投资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="180">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="38" Style="Sum">
+      <tk:FieldName>长期投资合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期投资合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="190">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>固定资产</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="200">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="39">
+      <tk:FieldName>固定资产原价</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产原价</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="210">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="40">
+      <tk:FieldName>累计折旧</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：累计折旧</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="220">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="41">
+      <tk:FieldName>固定资产净值</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产净值</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="230">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="42">
+      <tk:FieldName>固定资产减值准备</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：固定资产减值准备</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="240">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="43" Style="Sum">
+      <tk:FieldName>固定资产净额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产净额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="250">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="44">
+      <tk:FieldName>工程物资</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>工程物资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="260">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="45">
+      <tk:FieldName>在建工程</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>在建工程</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="270">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="46" Style="Sum">
+      <tk:FieldName>固定资产清理</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产清理</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="280">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="50" Style="Sum">
+      <tk:FieldName>固定资产合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="290">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>无形资产及其他资产</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>无形资产及其他资产：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="300">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="51">
+      <tk:FieldName>无形资产</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>无形资产</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="310">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="52">
+      <tk:FieldName>长期待摊费用</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期待摊费用</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="320">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="53">
+      <tk:FieldName>其他长期资产</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他长期资产</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="330">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="60" Style="Sum">
+      <tk:FieldName>无形资产及其他资产合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>无形资产及其他资产合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="340">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>递延税项</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>递延税项：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="350">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="61">
+      <tk:FieldName>递延税款借项</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>递延税款借项</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="360">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="67" Style="Sum">
+      <tk:FieldName>资产总计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>资产总计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="370">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>流动负债</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>流动负债：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="380">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="68">
+      <tk:FieldName>短期借款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>短期借款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="390">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="69">
+      <tk:FieldName>应付票据</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应付票据</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="400">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="70">
+      <tk:FieldName>应付账款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应付账款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="410">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="71">
+      <tk:FieldName>预收账款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>预收账款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="420">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="72">
+      <tk:FieldName>应付工资</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应付工资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="430">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="73">
+      <tk:FieldName>应付福利费</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应付福利费</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="440">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="74">
+      <tk:FieldName>应付股利</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应付股利</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="450">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="75">
+      <tk:FieldName>应交税金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应交税金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="460">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="80">
+      <tk:FieldName>其他应交款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他应交款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="470">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="81">
+      <tk:FieldName>其他应付款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他应付款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="480">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="82">
+      <tk:FieldName>预提费用</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>预提费用</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="490">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="83">
+      <tk:FieldName>预计负债</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>预计负债</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="500">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="86">
+      <tk:FieldName>年内到期的长期负债</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>一年内到期的长期负债</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="510">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="90">
+      <tk:FieldName>其他流动负债</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他流动负债</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="520">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="100" Style="Sum">
+      <tk:FieldName>流动负债合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>流动负债合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="530">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>长期负债</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期负债：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="540">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="101">
+      <tk:FieldName>长期借款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期借款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="550">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="102">
+      <tk:FieldName>应付债券</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应付债券</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="560">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="103">
+      <tk:FieldName>长期应付款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期应付款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="570">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="106">
+      <tk:FieldName>专项应付款</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>专项应付款</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="580">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="108">
+      <tk:FieldName>其他长期负债</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他长期负债</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="590">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="110" Style="Sum">
+      <tk:FieldName>长期负债合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期负债合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="600">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>负债递延税项</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>递延税项：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="610">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="111">
+      <tk:FieldName>递延税款贷项</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>递延税款贷项</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="620">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="114" Style="Sum">
+      <tk:FieldName>负债合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>负债合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="630">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>所有者权益</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>所有者权益（或股东权益）：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="640">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="115">
+      <tk:FieldName>实收资本</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>实收资本（或股本）</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="650">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="116">
+      <tk:FieldName>已归还投资</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：已归还投资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="660">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="117" Style="Sum">
+      <tk:FieldName>实收资本净额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>实收资本（或股本）净额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="670">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="118">
+      <tk:FieldName>资本公积</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>资本公积</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="680">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="119">
+      <tk:FieldName>盈余公积</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>盈余公积</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="690">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="120">
+      <tk:FieldName>法定公益金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其中：法定公益金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="700">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="121">
+      <tk:FieldName>未分配利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>未分配利润</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="710">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="1" OrderNumber="122" Style="Sum">
+      <tk:FieldName>所有者权益合计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>所有者权益（或股东权益）合计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="720">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="135" Style="Sum">
+      <tk:FieldName>负债和所有者权益总计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>负债和所有者权益（或股东权益）总计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="730">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/><tk:Attribute Name="type" Value="number"/><tk:Attribute Name="data-number-to-fixed" Value="2"/>
+      </tk:Control>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

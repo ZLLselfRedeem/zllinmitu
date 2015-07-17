@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:element name="DataRight">
+    <xs:complexType>
+      <xs:group ref="DataRightGroup"/>
+      <xs:attribute name="SupportData" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="DataRightGroup">
+    <xs:choice>
+      <xs:element ref="RegNameRight"/>
+      <xs:element ref="OwnerRight"/>
+      <xs:element ref="CompositeRight"/>
+      <xs:element ref="EmptyRight"/>
+      <xs:any namespace="##other" processContents="lax"/>
+      <xs:element ref="ContactRight"/>
+    </xs:choice>
+  </xs:group>
+  <xs:element name="RegNameRight" type="xs:Name"/>
+  <xs:element name="OwnerRight">
+    <xs:complexType>
+      <xs:attribute name="FieldName" type="xs:Name" use="required"/>
+      <xs:attribute name="DataType" type="XmlDataType" default="int"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmptyRight">
+    <xs:complexType>
+      <xs:attribute name="AllowAll" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompositeRight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RightItem" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:group ref="DataRightGroup"/>
+            <xs:attribute name="Style" type="PageStyleType" use="required"/>
+            <xs:attribute name="Operation" type="xs:Name"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="HasRightIfNoItem" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactRight">
+    <xs:complexType>
+      <xs:attribute name="ContactDirFieldName" type="xs:Name" use="required"/>
+      <xs:attribute name="OnlyAdmin" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

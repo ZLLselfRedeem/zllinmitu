@@ -1,0 +1,181 @@
+﻿@using System.Linq;
+@using System.Xml.Schema;
+@using Toolkit.Suite
+@using Toolkit.SchemaSuite;
+@using Toolkit.SchemaSuite.Schema;
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Xml;
+@{
+    
+    SchemaRazorData e = @Model as SchemaRazorData;
+    ElementNode node = e.Node as ElementNode;
+    SchemaSuiteData data = e.SuiteData;
+    ElementNode[] multipleNodes = (from eleNode in node.Elements where eleNode.IsMultiple && eleNode.IsChecked != false select eleNode).ToArray();
+    bool hasMultipleNodes = multipleNodes.Length > 0;
+    string classScope = data.ClassScope == ModifierScope.Internal ? string.Empty : "public ";
+    string methodScope = data.MethodScope == ModifierScope.Internal ? string.Empty : "public ";
+}
+pacakge @data.Namespace.ToLower();
+
+@{
+    if (hasMultipleNodes)
+    {
+@:import java.util.ArrayList;    
+    }
+    foreach (var item in e.Namespaces)
+    {
+@:import @item;        
+    }
+}
+import yjc.toolkit.xml.annotation.*;
+
+@(classScope)final class @node.TypeName
+{
+@{
+    foreach (AttributeNode attrNode in node.Attributes) 
+    {
+        if (attrNode.IsChecked == false)
+            continue;
+        string type = SchemaSuiteUtil.GetJavaType(attrNode, e.RegTypes);
+        List<string> attributes = new List<string>();
+        if (!string.IsNullOrEmpty(attrNode.DefaultValue))
+            attributes.Add(string.Format("defaultValue = \"{0}\"", attrNode.DefaultValue));
+        if (attrNode.IsCamel)
+            attributes.Add("namingRule = NamingRule.Camel");
+        if (attrNode.IsRequired)
+            attributes.Add("required = true");
+        string attrString = string.Join(", ", attributes);
+        if (!string.IsNullOrEmpty(attrString))
+        {
+            attrString = "(" + attrString + ")";
+        }
+    @:@@@("XmlAttribute" + attrString)
+    @:private @type @attrNode.CamelName;
+@:
+    }
+    if (node.HasContent) 
+    {
+        @:@@XmlContent
+        @:private String content;
+@:
+    }
+    int index = 0;
+    foreach (ElementNode elemNode in node.Elements)
+    {
+        if (elemNode.IsChecked == false)
+            continue;
+        string attrName;
+        string type = SchemaSuiteUtil.GetJavaType(elemNode, e.RegTypes);
+        if (elemNode.SimpleType)
+            attrName = "XmlElement";
+        else 
+            attrName = "ObjectXmlElement";
+
+        string propName = elemNode.CamelName;
+        List<string> attributes = new List<string>();
+        if (elemNode.IsMultiple)
+        {
+            attributes.Add(string.Format("isMultiple = true, objectType = {0}.class, localName = \"{1}\"", type, elemNode.PascalName));
+            type = string.Format("ArrayList<{0}>", type);
+            propName = propName + "s";
+        }
+        if (elemNode.NamespaceType != NamespaceType.None)
+        {
+            attributes.Add(string.Format("namespaceType = NamespaceType.{0}", elemNode.NamespaceType));
+            if (elemNode.NamespaceType == NamespaceType.Namespace)
+                attributes.Add(string.Format("namespaceUri = \"{0}\"", elemNode.NamespaceUri));
+        }
+        if (elemNode.SimpleType && !string.IsNullOrEmpty(elemNode.DefaultValue))
+            attributes.Add(string.Format("defaultValue = \"{0}\"", elemNode.DefaultValue));
+        if (elemNode.IsCamel)
+            attributes.Add("namingRule = NamingRule.Camel");
+        if (elemNode.IsRequired)
+            attributes.Add("required = true");
+        attributes.Add(string.Format("order = {0}", (++index) * 10));
+        string attrString = "(" + string.Join(", ", attributes) + ")";
+    @:@@@(attrName + attrString)
+    @:private @type @propName;
+@:
+    }
+
+    @:public @(node.TypeName + "()") {
+    @:}
+
+    foreach (AttributeNode attrNode in node.Attributes) 
+    {
+        if (attrNode.IsChecked == false)
+            continue;
+        string type = SchemaSuiteUtil.GetJavaType(attrNode, e.RegTypes);
+@:
+    @:protected final void set@(attrNode.PascalName)(@type @attrNode.CamelName) {
+        @:this.@attrNode.CamelName = @attrNode.CamelName;
+    @:}
+    }
+    if (node.HasContent) 
+    {
+@:
+    @:protected final void setContent(String content) {
+        @:this.content = content;
+    @:}
+    }
+    foreach (ElementNode elemNode in node.Elements)
+    {
+        if (elemNode.IsChecked == false)
+            continue;
+        string type = SchemaSuiteUtil.GetJavaType(elemNode, e.RegTypes);
+        string propName = elemNode.CamelName;
+        string pascalName = elemNode.PascalName;
+        if (elemNode.IsMultiple)
+        {
+            type = string.Format("ArrayList<{0}>", type);
+            propName += "s";
+            pascalName += "s";
+        }
+@:
+    @:protected final void set@(pascalName)(@type @propName) {
+        @:this.@propName = @propName;
+    @:}
+    }
+    
+    
+    foreach (AttributeNode attrNode in node.Attributes) 
+    {
+        if (attrNode.IsChecked == false)
+            continue;
+        string type = SchemaSuiteUtil.GetJavaType(attrNode, e.RegTypes);
+        string getMethod = attrNode.TypeCode == XmlTypeCode.Boolean ? "is" : "get";
+@:
+    @:@(methodScope)final @type @(getMethod + attrNode.PascalName)() {
+        @:return @attrNode.CamelName;
+    @:}
+    }
+    if (node.HasContent) 
+    {
+@:
+    @:@(methodScope)final String getContent() {
+        @:return content;
+    @:}
+    }
+    foreach (ElementNode elemNode in node.Elements)
+    {
+        if (elemNode.IsChecked == false)
+            continue;
+        string type = SchemaSuiteUtil.GetJavaType(elemNode, e.RegTypes);
+        string propName = elemNode.CamelName;
+        string pascalName = elemNode.PascalName;
+        string getMethod = elemNode.TypeCode == XmlTypeCode.Boolean ? "is" : "get";
+        if (elemNode.IsMultiple)
+        {
+            type = string.Format("ArrayList<{0}>", type);
+            propName += "s";
+            pascalName += "s";
+        }
+@:
+    @:@(methodScope)final @type @(getMethod + pascalName)() {
+        @:return @propName;
+    @:}
+    }
+}
+}

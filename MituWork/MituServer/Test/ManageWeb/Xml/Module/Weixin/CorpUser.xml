@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>企业通讯录</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:DbSingleCustomTable TableName="WE_CORP_USER" ColumnCount="1"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource>
+        <tk:Resolver>
+          <tk:RegResolver>CorpUser</tk:RegResolver>
+        </tk:Resolver>
+        <tk:Operators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:FieldOperateRight FieldName="AttentionFlag">
+                <tk:Empty>Insert</tk:Empty>
+                <tk:Item Value="1">Update,Delete,Department,SendMsg</tk:Item>
+                <tk:Item Value="0" ContainsNull="true">Update,Delete,Department,Invite</tk:Item>
+              </tk:FieldOperateRight>
+            </tk:Right>
+            <tk:InsertOperator IsDialog="true"/>
+            <tk:UpdateOperator IsDialog="true"/>
+            <tk:DeleteOperator/>
+            <tk:Operator Position="Row" Id="Department" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>设置组织</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebUpdateXmlPage.tkx?Source=Weixin/CorpUserDept&amp;UserId=*UserId*</tk:Content>
+            </tk:Operator>
+            <tk:Operator Position="Row" Id="SendMsg" Info="Dialog">
+              <tk:Caption>
+                <tk:Content>发送消息</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebInsertXmlPage.tkx?Source=Weixin/CorpSimpleSendMsg&amp;Target=User&amp;UserId=*UserLogonName*</tk:Content>
+            </tk:Operator>
+            <tk:Operator Position="Row" Id="Invite">
+              <tk:Caption>
+                <tk:Content>邀请</tk:Content>
+              </tk:Caption>
+            </tk:Operator>
+          </tk:StandardOperators>
+        </tk:Operators>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SingleDialogRazorPageMaker ListDisplay="Striped" DialogHeight="600"/>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

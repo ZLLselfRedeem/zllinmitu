@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\BasicInheritance\BasicInheritance\bin\Debug\BasicInheritance.exe
+D:\ZhouLL\trunk\Study\BasicInheritance\BasicInheritance\bin\Debug\BasicInheritance.pdb
+D:\ZhouLL\trunk\Study\BasicInheritance\BasicInheritance\obj\Debug\BasicInheritance.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\BasicInheritance\BasicInheritance\obj\Debug\BasicInheritance.exe
+D:\ZhouLL\trunk\Study\BasicInheritance\BasicInheritance\obj\Debug\BasicInheritance.pdb

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\Refactor\Refactor\bin\Debug\Refactor.exe
+D:\ZhouLL\trunk\Study\Refactor\Refactor\bin\Debug\Refactor.pdb
+D:\ZhouLL\trunk\Study\Refactor\Refactor\obj\Debug\Refactor.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\Refactor\Refactor\obj\Debug\Refactor.exe
+D:\ZhouLL\trunk\Study\Refactor\Refactor\obj\Debug\Refactor.pdb

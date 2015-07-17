@@ -1,0 +1,9 @@
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\bin\Debug\FormsAppTest.exe.config
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\bin\Debug\FormsAppTest.exe
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\bin\Debug\FormsAppTest.pdb
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\obj\Debug\FormsAppTest.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\obj\Debug\FormsAppTest.Properties.Resources.resources
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\obj\Debug\FormsAppTest.csproj.GenerateResource.Cache
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\obj\Debug\FormsAppTest.exe
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\obj\Debug\FormsAppTest.pdb
+D:\ZhouLL\trunk\Study\FormsAppTest\FormsAppTest\obj\Debug\FormsAppTest.MainForm.resources

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\GenericAndCollecotion\GenericAndCollecotion\bin\Debug\GenericAndCollecotion.exe
+D:\ZhouLL\trunk\Study\GenericAndCollecotion\GenericAndCollecotion\bin\Debug\GenericAndCollecotion.pdb
+D:\ZhouLL\trunk\Study\GenericAndCollecotion\GenericAndCollecotion\obj\Debug\GenericAndCollecotion.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\GenericAndCollecotion\GenericAndCollecotion\obj\Debug\GenericAndCollecotion.exe
+D:\ZhouLL\trunk\Study\GenericAndCollecotion\GenericAndCollecotion\obj\Debug\GenericAndCollecotion.pdb

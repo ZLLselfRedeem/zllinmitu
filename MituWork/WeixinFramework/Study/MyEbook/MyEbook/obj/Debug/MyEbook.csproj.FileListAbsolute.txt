@@ -1,0 +1,7 @@
+D:\ZhouLL\trunk\Study\MyEbook\MyEbook\bin\Debug\MyEbook.exe
+D:\ZhouLL\trunk\Study\MyEbook\MyEbook\bin\Debug\MyEbook.pdb
+D:\ZhouLL\trunk\Study\MyEbook\MyEbook\obj\Debug\MyEbook.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\MyEbook\MyEbook\obj\Debug\MyEbook.Properties.Resources.resources
+D:\ZhouLL\trunk\Study\MyEbook\MyEbook\obj\Debug\MyEbook.csproj.GenerateResource.Cache
+D:\ZhouLL\trunk\Study\MyEbook\MyEbook\obj\Debug\MyEbook.exe
+D:\ZhouLL\trunk\Study\MyEbook\MyEbook\obj\Debug\MyEbook.pdb

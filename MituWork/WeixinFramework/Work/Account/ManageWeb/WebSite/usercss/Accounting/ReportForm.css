@@ -1,0 +1,107 @@
+* {
+    outline: none !important;
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+.cc-select {
+    height: 34px;
+    line-height: 34px;
+    /*width: 30% !important;*/
+    display: inline-block;
+}
+
+select.cc-select > option {
+    padding: 5px 10px;
+}
+
+.form-group {
+    margin-bottom: 0 !important;
+}
+
+.ver-middle {
+    height: 34px;
+    line-height: 34px;
+}
+
+.pdl-1 {
+    padding-left: 1.5em !important;
+}
+
+.pdl-2 {
+    padding-left: 2.5em !important;
+}
+
+.pdl-3 {
+    padding-left: 3.5em !important;
+}
+
+.pdl-4 {
+    padding-left: 4.5em !important;
+}
+
+.pdl-5 {
+    padding-left: 5.5em !important;
+}
+
+.pdl-6 {
+    padding-left: 6.5em !important;
+}
+
+.pdl-7 {
+    padding-left: 7.5em !important;
+}
+
+.pdl-8 {
+    padding-left: 8.5em !important;
+}
+
+.pdl-9 {
+    padding-left: 9.5em !important;
+}
+
+.pdl-10 {
+    padding-left: 10.5em !important;
+}
+
+.pdl-11 {
+    padding-left: 11.5em !important;
+}
+
+.pdl-12 {
+    padding-left: 12.5em !important;
+}
+
+.pdl-13 {
+    padding-left: 13.5em !important;
+}
+
+.pdl-14 {
+    padding-left: 14.5em !important;
+}
+
+.pdl-15 {
+    padding-left: 15.5em !important;
+}
+
+.pdl-16 {
+    padding-left: 16.5em !important;
+}
+
+.pdl-17 {
+    padding-left: 17.5em !important;
+}
+
+.pdl-18 {
+    padding-left: 18.5em !important;
+}
+
+.pdl-19 {
+    padding-left: 19.5em !important;
+}
+
+.pdl-20 {
+    padding-left: 20.5em !important;
+}

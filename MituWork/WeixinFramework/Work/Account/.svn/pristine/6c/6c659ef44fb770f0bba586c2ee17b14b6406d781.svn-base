@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\AccountDataXml.xsd">
+  <tk:Table IdName="ProfitAppropriation">
+    <tk:TableDesc>
+      <tk:Content>利润分配表</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" OrderNumber="1">
+      <tk:FieldName>净利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>一、净利润</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="10">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="2">
+      <tk:FieldName>年初未分配利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>加：年初未分配利润</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="20">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="4">
+      <tk:FieldName>其他转入</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他转入</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="30">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="8">
+      <tk:FieldName>可供分配的利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>二、可供分配的利润</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="40">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="9">
+      <tk:FieldName>法定盈余公积</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：提取法定盈余公积</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="50">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="10">
+      <tk:FieldName>法定公益金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>提取法定公益金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="60">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="11">
+      <tk:FieldName>职工奖励及福利</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>提取职工奖励及福利基金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="70">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="12">
+      <tk:FieldName>储备基金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>提取储备基金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="80">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="13">
+      <tk:FieldName>企业发展基金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>提取企业发展基金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="90">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="14">
+      <tk:FieldName>投资归还</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>利润归还投资</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="100">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="16">
+      <tk:FieldName>投资者利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>三、可供投资者分配的利润</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="110">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="17">
+      <tk:FieldName>优先股股利</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：应付优先股股利</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="120">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="18">
+      <tk:FieldName>任意盈余公积</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>提取任意盈余公积</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="130">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="19">
+      <tk:FieldName>普通股股利</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应付普通股股利</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="140">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="20">
+      <tk:FieldName>其他普通股股利</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>转作资本（或股本）的普通股股利</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="150">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="25">
+      <tk:FieldName>未分配利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>四、未分配利润</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="160">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

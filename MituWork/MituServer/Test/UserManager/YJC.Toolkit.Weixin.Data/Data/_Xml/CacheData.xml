@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_CACHE_DATA">
+    <tk:TableDesc>
+      <tk:Content>数据缓存表</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="string" IsKey="true" IsEmpty="false">
+      <tk:FieldName>CD_KEY</tk:FieldName>
+      <tk:NickName>DataKey</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>缓存标记</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>10</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="text">
+      <tk:FieldName>CD_DATA</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>缓存数据</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>CD_CREATE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>获取时间</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="Date">
+      <tk:FieldName>CD_VALID_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>下次更新时间</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CD_DATA_PLUG</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>数据获取插件</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>20</tk:Length>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

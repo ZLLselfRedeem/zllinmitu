@@ -1,0 +1,5 @@
+D:\WorkSpace\MyGitRep\MituWork\Mybranch\document\精通C#（第6版）源代码\Code\Chapter 22\AutoLotDAL (Version 2)\bin\Debug\AutoLotDAL.dll
+D:\WorkSpace\MyGitRep\MituWork\Mybranch\document\精通C#（第6版）源代码\Code\Chapter 22\AutoLotDAL (Version 2)\bin\Debug\AutoLotDAL.pdb
+D:\WorkSpace\MyGitRep\MituWork\Mybranch\document\精通C#（第6版）源代码\Code\Chapter 22\AutoLotDAL (Version 2)\obj\Debug\AutoLotDAL.dll
+D:\WorkSpace\MyGitRep\MituWork\Mybranch\document\精通C#（第6版）源代码\Code\Chapter 22\AutoLotDAL (Version 2)\obj\Debug\AutoLotDAL.pdb
+D:\WorkSpace\MyGitRep\MituWork\Mybranch\document\精通C#（第6版）源代码\Code\Chapter 22\AutoLotDAL (Version 2)\obj\Debug\AutoLotDAL.csprojResolveAssemblyReference.cache

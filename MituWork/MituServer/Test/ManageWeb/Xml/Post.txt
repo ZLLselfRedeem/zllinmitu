@@ -1,0 +1,1 @@
+{"WeMaterialUploadObject":{"Title":"","Introduction":"","FileName":"lingshi.jpg","ServerPath":"D:\\WorkSpace\\MyGitRep\\MituWork\\MituServer\\Test\\ManageWeb\\WebSite\\UploadTemp\\a48983ce-39e0-4daa-8f9e-04d387321bbb.jpg","FileSize":"57291","ContentType":"image/jpeg"}}

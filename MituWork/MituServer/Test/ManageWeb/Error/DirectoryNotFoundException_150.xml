@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><tk:Toolkit xmlns:tk="http://www.qdocuments.net"><Error><Source>Accounting/Company</Source><Page>YJC.Toolkit.Web.Page.WebListXmlHttpHandler</Page><Url>http://localhost:29533/Library/WebListXmlPage.tkx?Source=Accounting/Company</Url><DateTime>2015/7/10 10:28:52</DateTime><UserId>1</UserId><OrgId>1</OrgId></Error><Exception><Message>未能找到路径“D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\ManageWeb\Xml\Module\Accounting\Company.xml”的一部分。</Message><ErrorSource>mscorlib</ErrorSource><StackTrace>   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 YJC.Toolkit.Sys.ObjectExtension2.ReadFromFile(Object receiver, String method, String modelName, String fileName, ReadSettings settings, QName root)
+   在 YJC.Toolkit.Sys.ObjectExtension2.ReadXmlFromFile(Object receiver, String modelName, String fileName)
+   在 YJC.Toolkit.Sys.ObjectExtension2.ReadXmlFromFile(Object receiver, String fileName)
+   在 YJC.Toolkit.Web.InternalWebUtil.CreateModuleXml(HttpRequest request)
+   在 YJC.Toolkit.Web.Page.WebModuleContentPage..ctor()
+   在 YJC.Toolkit.Web.Page.WebListXmlPage..ctor()
+   在 YJC.Toolkit.Web.Page.WebListXmlHttpHandler.CreatePage()
+   在 YJC.Toolkit.Web.ToolkitHttpHandler.ProcessRequest(HttpContext context)</StackTrace><Type>System.IO.DirectoryNotFoundException</Type><TargetSite>Void WinIOError(Int32, System.String)</TargetSite><OtherInfos /></Exception></tk:Toolkit>

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\DefaultAppDomain\DefaultAppDomain\bin\Debug\DefaultAppDomain.exe
+D:\ZhouLL\trunk\Study\DefaultAppDomain\DefaultAppDomain\bin\Debug\DefaultAppDomain.pdb
+D:\ZhouLL\trunk\Study\DefaultAppDomain\DefaultAppDomain\obj\Debug\DefaultAppDomain.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\DefaultAppDomain\DefaultAppDomain\obj\Debug\DefaultAppDomain.exe
+D:\ZhouLL\trunk\Study\DefaultAppDomain\DefaultAppDomain\obj\Debug\DefaultAppDomain.pdb

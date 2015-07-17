@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2011 rel. 2 sp1 (CJY) 使用XMLSpy vHello编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen (Hello) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Application"/>
+        <xs:element ref="Databases"/>
+        <xs:element name="Entities" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Entity" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:Name" use="required"/>
+                  <xs:attribute name="ModelName" type="xs:token" use="required"/>
+                  <xs:attribute name="ProviderName" type="xs:token" use="required"/>
+                  <xs:attributeGroup ref="DbGroup"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Services" minOccurs="0"/>
+        <xs:element ref="Debug"/>
+        <xs:element ref="Other" minOccurs="0"/>
+        <xs:element ref="UserManager" minOccurs="0"/>
+        <xs:element ref="Extension" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required" fixed="2.0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Application">
+    <xs:complexType>
+      <xs:attribute name="Type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Application"/>
+            <xs:enumeration value="Web"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Path" type="xs:string" use="required"/>
+      <xs:attribute name="AppPath" type="xs:string"/>
+      <xs:attribute name="CommandTimeOut" type="xs:unsignedInt" default="600"/>
+      <xs:attribute name="CacheTime" type="xs:time" use="required"/>
+      <xs:attribute name="Single" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Databases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Database" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="DbGroup">
+    <xs:attribute name="SqlProvider" type="xs:token" use="required"/>
+    <xs:attribute name="DbProvider" type="xs:token" use="required"/>
+    <xs:attribute name="IdStep" type="xs:unsignedInt" default="1"/>
+    <xs:attribute name="ConnectionString" type="xs:string" use="required"/>
+    <xs:attribute name="Encode" type="xs:boolean" default="false"/>
+    <xs:attribute name="EncodeKey" type="xs:string"/>
+  </xs:attributeGroup>
+  <xs:element name="Database">
+    <xs:complexType>
+      <xs:attribute name="Name" type="xs:ID" use="required"/>
+      <xs:attribute name="Default" type="xs:boolean" default="false"/>
+      <xs:attributeGroup ref="DbGroup"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Debug">
+    <xs:complexType>
+      <xs:attribute name="Debug" type="xs:boolean" use="required"/>
+      <xs:attribute name="UseCache" type="xs:boolean" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Other">
+    <xs:complexType>
+      <xs:attribute name="Culture" type="xs:language" use="required"/>
+      <xs:attribute name="Model" type="xs:Name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserManager">
+    <xs:annotation>
+      <xs:documentation>该节点为动态节点</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="DbUserManager" minOccurs="0"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DbUserManager">
+    <xs:complexType>
+      <xs:attribute name="Context" type="xs:string"/>
+      <xs:attribute name="Type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Extension" type="xs:anyType"/>
+  <xs:element name="Services">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="LogOnService" type="XamlType" minOccurs="0"/>
+        <xs:element name="ModuleService" type="XamlType" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="XamlType">
+    <xs:sequence>
+      <xs:element name="Xaml" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\FunWithGenericCollections\FunWithGenericCollections\obj\Debug\FunWithGenericCollections.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\FunWithGenericCollections\FunWithGenericCollections\bin\Debug\FunWithGenericCollections.exe
+D:\ZhouLL\trunk\Study\FunWithGenericCollections\FunWithGenericCollections\bin\Debug\FunWithGenericCollections.pdb
+D:\ZhouLL\trunk\Study\FunWithGenericCollections\FunWithGenericCollections\obj\Debug\FunWithGenericCollections.exe
+D:\ZhouLL\trunk\Study\FunWithGenericCollections\FunWithGenericCollections\obj\Debug\FunWithGenericCollections.pdb

@@ -1,0 +1,1 @@
+D:\WorkSpace\MyGitRep\MituWork\Mybranch\document\精通C#（第6版）源代码\Code\Chapter 23\InventoryEDMConsoleApp\bin\Debug\InventoryEDMConsoleApp.exe.config

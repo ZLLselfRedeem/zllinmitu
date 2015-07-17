@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://nant.sf.net/release/0.91/nant.xsd" default="run" name="Hello">
+  <property name="TempPath" value="ManageWebTemp"/>
+  <property name="ZipFile" value="ManageWeb.zip"/>
+  <target name="run">
+    <delete dir="${TempPath}" includeemptydirs="true"/>
+    <copy includeemptydirs="true" todir="${TempPath}" overwrite="true">
+      <fileset basedir="../ManageWeb">
+        <include name="Xml\**.*"/>
+        <include name="WebSite\Bin\**.*"/>
+        <include name="WebSite\Library\**.*"/>
+        <include name="WebSite\toolkitcss\**.*"/>
+        <include name="WebSite\toolkitimages\**.*"/>
+        <include name="WebSite\toolkitjs\**.*"/>
+        <include name="WebSite\userjs\**.*"/>
+        <include name="WebSite\usercss\**.*"/>
+        <include name="WebSite\pic\**.*"/>
+        <include name="WebSite\Test\**.*"/>
+        <include name="WebSite\*.htm"/>
+        <exclude name="WebSite\Bin\**.pdb"/>
+        <exclude name="Xml\*.*"/>
+        <exclude name="Xml\obj\**.*"/>
+        <exclude name="Xml\Razor\_temp\**.*"/>
+        <exclude name="**.7z"/>
+      </fileset>
+    </copy>
+    <copy includeemptydirs="true" todir="${TempPath}/WebSite/Bin" overwrite="true">
+      <fileset basedir="../../_lib/tk5">
+        <include name="System.Web.Razor.dll"/>
+      </fileset>
+    </copy>
+    <delete includeemptydirs="true">
+      <fileset basedir="${TempPath}\WebSite\Bin\Modules">
+        <include name="YJC.Toolkit.Core.dll"/>
+        <include name="YJC.Toolkit.Core.Extension.dll"/>
+        <include name="YJC.Toolkit.AdoData.dll"/>
+        <include name="YJC.Toolkit.Data.dll"/>
+        <include name="YJC.Toolkit.MetaData.dll"/>
+        <include name="YJC.Toolkit.WebApp.dll"/>
+        <include name="YJC.Toolkit.Weixin.dll"/>
+        <include name="YJC.Toolkit.BaiduMap.dll"/>
+        <include name="YJC.Toolkit.Weixin.Data.dll"/>
+        <include name="en\**.*"/>
+        <include name="zh-CHS\**.*"/>
+      </fileset>
+    </delete>
+    <delete includeemptydirs="true">
+      <fileset basedir="${TempPath}\Xml">
+        <include name="Module\Android.Logon\**.*"/>
+        <include name="weixin\*.json"/>
+        <include name="Test\**.*"/>
+      </fileset>
+    </delete>
+    <delete file="${ZipFile}"/>
+    <zip includeemptydirs="false" zipfile="${ZipFile}">
+      <fileset basedir="${TempPath}">
+        <include name="**.*"/>
+      </fileset>
+    </zip>
+    <delete dir="${TempPath}" includeemptydirs="true"/>
+  </target>
+</project>

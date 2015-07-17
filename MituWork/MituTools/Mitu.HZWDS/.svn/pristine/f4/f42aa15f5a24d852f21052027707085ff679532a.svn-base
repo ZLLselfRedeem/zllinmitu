@@ -1,0 +1,21 @@
+﻿@using YJC.Toolkit.Sys;
+<div class="bg-primary" style="margin-left: -15px; margin-right: -15px; padding-top: 7px; padding-bottom: 7px">
+    <div class="dropdown pull-right">
+        <button class="btn btn-default dropdown-toggle mr20" style="margin-top: 3px" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            导航<i class="icon-reorder"></i>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@("Library/WebListXmlPage.tkx?Source=Cxcs/TongZhi".AppVirutalPath())">通知公告</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@("Library/WebListXmlPage.tkx?Source=Cxcs/FaGuiIndex".AppVirutalPath())">政策法规</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@("Library/WebListXmlPage.tkx?Source=Cxcs/BanShui".AppVirutalPath())">办税流程</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@("Library/WebListXmlPage.tkx?Source=Cxcs/ShenBaoQi".AppVirutalPath())">申报期查询</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://taxapp.nbcs.gov.cn/aWeb/invoiceJsp/invoiceSearch.jsp">发票信息查询</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@("Library/WebListXmlPage.tkx?Source=Cxcs/XinYong".AppVirutalPath())">信用等级查询</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@("Library/WebListXmlPage.tkx?Source=Cxcs/NaShui".AppVirutalPath())">纳税人学堂</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@("Library/WebListXmlPage.tkx?Source=CXCS/Lianxi".AppVirutalPath())">联系我们</a></li>
+        </ul>
+    </div>
+    <h4 class="vam dib ml20">杭州湾地税</h4>
+</div>

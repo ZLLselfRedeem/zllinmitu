@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\WeixinRule.xsd">
+  <tk:Rule RegName="TongZhi" Author="YJC">
+    <tk:Match>
+      <tk:EventClickRule EventKey="TongZhi"/>
+    </tk:Match>
+    <tk:Reply>
+      <tk:DataRowNewsMessage>
+        <tk:Sql>SELECT TOP 3 * FROM CS_DOCUMENT WHERE DOC_CATELOG = '01' ORDER BY DOC_PUB_DATE DESC</tk:Sql>
+        <tk:EmptyMessage>
+          <tk:Content>暂时还没有通知公告</tk:Content>
+        </tk:EmptyMessage>
+        <tk:DataRowArticle>
+          <tk:Title NeedParse="true">{:DOC_TITLE}</tk:Title>
+          <tk:PicUrl Base="cxcs">pic/sys/shui.jpg</tk:PicUrl>
+          <tk:Url NeedParse="true" Base="cxcs">doc.vp?{:DOC_DOC_ID}</tk:Url>
+        </tk:DataRowArticle>
+        <tk:FootArticle>
+          <tk:Title>
+            <tk:Content>更多　＞＞＞</tk:Content>
+          </tk:Title>
+          <tk:PicUrl Base="cxcs">pic/sys/shui.jpg</tk:PicUrl>
+          <tk:Url Base="cxcs">Library/WebListXmlPage.tkx?Source=Cxcs/TongZhi</tk:Url>
+        </tk:FootArticle>
+      </tk:DataRowNewsMessage>
+    </tk:Reply>
+  </tk:Rule>
+</tk:Toolkit>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>报表数据</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="Accounting/ReportData.xml" DisableAutoDetailLink="true"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource OrderBy="ORDER BY RD_REPORT_DATE DESC, RD_REPORT_NAME" DisablePage="Detail Insert Update">
+        <tk:Resolver>
+          <tk:RegResolver>ReportData</tk:RegResolver>
+        </tk:Resolver>
+        <tk:FilterSql NeedParse="true" EmptyMarco="Company">RD_COMPANY = {#Company}</tk:FilterSql>
+        <tk:Operators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:FieldOperateRight FieldName="ReportName">
+<!--               <tk:Empty>InsertProfit,InsertCashFlow,InsertBalance</tk:Empty>
+                <tk:Item Value="ProfitAppropriation">UpdateProfit,Delete</tk:Item>-->
+                <tk:Empty>InsertIncome,InsertCashFlow,InsertBalance</tk:Empty>
+                <tk:Item Value="IncomeStatement">UpdateIncome,Delete</tk:Item>
+                <tk:Item Value="BalanceSheet">UpdateBalance,Delete</tk:Item>
+                <tk:Item Value="CashFlowStatement">UpdateCashFlow,Delete</tk:Item>
+              </tk:FieldOperateRight>
+            </tk:Right>
+            <tk:Operator IconClass="icon-plus" Position="Global" Id="InsertBalance">
+              <tk:Caption>
+                <tk:Content>新建资产负债表</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebInsertXmlPage.tkx?Source=Report/BalanceSheet&amp;ReportName=BalanceSheet&amp;Company={#Company}</tk:Content>
+            </tk:Operator>
+            <tk:Operator Id="UpdateBalance">
+              <tk:Caption>
+                <tk:Content>修改</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebUpdateXmlPage.tkx?Source=Report/BalanceSheet&amp;ReportId=*ReportId*</tk:Content>
+            </tk:Operator>
+            <tk:Operator IconClass="icon-plus" Position="Global" Id="InsertCashFlow">
+              <tk:Caption>
+                <tk:Content>新建现金流量表</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebInsertXmlPage.tkx?Source=Report/CashFlowStatement&amp;ReportName=CashFlowStatement&amp;Company={#Company}</tk:Content>
+            </tk:Operator>
+            <tk:Operator Id="UpdateCashFlow">
+              <tk:Caption>
+                <tk:Content>修改</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebUpdateXmlPage.tkx?Source=Report/CashFlowStatement&amp;ReportId=*ReportId*</tk:Content>
+            </tk:Operator>
+<!--            <tk:Operator IconClass="icon-plus" Position="Global" Id="InsertProfit">
+              <tk:Caption>
+                <tk:Content>新建利润分配表</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebInsertXmlPage.tkx?Source=Report/ProfitAppropriation&amp;ReportName=ProfitAppropriation&amp;Company={#Company}</tk:Content>
+            </tk:Operator>
+            <tk:Operator Id="UpdateProfit">
+              <tk:Caption>
+                <tk:Content>修改</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebUpdateXmlPage.tkx?Source=Report/ProfitAppropriation&amp;ReportId=*ReportId*</tk:Content>
+            </tk:Operator>-->
+            <tk:Operator IconClass="icon-plus" Position="Global" Id="InsertIncome">
+              <tk:Caption>
+                <tk:Content>新建利润表</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">~/Library/WebInsertXmlPage.tkx?Source=Report/IncomeStatement&amp;ReportName=IncomeStatement&amp;Company={#Company}</tk:Content>
+            </tk:Operator>
+            <tk:Operator Id="UpdateIncome">
+              <tk:Caption>
+                <tk:Content>修改</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebUpdateXmlPage.tkx?Source=Report/IncomeStatement&amp;ReportId=*ReportId*</tk:Content>
+            </tk:Operator>
+            <tk:DeleteOperator />
+          </tk:StandardOperators>
+        </tk:Operators>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SingleRazorPageMaker ListDisplay="Striped">
+        <tk:Item Style="List" RazorFile="Accounting\ReportList.cshtml">
+          <tk:RazorData>
+            <tk:NormalListData OperatorWidth="100" SearchCheckBox="Like"/>
+          </tk:RazorData>
+        </tk:Item>
+      </tk:SingleRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

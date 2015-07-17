@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using YJC.Toolkit.Sys;
+
+namespace YJC.Toolkit.Accounting
+{
+    [RegClass]
+    public class InputObject
+    {
+        [ObjectElement]
+        public ReportInfo Info { get; set; }
+
+        [ObjectElement]
+        public ProfitAppropriation ProfitAppropriation { get; private set; }
+    }
+}

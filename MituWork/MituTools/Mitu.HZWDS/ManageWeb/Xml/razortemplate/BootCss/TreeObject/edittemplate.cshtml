@@ -1,0 +1,58 @@
+﻿@inherits YJC.Toolkit.Razor.NormalCustomTemplate
+@using System.Data;
+@using System.Web;
+@using YJC.Toolkit.Web;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Razor;
+@{
+    Dictionary<string, string> queryString = Model.QueryString;
+}
+@functions {
+    string GetUrl(Dictionary<string, string> queryString)
+    {
+        string url = "Library/WebListXmlPage.tkx?Source=" + queryString["Source"];
+        return url.AppVirutalPath();
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    @RenderLayoutPartial("../bin/css.cshtml", null)
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/jstree/themes/default/style.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/simple-sidebar.css".AppVirutalPath())" />
+</head>
+<body class="tk-dataPage" data-webPath="@HtmlUtil.AppVirtualPath">
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="tktree w100p h100p p10 oa bdc" data-url="@GetUrl(queryString)" data-selectFunc="" data-initValue="@queryString.GetKeyValue("InitValue")">
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    @RenderLayoutPartial("../bin/js.cshtml", null)
+    <script type="text/javascript" src="@("toolkitjs/v5/jstree/jstree.js".AppVirutalPath())"> </script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.tree.js".AppVirutalPath())"> </script>
+</body>
+</html>

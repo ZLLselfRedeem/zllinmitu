@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\schema\v4\Module.xsd">
+	<tk:Module Category="New" DisplayName="Xml文件哦" RegName="XmlTestModule" Order="50" Author="YJC" CreateDate="2011-11-17" Description="测试Xml Module" IconName="Images/png/039审批.png">
+		<UIElement>
+			<XamlFile>
+				<Position>Xml</Position>
+				<FileName>Xaml\TestModule1.xaml</FileName>
+				<BindingFileName>Xaml\TestModule1.binding.xml</BindingFileName>
+			</XamlFile>
+		</UIElement>
+	</tk:Module>
+</Toolkit>

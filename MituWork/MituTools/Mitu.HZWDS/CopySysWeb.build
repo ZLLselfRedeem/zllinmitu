@@ -1,0 +1,16 @@
+<project xmlns="http://nant.sf.net/release/0.91/nant.xsd" name="Hello" default="run" >
+  <property name="SourceDir" value="../Mitu.CXCS/ManageWeb"/>
+  <property name="DestDir" value="ManageWeb"/>
+  <target name="run">
+    <copy overwrite="true" todir="${DestDir}/WebSite">
+      <fileset basedir="${SourceDir}/WebSite">
+        <include name="toolkitjs\v5\toolkit\toolkit.js"/>
+        <include name="toolkitjs\v5\toolkit\coreT\*.js"/>
+        <include name="toolkitcss\v5\commonM\**.css"/>
+        <include name="Library\**.*" />
+        <include name="toolkitjs\v5\toolkit\**.js"/>
+      </fileset>
+    </copy>
+  </target>
+</project>
+

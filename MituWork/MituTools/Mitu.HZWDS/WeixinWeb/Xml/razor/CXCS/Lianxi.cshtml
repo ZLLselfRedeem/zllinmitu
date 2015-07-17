@@ -1,0 +1,58 @@
+﻿@inherits YJC.Toolkit.Razor.ToolkitTemplate
+@using YJC.Toolkit.Sys;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>联系我们</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap-theme.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/font-awesome.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/style.css?v=1".AppVirutalPath())" />
+    @*<link rel="stylesheet" type="text/css" href="@("usercss/input.css".AppVirutalPath())" />*@
+</head>
+<body id="WebInsertXmlPage" class="tk-dataPage" data-webpath="/WebSite/">
+    <div class="container">
+        <div id="metaData" class="hide" data-toolbar="false" data-option="false"></div>
+        @RenderLocalPartial("EditTitle.cshtml", null)
+        <address class="mt15">
+            <strong>宁波市地方税务局杭州湾新区分局</strong><br />
+            地址：宁波市杭州湾新区兴慈一路288号<br />
+            联系电话：0574-63098394<br />
+        </address>
+        <div id="Map" class="mt10 mb10 h300 w100p">
+        </div>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.7.2.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/toolkit.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.page.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.data.js?v=7".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.weixin.js?v=5".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.ui.js".AppVirutalPath())"></script>
+    <script charset="utf-8" type="text/javascript" src="http://map.qq.com/api/js?v=2.exp"></script>
+    <script>
+        function createQQMap2(id, lng, lat, caption, level) {
+            var center = new qq.maps.LatLng(lat, lng);
+            var map = new qq.maps.Map(document.getElementById(id), {
+                zoom: level,
+                scaleControl: true,
+                draggable: false,
+                center: center
+            });
+            var marker = new qq.maps.Marker({
+                position: center,
+                map: map,
+                title: caption,
+                clickable: false,
+            });
+        }
+        var lat = 30.304458;
+        var lng = 121.327742;
+        var bMap = createQQMap2("Map", lng, lat, "杭州湾地税", 15);
+    </script>
+
+</body>
+</html>

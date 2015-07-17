@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net D:\ZhouLL\branches\Xml\schema\v5\WeixinCorpAuth.xsd">
+	<tk:State Key="Test" Url="~/Library/WebModuleContentPage.tkx?Source=RazorTest/TestUrl" AppId="1"/>
+</tk:Toolkit>

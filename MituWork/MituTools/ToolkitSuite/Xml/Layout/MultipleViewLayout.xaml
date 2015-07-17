@@ -1,0 +1,35 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:tk="http://www.qdocuments.net" mc:Ignorable="d" tk:ControlHelper.EnterAsTab="True" KeyboardNavigation.TabNavigation="Cycle">
+	<DockPanel>
+		<ContentControl DockPanel.Dock="Top" Name="_CommandArea"/>
+		<TabControl TabStripPlacement="Bottom" Name="__MultipleView1">
+			<i:Interaction.Behaviors>
+				<tk:ViewContainerBehavior/>
+			</i:Interaction.Behaviors>
+			<TabItem IsEnabled="True" Header="浏览">
+				<i:Interaction.Behaviors>
+					<tk:ViewBehavior Name="ListView"/>
+				</i:Interaction.Behaviors>
+				<DockPanel>
+					<ContentControl DockPanel.Dock="Top" Name="_ContentArea1"/>
+					<Grid DockPanel.Dock="Top">
+						<TextBlock Text="合计：21"/>
+					</Grid>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="1*"/>
+						</Grid.ColumnDefinitions>
+						<Button Grid.Column="2" Content="Search"/>
+					</Grid>
+				</DockPanel>
+			</TabItem>
+			<TabItem Header="主数据">
+				<i:Interaction.Behaviors>
+					<tk:ViewBehavior Name="MainView"/>
+				</i:Interaction.Behaviors>
+				<ContentControl DockPanel.Dock="Bottom" Name="_ContentArea2"/>
+			</TabItem>
+		</TabControl>
+	</DockPanel>
+</Page>

@@ -1,0 +1,70 @@
+﻿@inherits YJC.Toolkit.Razor.NormalCustomTemplate
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@using System.Collections.Generic;
+@using System.Linq;
+@{
+    Dictionary<string, string> data = Model;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@data["FullName"]</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/font-awesome.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/frame.css".AppVirutalPath())" />
+</head>
+<body>
+    <div id="MainPage" class="container-fluid">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@StringUtil.EscapeHtmlAttribute(data["HomeUrl"])">@data["ShortName"]</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        @data["Menu"]
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">@StringUtil.EscapeHtml(data["UserName"]) <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="@StringUtil.EscapeHtmlAttribute("Library/WebModuleRedirectPage.tkx?Source=SimpleLogOff&useSource=true".AppVirutalPath())">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="tk-main">
+            @*<div class="tk-tabs">
+                <h2 id="tkTabs"></h2>
+            </div>*@
+            <div class="tk-container">
+                <div id="tkPages" class="tk-page-frame">
+                    <iframe id="tkFrameMain" src="@StringUtil.EscapeHtmlAttribute(data["StartUrl"])" class="tk-frame" frameborder="0" allowtransparency="true" name="tkFrameMain"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.11.1.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/toolkit.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.page.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.mainpage.js".AppVirutalPath())"> </script>
+</body>
+</html>

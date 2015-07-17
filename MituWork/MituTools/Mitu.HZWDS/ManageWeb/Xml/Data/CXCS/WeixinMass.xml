@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="CS_WEIXIN_MASS">
+    <tk:TableDesc>
+      <tk:Content>主文档</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>WM_MASS_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>ID</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="10" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_DOC_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>文档</tk:Content>
+      </tk:DisplayName>
+      <tk:EasySearch RegName="TaxDoc"/>
+      <tk:Layout Layout="PerLine"/>
+      <tk:Control Control="EasySearch" Order="20" DefaultShow="All"/>
+      <tk:ListDetail>
+        <tk:Link Target="_blank" Base="cxcs">doc.vp?*DocId*</tk:Link>
+      </tk:ListDetail>
+    </tk:Field>
+    <tk:Field DataType="short">
+      <tk:FieldName>WM_SEND_FLAG</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>发送标志</tk:Content>
+      </tk:DisplayName>
+      <tk:CodeTable RegName="MassStatus"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Combo" Order="30" DefaultShow="List"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>WM_SEND_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>发送日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="40" DefaultShow="List"/>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_SEND_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>发送人</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="50" DefaultShow="None"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>WM_CREATE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>创建日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="60" DefaultShow="None"/>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_CREATE_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>创建人</tk:Content>
+      </tk:DisplayName>
+      <tk:EasySearch RegName="USER"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="EasySearch" Order="70" DefaultShow="None"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>WM_UPDATE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>修改日期</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="80" DefaultShow="None"/>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_UPDATE_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>修改人</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="90" DefaultShow="None"/>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

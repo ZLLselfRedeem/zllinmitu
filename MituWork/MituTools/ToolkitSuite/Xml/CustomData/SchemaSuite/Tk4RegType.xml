@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\suite\RegSchemaType.xsd">
+	<RegElement ObjectType="MarcoConfigItem" SchemaType="MarcoConfigItem"/>
+	<RegElement ObjectType="XmlDataType" SchemaType="XmlDataType" Namespace="YJC.Toolkit.Data"/>
+	<RegElement ObjectType="FilePathPosition" SchemaType="FilePosition" Namespace="YJC.Toolkit.Sys"/>
+	<RegElement ObjectType="PageStyle" SchemaType="PageStyleType" Namespace="YJC.Toolkit.Sys"/>
+</Toolkit>

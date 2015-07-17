@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (mitu) -->
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_MEDIA_CACHE">
+    <tk:TableDesc>
+      <tk:Content>媒体缓存表</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="string" IsKey="true" IsEmpty="false">
+      <tk:FieldName>MC_MEDIA_TYPE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>媒体类型</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>20</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string" IsKey="true" IsEmpty="false">
+      <tk:FieldName>MC_MEDIA_KEY</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>媒体键值</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>100</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>MC_MEDIA_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>MediaId</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>100</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>MC_CREATE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>创建日期</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>MC_VALID_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>有效日期</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>MC_CORP_SECRET</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应用应用Secret</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>100</tk:Length>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

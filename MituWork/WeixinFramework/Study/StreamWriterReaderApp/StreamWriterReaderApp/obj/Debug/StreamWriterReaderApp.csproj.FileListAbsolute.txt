@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\StreamWriterReaderApp\StreamWriterReaderApp\bin\Debug\StreamWriterReaderApp.exe
+D:\ZhouLL\trunk\Study\StreamWriterReaderApp\StreamWriterReaderApp\bin\Debug\StreamWriterReaderApp.pdb
+D:\ZhouLL\trunk\Study\StreamWriterReaderApp\StreamWriterReaderApp\obj\Debug\StreamWriterReaderApp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\StreamWriterReaderApp\StreamWriterReaderApp\obj\Debug\StreamWriterReaderApp.exe
+D:\ZhouLL\trunk\Study\StreamWriterReaderApp\StreamWriterReaderApp\obj\Debug\StreamWriterReaderApp.pdb

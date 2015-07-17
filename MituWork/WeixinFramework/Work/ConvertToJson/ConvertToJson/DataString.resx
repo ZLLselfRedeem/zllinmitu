@@ -1,0 +1,1200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddTemplateResponse" xml:space="preserve">
+    <value>{
+    "errcode": 0,
+    "errmsg": "success", 
+    "template_id": 123456
+}</value>
+  </data>
+  <data name="AllGroupResponse" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+	"groups_detail": [
+		{
+		  "group_id": 200077549,
+		  "group_name": "最新上架"
+		},
+		{
+		  "group_id": 200079772,
+		  "group_name": "全球热卖"
+		}
+	]
+}</value>
+  </data>
+  <data name="AllPropertyResponse" xml:space="preserve">
+    <value>{
+  "errcode": 0,
+  "errmsg": "success",
+  "properties": [
+    {
+      "id": "1075741879",
+      "name": "品牌",
+      "property_value": [
+        {
+          "id": "200050867",
+          "name": "VIC&amp;#38"
+        },
+        {
+          "id": "200050868",
+          "name": "Kate&amp;#38"
+        },
+        {
+          "id": "200050971",
+          "name": "M&amp;#38"
+        },
+        {
+          "id": "200050972",
+          "name": "Black&amp;#38"
+        }
+      ]
+    } 
+  ]
+}</value>
+  </data>
+  <data name="AllSkuResponse" xml:space="preserve">
+    <value>{
+  "errcode": 0,
+  "errmsg": "success",
+  "sku_table": [
+    {
+      "id": "1075741873",
+      "name": "颜色",
+      "value_list": [
+        {
+          "id": "1079742375",
+          "name": "撞色"
+        },
+        {
+          "id": "1079742376",
+          "name": "桔色"
+        }
+      ]
+    }
+  ]
+}</value>
+  </data>
+  <data name="BillCheckResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="CallToReportResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;result_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>{
+"errcode": 0,
+"errmsg": "ok",
+"card": {
+"card_type": "GROUPON",
+"groupon": {
+"base_info": {
+"status": 1,
+"id": "p1Pj9jr90_SQRaVqYI239Ka1erkI",
+"logo_url":
+"http://www.supadmin.cn/uploads/allimg/120216/1_120216214725_1.jpg",
+"appid": "wx588def6b0089dd48",
+"code_type": "CODE_TYPE_TEXT",
+"brand_name": "海底捞",
+"title": "132 元双人火锅套餐",
+"sub_title": "hane",
+"date_info": {
+"type": 1,
+"begin_timestamp": 1397577600,
+"end_timestamp": 1399910400
+},
+"color": "#3373bb",
+"notice": "使用时向服务员出示此券",
+"service_phone": "020-88888888",
+"description": "不可与其他优惠同享\n 如需团购券发票，请在消费时向商户提出\n 店内均可使用，仅限堂食\n 餐前不可打包，餐后未吃完，可打包\n 本团购券不限人数，建议2 人使用，超过建议人数须另收酱料费5 元/位\n 本单谢绝自带酒水饮料",
+"use_limit": 1,
+"get_limit": 3,
+"can_share": true,
+"location_id_list" : [123, 12321, 345345],
+"custom_url_name": "立即使用",
+"custom_url": "http://www.qq.com",
+"custom_url_sub_title": "6 个汉字tips",
+"promotion_url_name": "更多优惠",
+"promotion_url": "http://www.qq.com",
+"source": "大众点评",
+"sku": {"quantity": 0}},
+"deal_detail": "以下锅底2 选1（有菌王锅、麻辣锅、大骨锅、番茄锅、清补凉锅、酸菜鱼锅可选）：\n 大锅1 份12 元\n 小锅2 份16 元\n 以下菜品2 选1\n 特级肥牛1 份30 元\n 洞庭鮰鱼卷1 份20 元\n 其他\n 鲜菇猪肉滑1 份18 元\n 金针菇1 份16 元\n 黑木耳1 份9 元\n 娃娃菜1 份8 元\n 冬瓜1 份6 元\n 火锅面2 个6 元\n 欢乐畅饮2 位12 元\n 自助酱料2 位10 元",
+}
+}}}</value>
+  </data>
+  <data name="CloseResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[sthBJ9QyUG6vkrjJ]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[6277A96D7875D4FF23AA7B6A4C3046AB]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"colors":[
+{"name":"Color010","value":"#55bd47"},
+{"name":"Color020","value":"#10ad61"},
+{"name":"Color030","value":"#35a4de"},
+{"name":"Color040","value":"#3d78da"},
+{"name":"Color050","value":"#9058cb"},
+{"name":"Color060","value":"#de9c33"},
+{"name":"Color070","value":"#ebac16"},
+{"name":"Color080","value":"#f9861f"},
+{"name":"Color081","value":"#f08500"},
+{"name":"Color090","value":"#e75735"},
+{"name":"Color100","value":"#d54036"},
+{"name":"Color101","value":" #cf3e36"}
+]
+}</value>
+  </data>
+  <data name="ConversionResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+	&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+	&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+	&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+	&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+	&lt;nonce_str&gt;&lt;![CDATA[sthBJ9QyUG6vkrjJ]]&gt;&lt;/nonce_str&gt;
+	&lt;sign&gt;&lt;![CDATA[6277A96D7875D4FF23AA7B6A4C3046AB]]&gt;&lt;/sign&gt;
+	&lt;result_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/result_code&gt;
+	&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+	&lt;short_url&gt;fdasfdaskljklr3w&lt;/short_url&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="IdResponse" xml:space="preserve">
+    <value>{
+  "errcode": 0,
+  "errmsg": "success",
+  "template_info": {
+    "Id": 103312916,
+    "Name": "testexpress",
+    "Assumer": 0,
+    "Valuation": 0,
+    "TopFee": [	
+      {
+        "Type": 10000027,
+        "Normal": {
+          "StartStandards": 1,
+          "StartFees": 2,
+          "AddStandards": 3,
+          "AddFees": 1
+        },
+        "Custom": [
+          {
+            "StartStandards": 1,
+            "StartFees": 1000,
+            "AddStandards": 1,
+            "AddFees": 3,
+            "DestCountry": "中国",
+            "DestProvince": "广东省",
+            "DestCity": "广州市"
+          }
+        ]
+      },
+      {
+        "Type": 10000028,
+        "Normal": {
+          "StartStandards": 1,
+          "StartFees": 3,
+          "AddStandards": 3,
+          "AddFees": 2
+        },
+        "Custom": [
+          {
+            "StartStandards": 1,
+            "StartFees": 10,
+            "AddStandards": 1,
+            "AddFees": 30,
+            "DestCountry": "中国",
+            "DestProvince": "广东省",
+            "DestCity": "广州市"
+          }
+        ]
+      },
+      {
+        "Type": 10000029,
+        "Normal": {
+          "StartStandards": 1,
+          "StartFees": 4,
+          "AddStandards": 3,
+          "AddFees": 3
+        },
+        "Custom": [
+          {
+            "StartStandards": 1,
+            "StartFees": 8,
+            "AddStandards": 2,
+            "AddFees": 11,
+            "DestCountry": "中国",
+            "DestProvince": "广东省",
+            "DestCity": "广州市"
+          }
+        ]
+      }
+    ]
+  }
+}</value>
+  </data>
+  <data name="IdTemplateResponse" xml:space="preserve">
+    <value>{
+  "errcode": 0,
+  "errmsg": "success",
+  "template_info": {
+    "Id": 103312916,
+    "Name": "testexpress",
+    "Assumer": 0,
+    "Valuation": 0,
+    "TopFee": [
+      {
+        "Type": 10000027,
+        "Normal": {
+          "StartStandards": 1,
+          "StartFees": 2,
+          "AddStandards": 3,
+          "AddFees": 1
+        },
+        "Custom": [
+          {
+            "StartStandards": 1,
+            "StartFees": 1000,
+            "AddStandards": 1,
+            "AddFees": 3,
+            "DestCountry": "中国",
+            "DestProvince": "广东省",
+            "DestCity": "广州市"
+          }
+        ]
+      },
+      {
+        "Type": 10000028,
+        "Normal": {
+          "StartStandards": 1,
+          "StartFees": 3,
+          "AddStandards": 3,
+          "AddFees": 2
+        },
+        "Custom": [
+          {
+            "StartStandards": 1,
+            "StartFees": 10,
+            "AddStandards": 1,
+            "AddFees": 30,
+            "DestCountry": "中国",
+            "DestProvince": "广东省",
+            "DestCity": "广州市"
+          }
+        ]
+      },
+      {
+        "Type": 10000029,
+        "Normal": {
+          "StartStandards": 1,
+          "StartFees": 4,
+          "AddStandards": 3,
+          "AddFees": 3
+        },
+        "Custom": [
+          {
+            "StartStandards": 1,
+            "StartFees": 8,
+            "AddStandards": 2,
+            "AddFees": 11,
+            "DestCountry": "中国",
+            "DestProvince": "广东省",
+            "DestCity": "广州市"
+          }
+        ]
+      }
+    ]
+  }
+}</value>
+  </data>
+  <data name="IdToBillResponse" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+	"order": {
+		"order_id": "7197417460812533543",
+		"order_status": 6,
+		"order_total_price": 6,
+		"order_create_time": 1394635817,
+		"order_express_price": 5,
+		"buyer_openid": "oDF3iY17NsDAW4UP2qzJXPsz1S9Q",
+		"buyer_nick": "likeacat",
+		"receiver_name": "张小猫",
+		"receiver_province": "广东省",
+		"receiver_city": "广州市",
+"receiver_zone": "天河区",
+		"receiver_address": "华景路一号南方通信大厦5楼",
+		"receiver_mobile": "123456789",
+		"receiver_phone": "123456789",
+		"product_id": "pDF3iYx7KDQVGzB7kDg6Tge5OKFo",
+		"product_name": "安莉芳E-BRA专柜女士舒适内衣蕾丝3/4薄杯聚拢上托性感文胸KB0716",
+		"product_price": 1,
+		"product_sku": "10000983:10000995;10001007:10001010",
+		"product_count": 1,
+		"product_img": "http://img2.paipaiimg.com/00000000/item-52B87243-63CCF66C00000000040100003565C1EA.0.300x300.jpg",
+		"delivery_id": "1900659372473",
+		"delivery_company": "059Yunda", 
+		"trans_id": "1900000109201404103172199813"
+	}
+}</value>
+  </data>
+  <data name="IdToResponse" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+	"group_detail": {
+		"group_id": 200077549,
+		"group_name": "最新上架",
+		"product_list": [
+		  "pDF3iYzZoY-Budrzt8O6IxrwIJAA",
+		  "pDF3iY3pnWSGJcO2MpS2Nxy3HWx8",
+		  "pDF3iY33jNt0Dj3M3UqiGlUxGrio"
+		]
+	}
+}</value>
+  </data>
+  <data name="LocationBatchAddResult" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"location_id_list":[271262077,271262079]
+}</value>
+  </data>
+  <data name="LocationBatchGetResult" xml:space="preserve">
+    <value>{ "errcode": 0,
+"errmsg": "ok",
+"location_list": [
+{
+"location_id": "493",
+"business_name": "steventao home",
+"phone": "020-12345678",
+"address": "广东省广州市番禺区广东省广州市番禺区南浦大道",
+"longitude": 113.280212402,
+"latitude": 23.0350666046
+},
+{
+"location_id": "468",
+"business_name": "TIT 创意园B4",
+"phone": "020-12345678",
+"address": "广东省广州市海珠区",
+"longitude": 113.325248718,
+"latitude": 23.1008300781
+}
+],
+"count": 2
+}</value>
+  </data>
+  <data name="MicroPayResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[FvYSnPuFFPkAr77M]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[63238039D6E43634297CF2A6EB5F3B72]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;openid&gt;&lt;![CDATA[oUpF8uN95-Ptaags6E_roPHg7AG0]]&gt;&lt;/openid&gt;
+&lt;is_subscribe&gt;&lt;![CDATA[Y]]&gt;&lt;/is_subscribe&gt;
+&lt;trade_type&gt;&lt;![CDATA[JSAPI]]&gt;&lt;/trade_type&gt;
+&lt;bank_type&gt;&lt;![CDATA[CCB_CREDIT]]&gt;&lt;/bank_type&gt;
+&lt;total_fee&gt;1&lt;/total_fee&gt;
+&lt;coupon_fee&gt;0&lt;/coupon_fee&gt;
+&lt;fee_type&gt;&lt;![CDATA[CNY]]&gt;&lt;/fee_type&gt;
+&lt;transaction_id&gt;&lt;![CDATA[1008450740201407220000058756]]&gt;&lt;/transaction_id&gt;
+&lt;out_trade_no&gt;&lt;![CDATA[1406033828]]&gt;&lt;/out_trade_no&gt;
+&lt;attach&gt;&lt;![CDATA[att]]&gt;&lt;/attach&gt;
+&lt;time_end&gt;&lt;![CDATA[20140722160655]]&gt;&lt;/time_end&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="ModuleInfos" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+	"shelf_info": {
+		"module_infos": [
+             {
+		  "group_info": {
+			"filter": {
+			  "count": 2
+			},
+			"group_id": 50
+		  },
+		  "eid": 1
+		},
+		{
+			"group_infos": {
+				"groups": [
+				  {
+					"group_id": 49
+				  },
+				  {
+					"group_id": 50
+				  },
+				  {
+					"group_id": 51
+				  }
+				]
+		  },
+		  "eid": 2
+		},
+		{
+		  "group_info": {
+			"group_id": 52,
+			"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5Jm64z4I0TTicv0TjN7Vl9bykUUibYKIOjicAwIt6Oy0Y6a1Rjp5Tos8tg/0"
+		  },
+		  "eid": 3
+		},
+		{
+		  "group_infos": {  
+			"groups": [
+			  {
+				"group_id": 49,
+				"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5uUQx7TLx4tB9qZfbe3JmqR4NkkEmpb5LUWoXF1ek9nga0IkeSSFZ8g/0"
+			  },
+			  {
+				"group_id": 50,
+				"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5G1kdy3ViblHrR54gbCmbiaMnl5HpLGm5JFeENyO9FEZAy6mPypEpLibLA/0"
+			  },
+			  {
+				"group_id": 52,
+				"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5uUQx7TLx4tB9qZfbe3JmqR4NkkEmpb5LUWoXF1ek9nga0IkeSSFZ8g/0"
+			  }
+			]
+		  },
+		  "eid": 4
+		}, 
+		{
+		  "group_infos": {
+			"groups": [
+			  {
+				"group_id": 43
+			  },
+			  {
+				"group_id": 44
+			  },
+			  {
+				"group_id": 45
+			  },
+			  {
+				"group_id": 46
+			  }
+			],
+			"img_background": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5uUQx7TLx4tB9qZfbe3JmqR4NkkEmpb5LUWoXF1ek9nga0IkeSSFZ8g/0"
+		  },
+		  "eid": 5
+		}
+        ]
+	},
+	"shelf_banner": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2ibp2DgDXiaic6WdflMpNdInS8qUia2BztlPu1gPlCDLZXEjia2qBdjoLiaCGUno9zbs1UyoqnaTJJGeEew/0",
+	"shelf_name": "新建货架",
+	"shelf_id": 97
+}</value>
+  </data>
+  <data name="NativeResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;nonce_str&gt;&lt;![CDATA[sthBJ9QyUG6vkrjJ]]&gt;&lt;/nonce_str&gt;
+&lt;prepay_id&gt;zengyudanXPY&lt;/prepay_id&gt;
+&lt;sign&gt;&lt;![CDATA[6277A96D7875D4FF23AA7B6A4C3046AB]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/result_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="NoticeResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[FvYSnPuFFPkAr77M]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[63238039D6E43634297CF2A6EB5F3B72]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;openid&gt;&lt;![CDATA[oUpF8uN95-Ptaags6E_roPHg7AG0]]&gt;&lt;/openid&gt;
+&lt;is_subscribe&gt;&lt;![CDATA[Y]]&gt;&lt;/is_subscribe&gt;
+&lt;trade_type&gt;&lt;![CDATA[JSAPI]]&gt;&lt;/trade_type&gt;
+&lt;bank_type&gt;&lt;![CDATA[CCB_CREDIT]]&gt;&lt;/bank_type&gt;
+&lt;total_fee&gt;1&lt;/total_fee&gt;
+&lt;coupon_fee&gt;0&lt;/coupon_fee&gt;
+&lt;fee_type&gt;&lt;![CDATA[CNY]]&gt;&lt;/fee_type&gt;
+&lt;transaction_id&gt;&lt;![CDATA[1008450740201407220000058756]]&gt;&lt;/transaction_id&gt;
+&lt;out_trade_no&gt;&lt;![CDATA[1406033828]]&gt;&lt;/out_trade_no&gt;
+&lt;attach&gt;&lt;![CDATA[att]]&gt;&lt;/attach&gt;
+&lt;time_end&gt;&lt;![CDATA[20140722160655]]&gt;&lt;/time_end&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="OrderQueryResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[FvYSnPuFFPkAr77M]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[63238039D6E43634297CF2A6EB5F3B72]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;trade_state&gt;&lt;![CDATA[REFUND]]&gt;&lt;/trade_state&gt;
+&lt;openid&gt;&lt;![CDATA[oUpF8uN95-Ptaags6E_roPHg7AG0]]&gt;&lt;/openid&gt;
+&lt;is_subscribe&gt;&lt;![CDATA[Y]]&gt;&lt;/is_subscribe&gt;
+&lt;trade_type&gt;&lt;![CDATA[JSAPI]]&gt;&lt;/trade_type&gt;
+&lt;bank_type&gt;&lt;![CDATA[CCB_CREDIT]]&gt;&lt;/bank_type&gt;
+&lt;total_fee&gt;1&lt;/total_fee&gt;
+&lt;coupon_fee&gt;0&lt;/coupon_fee&gt;
+&lt;fee_type&gt;&lt;![CDATA[CNY]]&gt;&lt;/fee_type&gt;
+&lt;transaction_id&gt;&lt;![CDATA[1008450740201407220000058756]]&gt;&lt;/transaction_id&gt;
+&lt;out_trade_no&gt;&lt;![CDATA[1406033828]]&gt;&lt;/out_trade_no&gt;
+&lt;attach&gt;&lt;![CDATA[att]]&gt;&lt;/attach&gt;
+&lt;time_end&gt;&lt;![CDATA[20140722160655]]&gt;&lt;/time_end&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="PaymentResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+	&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+	&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+	&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+	&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+	&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+	&lt;nonce_str&gt;&lt;![CDATA[sthBJ9QyUG6vkrjJ]]&gt;&lt;/nonce_str&gt;
+	&lt;sign&gt;&lt;![CDATA[6277A96D7875D4FF23AA7B6A4C3046AB]]&gt;&lt;/sign&gt;
+	&lt;result_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/result_code&gt;
+	&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+	&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+	&lt;trade_type&gt;NATIVE&lt;/trade_type&gt;
+	&lt;prepay_id&gt;43242354&lt;/prepay_id&gt;
+	&lt;code_url&gt;fdasfdaskljklr3w&lt;/code_url&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="QueryResponse" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+	"product_info": {
+		"product_id": "pDF3iY6Kr_BV_CXaiYysoGqJhppQ",
+		"product_base": {
+			"name": "testaddproduct",
+			"category_id": [	
+				537074298
+			],
+			"img": [
+				"http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0"
+			],
+			"property": [
+				{
+					"id": "品牌",
+					"vid": "Fujifilm/富士"
+				},
+				{
+					"id": "屏幕尺寸",
+					"vid": "1.8英寸"
+				},
+				{
+					"id": "防抖性能",
+					"vid": "CCD防抖"
+				}
+			],
+			"sku_info": [
+				{
+					"id": "1075741873",
+					"vid": [
+						"1079742386",
+						"1079742363"
+					]
+				}
+			],
+			"buy_limit": 10,
+			"main_img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0",
+			"detail_html": "&lt;div class=\"item_pic_wrp\" style=\"margin-bottom:8px;font-size:0;\"&gt;&lt;img class=\"item_pic\" style=\"width:100%;\" alt=\"\" src=\"http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0\" &gt;&lt;/div&gt;&lt;p style=\"margin-bottom:11px;margin-top:11px;\"&gt;test&lt;/p&gt;&lt;div class=\"item_pic_wrp\" style=\"margin-bottom:8px;font-size:0;\"&gt;&lt;img class=\"item_pic\" style=\"width:100%;\" alt=\"\" src=\"http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ul1UcLcwxrFdwTKYhH9Q5YZoCfX4Ncx655ZK6ibnlibCCErbKQtReySaVA/0\" &gt;&lt;/div&gt;&lt;p style=\"margin-bottom:11px;margin-top:11px;\"&gt;test again&lt;/p&gt;"
+		},
+		"sku_list": [
+			{
+				"sku_id": "1075741873:1079742386",
+				"price": 30,
+				"icon_url": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0",
+				"quantity": 800,
+				"product_code": "testing",
+				"ori_price": 9000000
+			},
+			{
+				"sku_id": "1075741873:1079742363",
+				"price": 30,
+				"icon_url": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl28bJj62XgfHPibY3ORKicN1oJ4CcoIr4BMbfA8LqyyjzOZzqrOGz3f5KWq1QGP3fo6TOTSYD3TBQjuw/0",
+				"quantity": 800,
+				"product_code": "testingtesting",
+				"ori_price": 9000000
+			}
+		],
+		"attrext": {
+			"isPostFree": 0,
+			"isHasReceipt": 1,
+			"isUnderGuaranty": 0,
+			"isSupportReplace": 0,
+			"location": {
+				"country": "中国",
+				"province": "广东省",
+				"city": "广州市",
+				"address": "T.I.T创意园"
+			}
+		}, 
+		"delivery_info": {
+			"delivery_type": 1,
+			"template_id": 103312920
+		}		
+	}
+}</value>
+  </data>
+  <data name="RefundApplicationResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[FvYSnPuFFPkAr77M]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[63238039D6E43634297CF2A6EB5F3B72]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;transaction_id&gt;&lt;![CDATA[1008450740201407220000058756]]&gt;&lt;/transaction_id&gt;
+&lt;out_trade_no&gt;&lt;![CDATA[1406033828]]&gt;&lt;/out_trade_no&gt;
+&lt;out_refund_no&gt;asdfkjsdf&lt;/out_refund_no&gt;
+&lt;refund_id&gt;sokenghsf&lt;/refund_id&gt;
+&lt;refund_channel&gt;BALANCE&lt;/refund_channel&gt;
+&lt;refund_fee&gt;1250&lt;/refund_fee&gt;
+&lt;coupon_refund_fee&gt;1000&lt;/coupon_refund_fee&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="RefundInquiryResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[FvYSnPuFFPkAr77M]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[63238039D6E43634297CF2A6EB5F3B72]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;transaction_id&gt;&lt;![CDATA[1008450740201407220000058756]]&gt;&lt;/transaction_id&gt;
+&lt;out_trade_no&gt;&lt;![CDATA[1406033828]]&gt;&lt;/out_trade_no&gt;
+&lt;refund_count&gt;5&lt;/refund_count&gt;
+&lt;out_refund_no_0&gt;1d2fs125&lt;/out_refund_no_0&gt;
+&lt;out_refund_no_3&gt;1ddsdg2dsf&lt;/out_refund_no_3&gt;
+&lt;refund_id_0&gt;1246212121&lt;/refund_id_0&gt;
+&lt;refund_id_3&gt;asd1231223&lt;/refund_id_3&gt;
+&lt;refund_channel_0&gt;BALANCE&lt;/refund_channel_0&gt;
+&lt;refund_channel_3&gt;ORIGINAL&lt;/refund_channel_3&gt;
+&lt;refund_fee_0&gt;125&lt;/refund_fee_0&gt;
+&lt;refund_fee_3&gt;12&lt;/refund_fee_3&gt;
+&lt;coupon_refund_fee_0&gt;120&lt;/coupon_refund_fee_0&gt;
+&lt;coupon_refund_fee_3&gt;10&lt;/coupon_refund_fee_3&gt;
+&lt;refund_status_0&gt;CHANEG&lt;/refund_status_0&gt;
+&lt;refund_status_3&gt;FAIL&lt;/refund_status_3&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="ReverseResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[sthBJ9QyUG6vkrjJ]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[6277A96D7875D4FF23AA7B6A4C3046AB]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;recall&gt;Y&lt;/recall&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="SeachResponse" xml:space="preserve">
+    <value>&lt;xml&gt;
+&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;
+&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;
+&lt;appid&gt;&lt;![CDATA[wx2421b1c4370ec43b]]&gt;&lt;/appid&gt;
+&lt;mch_id&gt;&lt;![CDATA[10000100]]&gt;&lt;/mch_id&gt;
+&lt;device_info&gt;&lt;![CDATA[1000]]&gt;&lt;/device_info&gt;
+&lt;nonce_str&gt;&lt;![CDATA[FvYSnPuFFPkAr77M]]&gt;&lt;/nonce_str&gt;
+&lt;sign&gt;&lt;![CDATA[63238039D6E43634297CF2A6EB5F3B72]]&gt;&lt;/sign&gt;
+&lt;result_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/result_code&gt;
+&lt;err_code&gt;&lt;![CDATA[PAYERROR]]&gt;&lt;/err_code&gt;
+&lt;err_code_des&gt;&lt;![CDATA[支付错误]]&gt;&lt;/err_code_des&gt;
+&lt;trade_state&gt;&lt;![CDATA[REFUND]]&gt;&lt;/trade_state&gt;
+&lt;openid&gt;&lt;![CDATA[oUpF8uN95-Ptaags6E_roPHg7AG0]]&gt;&lt;/openid&gt;
+&lt;is_subscribe&gt;&lt;![CDATA[Y]]&gt;&lt;/is_subscribe&gt;
+&lt;trade_type&gt;&lt;![CDATA[JSAPI]]&gt;&lt;/trade_type&gt;
+&lt;bank_type&gt;&lt;![CDATA[CCB_CREDIT]]&gt;&lt;/bank_type&gt;
+&lt;total_fee&gt;1&lt;/total_fee&gt;
+&lt;coupon_fee&gt;0&lt;/coupon_fee&gt;
+&lt;fee_type&gt;&lt;![CDATA[CNY]]&gt;&lt;/fee_type&gt;
+&lt;transaction_id&gt;&lt;![CDATA[1008450740201407220000058756]]&gt;&lt;/transaction_id&gt;
+&lt;out_trade_no&gt;&lt;![CDATA[1406033828]]&gt;&lt;/out_trade_no&gt;
+&lt;attach&gt;&lt;![CDATA[att]]&gt;&lt;/attach&gt;
+&lt;time_end&gt;&lt;![CDATA[20140722160655]]&gt;&lt;/time_end&gt;
+&lt;/xml&gt;</value>
+  </data>
+  <data name="StatusGoodResponse" xml:space="preserve">
+    <value>{
+  "errcode": 0,
+  "errmsg": "success",
+  "products_info": [
+    {
+      "product_base": ..., 
+      "sku_list": ..., 
+  "attrext": ..., 
+      "delivery_info": ..., 
+      "product_id": "pDF3iY-mql6CncpbVajaB_obC3Bk",
+      "status": 1
+    },
+    {
+      "product_base": ..., 
+      "sku_list": ..., 
+  "attrext": ..., 
+      "delivery_info": ..., 
+      "product_id": "pDF3iY-mql6CncpbVajaB_obC321",
+      "status": 1
+    }
+  ]
+}</value>
+  </data>
+  <data name="StatusToBillResponse" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+	"order_list": [
+		{
+		  "order_id": "7197417460812533543",
+		  "order_status": 6,
+		  "order_total_price": 6,
+		  "order_create_time": 1394635817,
+		  "order_express_price": 5,
+		  "buyer_openid": "oDF3iY17NsDAW4UP2qzJXPsz1S9Q",
+		  "buyer_nick": "likeacat",
+		  "receiver_name": "张小猫",
+		  "receiver_province": "广东省",
+		  "receiver_city": "广州市",
+		  "receiver_address": "华景路一号南方通信大厦5楼",
+		  "receiver_mobile": "123456",
+		  "receiver_phone": "123456",
+		  "product_id": "pDF3iYx7KDQVGzB7kDg6Tge5OKFo", 
+		  "product_name": "安莉芳E-BRA专柜女士舒适内衣蕾丝3/4薄杯聚拢上托性感文胸KB0716",
+		  "product_price": 1,
+		  "product_sku": "10000983:10000995;10001007:10001010",
+		  "product_count": 1,
+		  "product_img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2icND8WwMThBEcehjhDv2icY4GrDSG5RLM3B2qd9kOicWGVJcsAhvXfibhWRNoGOvCfMC33G9z5yQr2Qw/0",
+		  "delivery_id": "1900659372473",
+		  "delivery_company": "059Yunda", 
+		  "trans_id": "1900000109201404103172199813"
+		},
+		{
+		  "order_id": "7197417460812533569",
+		  "order_status": 8,
+		  "order_total_price": 1,
+		  "order_create_time": 1394636235,
+		  "order_express_price": 0,
+		  "buyer_openid": "oDF3iY17NsDAW4UP2qzJXPsz1S9Q",
+		  "buyer_nick": "likeacat",
+		  "receiver_name": "张小猫",
+		  "receiver_province": "广东省",
+		  "receiver_city": "广州市",
+		  "receiver_address": "华景路一号南方通信大厦5楼",
+		  "receiver_mobile": "123456",
+		  "receiver_phone": "123456",
+		  "product_id": "pDF3iYx7KDQVGzB7kDg6Tge5OKFo", 
+		  "product_name": "项坠333",
+		  "product_price": 1,
+		  "product_sku": "1075741873:1079742377",
+		  "product_count": 1,
+		  "product_img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2icND8WwMThBEcehjhDv2icY4GrDSG5RLM3B2qd9kOicWGVJcsAhvXfibhWRNoGOvCfMC33G9z5yQr2Qw/0",
+		  "delivery_id": "1900659372473",
+		  "delivery_company": "059Yunda", 
+   		  "trans_id": "1900000109201404103172199813"
+		}
+	]
+}</value>
+  </data>
+  <data name="Ticket" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"ticket":"gQG28DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL0FuWC1DNmZuVEhv
+MVp4NDNMRnNRAAIEesLvUQMECAcAAA=="
+}</value>
+  </data>
+  <data name="SubGoodResponse" xml:space="preserve">
+    <value>{
+  "errcode": 0,
+  "errmsg": "success",
+  "cate_list": [
+    {
+      "id": "537074292",
+      "name": "数码相机"
+    },
+    {
+      "id": "537074293",
+      "name": "家用摄像机"
+    },
+    {
+      "id": "537074298",
+      "name": "单反相机"
+    },
+    {
+      "id": "537082412",
+      "name": "镜头"
+    },
+    {
+      "id": "537102001",
+      "name": "单电/微单"
+    }
+  ]
+}</value>
+  </data>
+  <data name="WeShelf" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+
+		  "shelf_info": {
+			"module_infos": [
+			  {
+
+  "group_info": {
+	"filter": {
+	  "count": 4
+	},
+	"group_id": 50
+  },
+  "eid": 1
+},
+{
+	"group_infos": {
+		"groups": [
+		  {
+			"group_id": 49
+		  },
+		  {
+			"group_id": 50
+		  },
+		  {
+			"group_id": 51
+		  }
+		]
+  },
+  "eid": 2
+},
+{
+  "group_info": {
+	"group_id": 52,
+	"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5Jm64z4I0TTicv0TjN7Vl9bykUUibYKIOjicAwIt6Oy0Y6a1Rjp5Tos8tg/0"
+  },
+  "eid": 3
+},
+{
+  "group_infos": {  
+	"groups": [
+	  {
+		"group_id": 49,
+		"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5uUQx7TLx4tB9qZfbe3JmqR4NkkEmpb5LUWoXF1ek9nga0IkeSSFZ8g/0"
+	  },
+	  {
+		"group_id": 50,
+		"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5G1kdy3ViblHrR54gbCmbiaMnl5HpLGm5JFeENyO9FEZAy6mPypEpLibLA/0"
+	  },
+	  {
+		"group_id": 52,
+		"img": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl29nqqObBwFwnIX3licVPnFV5uUQx7TLx4tB9qZfbe3JmqR4NkkEmpb5LUWoXF1ek9nga0IkeSSFZ8g/0"
+	  }
+	]
+  },
+  "eid": 4
+}
+
+			]
+		  },
+		  "shelf_banner": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl294FzPwnf9dAcaN7ButStztAZyy2yHY8pW6sTQKicIhAy5F0a2CqmrvDBjMFLtc2aEhAQ7uHsPow9A/0",
+		  "shelf_name": "新新人类",
+		  "shelf_id": 22
+		
+	
+}</value>
+  </data>
+  <data name="WeShelves" xml:space="preserve">
+    <value>{
+	"errcode": 0,
+	"errmsg": "success",
+	"shelves": [
+		{
+		  "shelf_info": {
+			"module_infos": [
+			  {
+				"group_infos": {
+				  "groups": [
+					{
+					  "group_id": 200080093
+					},
+					{
+					  "group_id": 200080118
+					},
+					{
+					  "group_id": 200080119
+					},
+					{
+					  "group_id": 200080135
+					}
+				  ],
+				  "img_background": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl294FzPwnf9dAcaN7ButStztAZyy2yHY8pW6sTQKicIhAy5F0a2CqmrvDBjMFLtc2aEhAQ7uHsPow9A/0"
+				},
+				"eid": 5
+			  }
+			]
+		  },
+		  "shelf_banner": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl294FzPwnf9dAcaN7ButStztAZyy2yHY8pW6sTQKicIhAy5F0a2CqmrvDBjMFLtc2aEhAQ7uHsPow9A/0",
+		  "shelf_name": "新新人类",
+		  "shelf_id": 22
+		},
+		{
+		  "shelf_info": {
+			"module_infos": [
+			  {
+				"group_info": {
+				  "group_id": 200080119,
+				  "filter": {
+					"count": 4
+				  }
+				},
+				"eid": 1
+			  }
+			]
+		  },
+		  "shelf_banner": "http://mmbiz.qpic.cn/mmbiz/4whpV1VZl294FzPwnf9dAcaN7ButStztAZyy2yHY8pW6sTQKicIhAy5F0a2CqmrvDBjMFLtc2aEhAQ7uHsPow9A/0",
+		  "shelf_name": "店铺",
+		  "shelf_id": 23
+		}
+	]
+}</value>
+  </data>
+  <data name="ApiTicket" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"ticket":"bxLdikRXVbTPdHSM05e5u5sUoXNKdvsdshFKA",
+"expires_in":7200
+}</value>
+  </data>
+  <data name="BatchAddCard" xml:space="preserve">
+    <value>{ "card_list": [
+{
+"card_id": "po_2Djks4-yP5PGtgGY4GkbAIIt0",
+"is_succ": 1
+},
+{
+"card_id": "po_2Djks4-yP5PGtgGY4GkbAIIt0",
+"is_succ": 1
+},
+{
+"card_id": "po_2DjtUhT_i8Q5Hgc0HLkCegYc8",
+"is_succ": 1
+}
+]
+}</value>
+  </data>
+  <data name="CardBatch" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"card_id_list":["ph_gmt7cUVrlRk8swPwx7aDyF-pg"],
+"total_num":1</value>
+  </data>
+  <data name="ChooseCard" xml:space="preserve">
+    <value>{
+"err_msg":" choose_card:ok ",
+"choose_card_info":[
+{
+"card_id": "p3G6It08WKRgR0hyV3hHVb6pxrPQ",
+"encrypt_code":
+"XXIzTtMqCxwOaawoE91+VJdsFmv7b8g0VZIZkqf4GWA60Fzpc8ksZ/5ZZ0DVkXdE"}
+]
+}</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"code":"751234212312"
+}</value>
+  </data>
+  <data name="CodeRes" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"openid":"oFS7Fjl0WsZ9AMZqrI80nbIq8xrA",
+"card":{
+"card_id":"pFS7Fjg8kV1IdDz01r4SQwMkuCKc",
+"begin_time": 1404205036,
+"end_time": 1404205036,
+}
+}</value>
+  </data>
+  <data name="Consume" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"card":{"card_id":"pFS7Fjg8kV1IdDz01r4SQwMkuCKc"},
+"openid":"oFS7Fjl0WsZ9AMZqrI80nbIq8xrA"
+}</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>}</value>
+  </data>
+  <data name="CardUpdate" xml:space="preserve">
+    <value>{
+"errcode":0,
+"errmsg":"ok",
+"result_bonus": 100,
+"result_balance": 200,
+"openid":"oFS7Fjl0WsZ9AMZqrI80nbIq8xrA"
+}</value>
+  </data>
+</root>

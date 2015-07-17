@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\CustomSerialization\CustomSerialization\bin\Debug\CustomSerialization.exe
+D:\ZhouLL\trunk\Study\CustomSerialization\CustomSerialization\bin\Debug\CustomSerialization.pdb
+D:\ZhouLL\trunk\Study\CustomSerialization\CustomSerialization\obj\Debug\CustomSerialization.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\CustomSerialization\CustomSerialization\obj\Debug\CustomSerialization.exe
+D:\ZhouLL\trunk\Study\CustomSerialization\CustomSerialization\obj\Debug\CustomSerialization.pdb

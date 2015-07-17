@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:tk="http://www.qdocuments.net" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" KeyboardNavigation.TabNavigation="Cycle">
+  <i:Interaction.Behaviors>
+    <tk:EnterAsTabBehavior />
+  </i:Interaction.Behaviors>
+  <DockPanel>
+    <ContentControl DockPanel.Dock="Top">
+      <wpf:ToolBar xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:tk="http://www.qdocuments.net" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+        <wpf:Button Name="Close">
+          <wpf:StackPanel Orientation="Horizontal">
+            <wpf:Image Stretch="None" Source="{wpf:Binding Mode=OneTime, Source={tk:Resource Path=Images/openicon/png/view-close.png}}" />
+            <wpf:TextBlock>关闭</wpf:TextBlock>
+          </wpf:StackPanel>
+        </wpf:Button>
+        <wpf:Button Name="ConvertPDM">
+          <wpf:StackPanel Orientation="Horizontal">
+            <wpf:Image Stretch="None" Source="{wpf:Binding Mode=OneTime, Source={tk:Resource Path=Images/png/128设计.png}}" />
+            <wpf:TextBlock>PD导入</wpf:TextBlock>
+          </wpf:StackPanel>
+        </wpf:Button>
+        <wpf:Button Name="Generate">
+          <wpf:StackPanel Orientation="Horizontal">
+            <wpf:Image Stretch="None" Source="{wpf:Binding Mode=OneTime, Source={tk:Resource Path=Images/openicon/png/autopackage.png}}" />
+            <wpf:TextBlock>生成</wpf:TextBlock>
+          </wpf:StackPanel>
+        </wpf:Button>
+      </wpf:ToolBar>
+    </ContentControl>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="4*" />
+        <RowDefinition Height="6*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="6*" />
+        <ColumnDefinition Width="4*" />
+      </Grid.ColumnDefinitions>
+      <ContentControl Grid.Row="0" Grid.Column="0">
+        <wpf:DockPanel xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:tk="http://www.qdocuments.net" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+          <i:Interaction.Behaviors>
+            <tk:FetchDataBehavior DataName="ConfigXml" />
+          </i:Interaction.Behaviors>
+          <wpf:StatusBar wpf:DockPanel.Dock="Bottom">
+            <wpf:StatusBarItem>
+              <wpf:StackPanel Orientation="Horizontal">
+                <wpf:TextBlock Text="记录数：" />
+                <wpf:TextBlock Text="{wpf:Binding Count}" />
+              </wpf:StackPanel>
+            </wpf:StatusBarItem>
+          </wpf:StatusBar>
+          <wpf:DataGrid AutoGenerateColumns="False" EnableColumnVirtualization="True" IsSynchronizedWithCurrentItem="True" ItemsSource="{wpf:Binding Tables}" Name="PDGrid">
+            <wpf:DataGrid.Columns>
+              <wpf:DataGridTextColumn Header="名称" Binding="{wpf:Binding TableName}" />
+              <wpf:DataGridTextColumn Header="说明" Binding="{wpf:Binding TableDesc}" />
+              <wpf:DataGridCheckBoxColumn Header="是否生成" Binding="{wpf:Binding IsChecked}" />
+              <wpf:DataGridComboBoxColumn Header="类型" SelectedValueBinding="{wpf:Binding TableType}">
+                <i:Interaction.Behaviors>
+                  <tk:CodeTableBehavior CodeTable="RegName=TableType" />
+                </i:Interaction.Behaviors>
+              </wpf:DataGridComboBoxColumn>
+            </wpf:DataGrid.Columns>
+          </wpf:DataGrid>
+        </wpf:DockPanel>
+      </ContentControl>
+      <ContentControl Grid.Row="0" Grid.Column="1">
+        <wpf:ScrollViewer VerticalScrollBarVisibility="Auto" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:tk="http://www.qdocuments.net" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+          <wpf:Grid Margin="40,40,40,40" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+            <i:Interaction.Behaviors>
+              <tk:FetchDataBehavior DataName="CodeData" />
+            </i:Interaction.Behaviors>
+            <wpf:Grid.RowDefinitions>
+              <wpf:RowDefinition Height="Auto" />
+              <wpf:RowDefinition Height="Auto" />
+              <wpf:RowDefinition Height="Auto" />
+              <wpf:RowDefinition Height="Auto" />
+              <wpf:RowDefinition Height="Auto" />
+              <wpf:RowDefinition Height="Auto" />
+              <wpf:RowDefinition Height="Auto" />
+            </wpf:Grid.RowDefinitions>
+            <wpf:Grid.ColumnDefinitions>
+              <wpf:ColumnDefinition Width="*" />
+              <wpf:ColumnDefinition Width="3*" />
+            </wpf:Grid.ColumnDefinitions>
+            <wpf:TextBlock Padding="0, 5, 2, 5" Text="VS版本:" wpf:Grid.Row="0" wpf:Grid.Column="0" TextAlignment="Right" />
+            <wpf:ComboBox wpf:Grid.Row="0" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="StudioVer" SelectedValue="{wpf:Binding Path=StudioVer, Mode=TwoWay}" ToolTip="请选择VS版本">
+              <i:Interaction.Behaviors>
+                <tk:CodeTableBehavior CodeTable="RegName=StudioVersion" />
+              </i:Interaction.Behaviors>
+            </wpf:ComboBox>
+            <wpf:TextBlock Padding="0, 5, 2, 5" Text="Toolkit版本:" wpf:Grid.Row="1" wpf:Grid.Column="0" TextAlignment="Right" />
+            <wpf:ComboBox wpf:Grid.Row="1" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="ToolkitVer" SelectedValue="{wpf:Binding Path=ToolkitVer, Mode=TwoWay}" ToolTip="请选择Toolkit版本">
+              <i:Interaction.Behaviors>
+                <tk:CodeTableBehavior CodeTable="RegName=ToolkitVersion" />
+              </i:Interaction.Behaviors>
+            </wpf:ComboBox>
+            <wpf:TextBlock Padding="0, 5, 2, 5" Text="项目名称:" wpf:Grid.Row="2" wpf:Grid.Column="0" TextAlignment="Right" />
+            <wpf:TextBox wpf:Grid.Row="2" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="ProjectName" ToolTip="请填写项目名称">
+              <wpf:TextBox.Text>
+                <wpf:Binding Path="ProjectName" Mode="TwoWay">
+                  <wpf:Binding.ValidationRules />
+                </wpf:Binding>
+              </wpf:TextBox.Text>
+            </wpf:TextBox>
+            <wpf:TextBlock Padding="0, 5, 2, 5" Text="作者:" wpf:Grid.Row="3" wpf:Grid.Column="0" TextAlignment="Right" />
+            <wpf:TextBox wpf:Grid.Row="3" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="Author" ToolTip="请填写作者名称">
+              <wpf:TextBox.Text>
+                <wpf:Binding Path="Author" Mode="TwoWay">
+                  <wpf:Binding.ValidationRules />
+                </wpf:Binding>
+              </wpf:TextBox.Text>
+            </wpf:TextBox>
+            <wpf:TextBlock Padding="0, 5, 2, 5" Text="命名空间:" wpf:Grid.Row="4" wpf:Grid.Column="0" TextAlignment="Right" />
+            <wpf:TextBox wpf:Grid.Row="4" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="Namespace" ToolTip="请填写命名空间">
+              <wpf:TextBox.Text>
+                <wpf:Binding Path="Namespace" Mode="TwoWay">
+                  <wpf:Binding.ValidationRules />
+                </wpf:Binding>
+              </wpf:TextBox.Text>
+            </wpf:TextBox>
+            <wpf:TextBlock Padding="0, 5, 2, 5" Text="保存路径:" wpf:Grid.Row="5" wpf:Grid.Column="0" TextAlignment="Right" />
+            <tk:FolderPicker wpf:Grid.Row="5" wpf:Grid.Column="1" wpf:Grid.ColumnSpan="1" Name="SolutionPath" ToolTip="请选择保存路径" FolderName="{wpf:Binding SolutionPath, Mode=TwoWay}" />
+          </wpf:Grid>
+        </wpf:ScrollViewer>
+      </ContentControl>
+      <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        <wpf:DockPanel xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:tk="http://www.qdocuments.net" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+          <i:Interaction.Behaviors>
+            <tk:FetchDataBehavior DataName="ConfigXml" />
+          </i:Interaction.Behaviors>
+          <wpf:StatusBar wpf:DockPanel.Dock="Bottom">
+            <wpf:StatusBarItem>
+              <wpf:StackPanel Orientation="Horizontal">
+                <wpf:TextBlock Text="记录数：" />
+                <wpf:TextBlock Text="{wpf:Binding Count}" />
+              </wpf:StackPanel>
+            </wpf:StatusBarItem>
+          </wpf:StatusBar>
+          <wpf:DataGrid AutoGenerateColumns="False" EnableColumnVirtualization="True" IsSynchronizedWithCurrentItem="True" ItemsSource="{wpf:Binding Tables.CollectionView.CurrentItem.Fields}" Name="PDGridDetail">
+            <wpf:DataGrid.Columns>
+              <wpf:DataGridTextColumn Header="名称" Binding="{wpf:Binding FieldName}" />
+              <wpf:DataGridTextColumn Header="说明" Binding="{wpf:Binding DisplayName}" />
+              <wpf:DataGridComboBoxColumn Header="字段类型" SelectedValueBinding="{wpf:Binding DataType}">
+                <i:Interaction.Behaviors>
+                  <tk:CodeTableBehavior CodeTable="RegName=XmlDataType" />
+                </i:Interaction.Behaviors>
+              </wpf:DataGridComboBoxColumn>
+              <wpf:DataGridCheckBoxColumn Header="主键" Binding="{wpf:Binding IsKey}" />
+              <wpf:DataGridCheckBoxColumn Header="为空" Binding="{wpf:Binding IsEmpty}" />
+              <wpf:DataGridCheckBoxColumn Header="自增" Binding="{wpf:Binding IsAutoInc}" />
+              <wpf:DataGridTextColumn Header="长度" Binding="{wpf:Binding Length}" />
+              <wpf:DataGridTextColumn Header="CodeTable" Binding="{wpf:Binding CodeTable}" />
+              <wpf:DataGridTextColumn Header="顺序" Binding="{wpf:Binding Order}" />
+              <wpf:DataGridTextColumn Header="默认值" Binding="{wpf:Binding DefaultValue}" />
+              <wpf:DataGridComboBoxColumn Header="布局" SelectedValueBinding="{wpf:Binding Layout}">
+                <i:Interaction.Behaviors>
+                  <tk:CodeTableBehavior CodeTable="RegName=FieldLayout" />
+                </i:Interaction.Behaviors>
+              </wpf:DataGridComboBoxColumn>
+              <wpf:DataGridTextColumn Header="单元数" Binding="{wpf:Binding UnitNumber}" />
+              <wpf:DataGridComboBoxColumn Header="控件" SelectedValueBinding="{wpf:Binding HtmlCtrl}">
+                <i:Interaction.Behaviors>
+                  <tk:CodeTableBehavior CodeTable="RegName=HtmlCtrlType" />
+                </i:Interaction.Behaviors>
+              </wpf:DataGridComboBoxColumn>
+              <wpf:DataGridTextColumn Header="页面类型" Binding="{wpf:Binding PageStyle}" />
+            </wpf:DataGrid.Columns>
+          </wpf:DataGrid>
+        </wpf:DockPanel>
+      </ContentControl>
+    </Grid>
+  </DockPanel>
+</Page>

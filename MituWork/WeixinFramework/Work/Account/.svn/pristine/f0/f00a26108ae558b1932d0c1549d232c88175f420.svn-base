@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using YJC.Toolkit.Sys;
+
+namespace YJC.Toolkit.Accounting
+{
+    public class IncomeStatement
+    {
+        [SimpleElement(Order = 10, LocalName = "主营业收入")]
+        public int RevenueMainOperation { get; set; }
+
+        [SimpleElement(Order = 20, LocalName = "主营业务成本")]
+        public int CostOfMainOperation { get; set; }
+
+        [SimpleElement(Order = 30, LocalName = "主营业务税金及附加")]
+        public int TaxesMain { get; set; }
+
+        [SimpleElement(Order = 40, LocalName = "主营业务利润")]
+        public int ProfitMain { get; set; }
+
+        [SimpleElement(Order = 50, LocalName = "其他业务利润")]
+        public int OtherProfit { get; set; }
+
+        [SimpleElement(Order = 60, LocalName = "营业费用")]
+        public int OperatingExpense { get; set; }
+
+        [SimpleElement(Order = 70, LocalName = "管理费用")]
+        public int AdminExpense { get; set; }
+
+        [SimpleElement(Order = 80, LocalName = "财务费用")]
+        public int FinancialExpense { get; set; }
+
+        [SimpleElement(Order = 90, LocalName = "营业利润")]
+        public int OperatingProfit { get; set; }
+
+        [SimpleElement(Order = 100, LocalName = "投资收益")]
+        public int InvestmentIncome { get; set; }
+
+        [SimpleElement(Order = 110, LocalName = "补贴收入")]
+        public int RevenueSubsidy { get; set; }
+
+        [SimpleElement(Order = 120, LocalName = "营业外收入")]
+        public int OperatingRevenue { get; set; }
+
+        [SimpleElement(Order = 130, LocalName = "营业外支出")]
+        public int OperatingExp { get; set; }
+
+        [SimpleElement(Order = 140, LocalName = "利润总额")]
+        public int IncomeBeforeTax { get; set; }
+
+        [SimpleElement(Order = 150, LocalName = "所得税")]
+        public int IncomeTax { get; set; }
+
+        [SimpleElement(Order = 160, LocalName = "净利润")]
+        public int NetIncome { get; set; }
+    }
+}

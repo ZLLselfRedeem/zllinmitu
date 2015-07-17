@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\AttributedCarLibrary\AttributedCarLibrary\bin\Debug\AttributedCarLibrary.dll
+D:\ZhouLL\trunk\Study\AttributedCarLibrary\AttributedCarLibrary\bin\Debug\AttributedCarLibrary.pdb
+D:\ZhouLL\trunk\Study\AttributedCarLibrary\AttributedCarLibrary\obj\Debug\AttributedCarLibrary.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\AttributedCarLibrary\AttributedCarLibrary\obj\Debug\AttributedCarLibrary.dll
+D:\ZhouLL\trunk\Study\AttributedCarLibrary\AttributedCarLibrary\obj\Debug\AttributedCarLibrary.pdb

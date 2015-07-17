@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\StaticProperty\StaticProperty\obj\Debug\StaticProperty.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\StaticProperty\StaticProperty\bin\Debug\StaticProperty.exe
+D:\ZhouLL\trunk\Study\StaticProperty\StaticProperty\bin\Debug\StaticProperty.pdb
+D:\ZhouLL\trunk\Study\StaticProperty\StaticProperty\obj\Debug\StaticProperty.exe
+D:\ZhouLL\trunk\Study\StaticProperty\StaticProperty\obj\Debug\StaticProperty.pdb

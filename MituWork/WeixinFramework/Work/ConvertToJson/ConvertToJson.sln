@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeClassLibrary", "..\ClassLibrary1\ClassLibrary1\WeClassLibrary.csproj", "{489E2892-4030-449C-91C4-C9931C4BDF05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeText", "ConvertToJson\WeText.csproj", "{BE97DC4B-EC35-4F0A-B086-3478039E6B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSemantic", "..\..\branches\Test\Test\TestCorpWeixin\TestSemantic.csproj", "{91CD1659-32DD-48B7-A634-AF5C6BBFA8B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{489E2892-4030-449C-91C4-C9931C4BDF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489E2892-4030-449C-91C4-C9931C4BDF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489E2892-4030-449C-91C4-C9931C4BDF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489E2892-4030-449C-91C4-C9931C4BDF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE97DC4B-EC35-4F0A-B086-3478039E6B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE97DC4B-EC35-4F0A-B086-3478039E6B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE97DC4B-EC35-4F0A-B086-3478039E6B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE97DC4B-EC35-4F0A-B086-3478039E6B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CD1659-32DD-48B7-A634-AF5C6BBFA8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CD1659-32DD-48B7-A634-AF5C6BBFA8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CD1659-32DD-48B7-A634-AF5C6BBFA8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CD1659-32DD-48B7-A634-AF5C6BBFA8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

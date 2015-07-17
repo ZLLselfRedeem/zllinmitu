@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:include schemaLocation="CommonType.xsd"/>
+  <xs:simpleType name="WpfFileExtension">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Module"/>
+      <xs:enumeration value="Resource"/>
+      <xs:enumeration value="Theme"/>
+      <xs:enumeration value="Image"/>
+      <xs:enumeration value="ModuleInterface"/>
+      <xs:enumeration value="Layout"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WpfFilePathPosition">
+    <xs:union memberTypes="WpfFileExtension FilePosition"/>
+  </xs:simpleType>
+  <xs:simpleType name="SearchPatternType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Logical"/>
+      <xs:enumeration value="Visual"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="WpfFileAttrGroup">
+    <xs:attribute name="FileName" type="xs:string" use="required"/>
+    <xs:attribute name="Position" type="WpfFilePathPosition" use="required"/>
+  </xs:attributeGroup>
+  <xs:complexType name="WpfFileType">
+    <xs:attributeGroup ref="WpfFileAttrGroup"/>
+  </xs:complexType>
+  <xs:simpleType name="DockType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="Top"/>
+      <xs:enumeration value="Right"/>
+      <xs:enumeration value="Bottom"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

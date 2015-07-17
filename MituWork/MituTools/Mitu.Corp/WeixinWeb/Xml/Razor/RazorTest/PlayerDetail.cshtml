@@ -1,0 +1,51 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssDetailTemplate
+@using System.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    DataRow mainRow = HtmlUtil.GetMainRow(Model, ViewBag);
+    ViewBag.Title = mainRow.GetString("Cname");
+    ViewBag.PageData.MainPicNickName = "AvatarId";
+    ViewBag.PageData.ShowPicture = true;
+    ViewBag.PageData.AddDisplayFieldText("Gender", "");
+    ViewBag.PageData.AddDisplayFieldSection("Birthday", "BirthDay");
+    ViewBag.PageData.AddDisplayFieldSection("CountryId", "CountryId");
+}
+@section Weixin {
+    @{
+        string linkUrl = "../../m/player.vp?" + mainRow.GetString("PlayerId");
+    }
+    <div class="hide" id="metaData" data-title="@mainRow.GetString("Cname")" data-option="true" data-img="@HtmlUtil.GetDownloadUrl(mainRow.GetString("AvatarId"), true, true)" data-link="@linkUrl" data-desc="球员资料"></div>
+}
+@section Header {
+    <div class="m20"></div>
+}
+@section Footer {
+    @RenderLocalTextFile("weinxin.txt")
+}
+@section BirthDay {
+    <li class="list-group-item">
+        <div class="row">
+            <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(3), "lv-vam pv1 text-right")">
+                <b>年龄</b>
+            </div>
+            <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(9), "pr5 lv-vam")">@mainRow["Age"]岁 (@(((DateTime)mainRow["Birthday"]).ToString("yyyy-MM-dd")))</div>
+        </div>
+    </li>
+}
+@section CountryId {
+    <li class="list-group-item">
+        <div class="row">
+            <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(3), "lv-vam pv1 text-right")">
+                <b>国家地区</b>
+            </div>
+            <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(4), "pr5 lv-vam")">@mainRow["CountryId_Name"]</div>
+            @{
+                string url = string.Format("../pic/country/{0}.png", mainRow["CountryId"]);
+            }
+            <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(4), "pv1 lv-vam")">
+                <img alt="" src="@url" class="h25"/>
+            </div>
+        </div>
+    </li>
+}

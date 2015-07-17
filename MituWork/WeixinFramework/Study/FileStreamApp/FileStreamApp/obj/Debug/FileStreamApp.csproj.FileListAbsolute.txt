@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\FileStreamApp\FileStreamApp\bin\Debug\FileStreamApp.exe.config
+D:\ZhouLL\trunk\Study\FileStreamApp\FileStreamApp\bin\Debug\FileStreamApp.exe
+D:\ZhouLL\trunk\Study\FileStreamApp\FileStreamApp\bin\Debug\FileStreamApp.pdb
+D:\ZhouLL\trunk\Study\FileStreamApp\FileStreamApp\obj\Debug\FileStreamApp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\FileStreamApp\FileStreamApp\obj\Debug\FileStreamApp.exe
+D:\ZhouLL\trunk\Study\FileStreamApp\FileStreamApp\obj\Debug\FileStreamApp.pdb

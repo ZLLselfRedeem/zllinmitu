@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>账户绑定</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Binding.xml"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource DisablePage="List Delete Update Detail">
+        <tk:Resolver>
+          <tk:RegResolver>Binding</tk:RegResolver>
+        </tk:Resolver>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:PostRazorPageMaker DestUrl="Custom" Template="BootcssEdit" UseRetUrlFirst="false" RazorFile="CXCS/BindingInsert.cshtml">
+        <tk:RazorData>
+          <tk:BootcssEditData SaveButtonCaption="提交" InsertFormat="{0}" CaptionColumn="3" DataColumn="9"/>
+        </tk:RazorData>
+        <tk:Script>usercss/input.css</tk:Script>
+        <tk:CustomUrl>WeixinClose</tk:CustomUrl>
+        <tk:AlertMessage>
+          <tk:Content>账户绑定申请已提交</tk:Content>
+        </tk:AlertMessage>
+      </tk:PostRazorPageMaker>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

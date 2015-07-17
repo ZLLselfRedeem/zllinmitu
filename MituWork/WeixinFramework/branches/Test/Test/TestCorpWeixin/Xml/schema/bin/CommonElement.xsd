@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (mitu) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:include schemaLocation="CommonType.xsd"/>
+  <xs:complexType name="MultiLanguageType">
+    <xs:choice>
+      <xs:element name="Content" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>无多语言配置时，填写的文本</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Lang" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>有多语言配置时，根据不同的语言配置不同的文本</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="Culture" type="xs:language" use="required">
+                <xs:annotation>
+                  <xs:documentation>语言名称，需要符合.net CultureInfo类的使用标准</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="FakeDeleteType">
+    <xs:attribute name="FieldName" type="xs:Name" use="required">
+      <xs:annotation>
+        <xs:documentation>标记删除的字段昵称</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Value" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>删除的值</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AllowNull" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>是否允许标记删除的字段为Null（Null表示是正常的记录）</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

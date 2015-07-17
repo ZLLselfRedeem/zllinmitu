@@ -1,0 +1,7 @@
+﻿@using System;
+@using System.Collections.Generic;
+@{
+    Dictionary<string, string> dict = Model as Dictionary<string, string>;
+    string projName = dict["SubProjectName"];
+}
+nant -buildfile:Make@(projName).build

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="CommandType.xsd"/>
+  <xs:include schemaLocation="EventHandlerType.xsd"/>
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Module"/>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required" fixed="4.0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Module">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Commands" minOccurs="0"/>
+        <xs:element ref="Handlers" minOccurs="0"/>
+        <xs:element ref="CommandBindings" minOccurs="0"/>
+        <xs:element ref="EventBindings" minOccurs="0"/>
+        <xs:element ref="InputBindings" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SearchPattern" type="SearchPatternType"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Commands">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="Command"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Handlers">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="Handler"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommandBindings">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="CommandBinding"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventBindings">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="EventBinding"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InputBindings">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="InputBinding"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Command">
+    <xs:annotation>
+      <xs:documentation>该节点为动态节点</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="CommandType">
+          <xs:attribute name="Name" type="xs:ID" use="required"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Handler">
+    <xs:annotation>
+      <xs:documentation>该节点为动态节点</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="EventHandlerType">
+          <xs:attribute name="Name" type="xs:ID" use="required"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommandBinding">
+    <xs:complexType>
+      <xs:attribute name="ElementName" type="xs:Name" use="required"/>
+      <xs:attribute name="CommandName" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventBinding">
+    <xs:complexType>
+      <xs:attribute name="ElementName" type="xs:Name" use="required"/>
+      <xs:attribute name="EventName" type="xs:Name" use="required"/>
+      <xs:attribute name="HandlerName" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InputBinding">
+    <xs:complexType>
+      <xs:attribute name="Gesture" type="xs:string" use="required"/>
+      <xs:attribute name="CommandName" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

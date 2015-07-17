@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\schema\v4\Module.xsd">
+	<tk:Module Category="New" DisplayName="测试Tree" RegName="TestTreeModule" Order="50" Author="lzm" CreateDate="2012-04-06" Description="测试Tree模型" IconName="Images/png/039审批.png">
+		<DataModule>
+			<TreeDataModule>
+				<TreeXaml>
+					<tk:StringEntityTree xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" x:TypeArguments="ef:baisonOAEntities, ef:SYS_ORGANIZATION"/>
+				</TreeXaml>
+			</TreeDataModule>
+		</DataModule>
+		<UIElement>
+			<ViewModel>
+				<RegionContainer>
+					<Layout>
+						<TwoAreaLayout ShowSplitter="true" ShowCommandBar="false" FirstPosition="Left" FirstLength="4*"/> 
+					</Layout>
+					<Region>
+						<TreeViewRegion DataName="Tree"/>
+					</Region>
+					<Region>
+						<NormalTypeRegion ReadOnlyBinding="false" Model="Normal">
+							<Fetchor>
+								<BindingName BindingPath="CurrentItem" DataName="Tree"/>
+							</Fetchor>
+							<XamlType>
+                <x:Type xmlns:ef="clr-namespace:EF.BooksModule;assembly=EF.BooksModule" TypeName="ef:SYS_ORGANIZATION"/>
+              </XamlType>
+						</NormalTypeRegion>
+					</Region>
+				</RegionContainer>
+			</ViewModel>
+		</UIElement>
+	</tk:Module>
+</Toolkit>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net D:..\..\schema\v5\WeixinRule.xsd">
+	<tk:Rule RegName="TextMsg3" Author="zll">
+		<tk:Match>
+			<tk:TextRule Text="3" MatchType="Exactly"/>
+		</tk:Match>
+		<tk:Reply>
+<!--			<tk:NewsMessage>
+        <tk:Article>
+          <tk:Title>
+            <tk:Content>美食</tk:Content>
+          </tk:Title>
+          <tk:Description>
+            <tk:Content>杭州最全的美食介绍</tk:Content>
+          </tk:Description>
+          <tk:PicUrl>http://i3.dpfile.com/2009-03-30/1795050_b.jpg</tk:PicUrl>
+          <tk:Url>http://hzbbs.fang.com/board/mstd/</tk:Url>
+        </tk:Article>
+			</tk:NewsMessage>-->
+			<tk:VideoMessage FileName="D:\C#Internal File\Mitu.Corp\WeixinWeb\WebSite\pic\sys\115621130115533b38616220.mp4"  Position="AbsolutePath" Title="小视频" Description="生活中的记录"/>
+		</tk:Reply>
+	</tk:Rule>
+</tk:Toolkit>

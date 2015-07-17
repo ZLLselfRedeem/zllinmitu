@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkUtility" DisplayName="错误分析工具" RegName="ErrorSuiteModule" Order="10" Author="WDW" CreateDate="2011-03-05" Description="Toolkit应用程序生成工具" IconName="Images/png/040验收.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>ErrorSuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <FrameXaml Position="Layout">
+        <FrameXamlFile>LeftRightLayout.xaml</FrameXamlFile>
+        <ContentArea>
+          <ObjectContent Name="ErrorSuite">
+            <Layout>
+              <NormalLayout ColumnCount="2" DataName="ErrorData"/>
+            </Layout>
+          </ObjectContent>
+        </ContentArea>
+        <CommandArea>
+          <DataModuleCommand/>
+        </CommandArea>
+      </FrameXaml>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net file:///D:/WorkSpace/MyGitRep/MituWork/MituServer/Test/ManageWeb/Xml/schema/v5/Module.xsd">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>永久素材管理</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+      <tk:CompositeMetaData>
+    <tk:Item>
+      <tk:Condition SearchType="Style" Style="Insert"/>
+      <tk:SingleClassMetaData ClassRegName="WeMaterialUploadObject" JsonDataType="Object" TableName="Upload">
+        <tk:Override>
+          <tk:Field NickName="Name" Control="Text"/>
+        </tk:Override> 
+      </tk:SingleClassMetaData>
+    </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="True"/>
+          <tk:SingleClassMetaData ClassRegName="WeMediaId" JsonDataType="Object"/>
+        </tk:Item>
+      </tk:CompositeMetaData>
+    </tk:MetaData>
+		<tk:Source>
+      <tk:SingleObjectSource DisablePage="Detail Update">
+        <tk:ObjectSource>
+          <tk:RegNameObjectSource>WeMaterialEdit</tk:RegNameObjectSource>
+        </tk:ObjectSource>
+        <tk:ListObjectSource>
+          <tk:RegNameObjectSource>WeMaterialList</tk:RegNameObjectSource>
+        </tk:ListObjectSource>
+        <tk:Operators>
+          <tk:StandardObjectOperators>
+            <tk:Right>
+              <tk:EmptyObjectOperateRight/>
+            </tk:Right>
+            <tk:InsertOperator IsDialog="true"/>
+            <tk:Operator Id="Delete" Info="AjaxUrl">
+              <tk:Caption>
+                <tk:Content>删除</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebDeleteXmlPage.tkx?Source=Weixin/WeMaterial&amp;Content=true&amp;Id=*MediaId*</tk:Content>
+              <tk:ConfirmData>
+                <tk:Content>确定删除吗？</tk:Content>
+              </tk:ConfirmData>
+            </tk:Operator>
+          </tk:StandardObjectOperators>
+        </tk:Operators>
+      </tk:SingleObjectSource>
+		</tk:Source>
+		<tk:PostObjectCreator>
+      <tk:CompositeCreator>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="Insert"/>
+          <tk:CustomJsonObjectCreator RegTypeName="WeMaterialUploadObject" LocalName="Upload" UseConstructor="false"/>
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="True"/>
+          <tk:CustomJsonObjectCreator RegTypeName="WeMediaId" LocalName="WeMediaId" UseConstructor="false"/>
+        </tk:Item>
+      </tk:CompositeCreator>
+		</tk:PostObjectCreator>
+		<tk:PageMaker>
+      <tk:SingleDialogObjectRazorPageMaker ListDisplay="Striped">
+<!--        <tk:Item Style="Insert" DestUrl="Custom">
+          <tk:RazorData>
+            <tk:NormalEditData SaveButtonCaption="上传"/>
+          </tk:RazorData>
+          <tk:CustomUrl>CloseDialog</tk:CustomUrl>
+        </tk:Item>-->
+      </tk:SingleDialogObjectRazorPageMaker>
+    </tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>

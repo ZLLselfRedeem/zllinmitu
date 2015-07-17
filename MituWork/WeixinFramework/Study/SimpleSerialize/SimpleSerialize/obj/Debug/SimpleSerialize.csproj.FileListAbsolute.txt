@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\SimpleSerialize\SimpleSerialize\bin\Debug\SimpleSerialize.exe
+D:\ZhouLL\trunk\Study\SimpleSerialize\SimpleSerialize\bin\Debug\SimpleSerialize.pdb
+D:\ZhouLL\trunk\Study\SimpleSerialize\SimpleSerialize\obj\Debug\SimpleSerialize.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\SimpleSerialize\SimpleSerialize\obj\Debug\SimpleSerialize.exe
+D:\ZhouLL\trunk\Study\SimpleSerialize\SimpleSerialize\obj\Debug\SimpleSerialize.pdb

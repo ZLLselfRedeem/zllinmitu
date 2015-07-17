@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\SimpleClassExample\SimpleClassExample\bin\Debug\SimpleClassExample.exe
+D:\ZhouLL\trunk\Study\SimpleClassExample\SimpleClassExample\bin\Debug\SimpleClassExample.pdb
+D:\ZhouLL\trunk\Study\SimpleClassExample\SimpleClassExample\obj\Debug\SimpleClassExample.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\SimpleClassExample\SimpleClassExample\obj\Debug\SimpleClassExample.exe
+D:\ZhouLL\trunk\Study\SimpleClassExample\SimpleClassExample\obj\Debug\SimpleClassExample.pdb

@@ -1,0 +1,78 @@
+﻿@inherits YJC.Toolkit.Razor.NormalCustomTemplate
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Web;
+@using System.Linq;
+@using System.Collections.Generic;
+@using System.Data;
+@functions {
+    string IsChecked(DataRow row, HashSet<int> partSet)
+    {
+        int id = row["Id"].Value<int>();
+        if (partSet.Contains(id))
+            return "checked";
+        return string.Empty;
+    }
+}
+@{
+    DataSet dataSet = (DataSet)Model;
+    DataTable partTable = dataSet.Tables["PartFunc"];
+    HashSet<int> partSet = new HashSet<int>();
+    if (partTable != null)
+    {
+        foreach (DataRow row in partTable.Rows)
+            partSet.Add(row["FuncId"].Value<int>());
+    }
+    DataTable funcTable = dataSet.Tables["Function"];
+    IEnumerable<DataRow> rootRows;
+    if (funcTable == null)
+        rootRows = null;
+    else
+        rootRows = from item in funcTable.AsEnumerable()
+                   where item.Field<int>("ParentId") == -1
+                   orderby item.Field<string>("TreeLayer")
+                   select item;
+}
+@section Main {
+    @if (rootRows != null)
+    {
+        <div>
+            <input type="hidden" id="PartId" value="@dataSet.GetFieldValue("QueryString", "Id")" />
+            @foreach (var rootRow in rootRows)
+            {
+                @{
+                 int id = rootRow["Id"].Value<int>();
+                 IEnumerable<DataRow> rows = from item in funcTable.AsEnumerable()
+                                             where item.Field<int>("ParentId") == id
+                                             orderby item.Field<string>("TreeLayer")
+                                             select item;
+                }
+                <div class="panel panel-default root" data-id="@id">
+                    <div class="panel-heading">
+                        <div class="pull-right">
+                            <a class="mr5 checkall" href="#">全选</a>
+                            <a class="mr5 anticheck" href="#">反选</a>
+                            <a class="mr5 uncheckall" href="#">全不选</a>
+                        </div>@rootRow.GetString("Name")
+                    </div>
+                    <div class="panel-body">
+                        @foreach (DataRow childRow in rows)
+                        {
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="@childRow.GetString("Id")" @IsChecked(childRow, partSet)>@childRow.GetString("Name")</label>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    <div class="text-center cl pt10 mb15">
+        @if (rootRows != null) 
+        {
+            @BootcssUtil.Button("保存", "btn-save mr10", BootcssButton.Primary, false)
+        }
+        @BootcssUtil.Button("关闭", "", BootcssButton.Default, false, new HtmlAttribute("data-dialog-action", "close"))
+    </div>
+}

@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\FileStudy\FileStudy\bin\Debug\FileStudy.exe.config
+D:\ZhouLL\trunk\Study\FileStudy\FileStudy\bin\Debug\FileStudy.exe
+D:\ZhouLL\trunk\Study\FileStudy\FileStudy\bin\Debug\FileStudy.pdb
+D:\ZhouLL\trunk\Study\FileStudy\FileStudy\obj\Debug\FileStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\FileStudy\FileStudy\obj\Debug\FileStudy.exe
+D:\ZhouLL\trunk\Study\FileStudy\FileStudy\obj\Debug\FileStudy.pdb

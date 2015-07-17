@@ -1,0 +1,8 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssListTemplate
+@using YJC.Toolkit.Web;
+@{ 
+    string imageUrl = string.Format("../userimages/flags/{0}.png", Model.Row["CountryId"]);
+}
+<div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(1), "lv-vam pv1 mr5")">
+    <img alt='@Model.Row["CountryId_Name"]' src='@imageUrl' class="w30">
+</div>

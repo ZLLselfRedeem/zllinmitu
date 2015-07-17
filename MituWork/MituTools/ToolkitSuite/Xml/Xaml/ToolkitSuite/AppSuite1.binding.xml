@@ -1,0 +1,27 @@
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\CommandBinding.xsd" version="4.0">
+  <Module SearchPattern="Logical">
+    <Commands>
+      <Command Name="Close">
+        <CloseModule/>
+      </Command>
+      <Command Name="Create">
+        <DataModule>
+          <Action>Create</Action>
+        </DataModule>
+      </Command>
+      <Command Name="SelectFolder">
+        <SelectFolder>
+          <TargetElement>txtPath</TargetElement>
+        </SelectFolder>
+      </Command>
+    </Commands>
+    <CommandBindings>
+      <CommandBinding CommandName="Close" ElementName="btnClose"/>
+      <CommandBinding CommandName="Create" ElementName="btnCreate"/>
+      <CommandBinding CommandName="SelectFolder" ElementName="btnSelectFolder"/>
+    </CommandBindings>
+    <InputBindings>
+      <InputBinding CommandName="Close" Gesture="Alt+x"/>
+    </InputBindings>
+  </Module>
+</Toolkit>

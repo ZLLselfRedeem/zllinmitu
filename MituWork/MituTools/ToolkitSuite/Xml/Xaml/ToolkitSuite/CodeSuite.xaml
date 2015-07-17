@@ -1,0 +1,90 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:tk="http://www.qdocuments.net"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300">
+
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" >
+            <Button Name="Close">关闭</Button>
+            <Button Name="ConvertPDM">PDM导入</Button>
+            <Button Name="Generate">生成</Button>
+            <Button Name="Test">Test</Button>
+        </ToolBar>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Path=Tables}" AutoGenerateColumns="False" CanUserAddRows="False" IsSynchronizedWithCurrentItem="True">
+                <i:Interaction.Behaviors>
+                    <tk:FetchDataBehavior DataName="ConfigXml"/>
+                </i:Interaction.Behaviors>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="名称" Binding="{Binding TableName}"/>
+                    <DataGridTextColumn Header="说明" Binding="{Binding TableDesc}"/>
+                    <DataGridComboBoxColumn Header="类型" SelectedValueBinding="{Binding TableType}" tk:ControlHelper.CodeTable="RegName=TableType"/>
+                    <DataGridCheckBoxColumn Header="是否生成" Binding="{Binding IsChecked}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Grid.Row="0" Grid.Column="1" >
+                <i:Interaction.Behaviors>
+                    <tk:FetchDataBehavior DataName="CodeData"/>
+                </i:Interaction.Behaviors>
+                <StackPanel  Orientation="Horizontal" >
+                    <TextBlock Text="项目名" Margin="10,0,10,0" TextAlignment="Right" Width="100"  />
+                    <TextBox Text="{Binding Path=ProjectName, Mode=TwoWay}"  Width="150" /> 
+                </StackPanel>
+                <StackPanel Margin="0,5,0,0" Orientation="Horizontal" >
+                    <TextBlock Text="命名空间" Margin="10,0,10,0"  TextAlignment="Right" Width="100" />
+                    <TextBox Text="{Binding Path=Namespace, Mode=TwoWay}"    Width="150"   />
+                </StackPanel>
+                <StackPanel Margin="0,5,0,0" Orientation="Horizontal" >
+                    <TextBlock Text="作者" Margin="10,0,10,0" TextAlignment="Right" Width="100" />
+                    <TextBox Text="{Binding Path=Author, Mode=TwoWay}"    Width="150"   />
+                </StackPanel>
+                <StackPanel Margin="0,10,0,0" Orientation="Horizontal" >
+                    <TextBlock Text="VS版本" Margin="10,0,10,0" TextAlignment="Right" Width="100"  />
+                    <ComboBox  tk:ControlHelper.CodeTable="RegName=StudioVersion"   SelectedValue="{Binding Path=StudioVer, Mode=TwoWay}" Width="150"   />
+                </StackPanel>
+                <StackPanel Margin="0,5,0,0" Orientation="Horizontal" >
+                    <TextBlock Text="Toolkit版本" Margin="10,0,10,0"  TextAlignment="Right" Width="100" />
+                    <ComboBox  tk:ControlHelper.CodeTable="RegName=ToolkitVersion"   SelectedValue="{Binding Path=ToolkitVer, Mode=TwoWay}" Width="150"   />
+                </StackPanel>
+                <StackPanel Margin="0,5,0,0" Orientation="Horizontal" >
+                    <TextBlock Text="路径" Margin="10,0,10,0"  TextAlignment="Right" Width="100" />
+                    <TextBox Text="{Binding Path=SolutionPath,Mode=TwoWay}" Width="150" IsReadOnly="False" Background="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}, Path=Background}" />
+                </StackPanel>
+
+            </StackPanel>
+            <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding Tables.CollectionView.CurrentItem.Fields}" AutoGenerateColumns="False" CanUserAddRows="False"  IsSynchronizedWithCurrentItem="True">
+                <i:Interaction.Behaviors>
+                    <tk:FetchDataBehavior DataName="ConfigXml"/>
+                </i:Interaction.Behaviors>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="名称" Binding="{Binding FieldName}"/>
+                    <DataGridTextColumn Header="说明" Binding="{Binding DisplayName}"/>
+
+                    <DataGridComboBoxColumn Header="字段类型" SelectedValueBinding="{Binding DataType}" tk:ControlHelper.CodeTable="RegName=XmlDataType" />
+                    <DataGridCheckBoxColumn Header="主键" Binding="{Binding IsKey}"/>
+                    <DataGridCheckBoxColumn Header="为空" Binding="{Binding IsEmpty}"/>
+                    <DataGridCheckBoxColumn Header="自增" Binding="{Binding IsAutoInc}"/>
+                    <DataGridTextColumn Header="长度" Binding="{Binding Length}"/>
+                    <DataGridTextColumn Header="CodeTable" Binding="{Binding CodeTable}"/>
+                    <DataGridTextColumn Header="默认值" Binding="{Binding DefaultValue}"/>
+                    <DataGridComboBoxColumn Header="布局" SelectedValueBinding="{Binding Layout}"  tk:ControlHelper.CodeTable="RegName=FieldLayout"  />
+                    <DataGridTextColumn Header="单元数" Binding="{Binding UnitNumber}"/>
+                    <DataGridComboBoxColumn Header="控件" SelectedValueBinding="{Binding HtmlCtrl}" tk:ControlHelper.CodeTable="RegName=HtmlCtrlType"   />
+                    <DataGridTextColumn Header="排序" Binding="{Binding Order}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Page>

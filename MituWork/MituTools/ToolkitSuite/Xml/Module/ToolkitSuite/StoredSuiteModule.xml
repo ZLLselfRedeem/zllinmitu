@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkSuite" DisplayName="存储过程转换工具" RegName="StoredSuiteModule" Order="10" Author="WDW" CreateDate="2012-03-09" Description="存储过程转换工具" IconName="Images/openicon/png/system-settings-3.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>StoredSuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <SimpleModel TypeAliasName="StoredSuite" DataName="StoreSuite"/>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

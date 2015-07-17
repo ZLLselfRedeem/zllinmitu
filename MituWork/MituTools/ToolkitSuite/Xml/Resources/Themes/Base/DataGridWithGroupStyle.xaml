@@ -1,0 +1,234 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:vsm="clr-namespace:System.Windows;assembly=PresentationFramework"
+                    xmlns:tk="http://www.qdocuments.net">
+  <Style TargetType="{x:Type GroupItem}">
+    <Setter Property="Margin" Value="0,0,0,5"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="GroupItem">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" MinWidth="19"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ToggleButton Name="_ToggleButton">
+              <ToggleButton.Style>
+                <Style TargetType="ToggleButton">
+                  <Setter Property="UIElement.Focusable" Value="False"/>
+                  <Setter Property="FrameworkElement.Width" Value="16"/>
+                  <Setter Property="FrameworkElement.Height" Value="16"/>
+                  <Setter Property="Control.Template">
+                    <Setter.Value>
+                      <ControlTemplate TargetType="ToggleButton">
+                        <Border Padding="5,5,5,5" Background="#00FFFFFF" Width="16" Height="16">
+                          <Path Fill="#00FFFFFF" Stroke="#FF989898" Name="ExpandPath">
+                            <Path.Data>
+                              <PathGeometry Figures="M0,0L0,6L6,0z" />
+                            </Path.Data>
+                            <Path.RenderTransform>
+                              <RotateTransform Angle="135" CenterX="3" CenterY="3" />
+                            </Path.RenderTransform>
+                          </Path>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                          <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="Shape.Stroke" TargetName="ExpandPath" Value="#FF1BBBFA"/>
+                            <Setter Property="Shape.Fill" TargetName="ExpandPath" Value="#00FFFFFF"/>
+                          </Trigger>
+                          <Trigger Property="ToggleButton.IsChecked" Value="True">
+                            <Setter Property="UIElement.RenderTransform" TargetName="ExpandPath">
+                              <Setter.Value>
+                                <RotateTransform Angle="180" CenterX="3" CenterY="3" />
+                              </Setter.Value>
+                            </Setter>
+                            <Setter Property="Shape.Fill" TargetName="ExpandPath" Value="#FF595959"/>
+                            <Setter Property="Shape.Stroke" TargetName="ExpandPath" Value="#FF262626"/>
+                          </Trigger>
+                        </ControlTemplate.Triggers>
+                      </ControlTemplate>
+                    </Setter.Value>
+                  </Setter>
+                </Style>
+              </ToggleButton.Style>
+            </ToggleButton>
+            <DockPanel Grid.Column="1">
+              <ContentPresenter Content="{Binding Path=Name}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" 
+                                ContentStringFormat="{TemplateBinding ContentStringFormat}" />
+            </DockPanel>
+            <!--ToggleButton x:Name="PART_Header" IsChecked="{Binding ElementName=_ToggleButton, Path=IsChecked}" FontWeight="Light" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Cursor="{TemplateBinding Cursor}" ClickMode="Press" Grid.Column="1" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsTabStop="False" KeyboardNavigation.TabNavigation="Once" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+              <ToggleButton.Foreground>
+                <SolidColorBrush x:Name="HeaderWrapper" Color="{DynamicResource BlackColor}"/>
+              </ToggleButton.Foreground>
+              <Grid Background="{TemplateBinding Background}">
+                <vsm:VisualStateManager.VisualStateGroups>
+                  <vsm:VisualStateGroup x:Name="CommonStates">
+                    <vsm:VisualState x:Name="Normal"/>
+                    <vsm:VisualState x:Name="Pressed">
+                      <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="MouseOverRectangle">
+                          <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenterWrapperColor" Storyboard.TargetProperty="Color">
+                          <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource WhiteColor}"/>
+                        </ColorAnimationUsingKeyFrames>
+                      </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Disabled">
+                      <Storyboard>
+                        <DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Content"/>
+                      </Storyboard>
+                    </vsm:VisualState>
+                  </vsm:VisualStateGroup>
+                </vsm:VisualStateManager.VisualStateGroups>
+                <Rectangle x:Name="MouseOverRectangle" IsHitTestVisible="False" Opacity="0" Fill="{DynamicResource HighlightBrush}"/>
+                <ContentControl Margin="0,-2">
+                  <ContentControl.Foreground>
+                    <SolidColorBrush x:Name="ContentPresenterWrapperColor" Color="{DynamicResource BlackColor}"/>
+                  </ContentControl.Foreground>
+                  <ContentPresenter x:Name="Content" Cursor="{TemplateBinding Cursor}" Content="{Binding Path=Name}" 
+                                ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Left"
+                                        Margin="{TemplateBinding Padding}" RenderOptions.ClearTypeHint="Enabled"/>
+                </ContentControl>
+              </Grid>
+            </ToggleButton-->
+            <ItemsPresenter Name="_ItemsHost" Visibility="Collapsed" Grid.Column="1" Grid.Row="1"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger SourceName="_ToggleButton" Property="ToggleButton.IsChecked" Value="True">
+              <Setter TargetName="_ItemsHost" Property="UIElement.Visibility" Value="Visible"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <!--ControlTemplate TargetType="{x:Type GroupItem}">
+              <Expander IsExpanded="True" BorderBrush="#FF002255"  BorderThickness="1,1,1,5">
+                <Expander.Header>
+                  <DockPanel>
+                    <TextBlock FontWeight="Bold" Text="{Binding Path=Name}" Margin="5,0,0,0" Width="300"/>
+                    <TextBlock FontWeight="Bold" Text="{Binding Path=ItemCount}"/>
+                  </DockPanel>
+                </Expander.Header>
+                <Expander.Content>
+                  <ItemsPresenter />
+                </Expander.Content>
+              </Expander>
+            </ControlTemplate-->
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="DataGridColumnWithGroupStyle" TargetType="DataGridColumnHeader">
+    <Setter Property="SnapsToDevicePixels" Value="true"/>
+    <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+    <Setter Property="FontFamily" Value="{DynamicResource ContentFontFamily}"/>
+    <Setter Property="FontSize" Value="{DynamicResource ControlTitleFontSize}"/>
+    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
+    <Setter Property="IsTabStop" Value="False"/>
+    <Setter Property="SeparatorBrush" Value="{DynamicResource SeperatorBrush}"/>
+    <Setter Property="Padding" Value="4,5,4,5"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="DataGridColumnHeader">
+          <Border BorderBrush="Black" BorderThickness="0,1">
+            <Border.Resources>
+              <Style x:Key="ColumnHeaderGripperStyle" TargetType="Thumb">
+                <Setter Property="Width" Value="2"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Cursor" Value="SizeWE"/>
+                <Setter Property="Template">
+                  <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                      <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}"/>
+                    </ControlTemplate>
+                  </Setter.Value>
+                </Setter>
+              </Style>
+            </Border.Resources>
+            <vsm:VisualStateManager.VisualStateGroups>
+              <vsm:VisualStateGroup x:Name="CommonStates">
+                <vsm:VisualState x:Name="Normal"/>
+                <vsm:VisualState x:Name="MouseOver">
+                  <Storyboard>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="MouseOverRectangle">
+                      <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="MouseOverLeftRightSeperator">
+                      <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                    </DoubleAnimationUsingKeyFrames>
+                  </Storyboard>
+                </vsm:VisualState>
+                <vsm:VisualState x:Name="Pressed">
+                  <Storyboard>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PressedRectangle">
+                      <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PressedLeftRightSeperator">
+                      <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                    </DoubleAnimationUsingKeyFrames>
+                  </Storyboard>
+                </vsm:VisualState>
+              </vsm:VisualStateGroup>
+              <vsm:VisualStateGroup x:Name="SortStates">
+                <vsm:VisualState x:Name="Unsorted"/>
+                <vsm:VisualState x:Name="SortAscending">
+                  <Storyboard>
+                    <DoubleAnimation Duration="0" To="1.0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SortIcon"/>
+                  </Storyboard>
+                </vsm:VisualState>
+                <vsm:VisualState x:Name="SortDescending">
+                  <Storyboard>
+                    <DoubleAnimation Duration="0" To="1.0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SortIcon"/>
+                    <DoubleAnimation Duration="0" To="-.9" Storyboard.TargetProperty="(RenderTransform).ScaleY" Storyboard.TargetName="SortIcon"/>
+                  </Storyboard>
+                </vsm:VisualState>
+              </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Grid x:Name="Root" Height="30">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Rectangle x:Name="BackgroundRectangle" Grid.ColumnSpan="2" Stretch="Fill" Fill="{DynamicResource WhiteBrush}"/>
+              <Rectangle x:Name="MouseOverRectangle" Grid.ColumnSpan="2" Opacity="0">
+                <Rectangle.Fill>
+                  <SolidColorBrush Color="{DynamicResource Gray8}"/>
+                </Rectangle.Fill>
+              </Rectangle>
+              <Rectangle x:Name="PressedRectangle" Grid.ColumnSpan="2" Opacity="0">
+                <Rectangle.Fill>
+                  <SolidColorBrush Color="{DynamicResource Gray8}"/>
+                </Rectangle.Fill>
+              </Rectangle>
+              <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="Auto"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                  <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RenderOptions.ClearTypeHint="Enabled"/>
+                <Path x:Name="SortIcon" Grid.Column="1" Data="F1 M -5.215,6.099L 5.215,6.099L 0,0L -5.215,6.099 Z " Fill="{DynamicResource GrayBrush3}" HorizontalAlignment="Left" Margin="4,0,0,0" Opacity="0" RenderTransformOrigin=".5,.5" Stretch="Uniform" VerticalAlignment="Center" Width="8">
+                  <Path.RenderTransform>
+                    <ScaleTransform ScaleY=".9" ScaleX=".9"/>
+                  </Path.RenderTransform>
+                </Path>
+                <CheckBox x:Name="GroupIcon" Grid.Column="2" Margin="4,0,10,0" ToolTip="分组" tk:HandlerHelper.Event="{}Event=Click&amp;Pattern=Visual&amp;Handler={'RegHandler':{'RegName':'DataGridGroup'}}"/>
+              </Grid>
+              <Rectangle x:Name="VerticalSeparator" Grid.Column="1" Fill="{TemplateBinding SeparatorBrush}" Visibility="{TemplateBinding SeparatorVisibility}" VerticalAlignment="Stretch" Width="1" Opacity="0"/>
+              <Border x:Name="MouseOverLeftRightSeperator" Grid.ColumnSpan="2" BorderThickness="1,0" BorderBrush="{DynamicResource SeperatorBrush}" Margin="-1,0,0,0" Opacity="0"/>
+              <Border x:Name="PressedLeftRightSeperator" Grid.ColumnSpan="2" Opacity="0" BorderBrush="{DynamicResource SeperatorBrush}" BorderThickness="1,0" Margin="-1,0,0,0"/>
+              <Thumb x:Name="PART_LeftHeaderGripper" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Left" Style="{DynamicResource ColumnHeaderGripperStyle}"/>
+              <Thumb x:Name="PART_RightHeaderGripper" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Right" Style="{DynamicResource ColumnHeaderGripperStyle}"/>
+            </Grid>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

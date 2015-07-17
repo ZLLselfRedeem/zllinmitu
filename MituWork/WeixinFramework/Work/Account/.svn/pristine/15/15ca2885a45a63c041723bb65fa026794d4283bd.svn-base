@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using YJC.Toolkit.Sys;
+
+namespace YJC.Toolkit.Accounting
+{
+    public class BasePostObject<T> : BasePostObject where T : new()
+    {
+        [ObjectElement]
+        public T ReportData { get; private set; }
+
+        public override string WriteXml()
+        {
+            if (ReportData == null)
+                return string.Empty;
+            return ReportData.WriteXml(WriteSettings.Default, QName.ToolkitNoNS);
+        }
+    }
+}

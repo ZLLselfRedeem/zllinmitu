@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by cjy (baison) -->
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_CORP_TAG">
+    <tk:TableDesc>
+      <tk:Content>微信企业标签</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>CT_TAG_ID</tk:FieldName>
+      <tk:NickName>TagId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>Id</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CT_NAME</tk:FieldName>
+      <tk:NickName>Name</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>名称</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CT_USER_LIST</tk:FieldName>
+      <tk:NickName>UserList</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>用户列表</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>4000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CT_DEPARTMENT_LIST</tk:FieldName>
+      <tk:NickName>DepartmentList</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>机构列表</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>4000</tk:Length>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

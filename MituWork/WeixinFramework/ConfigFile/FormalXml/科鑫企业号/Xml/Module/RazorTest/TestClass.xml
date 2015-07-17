@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>设置</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleClassMetaData ClassRegName="LogOnData" TableName="TestLogon">
+        <tk:TableDesc>
+          <tk:Content>设置</tk:Content>
+        </tk:TableDesc>
+        <tk:Add>
+          <tk:AddField DataType="int" FieldName="Id" Kind="Virtual" Order="101" Control="Text">
+            <tk:DisplayName>
+              <tk:Content>ID</tk:Content>
+            </tk:DisplayName>
+            <tk:Layout/>
+          </tk:AddField>
+        </tk:Add>
+        <tk:Override>
+          <tk:Field NickName="Password">
+            <tk:Edit Class="Hello"/>
+          </tk:Field>
+        </tk:Override>
+      </tk:SingleClassMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:EmptySource/>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SourceOutputPageMaker ContentType="text/html"/>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

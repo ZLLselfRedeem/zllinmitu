@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\LateBindingApp\LateBindingApp\bin\Debug\LateBindingApp.exe
+D:\ZhouLL\trunk\Study\LateBindingApp\LateBindingApp\bin\Debug\LateBindingApp.pdb
+D:\ZhouLL\trunk\Study\LateBindingApp\LateBindingApp\obj\Debug\LateBindingApp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\LateBindingApp\LateBindingApp\obj\Debug\LateBindingApp.exe
+D:\ZhouLL\trunk\Study\LateBindingApp\LateBindingApp\obj\Debug\LateBindingApp.pdb

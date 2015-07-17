@@ -1,0 +1,14 @@
+<Toolkit>
+  <AR_COMPANY>
+    <CompanyId />
+    <Tcode>323632</Tcode>
+    <Tname>浙江ZJU</Tname>
+    <FullName>杭州西湖</FullName>
+    <RegAddr>杭州</RegAddr>
+    <Area>110000</Area>
+    <hdArea>北京市</hdArea>
+    <Board>01</Board>
+    <ListDate>2015-07-11</ListDate>
+    <TransMode>02</TransMode>
+  </AR_COMPANY>
+</Toolkit>

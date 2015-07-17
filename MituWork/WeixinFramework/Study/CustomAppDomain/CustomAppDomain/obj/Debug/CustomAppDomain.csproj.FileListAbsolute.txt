@@ -1,0 +1,4 @@
+D:\ZhouLL\trunk\Study\CustomAppDomain\CustomAppDomain\bin\Debug\CustomAppDomain.exe
+D:\ZhouLL\trunk\Study\CustomAppDomain\CustomAppDomain\bin\Debug\CustomAppDomain.pdb
+D:\ZhouLL\trunk\Study\CustomAppDomain\CustomAppDomain\obj\Debug\CustomAppDomain.exe
+D:\ZhouLL\trunk\Study\CustomAppDomain\CustomAppDomain\obj\Debug\CustomAppDomain.pdb

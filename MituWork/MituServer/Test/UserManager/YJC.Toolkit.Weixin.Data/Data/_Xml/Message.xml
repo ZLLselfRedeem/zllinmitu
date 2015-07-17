@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_MESSAGE">
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false" IsAutoInc="true">
+      <tk:FieldName>WM_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>Id</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_TO_USER_NAME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>接受方</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_FROM_USER_NAME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>发送方</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_CREATE_TIME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>创建日期</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_MSG_TYPE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>消息类型</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_CONTENT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>文本消息内容</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_PIC_URL</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>图片链接</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_MEDIA_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>消息媒体id</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_FORMAT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>语音格式</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_THUMB_MEDIA_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>缩略图的媒体id</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>WM_LOCATION_X</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>地理位置纬度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>WM_LOCATION_Y</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>地理位置经度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_SCALE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>缩放大小</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_LABEL</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>位置信息</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_TITLE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>消息标题</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_DESCRIPTION</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>消息描述</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_URL</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>消息链接</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_EVENT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>事件类型</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_EVENT_KEY</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>事件KEY值</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_TICKET</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>二维码的ticket</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>256</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>WM_LATITUDE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>纬度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>WM_LONGITUDE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>经度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>WM_PRECISION</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>地理位置精度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_RECOGNITION</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>语音识别结果</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>4000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_SCAN_CODE_INFO</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>扫码结果</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_SEND_PICS_INFO</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>发图结果</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>4000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_SEND_LOCATION_INFO</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>地理位置结果</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_AGENT_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>应用Id</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="long">
+      <tk:FieldName>WM_MSG_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>消息id</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WM_STATUS</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>状态</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>255</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_TOTAL_COUNT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>群发全部人数</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_FILTER_COUNT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>群发过滤人数</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_SENT_COUNT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>群发发送人数</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WM_ERROR_COUNT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>群发失败人数</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>WM_CREATE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>创建时间</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

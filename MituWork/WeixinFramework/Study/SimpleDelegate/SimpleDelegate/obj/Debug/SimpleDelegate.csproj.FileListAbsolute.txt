@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\SimpleDelegate\SimpleDelegate\obj\Debug\SimpleDelegate.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\SimpleDelegate\SimpleDelegate\bin\Debug\SimpleDelegate.exe
+D:\ZhouLL\trunk\Study\SimpleDelegate\SimpleDelegate\bin\Debug\SimpleDelegate.pdb
+D:\ZhouLL\trunk\Study\SimpleDelegate\SimpleDelegate\obj\Debug\SimpleDelegate.exe
+D:\ZhouLL\trunk\Study\SimpleDelegate\SimpleDelegate\obj\Debug\SimpleDelegate.pdb

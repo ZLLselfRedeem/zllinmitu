@@ -1,0 +1,61 @@
+@using System.Text;
+@using Toolkit.Suite
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@{
+    GeneratorItemEventArgs e = @Model as GeneratorItemEventArgs;
+    TableInfo table = e.Table;
+    StringBuilder builder = new StringBuilder();
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="3.0" xsi:noNamespaceSchemaLocation="../../schema/v3/Data.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="@table.TableName" TableDesc="@table.TableDesc">
+@{
+  int i = 0;
+  foreach (var field in table.Fields)
+  {
+    ++i;  
+    builder.Clear();
+    if (field.IsKey)
+      builder.Append(" IsKey=\"true\"");
+    if (field.IsAutoInc)
+      builder.Append(" IsAutoInc=\"true\"");
+    if (!field.IsEmpty)
+      builder.Append(" IsEmpty=\"false\"");
+    @:<tk:Field DataType="@RazorUtil.GetDataType(field.DataType)"@builder.ToString()>
+      @:<tk:FieldName>@field.FieldName</tk:FieldName>
+      @:<tk:DisplayName>@field.DisplayName</tk:DisplayName>
+    if (field.DataType == XmlDataType.String) 
+    {
+      @:<tk:Length>@field.Length</tk:Length> 
+    }
+    string decoder = string.Empty;
+    if (!string.IsNullOrEmpty(field.CodeTable))
+    {
+        if (field.HtmlCtrl == HtmlCtrlType.Combo)
+            decoder = "      <tk:CodeTable>" + field.CodeTable + "</tk:CodeTable>\n";
+        else if (field.HtmlCtrl == HtmlCtrlType.EasySearch)
+            decoder = "      <tk:EasySearch RegName=\"" + field.CodeTable + "\"/>\n";
+    }
+      @decoder
+    string textHead = string.Empty;
+    if (field.DataType == XmlDataType.Text) 
+    {
+        textHead = " TextHead=\"true\"";
+    }
+      @:<tk:Display ThreeColumn="@field.GetThreeColumn()" DefaultShow="@field.GetPageStyle()"@textHead/>
+    if (field.HtmlCtrl == HtmlCtrlType.CheckBox)
+    {
+      @:<tk:Extension CheckValue="1" UnCheckValue="0"/>
+    }
+      @:<tk:HtmlCtrl HtmlCtrl="@field.HtmlCtrl" Order="@field.Order"/>
+    if (!string.IsNullOrEmpty(field.DefaultValue))
+    {
+      @:<tk:DefaultValue NeedParser="false">@field.DefaultValue</tk:DefaultValue>
+    }
+    @:</tk:Field>
+  }
+}
+  </tk:Table>
+</Toolkit>

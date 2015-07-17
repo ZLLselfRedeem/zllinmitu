@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\CommonSnappable\CommonSnappable\bin\Debug\CommonSnappable.dll
+D:\ZhouLL\trunk\Study\CommonSnappable\CommonSnappable\bin\Debug\CommonSnappable.pdb
+D:\ZhouLL\trunk\Study\CommonSnappable\CommonSnappable\obj\Debug\CommonSnappable.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\CommonSnappable\CommonSnappable\obj\Debug\CommonSnappable.dll
+D:\ZhouLL\trunk\Study\CommonSnappable\CommonSnappable\obj\Debug\CommonSnappable.pdb

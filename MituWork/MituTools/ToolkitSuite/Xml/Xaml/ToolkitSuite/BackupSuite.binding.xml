@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\CommandBinding.xsd" version="4.0">
+  <Module SearchPattern="Logical">
+    <Commands>
+      <Command Name="Close">
+        <CloseModule/>
+      </Command>
+      <Command Name="FillList">
+        <DataModule>
+          <Action>FillProjectList</Action>
+        </DataModule>
+      </Command>
+      <Command Name="Create">
+        <DataModule>
+          <Action>Create</Action>
+        </DataModule>
+      </Command>
+      <Command Name="SelectAll">
+        <Switcher>
+          <Mode>All</Mode>
+          <ItemsControlName>lsbProjectList</ItemsControlName>
+        </Switcher>
+      </Command>
+      <Command Name="SelectReverse">
+        <Switcher>
+          <Mode>Reverse</Mode>
+          <ItemsControlName>lsbProjectList</ItemsControlName>
+        </Switcher>
+      </Command>
+      <Command Name="SelectNone">
+        <Switcher>
+          <Mode>None</Mode>
+          <ItemsControlName>lsbProjectList</ItemsControlName>
+        </Switcher>
+      </Command>
+    </Commands>
+    <CommandBindings>
+      <CommandBinding ElementName="Close" CommandName="Close"/>
+      <CommandBinding ElementName="btnFillList" CommandName="FillList"/>
+      <CommandBinding ElementName="btnCreate" CommandName="Create"/>
+      <CommandBinding ElementName="btnSelectAll" CommandName="SelectAll"/>
+      <CommandBinding ElementName="btnSelectReverse" CommandName="SelectReverse"/>
+      <CommandBinding ElementName="btnSelectNone" CommandName="SelectNone"/>
+    </CommandBindings>
+    <InputBindings>
+      <InputBinding Gesture="Alt+D" CommandName="Close"/>
+    </InputBindings>
+  </Module>
+</Toolkit>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_CORP_APP_LOG">
+    <tk:TableDesc>
+      <tk:Content>微信企业进入日志</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>AL_LOG_ID</tk:FieldName>
+      <tk:NickName>LogId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>Id</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>AL_APP_ID</tk:FieldName>
+      <tk:NickName>AppId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>应用ID</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>AL_USER_ID</tk:FieldName>
+      <tk:NickName>UserId</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>用户ID</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>100</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>AL_CREATE_DATE</tk:FieldName>
+      <tk:NickName>CreateDate</tk:NickName>
+      <tk:DisplayName>
+        <tk:Content>进入时间</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

@@ -1,0 +1,18 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssListTemplate
+@using YJC.Toolkit.Web;
+@{ 
+    string id = Model.Row["AvatarId"].ToString();
+}
+<div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(2), "lv-vam")">
+    @if (id == string.Empty) 
+     { 
+        @{ 
+                 string url = string.Format("../pic/sys/hp-{0}.jpg", Model.Row["Gender"].ToString() == "F" ? "wta" : "atp"); 
+         } 
+        <img class="w40 h50" alt="" src="@url"/> 
+     }
+     else 
+     {
+        <img class="w40 h50" alt="" src="@HtmlUtil.GetDownloadUrl(id, true, true)"/> 
+     }
+</div>

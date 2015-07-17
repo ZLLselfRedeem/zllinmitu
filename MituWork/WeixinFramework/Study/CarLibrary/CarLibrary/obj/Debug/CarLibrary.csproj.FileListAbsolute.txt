@@ -1,0 +1,4 @@
+D:\ZhouLL\trunk\Study\CarLibrary\CarLibrary\bin\Debug\CarLibrary.dll
+D:\ZhouLL\trunk\Study\CarLibrary\CarLibrary\bin\Debug\CarLibrary.pdb
+D:\ZhouLL\trunk\Study\CarLibrary\CarLibrary\obj\Debug\CarLibrary.dll
+D:\ZhouLL\trunk\Study\CarLibrary\CarLibrary\obj\Debug\CarLibrary.pdb

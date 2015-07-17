@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B76E1752-F2DA-44F1-BCFC-8F641323546F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YJC.Toolkit.Weixin</RootNamespace>
+    <AssemblyName>YJC.Toolkit.Weixin.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\_lib\tk5\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\Toolkit.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>YJC.Toolkit2.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YJC.Toolkit.AdoData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.AdoData.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.BaiduMap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.BaiduMap.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core.Extension, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Core.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.LogOn, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.LogOn.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.MetaData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.MetaData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YJC.Toolkit.Weixin\YJC.Toolkit.Weixin.csproj">
+      <Project>{b76e1752-f2da-44f1-bcfc-8f641323546b}</Project>
+      <Name>YJC.Toolkit.Weixin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\_Xml\Group.xml" />
+    <EmbeddedResource Include="Data\_Xml\GroupUser.xml" />
+    <EmbeddedResource Include="Data\_Xml\Message.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\_Xml\SubscribeData.xml" />
+    <EmbeddedResource Include="Data\_Xml\WeUser.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\_Xml\UserLocation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="YJC.Toolkit2.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Corporation\CorpAuthStateConfig.cs" />
+    <Compile Include="Corporation\CorpDepartmentProxy.cs" />
+    <Compile Include="Corporation\CorpDetailAuthStateConfig.cs" />
+    <Compile Include="Corporation\CorpTagProxy.cs" />
+    <Compile Include="Corporation\WeixinCorpAuthConfig.cs" />
+    <Compile Include="Data\WeMaterialUploadObject.cs" />
+    <Compile Include="Data\WeServiceUploadImgObject.cs" />
+    <Compile Include="Data\_Source\WeMaterialEditObjectSource.cs" />
+    <Compile Include="Data\_Source\WeMaterialListObjectSource.cs" />
+    <Compile Include="Data\_Source\WeNewsMaterialEditObjectSource.cs" />
+    <Compile Include="Data\_Source\WeNewsMaterialListObjectSource.cs" />
+    <Compile Include="Data\_Source\WeServiceUploadImgObjectSource.cs" />
+    <Compile Include="Data\_Source\BaseWeixinListSource.cs" />
+    <Compile Include="Data\_Decoder\CorpDepartmentEasySearch.cs" />
+    <Compile Include="Data\_Decoder\CorpUserEasySearch.cs" />
+    <Compile Include="Data\_Decoder\WeUserEasySearch.cs" />
+    <Compile Include="Data\_Resolver\CorpTagResolver.cs" />
+    <Compile Include="Data\_Resolver\CorpAppLogResolver.cs" />
+    <Compile Include="Data\_Source\ChangeServicePasswordObjectSource.cs" />
+    <Compile Include="Data\_Source\CorpMessageObjectSource.cs" />
+    <Compile Include="Data\_Source\CorpMessageSender.cs" />
+    <Compile Include="Data\_Source\CorpSendTarget.cs" />
+    <Compile Include="Data\_Source\CorpTagUserSource.cs" />
+    <Compile Include="Data\_Resolver\InternalCorpUserResolver.cs" />
+    <Compile Include="Data\_Source\CorpUserDepartmentSource.cs" />
+    <Compile Include="Data\_Source\CorpUserStatusList.cs" />
+    <Compile Include="Data\_Resolver\CorpUserResolver.cs" />
+    <Compile Include="Data\_Source\CorpDepartmentEditObjectSource.cs" />
+    <Compile Include="Data\_Source\CorpDepartmentListObjectSource.cs" />
+    <Compile Include="Data\CorpDepartmentTree.cs" />
+    <Compile Include="Data\_Decoder\CorpTagCodeTable.cs" />
+    <Compile Include="Data\_Source\CorpTagEditObjectSource.cs" />
+    <Compile Include="Data\_Source\CorpTagListObjectSource.cs" />
+    <Compile Include="Data\_Decoder\WeGroupCodeTable.cs" />
+    <Compile Include="Data\_Source\WeGroupEditObjectSource.cs" />
+    <Compile Include="Data\_Source\WeGroupListObjectSource.cs" />
+    <Compile Include="Data\_Source\WeServiceAccountEditObjectSource.cs" />
+    <Compile Include="Data\_Source\WeServiceAccountListObjectSource.cs" />
+    <Compile Include="Data\_Source\WeVideoMaterialEditObjectSource.cs" />
+    <Compile Include="Data\_Source\WeVideoMaterialListObjectSource.cs" />
+    <Compile Include="Rule\_Config\EmptyMessageConfig.cs" />
+    <Compile Include="Rule\_Config\EventLocationSelectRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventPicPhotoAlbumRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventPicSysPhotoRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventPicWeixinRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventScanCodePushRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventScanCodeWaitMsgRuleConfig.cs" />
+    <Compile Include="Rule\RuleUtil.cs" />
+    <Compile Include="Rule\_Attribute\EnterAgentEventAttribute.cs" />
+    <Compile Include="Rule\_Config\BaseEventKeyRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventEnterAgentRuleConfig.cs" />
+    <Compile Include="Rule\_Config\ImageMessageConfig.cs" />
+    <Compile Include="Rule\_Config\MusicMessageConfig.cs" />
+    <Compile Include="Rule\_Config\VideoMessageConfig.cs" />
+    <Compile Include="Rule\_Config\VoiceMessageConfig.cs" />
+    <Compile Include="Rule\_LocalRule\CorpAppLogRule.cs" />
+    <Compile Include="Rule\_LocalRule\NormalUnSubscribleRule.cs" />
+    <Compile Include="Rule\_LocalRule\CorpUnSubscribeRule.cs" />
+    <Compile Include="Rule\_LocalRule\NormalSubscribleRule.cs" />
+    <Compile Include="Rule\_Attribute\EmptyRuleAttribute.cs" />
+    <Compile Include="Rule\_LocalRule\CorpSubscribeRule.cs" />
+    <Compile Include="Rule\_Engine\EmptyReplyEngine.cs" />
+    <Compile Include="User\WeGroupProxy.cs" />
+    <Compile Include="WeDataConst.cs" />
+    <Compile Include="WeixinListDataCacheCreator.cs" />
+    <Compile Include="_Data\IRetriever.cs" />
+    <Compile Include="_Data\CorpDeptRetriever.cs" />
+    <Compile Include="_Data\CorpTagRetriever.cs" />
+    <Compile Include="Data\_Resolver\CacheDataResolver.cs" />
+    <Compile Include="Data\_Log\DbMessageLog.cs" />
+    <Compile Include="Data\_Log\DbMessageLogConfig.cs" />
+    <Compile Include="Data\_Log\FileMessageLog.cs" />
+    <Compile Include="Data\_Log\FileMessageLogConfig.cs" />
+    <Compile Include="Data\_Resolver\GroupResolver.cs" />
+    <Compile Include="Data\_Resolver\GroupUserResolver.cs" />
+    <Compile Include="Data\_Log\IMessageLog.cs" />
+    <Compile Include="Data\_Resolver\MediaCacheResolver.cs" />
+    <Compile Include="Data\_Log\MessageLogConfigFactory.cs" />
+    <Compile Include="Data\_Resolver\MessageResolver.cs" />
+    <Compile Include="Data\_Resolver\SubscribeDataResolver.cs" />
+    <Compile Include="Data\_Resolver\UserLocationResolver.cs" />
+    <Compile Include="Data\_Resolver\UserResolver.cs" />
+    <Compile Include="Data\_Source\WeixinDataSource.cs" />
+    <Compile Include="Data\_Log\MessageLogConfigAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringConst.cs" />
+    <Compile Include="Rule\DataRowExpression.cs" />
+    <Compile Include="Rule\_Engine\DefaultEngine.cs" />
+    <Compile Include="Rule\IRule.cs" />
+    <Compile Include="Rule\_Attribute\BaseClickEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\LocationSelectEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\PicPhotoAlbumEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\PicSysPhotoEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\PicWeixinEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\ScanCodePushEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\ScanCodeWaitmsgEventAttribute.cs" />
+    <Compile Include="Rule\_Config\LinkMessageConfig.cs" />
+    <Compile Include="Rule\LinkRule.cs" />
+    <Compile Include="Rule\LocationEventRule.cs" />
+    <Compile Include="Rule\OpenIdExpression.cs" />
+    <Compile Include="Rule\TextMatchType.cs" />
+    <Compile Include="Rule\UrlMacroConfig.cs" />
+    <Compile Include="Rule\XmlConfigRule.cs" />
+    <Compile Include="Rule\_Attribute\ClickEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\EventRuleAttribute.cs" />
+    <Compile Include="Rule\_Attribute\ImageRuleAttribute.cs" />
+    <Compile Include="Rule\_Attribute\LinkRuleAttribute.cs" />
+    <Compile Include="Rule\_Attribute\LocationEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\LocationRuleAttribute.cs" />
+    <Compile Include="Rule\_Attribute\RuleAttribute.cs" />
+    <Compile Include="Rule\_Attribute\ScanEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\SubscribeEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\TextRuleAttribute.cs" />
+    <Compile Include="Rule\_Attribute\UnsubscribeEventAttribute.cs" />
+    <Compile Include="Rule\_Attribute\VideoRuleAttribute.cs" />
+    <Compile Include="Rule\_Attribute\VoiceRuleAttribute.cs" />
+    <Compile Include="Rule\_Config\ArticleConfigItem.cs" />
+    <Compile Include="Rule\_Config\DataRowArticle.cs" />
+    <Compile Include="Rule\_Config\DataRowNewsMessage.cs" />
+    <Compile Include="Rule\_Config\DataRowNewsMessageConfig.cs" />
+    <Compile Include="Rule\_Config\EventClickRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventKeyType.cs" />
+    <Compile Include="Rule\_Config\EventLocationRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventScanRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventSubscribeRuleConfig.cs" />
+    <Compile Include="Rule\_Config\EventUnsubscribeRuleConfig.cs" />
+    <Compile Include="Rule\_Config\ImageRuleConfig.cs" />
+    <Compile Include="Rule\_Config\LinkRuleConfig.cs" />
+    <Compile Include="Rule\_Config\LocationRuleConfig.cs" />
+    <Compile Include="Rule\_Config\MatchRuleType.cs" />
+    <Compile Include="Rule\_Config\MusicMessageConfigItem.cs" />
+    <Compile Include="Rule\_Config\NewsMessageConfig.cs" />
+    <Compile Include="Rule\_Config\RegMessageConfig.cs" />
+    <Compile Include="Rule\_Config\ReplyMessageType.cs" />
+    <Compile Include="Rule\_Config\RuleConfigItem.cs" />
+    <Compile Include="Rule\_Config\TextMarcoMessageConfig.cs" />
+    <Compile Include="Rule\_Config\TextMessageConfig.cs" />
+    <Compile Include="Rule\_Config\TextRuleConfig.cs" />
+    <Compile Include="Rule\_Config\VideoMessageConfigItem.cs" />
+    <Compile Include="Rule\_Config\VideoRuleConfig.cs" />
+    <Compile Include="Rule\_Config\VoiceRuleConfig.cs" />
+    <Compile Include="Rule\_Config\WeixinRuleXml.cs" />
+    <Compile Include="Rule\_Engine\EventReplyEngine.cs" />
+    <Compile Include="Rule\_Engine\IMessageReplyEngine.cs" />
+    <Compile Include="Rule\_Engine\MessageEngine.cs" />
+    <Compile Include="Rule\_Engine\NormalReplyEngine.cs" />
+    <Compile Include="Rule\_Factory\MatchRuleConfigAttribute.cs" />
+    <Compile Include="Rule\_Factory\MatchRuleConfigFactory.cs" />
+    <Compile Include="Rule\_Factory\ReplyMessageAttribute.cs" />
+    <Compile Include="Rule\_Factory\ReplyMessageConfigAttribute.cs" />
+    <Compile Include="Rule\_Factory\ReplyMessageConfigFactory.cs" />
+    <Compile Include="Rule\_Factory\ReplyMessagePlugInFactory.cs" />
+    <Compile Include="Rule\_Factory\RulePlugInFactory.cs" />
+    <Compile Include="User\AuthStateConfig.cs" />
+    <Compile Include="User\DetailAuthStateConfig.cs" />
+    <Compile Include="User\WeixinAuthConfig.cs" />
+    <Compile Include="WeCorpMediaCacheCreator.cs" />
+    <Compile Include="_Data\WeGroupRetriever.cs" />
+    <Compile Include="_Data\WeDataObjectAttribute.cs" />
+    <Compile Include="_Data\WeDataObjectPlugInFactory.cs" />
+    <Compile Include="WeDataUtil.cs" />
+    <Compile Include="WeixinCorpSource.cs" />
+    <Compile Include="WeixinMediaCacheCreator.cs" />
+    <Compile Include="WeixinSource.cs" />
+    <Compile Include="_App\DefaultExtraConfigItem.cs" />
+    <Compile Include="_App\DefaultMessageConfigItem.cs" />
+    <Compile Include="_App\TypeDefaultConfigItem.cs" />
+    <Compile Include="_App\WeixinExtraConfigItem.cs" />
+    <Compile Include="_App\WeixinToolkitSettings.cs" />
+    <Compile Include="_App\WeixinToolkitInitialization.cs" />
+    <Compile Include="_App\WeixinExtraXml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\_Xml\CacheData.xml" />
+    <EmbeddedResource Include="Data\_Xml\MediaCache.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\_Xml\CorpUser.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\_Xml\CorpAppLog.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\_Xml\CorpTag.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\_Xml\CorpEasySearchUser.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

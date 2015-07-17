@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>意见与投诉</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Suggestion.xml">
+        <tk:Override>
+          <tk:Field NickName="Content">
+            <tk:DisplayName>
+              <tk:Content>意见投诉</tk:Content>
+            </tk:DisplayName>
+          </tk:Field>
+          <tk:Field NickName="DataType">
+            <tk:Edit>
+              <tk:Updating UpdateKind="Insert">2</tk:Updating>
+            </tk:Edit>
+          </tk:Field>
+        </tk:Override>
+        <tk:Except>
+          <tk:DelField NickName="Category"/>
+        </tk:Except>
+      </tk:SingleXmlMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource DisablePage="List Delete Update Detail" UseMetaData="true">
+        <tk:Resolver>
+          <tk:RegResolver>Suggestion</tk:RegResolver>
+        </tk:Resolver>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:PostRazorPageMaker DestUrl="Custom" Template="BootcssEdit" UseRetUrlFirst="false" RazorFile="CxCS\SuggestionInsert.cshtml">
+        <tk:RazorData>
+          <tk:BootcssEditData SaveButtonCaption="发送" InsertFormat="{0}" CaptionColumn="3" DataColumn="9">
+            <tk:Header ContentType="RazorFile">EditTitle.cshtml</tk:Header>
+          </tk:BootcssEditData>
+        </tk:RazorData>
+        <tk:Script>usercss/input.css</tk:Script>
+        <tk:CustomUrl>WeixinClose</tk:CustomUrl>
+        <tk:AlertMessage>
+          <tk:Content>意见与投诉已发送</tk:Content>
+        </tk:AlertMessage>
+      </tk:PostRazorPageMaker>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

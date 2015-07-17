@@ -1,0 +1,27 @@
+﻿@using System.Linq;
+@using Toolkit.Suite
+@using Toolkit.SchemaSuite;
+@using Toolkit.SchemaSuite.Schema;
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@{
+    SchemaRazorData e = @Model as SchemaRazorData;
+    EnumNode node = e.Node as EnumNode;
+    SchemaSuiteData data = e.SuiteData;
+    int index = 0;
+}
+namespace @data.Namespace
+{
+    @data.ClassScope.ToString().ToLower() enum @node.TypeName
+    {
+@{
+    int count = node.Items.Count;
+    foreach (string item in node.Items)
+    {
+        string sep = (++index == count) ? string.Empty : ",";
+        @:@item@sep
+    }
+}
+    }
+}

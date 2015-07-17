@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\MyFirstCSharpApp\MyFirstCSharpApp\bin\Debug\MyFirstCSharpApp.exe
+D:\ZhouLL\trunk\Study\MyFirstCSharpApp\MyFirstCSharpApp\bin\Debug\MyFirstCSharpApp.pdb
+D:\ZhouLL\trunk\Study\MyFirstCSharpApp\MyFirstCSharpApp\obj\Debug\MyFirstCSharpApp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\MyFirstCSharpApp\MyFirstCSharpApp\obj\Debug\MyFirstCSharpApp.exe
+D:\ZhouLL\trunk\Study\MyFirstCSharpApp\MyFirstCSharpApp\obj\Debug\MyFirstCSharpApp.pdb

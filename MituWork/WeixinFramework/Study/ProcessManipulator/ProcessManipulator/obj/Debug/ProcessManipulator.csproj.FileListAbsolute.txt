@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ProcessManipulator\ProcessManipulator\bin\Debug\ProcessManipulator.exe
+D:\ZhouLL\trunk\Study\ProcessManipulator\ProcessManipulator\bin\Debug\ProcessManipulator.pdb
+D:\ZhouLL\trunk\Study\ProcessManipulator\ProcessManipulator\obj\Debug\ProcessManipulator.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ProcessManipulator\ProcessManipulator\obj\Debug\ProcessManipulator.exe
+D:\ZhouLL\trunk\Study\ProcessManipulator\ProcessManipulator\obj\Debug\ProcessManipulator.pdb

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema\v4\Application.xsd" version="2.0">
+  <Application Path=".." AppPath="bin" Type="Application" CommandTimeOut="600" CacheTime="00:15:00"/>
+  <Databases>
+    <Database Encode="false" SqlProvider="SQL Server" Name="Default" IdStep="1" DbProvider="SQL Server" Default="true" ConnectionString="USER ID=sa;PASSWORD=windows95;INITIAL CATALOG=baisonOA120326;DATA SOURCE=(local);CONNECT TIMEOUT=30"/>
+    <Database Encode="false" SqlProvider="SQL Server" Name="Ole" IdStep="1" DbProvider="OleDb" ConnectionString="Provider=sqloledb;Data Source=localhost;Initial Catalog=Workflow;User Id=sa;Password=windows95"/>
+    <Database Encode="false" SqlProvider="SQL Server" Name="Odbc" IdStep="1" DbProvider="Odbc" ConnectionString="Driver={SQL Server};Server=(local);Trusted_Connection=Yes;Database=World;"/>
+  </Databases>
+  <Entities>
+    <Entity Name="baisonOAEntities" ModelName="Books" ProviderName="System.Data.SqlClient" SqlProvider="SQL Server2005" ConnectionString="USER ID=sa;PASSWORD=windows95;INITIAL CATALOG=baisonOA120326;DATA SOURCE=(local);CONNECT TIMEOUT=30;App=EntityFramework" DbProvider="SQL Server"/>
+    <Entity Name="UsersEntities" ModelName="UsersEntities" ProviderName="System.Data.SqlClient" SqlProvider="SQL Server2005" ConnectionString="USER ID=sa;PASSWORD=windows95;INITIAL CATALOG=baisonOA120326;DATA SOURCE=(local);CONNECT TIMEOUT=30;App=EntityFramework" DbProvider="SQL Server"/>
+    <Entity Name="CallEntities" ModelName="CallEntities" ProviderName="System.Data.SqlClient" SqlProvider="SQL Server2005" ConnectionString="USER ID=baison;PASSWORD=baison;INITIAL CATALOG=CallCenter.Test;DATA SOURCE=192.168.166.7;CONNECT TIMEOUT=30;App=EntityFramework" DbProvider="SQL Server"/>
+    <Entity Name="StarLinkEntities" ModelName="StarLinkEntities" ProviderName="System.Data.SqlClient" SqlProvider="SQL Server2005" ConnectionString="USER ID=baison;PASSWORD=baison;INITIAL CATALOG=CallCenter.Test;DATA SOURCE=192.168.166.7;CONNECT TIMEOUT=30;App=EntityFramework" DbProvider="SQL Server"/>
+  </Entities>
+  <Services>
+    <!--LogOnService>
+      <Xaml>
+        <ef:DialogLogOnService xmlns:ef="clr-namespace:Test.LogOn;assembly=Test.LogOn"/>
+      </Xaml>
+    </LogOnService-->
+  </Services>
+  <Debug UseCache="true" Debug="true"/>
+  <Other Culture="zh-cn" Model="DevExpress"/>
+  <Extension/>
+</Toolkit>

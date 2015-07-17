@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><tk:Toolkit xmlns:tk="http://www.qdocuments.net"><Error><Page>ASP.global_asax</Page><Url>http://localhost:47545/Library/We.aspx</Url><DateTime>2015/1/5 14:18:45</DateTime></Error><Exception><Message>只有在配置文件或 Page 指令中将 enableSessionState 设置为 true 时，才能使用会话状态。还请确保在应用程序配置的 &lt;configuration&gt;\&lt;system.web&gt;\&lt;httpModules&gt; 节中包括 System.Web.SessionStateMod 或自定义会话状态模块。</Message><ErrorSource>System.Web</ErrorSource><StackTrace>   在 System.Web.UI.Page.get_Session()
+   在 YJC.Toolkit.Web.ToolkitServlet..ctor()
+   在 YJC.Toolkit.Weixin.Web.WeServlet..ctor()
+   在 ASP.library_we_aspx..ctor() 位置 c:\Users\zll\AppData\Local\Temp\Temporary ASP.NET Files\vs\99b5c0be\fa470db0\App_Web_obj1z4uk.1.cs:行号 0
+   在 __ASP.FastObjectFactory_app_web_obj1z4uk.Create_ASP_library_we_aspx() 位置 c:\Users\zll\AppData\Local\Temp\Temporary ASP.NET Files\vs\99b5c0be\fa470db0\App_Web_obj1z4uk.11.cs:行号 0
+   在 System.Web.Compilation.BuildResultCompiledType.CreateInstance()
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)</StackTrace><Type>System.Web.HttpException</Type><TargetSite>System.Web.SessionState.HttpSessionState get_Session()</TargetSite><OtherInfos /></Exception></tk:Toolkit>

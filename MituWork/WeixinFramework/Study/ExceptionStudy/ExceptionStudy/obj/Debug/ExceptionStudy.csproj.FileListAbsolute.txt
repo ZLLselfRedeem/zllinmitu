@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ExceptionStudy\ExceptionStudy\bin\Debug\ExceptionStudy.exe
+D:\ZhouLL\trunk\Study\ExceptionStudy\ExceptionStudy\bin\Debug\ExceptionStudy.pdb
+D:\ZhouLL\trunk\Study\ExceptionStudy\ExceptionStudy\obj\Debug\ExceptionStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ExceptionStudy\ExceptionStudy\obj\Debug\ExceptionStudy.exe
+D:\ZhouLL\trunk\Study\ExceptionStudy\ExceptionStudy\obj\Debug\ExceptionStudy.pdb

@@ -1,0 +1,10 @@
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\obj\Debug\XMLStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\bin\Debug\XMLStudy.exe
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\bin\Debug\XMLStudy.pdb
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\obj\Debug\XMLStudy.exe
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\obj\Debug\XMLStudy.pdb
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\bin\Debug\NPOI.xml
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\bin\Debug\NPOI.OOXML.xml
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\bin\Debug\NPOI.OpenXml4Net.xml
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\bin\Debug\en\YJC.Toolkit.Core.resources.dll
+D:\ZhouLL\trunk\Study\XMLStudy\XMLStudy\bin\Debug\zh-CHS\YJC.Toolkit.Core.resources.dll

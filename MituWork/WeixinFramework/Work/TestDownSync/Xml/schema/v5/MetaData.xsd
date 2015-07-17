@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/CommonType.xsd"/>
+  <xs:complexType name="MetaDataType">
+    <xs:choice>
+      <xs:element ref="SingleXmlMetaData"/>
+      <xs:any namespace="##other" processContents="lax"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="SingleXmlMetaData">
+    <xs:complexType>
+      <xs:attribute name="DataXml" type="xs:anyURI" use="required"/>
+      <xs:attribute name="ColumnCount">
+        <xs:simpleType>
+          <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="1"/>
+            <xs:maxExclusive value="5"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="CommitDetail" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

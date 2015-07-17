@@ -1,0 +1,22 @@
+@using Toolkit.Suite
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@{
+    GeneratorItemEventArgs e = @Model as GeneratorItemEventArgs;
+    TableInfo table = e.Table;
+    string normalName = StringUtil.GetSignName(table.TableName);
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="3.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/v3/Module.xsd">
+  <tk:Module>
+    <tk:Title>@table.TableDesc</tk:Title>
+    <tk:DataSet>Single</tk:DataSet>
+    <tk:Resolvers>
+      <tk:Resolver Style="Normal" List="true">
+        <tk:RegName>@normalName</tk:RegName>
+        <tk:Xml>@(e.Setting.ProjectName + "/" + normalName + ".xml")</tk:Xml>
+      </tk:Resolver>
+    </tk:Resolvers>
+  </tk:Module>
+</Toolkit>

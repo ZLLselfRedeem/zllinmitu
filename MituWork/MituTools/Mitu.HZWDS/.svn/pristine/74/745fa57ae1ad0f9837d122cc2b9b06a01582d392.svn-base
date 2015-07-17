@@ -1,0 +1,26 @@
+﻿<project xmlns="http://nant.sf.net/release/0.91/nant.xsd" name="Hello" default="run">
+  <property name="BaseDir" value="../HzwdsMgr.WebSite"/>
+  <property name="ZipFile" value="ManageWeb.zip"/>
+  <target name="run">
+    <copy overwrite="true" todir=".">
+      <fileset basedir="\\tsclient\E\VS2014\Mitu.Hzwds\Server.NANT">
+        <include name="${ZipFile}"/>
+      </fileset>
+    </copy>
+    <delete includeemptydirs="true">
+      <fileset basedir="${BaseDir}">
+        <include name="Xml\**.*"/>
+        <exclude name="Xml\Application.xml"/>
+        <exclude name="Xml\Post.xml"/>
+        <exclude name="Xml\Razor\_temp\**.*"/>
+        <include name="Web\Bin\**.*"/>
+      </fileset>
+    </delete>
+    <unzip overwrite="true" zipfile="${ZipFile}" todir="${BaseDir}"/>
+    <copy overwrite="true" todir="${BaseDir}/Xml">
+      <fileset basedir="..\AppFile\HzwdsMgr">
+        <include name="Application.xml"/>
+      </fileset>
+    </copy>
+  </target>
+</project>

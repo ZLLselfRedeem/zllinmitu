@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/suite/CodeSuite.xsd">
+	<CodeGenerator CompatibleType="Toolkit" ToolkitVer="Tk50" RegName="Tk5TableClass" Author="YJC" CreateDate="2014-11-04" Description="根据Toolkit5的Table架构生成Row读取Class">
+		<FileName Extension="cs" Catalog="Class" UseProjectName="true">
+			<MainName NeedParse="true">{NormalTableName}Class</MainName>
+		</FileName>
+		<RazorFile>CodeSuite/Tk5/Tk5TableClass.cshtml</RazorFile>
+	</CodeGenerator>
+</Toolkit>

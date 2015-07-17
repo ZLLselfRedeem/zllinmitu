@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/suite/CodeSuite.xsd">
+	<CodeGenerator CompatibleType="Both" ToolkitVer="Tk40 Tk30" StudioVer="VS2010 VS2012" RegName="VS2010Proj" Author="YJC" CreateDate="2012-10-10" BaseClass="Table" Description="Toolkit4的TableResolver的csproj生成">
+		<FileName Extension="csproj" UseProjectName="true">
+			<MainName NeedParse="true">{ProjectName}</MainName>
+		</FileName>
+		<RazorFile>CodeSuite/Tk4/VSProject.cshtml</RazorFile>
+	</CodeGenerator>
+</Toolkit>

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\DynamicAsmBuider\DynamicAsmBuider\bin\Debug\DynamicAsmBuider.exe
+D:\ZhouLL\trunk\Study\DynamicAsmBuider\DynamicAsmBuider\bin\Debug\DynamicAsmBuider.pdb
+D:\ZhouLL\trunk\Study\DynamicAsmBuider\DynamicAsmBuider\obj\Debug\DynamicAsmBuider.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\DynamicAsmBuider\DynamicAsmBuider\obj\Debug\DynamicAsmBuider.exe
+D:\ZhouLL\trunk\Study\DynamicAsmBuider\DynamicAsmBuider\obj\Debug\DynamicAsmBuider.pdb

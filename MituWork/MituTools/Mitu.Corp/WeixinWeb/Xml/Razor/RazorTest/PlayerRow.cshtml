@@ -1,0 +1,32 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssListTemplate
+@using System.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    DataRow row = (DataRow)Model.Row;
+    string imgUrl = string.Format("../userimages/flags/{0}.png", row.GetString("CountryId"));
+    string hrefUrl = "../m/player.vp?" + row.GetString("PlayerId");
+    string picId = row.GetString("AvatarId");
+    string picUrl;
+    if (string.IsNullOrEmpty(picId))
+    {
+        picUrl = string.Format("../pic/sys/hp-{0}.jpg", row.GetString("Gender") == "F" ? "wta" : "atp"); 
+    }
+    else
+    {
+        picUrl = HtmlUtil.GetDownloadUrl(picId, true, true);
+    }
+}
+<li class="list-group-item">
+    <div class="row">
+        <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(2), "lv-vam")">
+            <img class="w40 h50" alt="" src="@picUrl" />
+        </div>
+        <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(8), "lv-vam")">
+            <a href="@hrefUrl" target="_blank"><h5>@row.GetString("Cname")</h5></a>
+        </div>
+        <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(2), "lv-vam pv1 mr5")">
+            <img alt="@row.GetString("CountryId_Name")" src="@imgUrl" class="w30">
+        </div>
+    </div>
+</li>

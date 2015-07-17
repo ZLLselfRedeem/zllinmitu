@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Toolkit version="2.0" xsi:noNamespaceSchemaLocation="../schema/v3/CodeData.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 性别代码表 -->
+  <tk:CodeData RegName="CodeSex" Author="YJC" CreateDate="2009-05-01" Description="性别代码表">
+    <Row>
+      <CODE_VALUE>01</CODE_VALUE>
+      <CODE_NAME>男</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>02</CODE_VALUE>
+      <CODE_NAME>女</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>03</CODE_VALUE>
+      <CODE_NAME>其他</CODE_NAME>
+    </Row>
+  </tk:CodeData>
+  <!-- 学历代码表 -->
+  <tk:CodeData RegName="CodeEducation" Description="学历代码表">
+    <Row>
+      <CODE_VALUE>01</CODE_VALUE>
+      <CODE_NAME>小学</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>02</CODE_VALUE>
+      <CODE_NAME>初中</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>03</CODE_VALUE>
+      <CODE_NAME>高中</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>04</CODE_VALUE>
+      <CODE_NAME>中专</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>05</CODE_VALUE>
+      <CODE_NAME>大专</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>06</CODE_VALUE>
+      <CODE_NAME>大学</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>07</CODE_VALUE>
+      <CODE_NAME>研究生</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>08</CODE_VALUE>
+      <CODE_NAME>博士或以上</CODE_NAME>
+    </Row>
+  </tk:CodeData>
+  <!-- 是否代码表 -->
+  <tk:CodeData RegName="CodeWhether" Description="是否代码表">
+    <Row>
+      <CODE_VALUE>1</CODE_VALUE>
+      <CODE_NAME>是</CODE_NAME>
+    </Row>
+    <Row>
+      <CODE_VALUE>0</CODE_VALUE>
+      <CODE_NAME>否</CODE_NAME>
+    </Row>
+  </tk:CodeData>
+</Toolkit>

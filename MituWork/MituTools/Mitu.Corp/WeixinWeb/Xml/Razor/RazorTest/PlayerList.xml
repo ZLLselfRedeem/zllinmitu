@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="1.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\BootstrapListTemplate.xsd">
+  <tk:ListTemplate QueryResolverName="Player" QueryFieldName="Cname" ShowQuery="true">
+    <tk:ListFields>
+      <tk:ListField NickName="AvatarId" Col="2"/>
+      <tk:ListField NickName="Cname" Col="8"/>
+      <tk:ListField NickName="CountryId" Col="1" Class="pv1 mr5"/>
+    </tk:ListFields>
+    <tk:Row ContentType="RazorFile">row.cshtml</tk:Row>
+    <tk:FieldItem NickName="AvatarId" ContentType="RazorText"><![CDATA[@{ string id = Model.Row["AvatarId"].ToString(); }
+    <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(2), "lv-vam")">
+     @if (id == string.Empty) { @{ string url = string.Format("../pic/sys/hp-{0}.jpg", Model.Row["Gender"].ToString() == "F" ? "wta" : "atp"); } <img class="w40 h50" alt="" src="@url"/> }
+     else { <img class="w40 h50" alt="" src="@HtmlUtil.GetDownloadUrl(id, true, true)"/> }</div>]]></tk:FieldItem>
+    <tk:FieldItem NickName="CountryId" ContentType="RazorText"><![CDATA[@{ string imageUrl = string.Format("../userimages/flags/{0}.png", Model.Row["CountryId"]); } 
+    <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(1), "lv-vam pv1 mr5")">
+    <img alt='@Model.Row["CountryId_Name"]' src='@imageUrl' class="w30"></div>]]></tk:FieldItem>
+  </tk:ListTemplate>
+</tk:Toolkit>

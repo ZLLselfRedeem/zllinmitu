@@ -1,0 +1,7 @@
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\CSharpSnapIn\bin\Debug\CSharpSnapIn.dll
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\CSharpSnapIn\bin\Debug\CSharpSnapIn.pdb
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\CSharpSnapIn\bin\Debug\CommonSnappableTypes.dll
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\CSharpSnapIn\bin\Debug\CommonSnappableTypes.pdb
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\CSharpSnapIn\obj\Debug\CSharpSnapIn.csprojResolveAssemblyReference.cache
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\CSharpSnapIn\obj\Debug\CSharpSnapIn.dll
+D:\搜狗高速下载\精通C#（第6版）源代码\Code\Chapter 15\ExtendableApp\CSharpSnapIn\obj\Debug\CSharpSnapIn.pdb

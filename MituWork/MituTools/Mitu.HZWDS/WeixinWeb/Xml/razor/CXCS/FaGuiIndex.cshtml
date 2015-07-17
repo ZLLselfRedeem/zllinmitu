@@ -1,0 +1,183 @@
+﻿@inherits YJC.Toolkit.Razor.ToolkitTemplate
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>政策法规</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap-theme.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/font-awesome.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/style.css?v=1".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("usercss/docList.css".AppVirutalPath())" />
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body id="WebListXmlPage" data-webpath="@HtmlUtil.AppVirtualPath">
+    <div class="container">
+        <div id="metaData" class="Hide" data-toolbar="false" data-option="false"></div>
+        @RenderLocalPartial("EditTitle.cshtml", null)
+        <div style="position:relative">
+            <div class="new-row">
+                <img src="@("pic/sys/bg2.jpg".AppVirutalPath())" style="width:100%;">
+                <div class="bg-title">政策法规</div>
+            </div>
+        </div>
+
+        <form class="navbar-form" role="search" id="QueryForm" data-post="{&quot;Table&quot;:&quot;CS_DOCUMENT&quot;,&quot;SearchMethod&quot;:&quot;Id&quot;,&quot;JsonType&quot;:&quot;Object&quot;,&quot;Fields&quot;:[{&quot;Name&quot;:&quot;Title&quot;,&quot;Type&quot;:&quot;Text&quot;}]}" data-resolver="TaxDocument">
+            <div id="CS_DOCUMENT" class="table-row">
+                <div class="input-group w100p">
+                    <input type="text" class="form-control" placeholder="关键字" id="Title" value="" />
+                    <div class="input-group-btn">
+                        <button class="btn btn-default btn-search" type="button">
+                            <span class="glyphicon glyphicon-search" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="tk-datalist">
+            <div id="listData">
+                <ul id="pageList" class="list-group" data-url="@("Library/WebListXmlPage.tkx?Source=Cxcs/FaGui".AppVirutalPath())">
+                    <li class="list-group-item">
+                        <a href="javascript:void(0);" data-url="@("Library/WebListXmlPage.tkx?Source=Cxcs/FaGui".AppVirutalPath())">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">全部法规文件</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">税收征管</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">营业税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">企业所得税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">个人所得税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">资源税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">房产税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">印花税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">土地增值税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">城市维护建设税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">契税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">车船税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">城镇土地使用税</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a target="_blank" href="#" class="condition">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 lv-vam">代征规费</div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam pv1"><i class="icon-angle-right icon-large"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.7.2.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/toolkit.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.page.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.data.js?v=7".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.weixin.js?v=5".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.ui.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.list.js".AppVirutalPath())"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.condition").click(function () {
+                var obj = $(this);
+                var title = obj.text().trim();
+                document.location.href = "../Library/WebModuleRedirectPage.tkx?Source=SearchFaGui&useSource=true&Title=" + title;
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

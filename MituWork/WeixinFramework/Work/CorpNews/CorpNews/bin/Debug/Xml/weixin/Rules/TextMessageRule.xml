@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\WeixinRule.xsd">
+  <tk:Rule RegName="TextMsg" Author="YJC" CorpId="1">
+    <tk:Match>
+      <tk:TextRule Text="1" MatchType="StartWith"/>
+    </tk:Match>
+    <tk:Reply>
+      <tk:TextMarcoMessage>
+        <tk:Content NeedParse="true">你的OpenId是{OpenId}</tk:Content>
+      </tk:TextMarcoMessage>
+    </tk:Reply>
+  </tk:Rule>
+</tk:Toolkit>

@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using YJC.Toolkit.Sys;
+
+namespace YJC.Toolkit.Accounting
+{
+    public class ProfitAppropriation
+    {
+        [SimpleElement(Order = 10, LocalName = "净利润")]
+        public int NetProfit { get; set; }
+
+        [SimpleElement(Order = 20, LocalName = "年初未分配利润")]
+        public int UndistributedBeg { get; set; }
+
+        [SimpleElement(Order = 30, LocalName = "其他转入")]
+        public int OtherThransferIns { get; set; }
+
+        [SimpleElement(Order = 40, LocalName = "可供分配的利润")]
+        public int ProfitDistributed { get; set; }
+
+        [SimpleElement(Order = 50, LocalName = "法定盈余公积")]
+        public int StaturoyReserve { get; set; }
+
+        [SimpleElement(Order = 60, LocalName = "法定公益金")]
+        public int WelfareFund { get; set; }
+
+        [SimpleElement(Order = 70, LocalName = "职工奖励及福利")]
+        public int EmployeeWelfare { get; set; }
+
+        [SimpleElement(Order = 80, LocalName = "储备基金")]
+        public int ReserveFund { get; set; }
+
+        [SimpleElement(Order = 90, LocalName = "企业发展基金")]
+        public int EnterpriseFund { get; set; }
+
+        [SimpleElement(Order = 100, LocalName = "投资归还")]
+        public int RetunInvestment { get; set; }
+
+        [SimpleElement(Order = 110, LocalName = "投资者利润")]
+        public int InvestorProfit { get; set; }
+
+        [SimpleElement(Order = 120, LocalName = "优先股股利")]
+        public int PrefereedStock { get; set; }
+
+        [SimpleElement(Order = 130, LocalName = "任意盈余公积")]
+        public int DiscretinaryReserve { get; set; }
+
+        [SimpleElement(Order = 140, LocalName = "普通股股利")]
+        public int CommonStock { get; set; }
+
+        [SimpleElement(Order = 150, LocalName = "其他普通股股利")]
+        public int ConvertedStock { get; set; }
+
+        [SimpleElement(Order = 160, LocalName = "未分配利润")]
+        public int Undistributed { get; set; }
+    }
+}

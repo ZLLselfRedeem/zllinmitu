@@ -1,0 +1,155 @@
+﻿@inherits YJC.Toolkit.Accounting.AccountEditTemplate
+@using System.Data;
+@using System.Collections.Generic;
+@using YJC.Toolkit.MetaData;
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Razor;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@using YJC.Toolkit.Accounting;
+@{
+    NormalEditData pageData = ViewBag.PageData;
+    HtmlAttribute retAttr = new HtmlAttribute("data-action", "return");
+
+    Tk5NormalTableData table = ViewBag.MetaData.Table;
+    List<Tk5FieldInfoEx> hiddenFields = table.HiddenList;
+    List<Tk5FieldInfoEx> normalFields = table.TableList;
+    int columnCount = table.ColumnCount;
+    int columnWidth = 12 / columnCount;
+    int fieldsCount = normalFields.Count;
+    int columnFieldCount = fieldsCount / columnCount;
+    @if ((fieldsCount % columnCount) != 0){
+        ++columnFieldCount;
+    }
+
+    ReportObjectData model = Model as ReportObjectData;
+    ObjectContainer mainObject = model.Object;// HtmlUtil.GetMainObject(Model, ViewBag);
+    ReportInfo rptInfo = model.Info;
+    string dateValue = rptInfo.ReportDate == new DateTime() ? string.Empty : rptInfo.ReportDate.ToString("yyyy-MM");
+    HtmlAttribute attribute = new HtmlAttribute("data-url", ("Library/WebListXmlPage.tkx?Source=Accounting/ReportData&Company=" + rptInfo.Company).AppVirutalPath());
+}
+@section DefaultButtons
+{
+    <div class="text-center clearfix">
+        @BootcssUtil.Button(pageData.SaveButtonCaption, "btn-submit", BootcssButton.Primary, false)
+        @BootcssUtil.Button(pageData.CancelCaption, "m10", BootcssButton.Default, false, retAttr, attribute)
+    </div>
+}
+@functions 
+{
+    string GetJson(Tk5NormalTableData table)
+    {
+        var normalJson = "{\"Table\":\"Info\",\"SearchMethod\":\"Id\",\"JsonType\":\"Object\",\"Fields\":[{\"Name\":\"ReportId\",\"Type\":\"Hidden\"},{\"Name\":\"Company\",\"Type\":\"Hidden\"},{\"Name\":\"ReportDate\",\"Type\":\"Date\"},{\"Name\":\"ReportType\",\"Type\":\"Combo\"},{\"Name\":\"ReportName\",\"Type\":\"Hidden\"}]}";
+        var json = string.Format("{{\"Tables\":[{0}, {1}]}}", table.JsonFields, normalJson);
+        return StringUtil.EscapeHtmlAttribute(json);
+    } 
+}
+@{
+}
+<form action="@ViewBag.PageData.FormAction" method="POST" data-toggle="validator" id="PostForm" class="tk-dataform p5 mb15" role="form" data-check="true" data-post="@GetJson(table)">
+    <div class="row tk-datatable table-row" id="Info">
+        <div class="col-sm-4">
+            <div class="row">
+                <label class="col-sm-4 ver-middle">报表类型：</label>
+                <div class="col-sm-8 ">
+                    <span class="tk-control">
+                        <select id="ReportType" name="ReportType" class="form-control" data-title="市场板块">
+                            <option value="01" @if (rptInfo.ReportType == "01") {  @: selected
+                                                                         }>
+                                合并报表
+                            </option>
+                            <option value="02" @if (rptInfo.ReportType == "02") {  @: selected
+                                                                         }>
+                                母公司报表
+                            </option>
+                        </select>
+                    </span>
+                </div>
+                <br />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <label class="col-sm-2 ver-middle">日期：</label>
+                <span class="tk-control">
+                    <div id="_RptDateCtrl" class="input-group date" data-control="CustomDate" data-date-format="yyyy-mm" data-date="@dateValue">
+                        <input type="text" size="10" readonly placeholder="日期" id="ReportDate" name="ReportDate" class="form-control" data-title="日期" value="@dateValue">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-remove"></i></span>
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                </span>
+            </div>
+            <br />
+        </div>
+        <div class="col-sm-2">
+            <div class="row ml20">
+                <strong class="ver-middle">单位：元</strong>
+                <input id="ReportName" type="hidden" value="@rptInfo.ReportName">
+                <input id="Company" type="hidden" value="@rptInfo.Company">
+                <input id="ReportId" type="hidden" value="@rptInfo.ReportId">
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="@table.TableName" class="@HtmlUtil.MergeClass("tk-datatable table-row", "column" + table.ColumnCount.ToString())">
+        <div class="hide">
+            @*@foreach (Tk5FieldInfoEx field in hiddenFields)
+                {
+                    @RenderHidden(dataRow, field, true)
+                }*@
+        </div>
+        <div class="row">
+            @for (int i = 0; i < columnCount; ++i)
+            {
+                @{
+                int start = i * columnFieldCount;
+                int end = start + columnFieldCount;
+                if (end > fieldsCount)
+                {
+                    end = fieldsCount;
+                }
+                }
+                <div class="@("col-sm-" + columnWidth.ToString())">
+                    <table class="table">
+                        <tr>
+                            <th>资产</th>
+                            <th>行次</th>
+                            <th>期末数</th>
+                        </tr>
+                        @for (int j = start; j < end; ++j)
+                        {
+                            @{
+                            var field = normalFields[j];
+
+                            Tuple<int, byte, FieldStyle> info = field.Tag as Tuple<int, byte, FieldStyle>;
+                            string intendClass = info.Item2 == 0 ? string.Empty : "class=\"pdl-" + info.Item2 + "\"";
+                            }
+                            @if (info.Item3 == FieldStyle.Title)
+                            {
+                                <tr class="info">
+                                    <td>@field.DisplayName</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td @intendClass>@field.DisplayName</td>
+                                    <td>@info.Item1</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <span class="tk-control">@field.InputByLocalName(mainObject, true)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</form>
+
+@RenderSectionOrDefault("ModuleButtons", "DefaultButtons")

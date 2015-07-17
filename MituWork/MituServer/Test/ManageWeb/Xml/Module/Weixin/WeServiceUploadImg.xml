@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>上传头像</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleClassMetaData ClassRegName="WeServiceUploadImgObject" JsonDataType="Object" TableName="UploadImg" CommitDetail="true"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleObjectSource DisablePage="Detail Delete List Update">
+        <tk:ObjectSource>
+          <tk:RegNameObjectSource>WeServiceUploadImg</tk:RegNameObjectSource>
+        </tk:ObjectSource>
+      </tk:SingleObjectSource>
+    </tk:Source>
+    <tk:PostObjectCreator>
+      <tk:CustomJsonObjectCreator RegTypeName="WeServiceUploadImgObject" LocalName="UploadImg" UseConstructor="false"/>
+    </tk:PostObjectCreator>
+    <tk:PageMaker>
+      <tk:SingleDialogObjectRazorPageMaker ListDisplay="Striped">
+        <tk:Item Style="Insert" DestUrl="Custom">
+          <tk:RazorData>
+            <tk:NormalEditData SaveButtonCaption="上传"/>
+          </tk:RazorData>
+          <tk:CustomUrl>CloseDialog</tk:CustomUrl>
+          <tk:AlertMessage>
+            <tk:Content>头像已上传</tk:Content>
+          </tk:AlertMessage>
+        </tk:Item>
+      </tk:SingleDialogObjectRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

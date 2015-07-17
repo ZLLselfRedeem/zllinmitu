@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ThreadsStudy\ThreadsStudy\bin\Debug\ThreadsStudy.exe
+D:\ZhouLL\trunk\Study\ThreadsStudy\ThreadsStudy\bin\Debug\ThreadsStudy.pdb
+D:\ZhouLL\trunk\Study\ThreadsStudy\ThreadsStudy\obj\Debug\ThreadsStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ThreadsStudy\ThreadsStudy\obj\Debug\ThreadsStudy.exe
+D:\ZhouLL\trunk\Study\ThreadsStudy\ThreadsStudy\obj\Debug\ThreadsStudy.pdb

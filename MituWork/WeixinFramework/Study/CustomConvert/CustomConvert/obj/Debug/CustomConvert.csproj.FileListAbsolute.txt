@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\CustomConvert\CustomConvert\obj\Debug\CustomConvert.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\CustomConvert\CustomConvert\bin\Debug\CustomConvert.exe
+D:\ZhouLL\trunk\Study\CustomConvert\CustomConvert\bin\Debug\CustomConvert.pdb
+D:\ZhouLL\trunk\Study\CustomConvert\CustomConvert\obj\Debug\CustomConvert.exe
+D:\ZhouLL\trunk\Study\CustomConvert\CustomConvert\obj\Debug\CustomConvert.pdb

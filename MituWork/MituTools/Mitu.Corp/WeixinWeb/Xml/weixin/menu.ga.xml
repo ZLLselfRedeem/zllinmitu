@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\schema\v5\WeixinMenu.xsd">
+  <tk:Menu>
+    <tk:ClickButton>
+      <tk:Caption>
+        <tk:Content>我要报警</tk:Content>
+      </tk:Caption>
+      <tk:Key>AskPolice</tk:Key>
+    </tk:ClickButton>
+    <tk:ClickButton>
+      <tk:Caption>
+        <tk:Content>我要咨询</tk:Content>
+      </tk:Caption>
+      <tk:Key>kkb</tk:Key>
+    </tk:ClickButton>
+  </tk:Menu>
+</tk:Toolkit>

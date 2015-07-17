@@ -1,0 +1,9 @@
+D:\ZhouLL\trunk\Work\NullTest\NullTest\bin\Debug\NullTest.exe.config
+D:\ZhouLL\trunk\Work\NullTest\NullTest\bin\Debug\NullTest.exe
+D:\ZhouLL\trunk\Work\NullTest\NullTest\bin\Debug\NullTest.pdb
+D:\ZhouLL\trunk\Work\NullTest\NullTest\obj\Debug\NullTest.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Work\NullTest\NullTest\obj\Debug\NullTest.exe
+D:\ZhouLL\trunk\Work\NullTest\NullTest\obj\Debug\NullTest.pdb
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\NullTest\NullTest\bin\Debug\NullTest.exe.config
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\NullTest\NullTest\obj\Debug\NullTest.exe
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\NullTest\NullTest\obj\Debug\NullTest.pdb

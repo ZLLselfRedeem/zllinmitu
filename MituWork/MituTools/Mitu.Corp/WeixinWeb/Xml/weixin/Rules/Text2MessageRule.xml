@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\WeixinRule.xsd">
+  <tk:Rule RegName="TextMsg2" Author="YJC">
+    <tk:Match>
+      <tk:TextRule Text="2" MatchType="Exactly"/>
+    </tk:Match>
+    <tk:Reply>
+<!--      <tk:TextMessage>
+        <tk:Content>
+          <tk:Content>你真二</tk:Content>
+        </tk:Content>
+      </tk:TextMessage>-->
+      <tk:VoiceMessage FileName="WebSite\pic\sys\20140818142257.amr" Position="Solution"/>
+    </tk:Reply>
+  </tk:Rule>
+</tk:Toolkit>

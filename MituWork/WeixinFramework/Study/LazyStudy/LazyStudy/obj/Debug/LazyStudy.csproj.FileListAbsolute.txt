@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\LazyStudy\LazyStudy\bin\Debug\LazyStudy.exe
+D:\ZhouLL\trunk\Study\LazyStudy\LazyStudy\bin\Debug\LazyStudy.pdb
+D:\ZhouLL\trunk\Study\LazyStudy\LazyStudy\obj\Debug\LazyStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\LazyStudy\LazyStudy\obj\Debug\LazyStudy.exe
+D:\ZhouLL\trunk\Study\LazyStudy\LazyStudy\obj\Debug\LazyStudy.pdb

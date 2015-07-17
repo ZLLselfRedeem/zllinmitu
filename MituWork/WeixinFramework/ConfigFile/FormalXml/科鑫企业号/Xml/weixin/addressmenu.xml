@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\schema\v5\WeixinMenu.xsd">
+  <tk:Menu>
+      <tk:ViewButton>
+        <tk:Caption>
+          <tk:Content>通讯录列表</tk:Content>
+        </tk:Caption>
+        <tk:CorpAuthUrl State="AddressList" Base="addtest"/>
+        <!--<tk:Url Base="cxcs">userhtml/fagui.html</tk:Url>-->
+      </tk:ViewButton>
+  </tk:Menu>
+</tk:Toolkit>

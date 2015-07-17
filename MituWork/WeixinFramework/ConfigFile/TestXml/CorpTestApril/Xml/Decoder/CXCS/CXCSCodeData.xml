@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\CodeData.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:CodeData RegName="TaxDocCatelog" Author="YJC" CreateDate="2014-07-07" Description="文档种类代码表">
+    <tk:Row>
+      <tk:Value>01</tk:Value>
+      <tk:Name>
+        <tk:Content>通知公告</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>02</tk:Value>
+      <tk:Name>
+        <tk:Content>办税流程</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>03</tk:Value>
+      <tk:Name>
+        <tk:Content>纳税辅导</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>04</tk:Value>
+      <tk:Name>
+        <tk:Content>法规文件</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>05</tk:Value>
+      <tk:Name>
+        <tk:Content>联系方式</tk:Content>
+      </tk:Name>
+    </tk:Row>
+  </tk:CodeData>
+  <tk:CodeData RegName="ConsultType" Author="YJC" CreateDate="2014-08-07" Description="咨询类别代码表">
+    <tk:Row>
+      <tk:Value>01</tk:Value>
+      <tk:Name>
+        <tk:Content>税收政策类</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>02</tk:Value>
+      <tk:Name>
+        <tk:Content>税务登记类</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>03</tk:Value>
+      <tk:Name>
+        <tk:Content>纳税申报类</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>04</tk:Value>
+      <tk:Name>
+        <tk:Content>发票管理类</tk:Content>
+      </tk:Name>
+    </tk:Row>
+    <tk:Row>
+      <tk:Value>05</tk:Value>
+      <tk:Name>
+        <tk:Content>其他类别</tk:Content>
+      </tk:Name>
+    </tk:Row>
+  </tk:CodeData>
+</tk:Toolkit>

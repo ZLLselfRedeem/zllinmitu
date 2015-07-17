@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\DirectoryApp\DirectoryApp\bin\Debug\DirectoryApp.exe.config
+D:\ZhouLL\trunk\Study\DirectoryApp\DirectoryApp\bin\Debug\DirectoryApp.exe
+D:\ZhouLL\trunk\Study\DirectoryApp\DirectoryApp\bin\Debug\DirectoryApp.pdb
+D:\ZhouLL\trunk\Study\DirectoryApp\DirectoryApp\obj\Debug\DirectoryApp.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\DirectoryApp\DirectoryApp\obj\Debug\DirectoryApp.exe
+D:\ZhouLL\trunk\Study\DirectoryApp\DirectoryApp\obj\Debug\DirectoryApp.pdb

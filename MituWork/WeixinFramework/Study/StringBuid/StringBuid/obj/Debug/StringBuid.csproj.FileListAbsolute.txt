@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\StringBuid\StringBuid\bin\Debug\StringBuid.exe
+D:\ZhouLL\trunk\Study\StringBuid\StringBuid\bin\Debug\StringBuid.pdb
+D:\ZhouLL\trunk\Study\StringBuid\StringBuid\obj\Debug\StringBuid.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\StringBuid\StringBuid\obj\Debug\StringBuid.exe
+D:\ZhouLL\trunk\Study\StringBuid\StringBuid\obj\Debug\StringBuid.pdb

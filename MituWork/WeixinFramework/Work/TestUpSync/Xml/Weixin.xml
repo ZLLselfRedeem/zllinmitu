@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net schema\v5\Weixin.xsd">
+  <tk:Weixin AppId="wxa7037a02def40477" LogRawMessage="true">
+  <tk:CorpSecret UserManager="JqBsRefE5f_f-vkww7S81PrXe9NqPpGAf5CxhSc14cuG2odJLZHXQAvqIpoL8h1m"/>
+    <tk:CorpApp Token="mitu2014" Secret="JqBsRefE5f_f-vkww7S81PrXe9NqPpGAf5CxhSc14cuG2odJLZHXQAvqIpoL8h1m" EncodingAESKey="3t9Fz7IifBGdld5EBBwtwfCHRvBWq7sQH0Qqxh8LCIP" AppName="企业小助手" AppId="0">
+      <tk:Menu FileName="weixin/menu.xml"/>
+      <tk:DefaultMessage>
+        <tk:Global>
+          <tk:TextMessage>
+            <tk:Content>
+              <tk:Content><![CDATA[请输入序号进行操作：
+[1] 查看即时状态信息
+[91]开启消息提醒
+[81]关闭消息提醒
+更多功能请轻触屏幕左下角小图标，切换到菜单进行操作]]></tk:Content>
+            </tk:Content>
+          </tk:TextMessage>
+        </tk:Global>
+      </tk:DefaultMessage>
+    </tk:CorpApp>
+    <tk:MessageLog>
+      <tk:DbMessageLog/>
+    </tk:MessageLog>
+  </tk:Weixin>
+</tk:Toolkit>

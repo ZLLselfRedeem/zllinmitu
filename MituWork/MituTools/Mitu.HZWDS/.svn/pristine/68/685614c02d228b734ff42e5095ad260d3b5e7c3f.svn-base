@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>微信群发</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:MasterDetailMetaData>
+        <tk:Master>
+          <tk:SingleXmlMetaData DataXml="CXCS/WeixinMass.xml" ColumnCount="1"/>
+        </tk:Master>
+        <tk:Detail ListStyle="Table">
+          <tk:SingleXmlMetaData DataXml="CXCS/WeixinMassDetail.xml"/>
+        </tk:Detail>
+      </tk:MasterDetailMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:MasterDetailDbSource DisablePage="Insert" OrderBy="ORDER BY WM_MASS_ID DESC">
+        <tk:MasterResolver>
+          <tk:RegResolver>WeixinMass</tk:RegResolver>
+        </tk:MasterResolver>
+        <tk:Detail UpdateMode="DelIns">
+          <tk:Resolver>
+            <tk:RegResolver>WeixinMassDetail</tk:RegResolver>
+          </tk:Resolver>
+          <tk:Relation OrderBy="ORDER BY WMD_ORDER_NUM">
+            <tk:MasterFields>MassId</tk:MasterFields>
+            <tk:DetailFields>MassId</tk:DetailFields>
+          </tk:Relation>
+        </tk:Detail>
+        <tk:Operators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:FieldOperateRight FieldName="SendFlag">
+                <tk:Item Value="0">Update,Delete</tk:Item>
+                <tk:Item Value="1">Update,Delete,Detail</tk:Item>
+                <tk:Item Value="4"/>
+              </tk:FieldOperateRight>
+            </tk:Right>
+            <tk:Operator Id="Update" Info="Update">
+              <tk:Caption>
+                <tk:Content>修改</tk:Content>
+              </tk:Caption>
+            </tk:Operator>
+            <tk:Operator Id="Delete" Info="Delete,AjaxUrl">
+              <tk:Caption>
+                <tk:Content>删除</tk:Content>
+              </tk:Caption>
+              <tk:ConfirmData>
+                <tk:Content>确认删除吗？</tk:Content>
+              </tk:ConfirmData>
+            </tk:Operator>
+            <tk:Operator Id="Detail">
+              <tk:Caption>
+                <tk:Content>群发</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebDetailXmlPage.tkx?Source=CXCS/WeixinMass&amp;MassId=*MassId*</tk:Content>
+            </tk:Operator>
+          </tk:StandardOperators>
+        </tk:Operators>
+        <tk:DetailOperators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:FieldOperateRight FieldName="SendFlag">
+                <tk:Item Value="0">Update</tk:Item>
+                <tk:Item Value="1">Update,Mass</tk:Item>
+                <tk:Item Value="4"/>
+              </tk:FieldOperateRight>
+            </tk:Right>
+            <tk:Operator Id="Update" Info="Update" IconClass="icon-edit">
+              <tk:Caption>
+                <tk:Content>修改</tk:Content>
+              </tk:Caption>
+            </tk:Operator>
+            <tk:Operator Id="Mass" IconClass="icon-envelope" Info="JS">
+              <tk:Caption>
+                <tk:Content>群发</tk:Content>
+              </tk:Caption>
+              <tk:Content NeedParse="true">sendMassMessage(*MassId*, "{#RetUrl}")</tk:Content>
+              <tk:ConfirmData>
+                <tk:Content>每月只能群发4次，请确定是否需要群发？</tk:Content>
+              </tk:ConfirmData>
+            </tk:Operator>
+          </tk:StandardOperators>
+        </tk:DetailOperators>
+      </tk:MasterDetailDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <!--<tk:SingleRazorPageMaker ListDisplay="Striped" />-->
+      <tk:MasterDetailRazorPageMaker ListDisplay="Striped">
+        <tk:Item Style="List">
+          <tk:RazorData>
+            <tk:NormalListData ShowExportExcel="false"/>
+          </tk:RazorData>
+        </tk:Item>
+        <tk:Item Style="Update" DestUrl="Detail" UseRetUrlFirst="false">
+          <tk:RetUrl Style="Custom">
+            <tk:CustomUrl>~/Library/WebListXmlPage.tkx?Source=CXCS/Document</tk:CustomUrl>
+          </tk:RetUrl>
+        </tk:Item>
+        <tk:Item Style="Detail">
+          <tk:Script>userjs/mass.js</tk:Script>
+        </tk:Item>
+      </tk:MasterDetailRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

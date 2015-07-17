@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_Toolkit5" DisplayName="Tk5数据库脚本工具" RegName="Tk5DbDeployModule" Order="40" Author="YJC" CreateDate="2014-12-05" Description="Toolkit5数据库脚本工具" IconName="Images/png/138SQL信息.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>Tk5DbDeploySuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <SimpleModel TypeAliasName="Tk5DbDeploySuite" DataName="Tk5DbDeploySuite" ColumnCount="2"/>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

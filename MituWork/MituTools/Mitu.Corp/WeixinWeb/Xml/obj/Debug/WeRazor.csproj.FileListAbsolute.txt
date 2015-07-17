@@ -1,0 +1,36 @@
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\Razor.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\Razor.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.AdoData.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Core.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Core.Extension.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Data.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.MetaData.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Razor.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Web.Razor.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.WebApp.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.AdoData.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Core.Extension.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Core.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Data.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.MetaData.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Razor.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.Web.Razor.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\YJC.Toolkit.WebApp.pdb
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\en\YJC.Toolkit.AdoData.resources.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\zh-CHS\YJC.Toolkit.AdoData.resources.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\en\YJC.Toolkit.Core.resources.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\zh-CHS\YJC.Toolkit.Core.resources.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\en\YJC.Toolkit.Data.resources.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\zh-CHS\YJC.Toolkit.Data.resources.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\obj\Debug\WeRazor.csprojResolveAssemblyReference.cache
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\obj\Debug\Razor.dll
+E:\VS2014\Mitu.Corp\WeixinWeb\Xml\obj\Debug\Razor.pdb
+D:\C#Internal File\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\Razor.dll
+D:\C#Internal File\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\Razor.pdb
+D:\C#Internal File\Mitu.Corp\WeixinWeb\Xml\obj\Debug\Razor.dll
+D:\C#Internal File\Mitu.Corp\WeixinWeb\Xml\obj\Debug\Razor.pdb
+D:\C#\C#Internal File\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\Razor.dll
+D:\C#\C#Internal File\Mitu.Corp\WeixinWeb\Xml\razor\_temp\_temp\Razor.pdb
+D:\C#\C#Internal File\Mitu.Corp\WeixinWeb\Xml\obj\Debug\WeRazor.csprojResolveAssemblyReference.cache
+D:\C#\C#Internal File\Mitu.Corp\WeixinWeb\Xml\obj\Debug\Razor.dll
+D:\C#\C#Internal File\Mitu.Corp\WeixinWeb\Xml\obj\Debug\Razor.pdb

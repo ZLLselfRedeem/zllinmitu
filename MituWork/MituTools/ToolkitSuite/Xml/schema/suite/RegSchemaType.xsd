@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RegElement" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegElement">
+    <xs:complexType>
+      <xs:attribute name="SchemaType" type="xs:ID" use="required"/>
+      <xs:attribute name="ObjectType" type="xs:Name" use="required"/>
+      <xs:attribute name="Namespace" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

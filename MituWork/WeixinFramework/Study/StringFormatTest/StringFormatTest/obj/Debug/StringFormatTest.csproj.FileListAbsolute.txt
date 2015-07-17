@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\StringFormatTest\StringFormatTest\bin\Debug\StringFormatTest.exe
+D:\ZhouLL\trunk\Study\StringFormatTest\StringFormatTest\bin\Debug\StringFormatTest.pdb
+D:\ZhouLL\trunk\Study\StringFormatTest\StringFormatTest\obj\Debug\StringFormatTest.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\StringFormatTest\StringFormatTest\obj\Debug\StringFormatTest.exe
+D:\ZhouLL\trunk\Study\StringFormatTest\StringFormatTest\obj\Debug\StringFormatTest.pdb

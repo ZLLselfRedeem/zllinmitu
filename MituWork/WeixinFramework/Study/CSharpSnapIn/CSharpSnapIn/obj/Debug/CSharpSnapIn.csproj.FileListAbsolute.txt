@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\CSharpSnapIn\CSharpSnapIn\bin\Debug\CSharpSnapIn.dll
+D:\ZhouLL\trunk\Study\CSharpSnapIn\CSharpSnapIn\bin\Debug\CSharpSnapIn.pdb
+D:\ZhouLL\trunk\Study\CSharpSnapIn\CSharpSnapIn\bin\Debug\CommonSnappable.dll
+D:\ZhouLL\trunk\Study\CSharpSnapIn\CSharpSnapIn\bin\Debug\CommonSnappable.pdb
+D:\ZhouLL\trunk\Study\CSharpSnapIn\CSharpSnapIn\obj\Debug\CSharpSnapIn.dll
+D:\ZhouLL\trunk\Study\CSharpSnapIn\CSharpSnapIn\obj\Debug\CSharpSnapIn.pdb

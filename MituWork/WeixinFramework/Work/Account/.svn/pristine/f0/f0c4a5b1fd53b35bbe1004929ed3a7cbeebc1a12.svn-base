@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using YJC.Toolkit.Data;
+using YJC.Toolkit.Sys;
+
+namespace YJC.Toolkit.Accounting
+{
+    [Source]
+    internal class AccountDataSource : BaseDbSource
+    {
+        public override OutputData DoAction(IInputData input)
+        {
+            if (input.IsPost)
+            {
+                InputObject obj = input.PostObject.Convert<InputObject>();
+
+                TkDebug.AssertNotNull(obj, "", this);
+
+                return OutputData.CreateToolkitObject(KeyData.Empty);
+            }
+            else
+            {
+                input.CallerInfo.AddInfo(DataSet);
+
+                return OutputData.Create(DataSet);
+            }
+        }
+    }
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by cjy (baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:include schemaLocation="../../bin/CommonType.xsd"/>
+  <xs:include schemaLocation="../../bin/CommonElement.xsd"/>
+  <xs:include schemaLocation="Operators.xsd"/>
+  <xs:complexType name="OperateRightType">
+    <xs:choice>
+      <xs:element ref="tk:SimpleListOperateRight"/>
+      <xs:element name="EmptyOperateRight" type="tk:EmptyType">
+        <xs:annotation>
+          <xs:documentation>不产生操作权限，配置的操作符将全部起效</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element ref="tk:FieldOperateRight"/>
+      <xs:element name="RegOperateRight" type="xs:Name">
+        <xs:annotation>
+          <xs:documentation>根据根据配置的注册名实例化OeprateRight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="OperateRightConfig">
+    <xs:choice>
+      <xs:element ref="tk:StandardOperators"/>
+      <xs:element ref="tk:SimpleListOperators"/>
+      <xs:element ref="tk:SimpleDetailOperators"/>
+      <xs:element ref="tk:SimpleTreeDetailOperators"/>
+      <xs:any namespace="##other" processContents="lax"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="ObjectOperateRightType">
+    <xs:choice>
+      <xs:element ref="tk:SimpleListObjectOperateRight">
+        <xs:annotation>
+          <xs:documentation>默认列表对象操作符配置权限</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EmptyObjectOperateRight" type="tk:EmptyType">
+        <xs:annotation>
+          <xs:documentation>不产生对象操作权限，配置的操作符将全部起效</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="ObjectOperateRightConfig">
+    <xs:choice>
+      <xs:element ref="tk:StandardObjectOperators">
+        <xs:annotation>
+          <xs:documentation>标准对象操作符配置</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element ref="tk:SimpleListObjectOperators">
+        <xs:annotation>
+          <xs:documentation>默认列表对象操作符配置</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element ref="tk:SimpleDetailObjectOperators">
+        <xs:annotation>
+          <xs:documentation>默认查看页面的对象操作符配置</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SimpleTreeDetailObjectOperators"/>
+      <xs:any namespace="##other" processContents="lax"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="SimpleListOperators" type="tk:_tk_SimpleListOperatorsType">
+    <xs:annotation>
+      <xs:documentation>默认列表操作符配置</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StandardOperators">
+    <xs:annotation>
+      <xs:documentation>标准操作符配置</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Right" type="tk:OperateRightType">
+          <xs:annotation>
+            <xs:documentation>操作权限配置</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:group ref="tk:_tk_OperatorGroup" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SimpleDetailOperators" type="tk:EmptyType">
+    <xs:annotation>
+      <xs:documentation>默认查看页面的操作符配置</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SimpleListObjectOperators" type="tk:_tk_SimpleListOperatorsType">
+    <xs:annotation>
+      <xs:documentation>默认列表操作符配置</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StandardObjectOperators">
+    <xs:annotation>
+      <xs:documentation>标准操作符配置</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Right" type="tk:ObjectOperateRightType">
+          <xs:annotation>
+            <xs:documentation>对象操作权限配置</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:group ref="tk:_tk_OperatorGroup" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SimpleDetailObjectOperators" type="tk:EmptyType">
+    <xs:annotation>
+      <xs:documentation>默认查看页面的操作符配置</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SimpleTreeDetailOperators" type="tk:EmptyType">
+    <xs:annotation>
+      <xs:documentation>默认树详细页面操作符配置</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="_tk_OperatePageStyle">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Insert"/>
+      <xs:enumeration value="Update"/>
+      <xs:enumeration value="Delete"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_OperatePageStyleList">
+    <xs:list itemType="tk:_tk_OperatePageStyle"/>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_OperateStyleTotal">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="All"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OperatePageStyle">
+    <xs:union memberTypes="tk:_tk_OperateStyleTotal tk:_tk_OperatePageStyleList"/>
+  </xs:simpleType>
+  <xs:complexType name="SimpleListOperateRightType">
+    <xs:attribute name="Operators" type="tk:OperatePageStyle">
+      <xs:annotation>
+        <xs:documentation>配置页面的按钮，默认为All，即有新建，修改和删除功能</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:element name="SimpleListOperateRight" type="tk:SimpleListOperateRightType">
+    <xs:annotation>
+      <xs:documentation>默认列表操作符配置权限</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SimpleListObjectOperateRight" type="tk:SimpleListOperateRightType">
+    <xs:annotation>
+      <xs:documentation>默认列表操作符配置权限</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FieldOperateRight">
+    <xs:annotation>
+      <xs:documentation>根据Field的值配置操作权限</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Empty" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>配置列表全局的OperatorId，多个Operator时，Id中间用","隔开</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Item" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>配置内容为Operator的Id，多个Operator时，Id中间用","隔开</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="Value" type="xs:string" use="required">
+                  <xs:annotation>
+                    <xs:documentation>字段匹配的值</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="ContainsNull" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>是否匹配DbNull</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="FieldName" type="xs:Name" use="required">
+        <xs:annotation>
+          <xs:documentation>字段的昵称</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="_tk_SimpleListOperatorsType">
+    <xs:complexContent>
+      <xs:extension base="tk:SimpleListOperateRightType">
+        <xs:attribute name="IsDialog" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>是否使用Dialog的方式显示</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

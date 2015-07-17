@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkUtility" DisplayName="Web测试工具" RegName="WebTestModule" Order="10" Author="YJC" CreateDate="2011-12-05" Description="Toolkit Web测试工具" IconName="Images/png/040验收.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>WebtestSuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <SimpleModel TypeAliasName="WebtestSuite" DataName="WebtestData" ColumnCount="1"/>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

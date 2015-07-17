@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>账户绑定</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Binding.xml" DisableAutoDetailLink="true">
+        <tk:Override>
+          <tk:Field NickName="CheckFlag"/>
+        </tk:Override>
+      </tk:SingleXmlMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource DisablePage="Insert Update Detail" OrderBy="ORDER BY CB_BIND_ID DESC" UseMetaData="true">
+        <tk:Resolver>
+          <tk:RegResolver>Binding</tk:RegResolver>
+        </tk:Resolver>
+        <tk:TabSheets>
+          <tk:TabSheet Id="UnChecked">
+            <tk:Caption>
+              <tk:Content>未审核</tk:Content>
+            </tk:Caption>
+            <tk:Condition>CB_CHECK_FLAG=0</tk:Condition>
+          </tk:TabSheet>
+          <tk:TabSheet Id="All">
+            <tk:Caption>
+              <tk:Content>全部</tk:Content>
+            </tk:Caption>
+          </tk:TabSheet>
+          <tk:TabSheet Id="Checked">
+            <tk:Caption>
+              <tk:Content>已审核</tk:Content>
+            </tk:Caption>
+            <tk:Condition>CB_CHECK_FLAG=1</tk:Condition>
+          </tk:TabSheet>
+        </tk:TabSheets>
+        <tk:Operators>
+          <tk:StandardOperators>
+            <tk:Right>
+              <tk:FieldOperateRight FieldName="CheckFlag">
+                <tk:Item Value="0" ContainsNull="true">Checked,Delete</tk:Item>
+                <tk:Item Value="1">UnCheck</tk:Item>
+              </tk:FieldOperateRight>
+            </tk:Right>
+            <tk:Operator Position="Row" Info="AjaxUrl" Id="Checked">
+              <tk:Caption>
+                <tk:Content>审核</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebModuleContentPage.tkx?Source=CXCS/CheckBinding&amp;Flag=1&amp;BindId=*BindId*</tk:Content>
+              <tk:ConfirmData>
+                <tk:Content>确认审核通过吗？</tk:Content>
+              </tk:ConfirmData>
+            </tk:Operator>
+            <tk:Operator Id="Delete" Info="AjaxUrl;Delete" Position="Row">
+              <tk:Caption>
+                <tk:Content>删除</tk:Content>
+              </tk:Caption>
+              <tk:ConfirmData>
+                <tk:Content>确认删除吗？</tk:Content>
+              </tk:ConfirmData>
+            </tk:Operator>
+            <tk:Operator Id="UnCheck" Info="AjaxUrl" Position="Row">
+              <tk:Caption>
+                <tk:Content>取消审核</tk:Content>
+              </tk:Caption>
+              <tk:Content>~/Library/WebModuleContentPage.tkx?Source=CXCS/CheckBinding&amp;Flag=0&amp;BindId=*BindId*</tk:Content>
+              <tk:ConfirmData>
+                <tk:Content>确认取消审核吗？</tk:Content>
+              </tk:ConfirmData>
+            </tk:Operator>
+          </tk:StandardOperators>
+        </tk:Operators>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SingleRazorPageMaker ListDisplay="Striped">
+        <tk:Item Style="List">
+          <tk:RazorData>
+            <tk:NormalListData TabDisplayType="Normal" ShowExportExcel="false"/>
+          </tk:RazorData>
+        </tk:Item>
+      </tk:SingleRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

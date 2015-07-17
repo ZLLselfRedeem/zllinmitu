@@ -1,0 +1,5 @@
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\bin\Modules\Accounting.Data.dll
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\ManageWeb\WebSite\bin\Modules\Accounting.Data.pdb
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\Data\Accounting.Data\obj\Debug\Accounting.Data.csprojResolveAssemblyReference.cache
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\Data\Accounting.Data\obj\Debug\Accounting.Data.dll
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Work\Account\Data\Accounting.Data\obj\Debug\Accounting.Data.pdb

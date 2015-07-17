@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (mitu) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="EmptyType">
+    <xs:annotation>
+      <xs:documentation>空类型</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MarcoConfigItem">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="NeedParse" type="xs:boolean" default="false">
+          <xs:annotation>
+            <xs:documentation>是否启动宏分析，默认不启动</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="SQLInject" type="xs:boolean" default="true">
+          <xs:annotation>
+            <xs:documentation>是否启动检查SQL注入，默认启动。SQL注入会坚持分号，单引号</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="EmptyMarco" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>当配置的宏运算结果为空时，整个宏将返回为空。如果需要配置多个，总结可以用","隔开。</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TkDataType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="binary"/>
+      <xs:enumeration value="Date"/>
+      <xs:enumeration value="Decimal"/>
+      <xs:enumeration value="double"/>
+      <xs:enumeration value="text"/>
+      <xs:enumeration value="long"/>
+      <xs:enumeration value="string"/>
+      <xs:enumeration value="Guid"/>
+      <xs:enumeration value="bit"/>
+      <xs:enumeration value="short"/>
+      <xs:enumeration value="xml"/>
+      <xs:enumeration value="money"/>
+      <xs:enumeration value="DateTime"/>
+      <xs:enumeration value="blob"/>
+      <xs:enumeration value="byte"/>
+      <xs:enumeration value="int"/>
+      <xs:enumeration value="Geography"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="AuthorAttrGroup">
+    <xs:attribute name="Description" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>插件功能的描述</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Author" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>插件的作者</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CreateDate" type="xs:date">
+      <xs:annotation>
+        <xs:documentation>插件的创建日期</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="RegItem">
+    <xs:attribute name="RegName" type="xs:ID" use="required">
+      <xs:annotation>
+        <xs:documentation>插件的注册名</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attributeGroup ref="AuthorAttrGroup"/>
+  </xs:attributeGroup>
+  <xs:complexType name="FieldItem">
+    <xs:simpleContent>
+      <xs:extension base="xs:Name">
+        <xs:attribute name="DataType" type="TkDataType" default="string">
+          <xs:annotation>
+            <xs:documentation>数据类型</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ActiveFieldItem">
+    <xs:simpleContent>
+      <xs:extension base="FieldItem">
+        <xs:attribute name="Value" type="xs:Name">
+          <xs:annotation>
+            <xs:documentation>字段是Active的值</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ExtensionType">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeType">
+    <xs:attribute name="Span" type="xs:time">
+      <xs:annotation>
+        <xs:documentation>配置的时间间隔</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="SystemConfiged" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>是否使用系统配置的时间，如果true，Span的配置将无效</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:simpleType name="FilePosition">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Solution"/>
+      <xs:enumeration value="Application"/>
+      <xs:enumeration value="Xml"/>
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="AbsolutePath"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="PageAttribute">
+    <xs:attribute name="Style" type="PageStyleType" use="required"/>
+    <xs:attribute name="Operation" type="xs:string"/>
+  </xs:attributeGroup>
+  <xs:simpleType name="PageStyleType">
+    <xs:union memberTypes="_tk_Normal_Style _tk_Custom_Style"/>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_Normal_Style">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Insert"/>
+      <xs:enumeration value="Update"/>
+      <xs:enumeration value="Detail"/>
+      <xs:enumeration value="Delete"/>
+      <xs:enumeration value="List"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_Custom_Style">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Custom"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_PageStyleOperation">
+    <xs:restriction base="xs:Name">
+      <xs:pattern value="C\c*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PageStyleIntf">
+    <xs:union memberTypes="_tk_Normal_Style _tk_PageStyleOperation"/>
+  </xs:simpleType>
+  <xs:simpleType name="ConfigType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="True"/>
+      <xs:enumeration value="False"/>
+      <xs:enumeration value="SystemConfiged"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ReadSettingsType">
+    <xs:attribute name="ReadRoot" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>是否需要读取根节点，此属性针对Xml有效，对Json无效</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="DateFormat" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>日期格式</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="DateTimeFormat" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>日期（包含时间）格式</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Encoding" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>数据编码</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="WriteSettingsType">
+    <xs:attribute name="Encoding" type="xs:Name">
+      <xs:annotation>
+        <xs:documentation>数据编码</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="OmitHead" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>是否忽略输出头信息，此标记针对Xml有效</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CloseInput" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>是否释放传入的数据流，默认为true</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:attributeGroup name="CaptionGroup">
+    <xs:attribute name="Id" type="xs:token" use="required">
+      <xs:annotation>
+        <xs:documentation>关键字Key</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Caption" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>显示的标题</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:simpleType name="ActionResult">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="ReLogon"/>
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Fail"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlignType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Center"/>
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="Right"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ActionResultType">
+    <xs:attribute name="Result" type="ActionResult" use="required">
+      <xs:annotation>
+        <xs:documentation>输出结果</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Message" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>消息内容</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>业务咨询</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Suggestion.xml" DisableAutoDetailLink="true" >
+        <tk:Override>
+          <tk:Field NickName="Content">
+            <tk:DisplayName>
+              <tk:Content>咨询内容</tk:Content>
+            </tk:DisplayName>
+          </tk:Field>
+          <tk:Field NickName="OrgName" Order="61"/>
+        </tk:Override>
+      </tk:SingleXmlMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource DisablePage="Insert Delete Update Detail"  OrderBy="ORDER BY CS_SUG_ID DESC">
+        <tk:Resolver>
+          <tk:RegResolver>Suggestion</tk:RegResolver>
+        </tk:Resolver>
+        <tk:FilterSql>CS_DATA_TYPE=1</tk:FilterSql>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SingleRazorPageMaker ListDisplay="Striped">
+        <tk:Item Style="List">
+          <tk:RazorData>
+            <tk:NormalListData OperatorPosition="None" ShowExportExcel="false" />
+          </tk:RazorData>
+        </tk:Item>
+      </tk:SingleRazorPageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

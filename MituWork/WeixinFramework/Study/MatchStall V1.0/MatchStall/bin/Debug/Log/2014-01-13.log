@@ -1,0 +1,4 @@
+发生时间：2014/1/13 21:08:13
+异常信息：配置系统未能初始化
+   在 MatchStall.AppForm.btnChooseExcelFile_Click(Object sender, EventArgs e) 位置 g:\baiduyundownload\MatchStall V1.0\MatchStall\AppForm.cs:行号 54
+

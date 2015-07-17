@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\LambdaStudy\LambdaStudy\bin\Debug\LambdaStudy.exe
+D:\ZhouLL\trunk\Study\LambdaStudy\LambdaStudy\bin\Debug\LambdaStudy.pdb
+D:\ZhouLL\trunk\Study\LambdaStudy\LambdaStudy\obj\Debug\LambdaStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\LambdaStudy\LambdaStudy\obj\Debug\LambdaStudy.exe
+D:\ZhouLL\trunk\Study\LambdaStudy\LambdaStudy\obj\Debug\LambdaStudy.pdb

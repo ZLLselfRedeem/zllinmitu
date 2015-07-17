@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by lzm (baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.qdocuments.net" schemaLocation="DataItem.xsd"/>
+	<xs:element name="Toolkit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tk:Table"/>
+			</xs:sequence>
+			<xs:attribute name="version" use="required" fixed="4.0"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Attribute">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="Value" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Page">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CustomCtrl" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="Style" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:NMTOKEN">
+						<xs:enumeration value="Detail"/>
+						<xs:enumeration value="List"/>
+						<xs:enumeration value="Custom"/>
+						<xs:enumeration value="Insert"/>
+						<xs:enumeration value="Update"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Operation" type="xs:string"/>
+			<xs:attribute name="CtrlType" use="required"/>
+			<xs:attribute name="Order" type="xs:int"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IntRange">
+		<xs:complexType>
+			<xs:attribute name="LowValue" type="xs:int"/>
+			<xs:attribute name="HighValue" type="xs:int"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChinaMobile"/>
+	<xs:element name="ChinaTelcom"/>
+	<xs:element name="ChinaUnicom"/>
+	<xs:element name="CurrentDate"/>
+	<xs:element name="Date"/>
+	<xs:element name="Double"/>
+	<xs:element name="Email"/>
+	<xs:element name="Int"/>
+	<xs:element name="Mobile"/>
+	<xs:element name="NotEmpty"/>
+	<xs:element name="PostCode"/>
+	<xs:element name="SFZ"/>
+	<xs:element name="SingleValue"/>
+	<xs:element name="UniqueRow"/>
+	<xs:element name="DateRange">
+		<xs:complexType>
+			<xs:attribute name="LowValue" type="xs:date"/>
+			<xs:attribute name="HighValue" type="xs:date"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DoubleRange">
+		<xs:complexType>
+			<xs:attribute name="LowValue" type="xs:double"/>
+			<xs:attribute name="HighValue" type="xs:double"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Regex">
+		<xs:complexType>
+			<xs:attribute name="Message" type="xs:string"/>
+			<xs:attribute name="Pattern" type="xs:string"/>
+			<xs:attribute name="Options">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="None"/>
+						<xs:enumeration value="IgnoreCase"/>
+						<xs:enumeration value="Multiline"/>
+						<xs:enumeration value="ExplicitCapture"/>
+						<xs:enumeration value="Compiled"/>
+						<xs:enumeration value="Singleline"/>
+						<xs:enumeration value="IgnorePatternWhitespace"/>
+						<xs:enumeration value="RightToLeft"/>
+						<xs:enumeration value="ECMAScript"/>
+						<xs:enumeration value="CultureInvariant"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FixLength" type="LengthType"/>
+	<xs:element name="StringLength" type="LengthType"/>
+	<xs:element name="StringMaxLength" type="LengthType"/>
+	<xs:complexType name="LengthType">
+		<xs:attribute name="Length" type="xs:int"/>
+	</xs:complexType>
+	<xs:element name="CustomCtrl" type="xs:anyType"/>
+</xs:schema>

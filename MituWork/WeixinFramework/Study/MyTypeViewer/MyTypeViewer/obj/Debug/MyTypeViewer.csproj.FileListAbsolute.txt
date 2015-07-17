@@ -1,0 +1,7 @@
+D:\ZhouLL\trunk\Study\MyTypeViewer\MyTypeViewer\bin\Debug\MyTypeViewer.exe
+D:\ZhouLL\trunk\Study\MyTypeViewer\MyTypeViewer\bin\Debug\MyTypeViewer.pdb
+D:\ZhouLL\trunk\Study\MyTypeViewer\MyTypeViewer\obj\Debug\MyTypeViewer.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\MyTypeViewer\MyTypeViewer\obj\Debug\MyTypeViewer.exe
+D:\ZhouLL\trunk\Study\MyTypeViewer\MyTypeViewer\obj\Debug\MyTypeViewer.pdb
+D:\ZhouLL\trunk\Study\MyTypeViewer\MyTypeViewer\bin\Debug\en\YJC.Toolkit.Core.resources.dll
+D:\ZhouLL\trunk\Study\MyTypeViewer\MyTypeViewer\bin\Debug\zh-CHS\YJC.Toolkit.Core.resources.dll

@@ -1,0 +1,15 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssListTemplate
+@using System.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    DataRow row = (DataRow)(Model.Row);
+    string url = ("doc.vp?" + row.GetString("DocId")).AppVirutalPath();
+}
+@*<div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(10), "lv-vam pv1")">*@
+<div class="doc-title"><a target="_blank" href="@url">@row.GetString("Title")</a></div>
+<div class="doc-title">
+    <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(9), "lv-vam pr5")" style="padding-left:0">@row.GetString("Number")</div>
+    <div class="@HtmlUtil.MergeClass(BootcssUtil.GetColClass(3), "lv-vam pv1 text-right")">@row.GetDateTime("OrginDate", "yyyyMMdd")</div>
+</div>
+@*</div>*@

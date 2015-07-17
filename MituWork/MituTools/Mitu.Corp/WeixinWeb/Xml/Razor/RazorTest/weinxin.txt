@@ -1,0 +1,7 @@
+﻿<div class="mb15">
+  <p style="text-align:center;line-height:2em;">
+    <a href="weixin://contacts/profile/gh_6a56aab9a27f">
+      <img src="../pic/sys/mitutennis-b1.gif" class="max-w100p"/>
+    </a>
+  </p>
+</div>

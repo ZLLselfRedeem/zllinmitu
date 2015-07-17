@@ -1,0 +1,5 @@
+D:\C#InternalFile\Mitu.HZWDS\ManageWeb\WebSite\bin\Modules\Cxcs.Data.dll
+D:\C#InternalFile\Mitu.HZWDS\ManageWeb\WebSite\bin\Modules\Cxcs.Data.pdb
+D:\C#InternalFile\Mitu.HZWDS\Data\Cxcs.Data\obj\Debug\Cxcs.Data.dll
+D:\C#InternalFile\Mitu.HZWDS\Data\Cxcs.Data\obj\Debug\Cxcs.Data.pdb
+D:\C#InternalFile\Mitu.HZWDS\Data\Cxcs.Data\obj\Debug\Cxcs.Data.csprojResolveAssemblyReference.cache

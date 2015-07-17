@@ -1,0 +1,10 @@
+D:\WrokSpace\trunk\Study\DataClassStudy\DataClassStudy\bin\Debug\DataClassStudy.exe
+D:\WrokSpace\trunk\Study\DataClassStudy\DataClassStudy\bin\Debug\DataClassStudy.pdb
+D:\WrokSpace\trunk\Study\DataClassStudy\DataClassStudy\obj\Debug\DataClassStudy.csprojResolveAssemblyReference.cache
+D:\WrokSpace\trunk\Study\DataClassStudy\DataClassStudy\obj\Debug\DataClassStudy.exe
+D:\WrokSpace\trunk\Study\DataClassStudy\DataClassStudy\obj\Debug\DataClassStudy.pdb
+D:\ZhouLL\trunk\Study\DataClassStudy\DataClassStudy\obj\Debug\DataClassStudy.exe
+D:\ZhouLL\trunk\Study\DataClassStudy\DataClassStudy\obj\Debug\DataClassStudy.pdb
+D:\ZhouLL\trunk\Study\DataClassStudy\DataClassStudy\bin\Debug\DataClassStudy.exe
+D:\ZhouLL\trunk\Study\DataClassStudy\DataClassStudy\bin\Debug\DataClassStudy.pdb
+D:\ZhouLL\trunk\Study\DataClassStudy\DataClassStudy\obj\Debug\DataClassStudy.csprojResolveAssemblyReference.cache

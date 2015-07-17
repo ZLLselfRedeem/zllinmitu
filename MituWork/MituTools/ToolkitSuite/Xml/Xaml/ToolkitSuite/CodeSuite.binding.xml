@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\CommandBinding.xsd" version="4.0">
+  <Module SearchPattern="Logical">
+    <Commands>
+      <Command Name="Close">
+        <DataModule>
+          <Action>Close</Action>
+        </DataModule>
+      </Command>
+      <Command Name="ConvertPDM">
+        <DataModule>
+          <Action>ConvertPDM</Action>
+        </DataModule>
+      </Command>
+      <Command Name="Generate">
+        <DataModule>
+          <Action>Generate</Action>
+        </DataModule>
+      </Command>
+      <Command Name="Test">
+        <DataModule>
+          <Action>Test</Action>
+        </DataModule>
+      </Command>
+    </Commands>
+    <CommandBindings>
+      <CommandBinding ElementName="Close" CommandName="Close"/>
+      <CommandBinding ElementName="ConvertPDM" CommandName="ConvertPDM"/>
+      <CommandBinding ElementName="Generate" CommandName="Generate"/>
+      <CommandBinding ElementName="Test" CommandName="Test"/>
+    </CommandBindings>
+  </Module>
+</Toolkit>

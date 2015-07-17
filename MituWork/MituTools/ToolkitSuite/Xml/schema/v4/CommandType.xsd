@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen (eb) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/WpfCommonType.xsd"/>
+  <xs:complexType name="CommandType">
+    <xs:choice>
+      <xs:element ref="CloseModule"/>
+      <xs:element ref="Close"/>
+      <xs:element ref="MessageBox"/>
+      <xs:element ref="DataModule"/>
+      <xs:element ref="RegCommand"/>
+      <xs:element ref="SelectFolder"/>
+      <xs:element ref="Switcher"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="CloseModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Name" type="xs:token" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Close"/>
+  <xs:element name="MessageBox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Text" type="xs:token"/>
+        <xs:element name="Caption" type="xs:string" minOccurs="0"/>
+        <xs:element name="Button" type="ButtonType" default="OK" minOccurs="0"/>
+        <xs:element name="Icon" type="IconType" default="None" minOccurs="0"/>
+        <xs:element name="DefaultResult" type="DefaultResultType" default="None" minOccurs="0"/>
+        <xs:element name="Options" type="OptionsType" default="None" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Action" type="xs:token"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegCommand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RegName" type="xs:token"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TargetElement" type="xs:Name"/>
+        <xs:element name="Pattern" type="SearchPatternType" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ButtonType">
+    <xs:restriction base="xs:Name">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="OKCancel"/>
+      <xs:enumeration value="YesNoCancel"/>
+      <xs:enumeration value="YesNo"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IconType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Hand"/>
+      <xs:enumeration value="Stop"/>
+      <xs:enumeration value="Question"/>
+      <xs:enumeration value="Exclamation"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Information"/>
+      <xs:enumeration value="Asterisk"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DefaultResultType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="Cancel"/>
+      <xs:enumeration value="Yes"/>
+      <xs:enumeration value="No"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OptionsType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="DefaultDesktopOnly"/>
+      <xs:enumeration value="RightAlign"/>
+      <xs:enumeration value="RtlReading"/>
+      <xs:enumeration value="ServiceNotification"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SwitcherModeType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="All"/>
+      <xs:enumeration value="Reverse"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Switcher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Mode" type="SwitcherModeType"/>
+        <xs:element name="ItemsControlName" type="xs:Name"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

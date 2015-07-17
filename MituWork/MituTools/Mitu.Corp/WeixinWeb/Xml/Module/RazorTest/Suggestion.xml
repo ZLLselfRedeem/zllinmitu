@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>设置</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="Users/Suggestion.xml"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource UseMetaData="false" DisablePage="List Update Detail Delete">
+        <tk:Resolver>
+          <tk:RegResolver>Suggestion</tk:RegResolver>
+        </tk:Resolver>
+      </tk:SingleDbSource>
+      <!--<tk:CompositeSource>
+        <tk:Item>
+          <tk:Condition SearchType="Post" IsPost="false"/>
+          <tk:SingleDbInsertSource>
+            <tk:Resolver>
+              <tk:RegResolver>Suggestion</tk:RegResolver>
+            </tk:Resolver>
+          </tk:SingleDbInsertSource>
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="Post" IsPost="true"/>
+          <tk:SingleDbEditSource>
+            <tk:Resolver>
+              <tk:RegResolver>Suggestion</tk:RegResolver>
+            </tk:Resolver>
+          </tk:SingleDbEditSource>
+        </tk:Item>
+      </tk:CompositeSource>-->
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:PostRazorPageMaker DestUrl="Custom" Template="BootcssEdit" RazorFile="RazorTest/SuggestionEdit.cshtml">
+        <tk:CustomUrl>WeixinClose</tk:CustomUrl>
+        <tk:AlertMessage>
+          <tk:Content>意见建议已成功发送，非常感谢您的关心和支持！</tk:Content>
+        </tk:AlertMessage>
+      </tk:PostRazorPageMaker>
+      <!--<tk:CompositePageMaker>
+        <tk:Item>
+          <tk:Condition SearchType="Post" IsPost="false"/>
+          <tk:RazorPageMaker Template="BootcssEdit" RazorFile="RazorTest/SuggestionEdit.cshtml" />
+          -->
+      <!--<tk:SimpleXsltPageMaker XsltFile="xslt/UsersM/SuggestionEdit.xslt" UseXsltArgs="true"/>-->
+      <!--
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="Post" IsPost="true"/>
+          <tk:PostPageMaker DestUrl="Custom" DataType="Json">
+            <tk:CustomUrl>WeixinClose</tk:CustomUrl>
+            <tk:AlertMessage>
+              <tk:Content>意见建议已成功发送，非常感谢您的关心和支持！</tk:Content>
+            </tk:AlertMessage>
+          </tk:PostPageMaker>
+        </tk:Item>
+      </tk:CompositePageMaker>-->
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

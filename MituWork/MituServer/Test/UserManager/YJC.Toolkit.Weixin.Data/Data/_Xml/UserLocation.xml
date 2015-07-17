@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_USER_LOCATION">
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>UL_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>ID</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>UL_OPEN_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>用户OpenId</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>UL_CREATE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>上报日期</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>UL_LATITUDE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>经度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>UL_LONGITUDE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>纬度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="double">
+      <tk:FieldName>UL_PRECISION</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>位置精度</tk:Content>
+      </tk:DisplayName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>UL_CITY_CODE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>所在城市</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>6</tk:Length>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

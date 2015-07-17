@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net schema\v5\Weixin.xsd">
+<!--<tk:Weixin Token="mitu2014" Secret="ebd50d296451210d3382c4e95473ca64" AppId="wxbecc5c76d695d14e" OpenId="gh_45677552d1de">-->
+  <tk:Weixin AppId="wxbecc5c76d695d14e">
+    <tk:Normal Token="mitu2014" Secret="ebd50d296451210d3382c4e95473ca64" OpenId="gh_45677552d1de" EncodingAESKey="D2jZkkUx5U9iO0kN1oz1TO7QgPI6SFVlcoavVt1X3vi" MessageMode="Secure">
+      <tk:Menu FileName="weixin/menu.bak.xml"/>
+      <tk:DefaultMessage>
+        <tk:Global>
+          <tk:TextMessage>
+            <tk:Content>
+              <tk:Content><![CDATA[更多功能请轻触屏幕左下角小图标，切换到菜单进行操作]]></tk:Content>
+            </tk:Content>
+          </tk:TextMessage>
+        </tk:Global>
+      </tk:DefaultMessage>
+    </tk:Normal>
+    <tk:MessageLog>
+      <tk:DbMessageLog/>
+    </tk:MessageLog>
+  </tk:Weixin>
+</tk:Toolkit>

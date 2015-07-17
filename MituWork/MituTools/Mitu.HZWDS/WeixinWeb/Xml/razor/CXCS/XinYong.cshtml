@@ -1,0 +1,29 @@
+﻿@inherits YJC.Toolkit.Razor.ToolkitTemplate
+@using YJC.Toolkit.Sys;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>信用等级查询</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/font-awesome.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/style.css?v=1".AppVirutalPath())" />
+    @*<link rel="stylesheet" type="text/css" href="@("usercss/input.css".AppVirutalPath())" />*@
+</head>
+<body id="WebInsertXmlPage" class="tk-dataPage" data-webpath="/WebSite/">
+    <div class="container">
+        <div id="metaData" class="hide" data-toolbar="false" data-option="false"></div>
+        @RenderLocalPartial("EditTitle.cshtml", null)
+	<br />
+	<br />
+	<br />
+	<h1 style="text-align: center; color: #428bca" >栏目正在建设中...</h1>
+        <img src="@("coming/img1.jpg".AppVirutalPath())" style="display: block;margin-right: auto;margin-left: auto;max-width: 100%;" />
+    </div>
+<script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.11.1.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+
+</body>
+</html>

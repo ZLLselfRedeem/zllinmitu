@@ -1,0 +1,67 @@
+﻿@inherits YJC.Toolkit.Accounting.AccountEditTemplate
+@using System.Data;
+@using YJC.Toolkit.Web;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Razor;
+@using YJC.Toolkit.MetaData;
+@{
+    DataSet dataSet = (DataSet)Model;
+    NormalEditData pageData = (NormalEditData)ViewBag.PageData;
+    Tk5NormalTableData table = ViewBag.MetaData.Table;
+    string title = table.TableDesc;
+}
+@section DefaultHeader {
+    @if (pageData.Header != null)
+    {
+        @RenderRazorOutputData(pageData.Header, Model)
+    }
+    else
+    {
+        <br />
+        <h1 class="text-center">@title</h1>
+        <br />
+    }
+}
+@section DefaultFooter {
+    @RenderRazorOutputData(pageData.Footer, Model)
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    @RenderLayoutPartial("../bin/css.cshtml", null)
+    @ViewBag.Script.CreateUserCss()
+    <style>
+        td {
+            vertical-align: middle !important;
+        }
+
+        .pdl-1 {
+            padding-left: 1.5em !important;
+        }
+
+        .pdl-2 {
+            padding-left: 2.5em !important;
+        }
+    </style>
+</head>
+<body id="@HtmlUtil.GetPageId(Model)" class="tk-dataPage" data-webPath="@HtmlUtil.AppVirtualPath">
+    <div class="container">
+        @if (pageData.ShowTitle)
+        {
+            @RenderSectionOrDefault("Header", "DefaultHeader")
+        }
+        @RenderSectionIfDefined("Main", "main.cshtml", Model)
+        @RenderSectionOrDefault("Footer", "DefaultFooter")
+    </div>
+    @RenderLayoutPartial("../bin/js.cshtml", null)
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.edit.js".AppVirutalPath())"> </script>
+    @ViewBag.Script.CreateUserJavaScript()
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

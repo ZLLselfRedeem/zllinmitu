@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\WeixinRule.xsd">
+  <tk:Rule RegName="kkb" Author="YJC">
+    <tk:Match>
+      <tk:EventClickRule EventKey="kkb"/>
+    </tk:Match>
+    <tk:Reply>
+      <tk:TextMessage>
+        <tk:Content>
+          <tk:Content>哈哈，你好啊！KKB。</tk:Content>
+        </tk:Content>
+      </tk:TextMessage>
+    </tk:Reply>
+  </tk:Rule>
+</tk:Toolkit>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>财税文档</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Document.xml">
+        <tk:Override>
+          <tk:Field NickName="Title">
+            <tk:ListDetail>
+              <tk:Link Target="_blank">~/Library/WebDetailXmlPage.tkx?Source=CXCS/ToolsDocument&amp;DocId=*DocId*</tk:Link>
+            </tk:ListDetail>
+          </tk:Field>
+        </tk:Override>
+        <tk:Except>
+          <tk:DelField NickName="Catelog"/>
+          <tk:DelField NickName="PubDate"/>
+          <tk:DelField NickName="KeyWord"/>
+          <tk:DelField NickName="VerifyFlag"/>
+        </tk:Except>
+      </tk:SingleXmlMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:CompositeSource>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="List"/>
+          <tk:RegNameSource>ToolsDocument</tk:RegNameSource>
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="True"/>
+          <tk:SingleDbSource Context="Tools">
+            <tk:Resolver>
+              <tk:RegResolver>TaxDocument</tk:RegResolver>
+            </tk:Resolver>
+          </tk:SingleDbSource>
+        </tk:Item>
+      </tk:CompositeSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:CompositePageMaker>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="Detail"/>
+          <tk:FreeRazorPageMaker RazorFile="Razor/CXCS/DocumentDetail.cshtml"/>
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="True"/>
+          <tk:SingleRazorPageMaker ListDisplay="Striped">
+            <tk:Item Style="List">
+              <tk:RazorData>
+                <tk:NormalListData ShowTitle="false" ShowExportExcel="false"/>
+              </tk:RazorData>
+            </tk:Item>
+          </tk:SingleRazorPageMaker>
+        </tk:Item>
+      </tk:CompositePageMaker>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\ContractSerializer\ContractSerializer\bin\Debug\ContractSerializer.exe.config
+D:\ZhouLL\trunk\Study\ContractSerializer\ContractSerializer\bin\Debug\ContractSerializer.exe
+D:\ZhouLL\trunk\Study\ContractSerializer\ContractSerializer\bin\Debug\ContractSerializer.pdb
+D:\ZhouLL\trunk\Study\ContractSerializer\ContractSerializer\obj\Debug\ContractSerializer.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ContractSerializer\ContractSerializer\obj\Debug\ContractSerializer.exe
+D:\ZhouLL\trunk\Study\ContractSerializer\ContractSerializer\obj\Debug\ContractSerializer.pdb

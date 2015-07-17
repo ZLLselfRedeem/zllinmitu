@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ComparableCar\ComparableCar\obj\Debug\ComparableCar.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ComparableCar\ComparableCar\bin\Debug\ComparableCar.exe
+D:\ZhouLL\trunk\Study\ComparableCar\ComparableCar\bin\Debug\ComparableCar.pdb
+D:\ZhouLL\trunk\Study\ComparableCar\ComparableCar\obj\Debug\ComparableCar.exe
+D:\ZhouLL\trunk\Study\ComparableCar\ComparableCar\obj\Debug\ComparableCar.pdb

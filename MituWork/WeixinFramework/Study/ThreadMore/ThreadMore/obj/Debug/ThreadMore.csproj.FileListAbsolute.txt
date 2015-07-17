@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ThreadMore\ThreadMore\bin\Debug\ThreadMore.exe
+D:\ZhouLL\trunk\Study\ThreadMore\ThreadMore\bin\Debug\ThreadMore.pdb
+D:\ZhouLL\trunk\Study\ThreadMore\ThreadMore\obj\Debug\ThreadMore.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ThreadMore\ThreadMore\obj\Debug\ThreadMore.exe
+D:\ZhouLL\trunk\Study\ThreadMore\ThreadMore\obj\Debug\ThreadMore.pdb

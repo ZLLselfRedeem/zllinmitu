@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net D:\XML配置文件\schema(3月16日版本最新)\v5\Weixin.xsd">
+	<tk:Weixin AppId="wxc8f9a4b375ff7869">
+		<tk:CorpSecret UserManager="z0tGHPtVrFDHIyr7gstasl6yCsFsQxa2p6Fm2o49iKPPcPCThv9mlHwQiltoU6t6"/>
+    <tk:CorpApp Token="mitu2014" Secret="z0tGHPtVrFDHIyr7gstasl6yCsFsQxa2p6Fm2o49iKPPcPCThv9mlHwQiltoU6t6" EncodingAESKey="3t9Fz7IifBGdld5EBBwtwfCHRvBWq7sQH0Qqxh8LCIP" AppName="企业小助手" AppId="0">
+      <tk:DefaultMessage>
+        <tk:Global>
+          <tk:TextMessage>
+            <tk:Content>
+              <tk:Content><![CDATA[更多功能请轻触屏幕左下角小图标，切换到菜单进行操作]]></tk:Content>
+            </tk:Content>
+          </tk:TextMessage>
+        </tk:Global>
+      </tk:DefaultMessage>
+    </tk:CorpApp>
+    <tk:MessageLog>
+      <tk:DbMessageLog/>
+    </tk:MessageLog>
+	</tk:Weixin>
+</tk:Toolkit>

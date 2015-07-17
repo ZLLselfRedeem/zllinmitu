@@ -1,0 +1,64 @@
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:tk="http://www.qdocuments.net"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" 
+      tk:ControlHelper.EnterAsTab="True" KeyboardNavigation.TabNavigation="Cycle">
+    <Page.InputBindings>
+        <KeyBinding Key="x" Modifiers="Alt" Command="{tk:Command Data={tk:StringResource CloseModuleCmdJson}}"/>
+    </Page.InputBindings>
+    <DockPanel>
+        <Image DockPanel.Dock="Top" Source="{Binding Mode=OneTime, Source={tk:Resource Path=Images/png/logo.bmp}}" />
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,10">
+            <Button Padding="0,10" Margin="10,5,10,5" TabIndex="2" Command="{tk:Command Source=Param, Parameter=Create, StringFormat={tk:StringResource DataModuleCmdFmtJson}}">
+                <StackPanel Orientation="Horizontal" Margin="10, 0, 20, 0">
+                    <Image Margin="10,0" Stretch="None" Source="{Binding Mode=OneTime, Source={tk:Resource Path=Images/png/006保存.png}}"/>
+                    <TextBlock>生成</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Padding="0,10" Margin="10,5,10,5" TabIndex="3" Command="{tk:Command Data={tk:StringResource CloseModuleCmdJson}}">
+                <StackPanel Orientation="Horizontal" Margin="10, 0, 20, 0">
+                    <Image Margin="10,0" Stretch="None" Source="{Binding Mode=OneTime, Source={tk:Resource Path=Images/png/008删除.png}}"/>
+                    <TextBlock>关闭</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Grid Margin="40, 40, 40, 40">
+            <i:Interaction.Behaviors>
+                <tk:FetchDataBehavior DataName="AppSuite"/>
+            </i:Interaction.Behaviors>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Padding="0,5,0,5" Text="VS版本:" Grid.Row="0" Grid.Column="0" TextAlignment="Right"/>
+            <ComboBox Grid.Row="0" Grid.Column="1" tk:ControlHelper.CodeTable="{tk:CodeTable RegName=StudioVersion}" SelectedValue="{Binding Path=StudioVer, Mode=TwoWay}"/>
+            <TextBlock Padding="0,5,0,5" Text="Toolkit版本:" Grid.Row="0" Grid.Column="2" TextAlignment="Right"/>
+            <ComboBox Grid.Row="0" Grid.Column="3" tk:ControlHelper.CodeTable="{tk:CodeTable RegName=ToolkitVersion}" SelectedValue="{Binding Path=ToolkitVer, Mode=TwoWay}"/>
+            <TextBlock Padding="0,5,0,5" Text="数据库类型:" Grid.Row="1" Grid.Column="0" TextAlignment="Right"/>
+            <ComboBox Grid.Row="1" Grid.Column="1" tk:ControlHelper.CodeTable="{tk:CodeTable RegName=DatabaseType}" SelectedValue="{Binding Path=DatabaseType, Mode=TwoWay}"/>
+            <TextBlock Padding="0,5,0,5" Text="解决方案:" Grid.Row="2" Grid.Column="0" TextAlignment="Right"/>
+            <TextBox Text="{Binding Path=SolutionName}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <TextBlock Padding="0,5,0,5" Text="数据库连接串:" Grid.Row="3" Grid.Column="0" TextAlignment="Right"/>
+            <TextBox Text="{Binding Path=ConnectionString}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" />
+            <TextBlock Padding="0,5,0,5" Text="基准路径:" Grid.Row="4" Grid.Column="0" TextAlignment="Right"/>
+            <DockPanel Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
+                <Button Content="..." DockPanel.Dock="Right" Margin="5,0" TabIndex="1" />
+                <TextBox Text="{Binding Path=BaseSolutionPath}" x:Name="txtPath" IsReadOnly="False" Background="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}, Path=Background}" />
+            </DockPanel>
+            <TextBlock Padding="0,5,0,5" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Path=SolutionPath, TargetNullValue=请设置解决方案和基准路径, StringFormat=在路径{0}下创建}"/>
+        </Grid>
+    </DockPanel>
+</Page>

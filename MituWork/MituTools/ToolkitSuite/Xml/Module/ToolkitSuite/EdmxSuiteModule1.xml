@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkWebApp" DisplayName="Edmx生成工具" RegName="EdmxSuiteModule" Order="30" Author="YJC" CreateDate="2012-01-19" Description="Toolkit代码辅助生成工具" IconName="Images/openicon/png/script-code-red.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>EdmxSuit</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <ViewModel>
+        <RegionContainer>
+          <Layout>
+            <!-- <FileLayout Position="Layout" FileName="Toolbar_TwoOneContentLayout.xaml"/>-->
+            <ThreeAreaLayout BigLength="5*" SmallLength="5*" BigPosition="Bottom" IsCommandBarOnTop="true" ShowCommandBar="true" ShowSplitter="Vertical"/>
+            <!--<TwoAreaLayout FirstLength="6*" FirstPosition="Top" IsCommandBarOnTop="true" IsRoot="true" ShowCommandBar="true" ShowSplitter="true"/>-->
+          </Layout>
+          <Region>
+            <TableTypeRegion ControlName="PDGridDetail" CanDelete="false" CanGroup="false" CanInsert="false" CanUpdate="false" ItemsSource="Tables.CollectionView.CurrentItem.Fields">
+              <Fetchor>
+                <SimpleDataName>ConfigXml</SimpleDataName>
+              </Fetchor>
+              <TypeAliasName>DetailField</TypeAliasName>
+            </TableTypeRegion>
+          </Region>
+          <Region>
+            <TableTypeRegion ControlName="PDGrid" CanDelete="false" CanGroup="false" CanInsert="false" CanUpdate="false" ItemsSource="Tables">
+              <Fetchor>
+                <SimpleDataName>ConfigXml</SimpleDataName>
+              </Fetchor>
+              <TypeAliasName>Table</TypeAliasName>
+            </TableTypeRegion>
+          </Region>
+          <Region>
+            <NormalTypeRegion>
+              <Fetchor>
+                <SimpleDataName>CodeData</SimpleDataName>
+              </Fetchor>
+              <TypeAliasName>EdmxSuit</TypeAliasName>
+            </NormalTypeRegion>
+          </Region>
+          <Region IsCommandRegion="true">
+            <DataModuleToolbar/>
+          </Region>
+        </RegionContainer>
+        <Behavior>
+          <DataModuleCommand/>
+        </Behavior>
+      </ViewModel>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

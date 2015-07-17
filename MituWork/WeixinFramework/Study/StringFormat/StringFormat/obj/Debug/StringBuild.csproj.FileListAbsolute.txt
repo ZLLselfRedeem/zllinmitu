@@ -1,0 +1,7 @@
+D:\ZhouLL\trunk\Study\StringBuild\StringBuild\bin\Debug\StringBuild.exe
+D:\ZhouLL\trunk\Study\StringBuild\StringBuild\bin\Debug\StringBuild.pdb
+D:\ZhouLL\trunk\Study\StringBuild\StringBuild\obj\Debug\StringBuild.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\StringBuild\StringBuild\obj\Debug\StringBuild.exe
+D:\ZhouLL\trunk\Study\StringBuild\StringBuild\obj\Debug\StringBuild.pdb
+D:\ZhouLL\trunk\Study\StringFormat\StringBuild\obj\Debug\StringBuild.exe
+D:\ZhouLL\trunk\Study\StringFormat\StringBuild\obj\Debug\StringBuild.pdb

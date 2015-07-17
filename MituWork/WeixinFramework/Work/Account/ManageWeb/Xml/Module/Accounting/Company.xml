@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>公司</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="Accounting/Company.xml" DisableAutoDetailLink="true">
+        <tk:Override>
+          <tk:Field NickName="FullName">
+            <tk:ListDetail>
+              <tk:Link Target="_blank">~/Library/WebListXmlPage.tkx?Source=Accounting/ReportData&amp;Company=*CompanyId*</tk:Link>
+            </tk:ListDetail>
+          </tk:Field>
+        </tk:Override>
+      </tk:SingleXmlMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource>
+        <tk:Resolver>
+          <tk:RegResolver>Company</tk:RegResolver>
+        </tk:Resolver>
+        <tk:Operators>
+          <tk:SimpleListOperators/>
+        </tk:Operators>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SingleRazorPageMaker ListDisplay="Striped"/>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

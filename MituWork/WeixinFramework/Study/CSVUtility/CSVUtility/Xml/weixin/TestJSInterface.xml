@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net D:\XML配置文件\米兔云助手XML\Xml\schema\v5\WeixinMenu.xsd">
+	<tk:Menu>
+	<tk:ViewButton>
+    <tk:Caption>
+      <tk:Content>JS接口测试</tk:Content>
+    </tk:Caption>
+    <tk:Url Base="wxtest">Library/WebListXmlPage.tkx?Source=RazorTest/TestFree</tk:Url>
+	</tk:ViewButton>
+	<tk:ViewButton>
+    <tk:Caption>
+      <tk:Content>微信测试</tk:Content>
+    </tk:Caption>
+    <tk:Url Base="wxtest">weixintest/index.html</tk:Url>
+	</tk:ViewButton>
+	</tk:Menu>
+</tk:Toolkit>

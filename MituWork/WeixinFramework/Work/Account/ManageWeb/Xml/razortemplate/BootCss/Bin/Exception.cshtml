@@ -1,0 +1,98 @@
+﻿@inherits YJC.Toolkit.Razor.ToolkitTemplate
+@using System.Collections.Generic;             
+@using System.Web;
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    ErrorInfo info = ((ExceptionData)Model).Error;
+    List<ExceptionInfo> errors = ((ExceptionData)Model).Infos;
+    errors.Reverse();
+    int i = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>程序出错了！</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap-theme.min.css".AppVirutalPath())" />
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-danger">“@info.Page”出现错误。 </h2>
+        <h2><small>@info.Url</small></h2>
+        <div class="panel-group" id="exceptionDetail">
+            @foreach (ExceptionInfo error in errors)
+            {
+                @{
+                     string inClass = string.Empty;
+                     if (i == 0)
+                     {
+                        inClass = "in";
+                     }
+                     string name = "error" + (++i);
+                 }
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#exceptionDetail" href="@("#" + name)">@StringUtil.EscapeHtml(error.Message)</a>
+                        </h4>
+                    </div>
+                    <div id="@name" class="@HtmlUtil.MergeClass("panel-collapse collapse", inClass)">
+                        <div class="panel-body">
+                            <dl class="dl-horizontal">
+                                <dt>例外类型</dt>
+                                <dd>@error.Type</dd>
+                            </dl>
+                            @if (!string.IsNullOrEmpty(error.TargetSite))
+                            {
+                                <dl class="dl-horizontal">
+                                    <dt>TargetSite</dt>
+                                    <dd>@StringUtil.EscapeHtml(error.TargetSite)</dd>
+                                </dl>
+                            }
+                            <dl class="dl-horizontal">
+                                <dt>错误源</dt>
+                                <dd>@(error.ErrorSource + ".dll")</dd>
+                            </dl>
+                            @if (!string.IsNullOrEmpty(error.ErrorObj))
+                            {
+                                <dl class="dl-horizontal">
+                                    <dt>错误对象</dt>
+                                    <dd>@StringUtil.EscapeHtml(error.ErrorObj)</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>错误对象类型</dt>
+                                    <dd>@StringUtil.EscapeHtml(error.ErrorObjType)</dd>
+                                </dl>
+                            }
+                            @if (!string.IsNullOrEmpty(error.Argument))
+                            {
+                                <dl class="dl-horizontal">
+                                    <dt>函数参数</dt>
+                                    <dd>@StringUtil.EscapeHtml(error.Argument)</dd>
+                                </dl>
+                            }
+                            @if (error.OtherInfos.Count > 0) 
+                            {
+                                @foreach (KeyValuePair<string, string> pair in error.OtherInfos)
+                                {
+                                    <dl class="dl-horizontal">
+                                        <dt>@pair.Key</dt>
+                                        <dd><pre>@StringUtil.EscapeHtml(pair.Value)</pre></dd>
+                                    </dl>
+                                }
+                            }
+                            <pre>@StringUtil.EscapeHtml(error.StackTrace)</pre>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.11.1.min.js".AppVirutalPath())"></script>
+        <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+D:\ZhouLL\trunk\Study\Motorcycle\Motorcycle\bin\Debug\Motorcycle.exe
+D:\ZhouLL\trunk\Study\Motorcycle\Motorcycle\bin\Debug\Motorcycle.pdb
+D:\ZhouLL\trunk\Study\Motorcycle\Motorcycle\obj\Debug\Motorcycle.exe
+D:\ZhouLL\trunk\Study\Motorcycle\Motorcycle\obj\Debug\Motorcycle.pdb

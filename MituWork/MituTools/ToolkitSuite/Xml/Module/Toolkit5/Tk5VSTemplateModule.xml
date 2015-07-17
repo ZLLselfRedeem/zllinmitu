@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_Toolkit5" DisplayName="Visual Studio模板分发" RegName="Tk5VSTemplateModule" Order="50" Author="YJC" CreateDate="2015-01-01" Description="Toolkit5 Visual Studio模板分发工具" IconName="Images/png/135查看进度.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>Tk5VSTemplate</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <SimpleModel TypeAliasName="Tk5VSTemplate" DataName="Tk5VSTemplate" ColumnCount="2"/>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

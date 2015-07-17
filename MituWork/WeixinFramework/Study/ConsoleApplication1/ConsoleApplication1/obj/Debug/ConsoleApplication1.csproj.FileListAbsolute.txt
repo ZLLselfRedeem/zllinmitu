@@ -1,0 +1,7 @@
+D:\Rep\MyGitRep\MituWork\WeixinFramework\Study\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Study\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Study\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Study\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Study\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Study\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\WorkSpace\MyGitRep\MituWork\WeixinFramework\Study\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManageWeb", "ManageWeb", "{65F3D975-2BE1-4586-A4A9-B9F6CA83E38B}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite", "ManageWeb\WebSite\", "{3B6FE4E3-3549-4841-AE0A-A56245CBA074}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{B76E1752-F2DA-44F1-BCFC-8F641323546B}|YJC.Toolkit.Weixin.dll;{1ea16380-6512-48e3-a8b1-15cb30de67bb}|YJC.Toolkit.Web.Excel.dll;{50E9EBBC-5C2A-493E-BB93-36AAE22E673F}|YJC.Toolkit.Excel.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/WebSite"
+		Debug.AspNetCompiler.PhysicalPath = "ManageWeb\WebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WebSite"
+		Release.AspNetCompiler.PhysicalPath = "ManageWeb\WebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "29533"
+		SlnRelativePath = "ManageWeb\WebSite\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageWeb", "ManageWeb\WebSite\ManageWeb.csproj", "{74A5ADF5-1AA9-4CDB-87BE-AE27CA2BF177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageWeb.Razor", "ManageWeb\Xml\ManageWeb.Razor.csproj", "{9F6C9F2E-7BF1-4CB8-8823-669A0D77E1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YJC.Toolkit.SimpleRight", "UserManager\YJC.Toolkit.SimpleRight\YJC.Toolkit.SimpleRight.csproj", "{F7E5CCE4-91E0-4E6D-A3F4-16236975478D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YJC.Toolkit.SimpleUser.Data", "UserManager\YJC.Toolkit.SimpleUser.Data\YJC.Toolkit.SimpleUser.Data.csproj", "{A9C2D3C5-3813-4006-86D1-58F32EFCDD31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YJC.Toolkit.Weixin", "UserManager\YJC.Toolkit.Weixin\YJC.Toolkit.Weixin.csproj", "{B76E1752-F2DA-44F1-BCFC-8F641323546B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YJC.Toolkit.Weixin.Data", "UserManager\YJC.Toolkit.Weixin.Data\YJC.Toolkit.Weixin.Data.csproj", "{B76E1752-F2DA-44F1-BCFC-8F641323546F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YJC.Toolkit.Excel", "UserManager\YJC.Toolkit.Excel\YJC.Toolkit.Excel.csproj", "{50E9EBBC-5C2A-493E-BB93-36AAE22E673F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YJC.Toolkit.Web.Excel", "UserManager\YJC.Toolkit.Excel.Web\YJC.Toolkit.Web.Excel.csproj", "{1EA16380-6512-48E3-A8B1-15CB30DE67BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B6FE4E3-3549-4841-AE0A-A56245CBA074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6FE4E3-3549-4841-AE0A-A56245CBA074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6FE4E3-3549-4841-AE0A-A56245CBA074}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6FE4E3-3549-4841-AE0A-A56245CBA074}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{74A5ADF5-1AA9-4CDB-87BE-AE27CA2BF177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A5ADF5-1AA9-4CDB-87BE-AE27CA2BF177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A5ADF5-1AA9-4CDB-87BE-AE27CA2BF177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A5ADF5-1AA9-4CDB-87BE-AE27CA2BF177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6C9F2E-7BF1-4CB8-8823-669A0D77E1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6C9F2E-7BF1-4CB8-8823-669A0D77E1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E5CCE4-91E0-4E6D-A3F4-16236975478D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E5CCE4-91E0-4E6D-A3F4-16236975478D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E5CCE4-91E0-4E6D-A3F4-16236975478D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E5CCE4-91E0-4E6D-A3F4-16236975478D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C2D3C5-3813-4006-86D1-58F32EFCDD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C2D3C5-3813-4006-86D1-58F32EFCDD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C2D3C5-3813-4006-86D1-58F32EFCDD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C2D3C5-3813-4006-86D1-58F32EFCDD31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76E1752-F2DA-44F1-BCFC-8F641323546F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E9EBBC-5C2A-493E-BB93-36AAE22E673F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E9EBBC-5C2A-493E-BB93-36AAE22E673F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E9EBBC-5C2A-493E-BB93-36AAE22E673F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E9EBBC-5C2A-493E-BB93-36AAE22E673F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA16380-6512-48E3-A8B1-15CB30DE67BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA16380-6512-48E3-A8B1-15CB30DE67BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA16380-6512-48E3-A8B1-15CB30DE67BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA16380-6512-48E3-A8B1-15CB30DE67BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B6FE4E3-3549-4841-AE0A-A56245CBA074} = {65F3D975-2BE1-4586-A4A9-B9F6CA83E38B}
+		{74A5ADF5-1AA9-4CDB-87BE-AE27CA2BF177} = {65F3D975-2BE1-4586-A4A9-B9F6CA83E38B}
+		{9F6C9F2E-7BF1-4CB8-8823-669A0D77E1A8} = {65F3D975-2BE1-4586-A4A9-B9F6CA83E38B}
+	EndGlobalSection
+EndGlobal

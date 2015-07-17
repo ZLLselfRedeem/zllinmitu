@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ReviewStudy\ReviewStudy\obj\Debug\ReviewStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ReviewStudy\ReviewStudy\bin\Debug\ReviewStudy.exe
+D:\ZhouLL\trunk\Study\ReviewStudy\ReviewStudy\bin\Debug\ReviewStudy.pdb
+D:\ZhouLL\trunk\Study\ReviewStudy\ReviewStudy\obj\Debug\ReviewStudy.exe
+D:\ZhouLL\trunk\Study\ReviewStudy\ReviewStudy\obj\Debug\ReviewStudy.pdb

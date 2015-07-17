@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\suite\RegSchemaType.xsd">
+  <RegElement ObjectType="MarcoConfigItem" SchemaType="MarcoConfigItem" Namespace="YJC.Toolkit.Data"/>
+  <RegElement ObjectType="MultiLanguageText" SchemaType="MultiLanguageType" Namespace="YJC.Toolkit.Data"/>
+  <RegElement ObjectType="TkDataType" SchemaType="TkDataType" Namespace="YJC.Toolkit.MetaData"/>
+  <RegElement ObjectType="PageStyle" SchemaType="PageStyleType" Namespace="YJC.Toolkit.MetaData"/>
+  <RegElement ObjectType="FilePathPosition" SchemaType="FilePosition" Namespace="YJC.Toolkit.Sys"/>
+  <RegElement ObjectType="FakeDeleteInfo" SchemaType="FakeDeleteType" Namespace="YJC.Toolkit.Data"/>
+  <RegElement ObjectType="FieldLayout" SchemaType="FieldLayoutType" Namespace="YJC.Toolkit.MetaData"/>
+  <RegElement ObjectType="ControlType" SchemaType="ControlType" Namespace="YJC.Toolkit.MetaData"/>
+  <RegElement ObjectType="PageStyle" SchemaType="DefaultShowType" Namespace="YJC.Toolkit.MetaData"/>
+</Toolkit>

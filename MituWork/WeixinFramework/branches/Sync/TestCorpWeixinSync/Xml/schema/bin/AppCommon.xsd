@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (Baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:include schemaLocation="CommonType.xsd"/>
+  <xs:attributeGroup name="AppAttrGroup">
+    <xs:attribute name="Path" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation>整个项目的基本路径，即SolutionPath</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AppPath" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>程序运行的路径，以Path为基准的相对路基，即入口点(如exe)所在的目录。</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PlugInPath" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>插件的路径，以App为基准的相对路径，默认为Modules</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CommandTimeout" type="xs:unsignedInt" use="required">
+      <xs:annotation>
+        <xs:documentation>DbCommand的超时时间</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Culture" type="xs:language" use="required">
+      <xs:annotation>
+        <xs:documentation>系统的默认语言</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CacheTime" type="xs:time" use="required">
+      <xs:annotation>
+        <xs:documentation>缓存的超时时间</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="UseCache" type="xs:boolean" use="required">
+      <xs:annotation>
+        <xs:documentation>是否启用缓存，由于某些缓存依赖对变化可能不敏感，因此建议开发期间可以将其配置为false，运行时配置为true</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:complexType name="DebugType">
+    <xs:attribute name="Debug" type="xs:boolean" use="required">
+      <xs:annotation>
+        <xs:documentation>true时，会输出各种调试信息文件，false时，这些文件不在输出</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ShowException" type="xs:boolean" use="required">
+      <xs:annotation>
+        <xs:documentation>true时，未处理的Exception会显示出详细信息。false时，页面显示内部错误并给出错误编号</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:simpleType name="_tk_RegDbProvider">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="SQL Server"/>
+      <xs:enumeration value="OleDb"/>
+      <xs:enumeration value="Odbc"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_DbProviderType">
+    <xs:union memberTypes="xs:Name tk:_tk_RegDbProvider"/>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_RegSqlProvider">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Access"/>
+      <xs:enumeration value="MySql"/>
+      <xs:enumeration value="Oracle"/>
+      <xs:enumeration value="SQL Server"/>
+      <xs:enumeration value="SQL Server2005"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_SqlProviderType">
+    <xs:union memberTypes="xs:Name tk:_tk_RegSqlProvider"/>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_KnownProviderName">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="System.Data.SqlClient"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_ProviderName">
+    <xs:union memberTypes="xs:string tk:_tk_KnownProviderName"/>
+  </xs:simpleType>
+  <xs:element name="Database">
+    <xs:annotation>
+      <xs:documentation>单个数据库连接配置</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="Name" type="xs:ID" use="required">
+        <xs:annotation>
+          <xs:documentation>Database的名称</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="Default" type="xs:boolean" use="required">
+        <xs:annotation>
+          <xs:documentation>标记是否是缺省的数据库，只能有一个Database标记为true</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="DbProvider" type="tk:_tk_DbProviderType" use="required">
+        <xs:annotation>
+          <xs:documentation>DbProvider的注册名</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="SqlProvider" type="tk:_tk_SqlProviderType" use="required">
+        <xs:annotation>
+          <xs:documentation>SqlProvider的注册名</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="IdStep" type="xs:unsignedInt">
+        <xs:annotation>
+          <xs:documentation>Id的步长。在Sql Server等通过存储过程获取Id的数据库中，大步长对效率提升有帮助，但容易产生断号。对Oracle等有内置获取Id的数据库，该属性无效。</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="ConnectionString" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation>Encode为true时，为加密串。false时，直接是连接串，不需要加密</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="Encode" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>标记连接串是否需要加密</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="ProviderName" type="tk:_tk_ProviderName">
+        <xs:annotation>
+          <xs:documentation>配置实体框架的ProviderName，配置此属性后，将在对应的App.Config中生成ConnectionString，实体框架的DbContext将可以使用</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Databases">
+    <xs:annotation>
+      <xs:documentation>数据库连接配置</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tk:Database" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SecretKey">
+    <xs:annotation>
+      <xs:documentation>默认加密的参数配置</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="IV" type="xs:string" use="required"/>
+      <xs:attribute name="Key" type="xs:string" use="required"/>
+      <xs:attribute name="Mode" type="tk:_tk_CipherMode"/>
+      <xs:attribute name="Padding" type="tk:_tk_PaddingMode"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="_tk_CipherMode">
+    <xs:annotation>
+      <xs:documentation>加密的块密码模式</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="CBC"/>
+      <xs:enumeration value="ECB"/>
+      <xs:enumeration value="OFB"/>
+      <xs:enumeration value="CFB"/>
+      <xs:enumeration value="CTS"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="_tk_PaddingMode">
+    <xs:annotation>
+      <xs:documentation>在消息数据块比加密操作所需的全部字节数短时应用的填充类型</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="PKCS7"/>
+      <xs:enumeration value="Zeros"/>
+      <xs:enumeration value="ANSIX923"/>
+      <xs:enumeration value="ISO10126"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Hosts">
+    <xs:annotation>
+      <xs:documentation>配置绝对路径</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Host" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>一个绝对路径的配置</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:attribute name="Key" type="xs:Name" use="required">
+              <xs:annotation>
+                <xs:documentation>名称，可在程序中通过此获取配置值</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="Value" type="xs:anyURI" use="required">
+              <xs:annotation>
+                <xs:documentation>绝对路径的值</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

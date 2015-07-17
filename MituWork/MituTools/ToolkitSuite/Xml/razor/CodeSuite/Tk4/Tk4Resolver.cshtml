@@ -1,0 +1,119 @@
+﻿@using System.Linq;
+@using Toolkit.Suite
+@using Toolkit.Suite.Utility
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@{
+    GeneratorItemEventArgs e = @Model as GeneratorItemEventArgs;
+    TableInfo table = e.Table;
+    string normalName = StringUtil.GetSignName(table.TableName);
+}
+using System;
+using System.Data;
+using YJC.Toolkit.Data;
+using YJC.Toolkit.Sys;
+
+namespace @e.Setting.Namespace
+{
+    /// <summary>
+    ///  @(table.TableDesc)(@table.TableName)的数据访问层类
+    /// </summary>
+    [Resolver(REG_NAME,
+        Description = "@(table.TableDesc)(@table.RegName)的数据访问层类",
+        Author = "@(e.Setting.Author)", CreateDate = "@DateTime.Today.ToString("yyyy-MM-dd")")]
+    public class @(normalName)Resolver : Tk4TableResolver
+    {
+        internal const string REG_NAME = "@(normalName)";
+        internal const string DATAXML = "@(e.Setting.ProjectName)/@(normalName).xml";
+
+        /// <summary>
+        /// 建构函数，设置附着的Xml文件。
+        /// </summary>
+        /// <param name="context">数据库连接上下文</param>
+        /// <param name="source">附着的数据源</param>
+        public @(normalName)Resolver(DbContext context, IDataSource source)
+            : base(DATAXML, context, source)
+        {
+            AutoUpdating = false;
+        }
+
+        /// <summary>
+        /// 在表发生新建、修改和删除的时候触动。注意，千万不要删除base.OnUpdatingRow(e);
+        /// UpdatingRow事件附着在基类该函数中。
+        /// </summary>
+        /// <param name="e">事件参数</param>
+        protected override void OnUpdatingRow(UpdatingEventArgs e)
+        {
+            base.OnUpdatingRow(e);
+
+@{
+    int keyCount = (from field in table.Fields where field.IsKey select field).Count();
+    string key = string.Empty;
+    if (keyCount == 1)
+        key = (from field in table.Fields where field.IsKey select field).First().FieldName;
+    FieldInfo createIdField = (from field in table.Fields where field.FieldName.EndsWith("CREATE_ID") select field).FirstOrDefault();
+    FieldInfo createDateField = (from field in table.Fields where field.FieldName.EndsWith("CREATE_DATE") select field).FirstOrDefault();
+    FieldInfo updateIdField = (from field in table.Fields where field.FieldName.EndsWith("UPDATE_ID") select field).FirstOrDefault();
+    FieldInfo updateDateField = (from field in table.Fields where field.FieldName.EndsWith("UPDATE_DATE") select field).FirstOrDefault();
+    
+}
+            switch (e.Status)
+            {
+                case UpdateKind.Insert:
+                @{
+                    if (!string.IsNullOrEmpty(key)) 
+                    {
+                    @:e.Row["@key"] = Context.GetUniId(TableName);
+                    }
+                    if (createIdField != null && updateIdField != null)
+                    {
+                    @:e.Row["@createIdField.FieldName"] = e.Row["@updateIdField.FieldName"] = GlobalVariable.UserId;
+                    }
+                    else if (createIdField != null)
+                    {
+                    @:e.Row["@createIdField.FieldName"] = GlobalVariable.UserId;
+                    }
+                    else if (updateIdField != null)
+                    {
+                    @:e.Row["@updateIdField.FieldName"] = GlobalVariable.UserId;
+                    }
+                    if (createDateField != null && updateDateField != null)
+                    {
+                    @:e.Row["@createDateField.FieldName"] = e.Row["@updateDateField.FieldName"] = DateTime.Now;
+                    }
+                    else if (createDateField != null)
+                    {
+                    @:e.Row["@createDateField.FieldName"] = DateTime.Now;
+                    }
+                    else if (updateDateField != null)
+                    {
+                    @:e.Row["@updateDateField.FieldName"] = DateTime.Now;
+                    }
+                }
+                    break;
+                case UpdateKind.Update:
+                @{
+                    if (updateIdField != null)
+                    {
+                    @:e.Row["@updateIdField.FieldName"] = GlobalVariable.UserId;
+                    }
+                    if (updateDateField != null)
+                    {
+                    @:e.Row["@updateDateField.FieldName"] = DateTime.Now;
+                    }                  
+               }
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 添加自定义的约束。注意，千万不要删除base.AddConstraints(status);
+        /// 程序根据Xml的信息，已经自动加入了非空、数值类型、日期类型、字符串长度以及EasySearch的约束
+        /// </summary>
+        /// <param name="style">标记是新建/修改的状态</param>
+        protected override void SetConstraints(PageStyle style)
+        {
+            base.SetConstraints(style);
+        }
+    }
+}

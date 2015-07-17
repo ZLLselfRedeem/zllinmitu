@@ -1,0 +1,19 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssCustomTemplate
+@using System.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    ViewBag.Title = "Test";
+}
+@section Header {
+    <div class="m20">
+        @BootcssUtil.Button("Test1", "hello", BootcssButton.Primary, true)
+        @BootcssUtil.Button("Hello", "world", BootcssButton.Success, true)
+    </div>
+}
+@section Footer {
+    @RenderLocalTextFile("weinxin.txt")
+}
+@section Main {
+    <h1>Hello, world</h1>
+}

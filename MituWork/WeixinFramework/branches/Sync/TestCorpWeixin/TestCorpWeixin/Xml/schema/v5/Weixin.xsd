@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by cjy (baison) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tk="http://www.qdocuments.net" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:include schemaLocation="WeixinItems/WeixinMessage.xsd"/>
+  <xs:element name="Toolkit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Weixin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice>
+                <xs:element name="Normal">
+                  <xs:annotation>
+                    <xs:documentation>微信公众号配置</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:group ref="tk:__tk_WeGroup"/>
+                    <xs:attribute name="Secret" type="xs:string" use="required">
+                      <xs:annotation>
+                        <xs:documentation>微信公众号分配的AppSecret</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="Token" type="xs:string" use="required">
+                      <xs:annotation>
+                        <xs:documentation>微信公众号设置的Token</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="OpenId" type="xs:string" use="required">
+                      <xs:annotation>
+                        <xs:documentation>微信公众号的OpenId</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="CorpApp" maxOccurs="unbounded">
+                  <xs:annotation>
+                    <xs:documentation>微信企业号配置</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:group ref="tk:__tk_WeGroup"/>
+                    <xs:attribute name="AppId" type="xs:unsignedInt" use="required">
+                      <xs:annotation>
+                        <xs:documentation>应用ID，在应用中心中，可以找到对应的ID</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="AppName" type="xs:string" use="required">
+                      <xs:annotation>
+                        <xs:documentation>应用名称或者描述</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="Token" type="xs:string" use="required">
+                      <xs:annotation>
+                        <xs:documentation>回调模式下配置的Token</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="EncodingAESKey" use="required">
+                      <xs:annotation>
+                        <xs:documentation>回调模式下配置的消息体加密</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:length value="43" fixed="true"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:attribute>
+                    <xs:attribute name="Secret" type="xs:string" use="required">
+                      <xs:annotation>
+                        <xs:documentation>开发者凭据，在权限管理组中寻找</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+              <xs:element ref="tk:MessageLog" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>消息日志</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="AppId" type="xs:string" use="required">
+              <xs:annotation>
+                <xs:documentation>微信公众号分配的AppId或者企业CorpId，微信企业号的设置中可以找到</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="DefaultSecret" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>仅在企业号模式下，需要配置用于用户管理。如果不配置，将以第一个企业App的Secret为准</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" fixed="5.0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="__tk_WeGroup">
+    <xs:sequence>
+      <xs:element ref="tk:Menu"/>
+      <xs:element ref="tk:DefaultMessage"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="Menu">
+    <xs:annotation>
+      <xs:documentation>微信菜单配置</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="FileName" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultMessage">
+    <xs:annotation>
+      <xs:documentation>缺省的微信消息</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Global" type="tk:ReplyMessageType">
+          <xs:annotation>
+            <xs:documentation>全局回复的消息，所有消息匹配不到时，回复该消息</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="TypeDefault" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>某类型消息如果没有匹配上，就以该配置的消息回复。该配置优先级高于Global配置。</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tk:ReplyMessageType">
+                <xs:attribute name="MessageType" type="tk:MessageType" use="required">
+                  <xs:annotation>
+                    <xs:documentation>接收消息的类型</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MessageLog">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="DbMessageLog" type="tk:EmptyType">
+          <xs:annotation>
+            <xs:documentation>缺省向数据库存入接收的消息</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="FileMessageLog">
+          <xs:annotation>
+            <xs:documentation>把接收的消息存成文件</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:attribute name="BasePath" type="xs:anyURI"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:complexType name="MarcoConfigItem">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="NeedParse" type="xs:boolean" default="false"/>
+        <xs:attribute name="SQLInject" type="xs:boolean" default="true"/>
+        <xs:attribute name="EmptyMarco" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="XmlDataType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="binary"/>
+      <xs:enumeration value="Date"/>
+      <xs:enumeration value="Decimal"/>
+      <xs:enumeration value="double"/>
+      <xs:enumeration value="text"/>
+      <xs:enumeration value="long"/>
+      <xs:enumeration value="string"/>
+      <xs:enumeration value="Guid"/>
+      <xs:enumeration value="bit"/>
+      <xs:enumeration value="short"/>
+      <xs:enumeration value="xml"/>
+      <xs:enumeration value="money"/>
+      <xs:enumeration value="DateTime"/>
+      <xs:enumeration value="blob"/>
+      <xs:enumeration value="byte"/>
+      <xs:enumeration value="int"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="RegItem">
+    <xs:attribute name="RegName" type="xs:ID" use="required"/>
+    <xs:attribute name="Description" type="xs:string"/>
+    <xs:attribute name="Author" type="xs:Name"/>
+    <xs:attribute name="CreateDate" type="xs:date"/>
+  </xs:attributeGroup>
+  <xs:complexType name="FieldItem">
+    <xs:simpleContent>
+      <xs:extension base="xs:Name">
+        <xs:attribute name="DataType" type="XmlDataType" default="string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ActiveFieldItem">
+    <xs:simpleContent>
+      <xs:extension base="FieldItem">
+        <xs:attribute name="Value" type="xs:Name"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ExtensionType">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeType">
+    <xs:attribute name="Span" type="xs:time"/>
+    <xs:attribute name="SystemConfiged" type="xs:boolean"/>
+  </xs:complexType>
+  <xs:simpleType name="FilePosition">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Solution"/>
+      <xs:enumeration value="Application"/>
+      <xs:enumeration value="Xml"/>
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="AbsolutePath"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PageStyleType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Insert"/>
+      <xs:enumeration value="Update"/>
+      <xs:enumeration value="Detail"/>
+      <xs:enumeration value="List"/>
+      <xs:enumeration value="Custom"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

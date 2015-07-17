@@ -1,0 +1,147 @@
+﻿@inherits YJC.Toolkit.Razor.ToolkitTemplate
+@using YJC.Toolkit.Sys;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>申报期查询</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" href="../toolkitjs/v5/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/font-awesome.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/style.css?v=1".AppVirutalPath())" />
+</head>
+<body id="WebInsertXmlPage" class="tk-dataPage" data-webpath="/WebSite/">
+    <div class="container">
+        <div id="metaData" class="hide" data-toolbar="false" data-option="false"></div>
+        @RenderLocalPartial("EditTitle.cshtml", null)
+<br />
+<br />
+<h3 class="text-center">2015年各月纳税申报、税款缴纳期限</h3>
+<br />
+
+<div class="table-responsive" style="border-top:0;">
+  <table class="table table-bordered table-hover">
+    <tr class="active">
+    	<td style="vertical-align: middle">月份</td>
+    	<td style="vertical-align: middle">营业税、城建税及附加、<br />印花税、资源税、水利基金、<br />社会保险费和残保金等，<br />核定征收企所税和个所税</td>
+    	<td style="vertical-align: middle">查帐企所税预缴、<br />个体工商业户生<br />产经营所得个所税</td>
+    	<td style="vertical-align: middle">房产税、<br >土地使用税</td>
+    	<td style="vertical-align: middle">土地增值税</td>
+    	<td style="vertical-align: middle">车船税</td>
+    </tr>
+    <tr>
+    	<td>1月</td>
+    	<td>1月19日</td>
+    	<td>1月19日</td>
+    	<td>1月19日</td>
+    	<td>1月19日</td>
+    	<td>1月19日</td>
+    </tr>
+    <tr>
+    	<td>2月</td>
+    	<td>2月15日</td>
+    	<td></td>
+    	<td>2月15日</td>
+    	<td>2月15日</td>
+    	<td>2月15日</td>
+    </tr>
+    <tr>
+    	<td>3月</td>
+    	<td>3月16日</td>
+    	<td class="warning">个所税年报3月31日</td>
+    	<td>3月16日</td>
+    	<td>3月16日</td>
+    	<td>3月16日</td>
+    </tr>
+    <tr>
+    	<td>4月</td>
+    	<td>4月20日</td>
+    	<td>4月20日</td>
+    	<td>4月20日</td>
+    	<td>4月20日</td>
+    	<td>4月20日</td>
+    </tr>
+    <tr>
+    	<td>5月</td>
+    	<td>5月18日</td>
+    	<td class="warning">企所税年报6月1日</td>
+    	<td>5月18日</td>
+    	<td>5月18日</td>
+    	<td>5月18日</td>
+    </tr>
+    <tr>
+    	<td>6月</td>
+    	<td>6月15日</td>
+    	<td></td>
+    	<td>6月15日</td>
+    	<td>6月15日</td>
+    	<td>6月15日</td>
+    </tr>
+    <tr>
+    	<td>7月</td>
+    	<td>7月15日</td>
+    	<td>7月15日</td>
+    	<td>7月15日</td>
+    	<td>7月15日</td>
+    	<td>7月15日</td>
+    </tr>
+    <tr>
+    	<td>8月</td>
+    	<td>8月17日</td>
+    	<td></td>
+    	<td>8月17日</td>
+    	<td>8月17日</td>
+    	<td>8月17日</td>
+    </tr>
+    <tr>
+    	<td>9月</td>
+    	<td>9月15日</td>
+    	<td></td>
+    	<td>9月15日</td>
+    	<td>9月15日</td>
+    	<td>9月15日</td>
+    </tr>
+    <tr>
+    	<td>10月</td>
+    	<td>10月22日</td>
+    	<td>10月22日</td>
+    	<td>10月22日</td>
+    	<td>10月22日</td>
+    	<td>10月22日</td>
+    </tr>
+    <tr>
+    	<td>11月</td>
+    	<td>11月16日</td>
+    	<td></td>
+    	<td>11月16日</td>
+    	<td>11月16日</td>
+    	<td>11月16日</td>
+    </tr>
+    <tr>
+    	<td>12月</td>
+    	<td>12月15日</td>
+    	<td></td>
+    	<td>12月15日</td>
+    	<td>12月15日</td>
+    	<td>12月15日</td>
+    </tr>
+    <tr class="info">
+    	<td style="vertical-align: middle">备注</td>
+    	<td></td>
+    	<td></td>
+    	<td>除房地产开发用地、<br />“双定户”等允许按月<br />申报缴纳情形外，<br />其余正常申报仍在<br />每年三、九月进行。</td>
+    	<td>房地产企业采用先预<br />缴后清算方式的，适用<br />上述期限，对按税务机关<br />规定期限清算申报的除外。<br />对其他应税事项<br />仍按有关规定办理</td>
+    	<td>除了按规定由保<br />险机构代收代缴车<br />船税以外</td>
+    </tr>
+  </table>
+</div>
+
+    <br />
+    <br />
+    </div>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.11.1.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+</body>
+</html>

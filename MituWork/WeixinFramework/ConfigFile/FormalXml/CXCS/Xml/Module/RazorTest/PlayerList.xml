@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>Good</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="Tennis/Player.xml">
+        <tk:TableDesc>
+          <tk:Content>浮点数</tk:Content>
+        </tk:TableDesc>
+        <tk:Add>
+          <tk:AddField DataType="string" FieldName="PL_TEST" Kind="Virtual" Order="92" Control="Text">
+            <tk:DisplayName>
+              <tk:Content>TEST</tk:Content>
+            </tk:DisplayName>
+            <tk:Layout UnitNum="1" Layout="PerUnit"/>
+          </tk:AddField>
+        </tk:Add>
+        <tk:Except>
+          <tk:DelField NickName="Technique"/>
+          <tk:DelField NickName="Ident"/>
+          <tk:DelField NickName="PrevPicId"/>
+        </tk:Except>
+      </tk:SingleXmlMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:DbListSource OrderBy="ORDER BY PL_VERIFY_FLAG desc, PL_CNAME">
+        <tk:Resolver>
+          <tk:RegResolver>Player</tk:RegResolver>
+        </tk:Resolver>
+        <tk:FilterSql>PL_VERIFY_FLAG > 0</tk:FilterSql>
+      </tk:DbListSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:ListRazorPageMaker Template="BootcssList" RazorFile="RazorTest/PlayerList.cshtml"/>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

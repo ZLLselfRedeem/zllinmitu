@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>办税流程</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Document.xml"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource UseMetaData="false" DisablePage="Insert Update Delete">
+        <tk:Resolver>
+          <tk:RegResolver>TaxDocument</tk:RegResolver>
+        </tk:Resolver>
+        <tk:FilterSql>DOC_CATELOG='02'</tk:FilterSql>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:CompositePageMaker>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="List"/>
+          <tk:ListRazorPageMaker Template="BootcssList" RazorFile="CXCS/BanShuiList.cshtml">
+            <tk:RazorData>
+              <tk:BootcssListData ShowBorder="false" PageNumberCount="5">
+                <tk:RazorField NickName="DocId" ContentType="Text"><![CDATA[<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 lv-vam text-left f20 ph3"><a class="noul" href="#">●</a></div>]]></tk:RazorField>
+                <tk:ListField NickName="DocId" Col="1" Class="text-left"/>
+                <tk:ListField NickName="Title" Col="10" Class="pv1"/>
+              </tk:BootcssListData>
+            </tk:RazorData>
+            <tk:Script>usercss/docList.css</tk:Script>
+            <tk:Script>usercss/noHeadList.css</tk:Script>
+          </tk:ListRazorPageMaker>
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="Detail"/>
+          <tk:FreeRazorPageMaker RazorFile="Razor/CXCS/DocumentDetail.cshtml"/>
+        </tk:Item>
+      </tk:CompositePageMaker>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

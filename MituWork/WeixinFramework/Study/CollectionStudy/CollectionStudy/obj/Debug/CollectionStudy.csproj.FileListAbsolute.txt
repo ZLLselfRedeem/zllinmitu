@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\CollectionStudy\CollectionStudy\bin\Debug\CollectionStudy.exe
+D:\ZhouLL\trunk\Study\CollectionStudy\CollectionStudy\bin\Debug\CollectionStudy.pdb
+D:\ZhouLL\trunk\Study\CollectionStudy\CollectionStudy\obj\Debug\CollectionStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\CollectionStudy\CollectionStudy\obj\Debug\CollectionStudy.exe
+D:\ZhouLL\trunk\Study\CollectionStudy\CollectionStudy\obj\Debug\CollectionStudy.pdb

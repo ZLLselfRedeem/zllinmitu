@@ -1,0 +1,66 @@
+﻿@inherits YJC.Toolkit.Razor.ToolkitTemplate
+@using System.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    DataSet dataSet = (DataSet)Model;
+    DataRow row = dataSet.GetRow("CS_DOCUMENT");
+    string title = row.GetString("Title");
+    DataTable attachTable = dataSet.Tables["CS_DOC_ATTACHMENT"];
+    string context = string.Empty;
+    if (!string.IsNullOrEmpty(row.GetString("SourceId")))
+    {
+        context = "Tools";
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("usercss/document.css?v=2".AppVirutalPath())" />
+</head>
+<body data-webPath="@HtmlUtil.AppVirtualPath">
+    <div class="container" name="_top" id="_top">
+        <div id="metaData" class="Hide" data-toolbar="true" data-option="true" data-title="@StringUtil.EscapeHtmlAttribute(title)" data-desc="@StringUtil.EscapeHtmlAttribute(row.GetString("PrevContent"))" data-link="@("~/doc.vp?" + row.GetString("DocId"))" data-img="~/pic/sys/shui.jpg"></div>
+        @if (!string.IsNullOrEmpty(row.GetString("OrginOrg")))
+        {
+            <h1>@row.GetString("OrginOrg")<br />@title</h1>
+        }
+        else
+        {
+            <h1>@title</h1>
+        }
+        </h1>
+        @if (!string.IsNullOrEmpty(row.GetString("Number")))
+        {
+            <p class="text-center">@row.GetString("Number")</p>
+        }
+        <div>
+            @row.GetString("Content")
+        </div>
+        @if (attachTable != null && attachTable.Rows.Count > 0)
+        {
+            <ul class="list-group">
+                @foreach (DataRow attachRow in attachTable.Rows)
+                {
+                    <li class="list-group-item">
+                        <a target="_blank" href="@HtmlUtil.GetDownloadUrl(attachRow.GetString("FileId"), true, false, context)">@attachRow.GetString("FileName")</a>
+                    </li>
+                }
+            </ul>
+        }
+        <div class="text-right mt10 mb10 f16">
+            <a href="#_top">返回顶部</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.7.2.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/toolkit.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.page.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/toolkit/coreT/toolkit.weixin.js?v=4".AppVirutalPath())"></script>
+</body>
+</html>

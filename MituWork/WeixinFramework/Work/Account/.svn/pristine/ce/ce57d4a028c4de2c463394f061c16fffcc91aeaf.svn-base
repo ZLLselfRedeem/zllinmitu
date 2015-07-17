@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net file:///D:/WorkSpace/MyGitRep/MituWork/WeixinFramework/Work/Account/ManageWeb/Xml/schema/v5/Module.xsd">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>公司</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+    <tk:SingleXmlMetaData DataXml="Accounting/Company.xml"/>
+  </tk:MetaData>
+		<tk:Source>
+		<tk:SingleDbSource>
+    <tk:Resolver>
+      <tk:RegResolver>Company</tk:RegResolver>
+    </tk:Resolver>
+    <tk:Operators>
+      <tk:StandardOperators>
+        <tk:Right>
+        <tk:EmptyOperateRight/>
+        </tk:Right>
+        <tk:InsertOperator/>
+        <tk:UpdateOperator/>
+        <tk:DeleteOperator/>
+      </tk:StandardOperators>
+    </tk:Operators>
+  </tk:SingleDbSource>
+		</tk:Source>
+		<tk:PageMaker>
+    <tk:SingleRazorPageMaker ListDisplay="Striped">
+      <tk:Item Style="List">
+      <tk:RazorData>
+        <tk:NormalListData OperatorWidth="100" SearchCheckBox="Like"/>
+      </tk:RazorData>
+      </tk:Item>
+    </tk:SingleRazorPageMaker>
+  </tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>

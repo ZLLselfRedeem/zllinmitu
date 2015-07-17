@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ThreadsCreating\ThreadsCreating\bin\Debug\ThreadsCreating.exe
+D:\ZhouLL\trunk\Study\ThreadsCreating\ThreadsCreating\bin\Debug\ThreadsCreating.pdb
+D:\ZhouLL\trunk\Study\ThreadsCreating\ThreadsCreating\obj\Debug\ThreadsCreating.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ThreadsCreating\ThreadsCreating\obj\Debug\ThreadsCreating.exe
+D:\ZhouLL\trunk\Study\ThreadsCreating\ThreadsCreating\obj\Debug\ThreadsCreating.pdb

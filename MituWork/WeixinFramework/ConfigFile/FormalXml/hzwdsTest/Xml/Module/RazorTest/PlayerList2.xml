@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>Good</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="Tennis/Player.xml">
+        <tk:Override>
+          <tk:Field NickName="Gender">
+            <tk:CodeTable RegName="GenderType2" />
+            <tk:ListDetail ListWidth="50" />
+          </tk:Field>
+        </tk:Override>
+      </tk:SingleXmlMetaData>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:DbListSource OrderBy="ORDER BY PL_CNAME">
+        <tk:Resolver>
+          <tk:RegResolver>Player</tk:RegResolver>
+        </tk:Resolver>
+        <tk:FilterSql>PL_VERIFY_FLAG > 0</tk:FilterSql>
+        <tk:Operators>
+          <tk:SimpleListOperators IsDialog="true"/>
+        </tk:Operators>
+      </tk:DbListSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:ListRazorPageMaker Template="NormalList">
+        <tk:RazorData>
+          <tk:NormalListData OperatorPosition="Left" ShowListHeader="true" PageNumberCount="10" Display="Striped"/>
+        </tk:RazorData>
+      </tk:ListRazorPageMaker>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkUtility" DisplayName="备份工程工具" RegName="BackupSuiteModule" Order="10" Author="YJC" CreateDate="2012-01-17" Description="备份工程工具" IconName="Images/png/125备份.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>BackupSuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <SimpleModel TypeAliasName="BackupSuite" DataName="BackupData"/>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

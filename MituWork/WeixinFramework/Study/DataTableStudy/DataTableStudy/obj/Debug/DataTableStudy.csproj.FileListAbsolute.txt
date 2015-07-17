@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\DataTableStudy\DataTableStudy\bin\Debug\DataTableStudy.exe
+D:\ZhouLL\trunk\Study\DataTableStudy\DataTableStudy\bin\Debug\DataTableStudy.pdb
+D:\ZhouLL\trunk\Study\DataTableStudy\DataTableStudy\obj\Debug\DataTableStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\DataTableStudy\DataTableStudy\obj\Debug\DataTableStudy.exe
+D:\ZhouLL\trunk\Study\DataTableStudy\DataTableStudy\obj\Debug\DataTableStudy.pdb

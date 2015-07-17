@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net ../../schema/v5/AccountDataXml.xsd">
+  <tk:Table IdName="CashFlowStatement">
+    <tk:TableDesc>
+      <tk:Content>现金流量表</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>经营活动现金流量</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>一、经营活动产生的现金流量：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="10">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="1">
+      <tk:FieldName>商品劳务收到的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>销售商品、提供劳务收到的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="20">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="3">
+      <tk:FieldName>收到的税费返还</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>收到的税费返还</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="30">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="8">
+      <tk:FieldName>经营活动相关现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>收到的其他与经营活动有关的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="40">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="10" OrderNumber="9" Style="Sum">
+      <tk:FieldName>经营现金流入小计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金流入小计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="50">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="10" Indent="2">
+      <tk:FieldName>商品劳务支付现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>购买商品、接受劳务支付的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="60">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="12">
+      <tk:FieldName>支付职工相关现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>支付给职工以及为职工支付的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="70">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="13">
+      <tk:FieldName>支付的税费</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>支付的各项税费</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="80">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="18">
+      <tk:FieldName>支付经营现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>支付的其他与经营活动有关的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="90">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="10" OrderNumber="20">
+      <tk:FieldName>经营现金流出小计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金流出小计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="100">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="21" Style="Sum">
+      <tk:FieldName>现金流量净额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>经营活动产生的现金流量净额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="110">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>投资活动现金流量</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>二、投资活动产生的现金流量：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="120">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="22">
+      <tk:FieldName>收回投资所收到的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>收回投资所收到的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="130">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="23">
+      <tk:FieldName>投资收益所得现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>取得投资收益所收到的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="140">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="25">
+      <tk:FieldName>收回资产所得现金净额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>处理固定资产、无形资产和其他长期资产所收回的现金净额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="150">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="28">
+      <tk:FieldName>投资活动收入的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>收到的其他与投资活动有关的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="160">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="10" OrderNumber="29" Style="Sum">
+      <tk:FieldName>投资现金流入小计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金流入小计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="170">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="30">
+      <tk:FieldName>购买资产的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>购建固定资产、无形资产和其他长期资产所支付的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="180">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="31">
+      <tk:FieldName>投资所支付的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>投资所支付的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="190">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="35">
+      <tk:FieldName>投资现金支出</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>支付的其他与投资活动相关的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="200">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="10" OrderNumber="36" Style="Sum">
+      <tk:FieldName>投资现金流出小计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金流出小计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="210">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="37" Style="Sum">
+      <tk:FieldName>投资活动现金流量净额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>投资活动产生的现金流量净额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="220">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>筹资活动现金流量</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>三、筹资活动产生的现金流量：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="230">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="38">
+      <tk:FieldName>吸收投资所收到的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>吸收投资所收到的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="240">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="40">
+      <tk:FieldName>借款所收到的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>借款所收到的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="250">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="43">
+      <tk:FieldName>收到的其他筹资活动现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>收到的其他与筹资活动有关的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="260">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="10" OrderNumber="44" Style="Sum">
+      <tk:FieldName>筹资现金流入小计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金流入小计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="270">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="45">
+      <tk:FieldName>偿还债务所支付的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>偿还债务所支付的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="280">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="46">
+      <tk:FieldName>股利等相关支付的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>分配股利、利润或偿付利息所支付的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="290">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="52">
+      <tk:FieldName>支付的其他筹资相关的现金</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>支付的其他与筹资活动有关的现金</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="300">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="10" OrderNumber="53" Style="Sum">
+      <tk:FieldName>筹资现金流出小计</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金流出小计</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="310">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="54">
+      <tk:FieldName>筹资活动产生的现金流量净额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>筹资活动产生的现金流量净额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="320">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="55">
+      <tk:FieldName>汇率变动对现金的影响</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>四、汇率变动对现金的影响</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="330">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="56">
+      <tk:FieldName>现金及现金等价物净增加额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>五、现金及现金等价物净增加额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="340">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>净利润调节为经营活动现金流量</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>1.将净利润调节为经营活动现金流量：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="350">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="57">
+      <tk:FieldName>净利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>净利润</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="360">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="58">
+      <tk:FieldName>计提的资产减值准备</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>加：计提的资产减值准备</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="370">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="59">
+      <tk:FieldName>固定资产折旧</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产折旧</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="380">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="60">
+      <tk:FieldName>无形资产摊销</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>无形资产摊销</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="390">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="61">
+      <tk:FieldName>长期待摊费用摊销</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>长期待摊费用摊销</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="400">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="64">
+      <tk:FieldName>待摊费用减少</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>待摊费用减少(减：增加)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="410">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="65">
+      <tk:FieldName>预提费用增加</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>预提费用增加(减：减少)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="420">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="66">
+      <tk:FieldName>处置资产的损失</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>处置固定资产、无形资产和其他长期资产的损失(减：收益)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="430">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="67">
+      <tk:FieldName>固定资产报废损失</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>固定资产报废损失</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="440">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="68">
+      <tk:FieldName>财务费用</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>财务费用</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="450">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="69">
+      <tk:FieldName>投资损失</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>投资损失(减： 收益)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="460">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="70">
+      <tk:FieldName>递延税款贷项</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>递延税款贷项(减：借项)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="470">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="71">
+      <tk:FieldName>存货的减少</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>存货的减少(减：增加)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="480">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="72">
+      <tk:FieldName>经营性应收项目的减少</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>经营性应收项目的减少(减：增加)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="490">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="73">
+      <tk:FieldName>经营性应付项目的增加</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>经营性应付项目的增加(减：减少)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="500">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="74">
+      <tk:FieldName>其他</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>其他</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="510">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="75" Style="Sum">
+      <tk:FieldName>经营活动产生的现金流量净额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>经营活动产生的现金流量净额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="520">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>不涉及现金收支的投资和筹资活动</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>2.不涉及现金收支的投资和筹资活动：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="530">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="76">
+      <tk:FieldName>债务转为资本</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>债务转为资本</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="540">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="77">
+      <tk:FieldName>一年内到期的可转换公司债券</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>一年内到期的可转换公司债券</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="550">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="78">
+      <tk:FieldName>融资租入固定资产</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>融资租入固定资产</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="560">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Style="Title">
+      <tk:FieldName>现金及现金等价物净增加情况</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>3.现金及现金等价物净增加情况：</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="570">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="79">
+      <tk:FieldName>现金的期末余额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金的期末余额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="580">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="80">
+      <tk:FieldName>现金的期初余额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：现金的期初余额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="590">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="81">
+      <tk:FieldName>现金等价物的期末余额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>加：现金等价物的期末余额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="600">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="82">
+      <tk:FieldName>现金等价物的期初余额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：现金等价物的期初余额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="610">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="83" Style="Sum">
+      <tk:FieldName>现金及等价物净增加额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>现金及现金等价物净增加额</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="620">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

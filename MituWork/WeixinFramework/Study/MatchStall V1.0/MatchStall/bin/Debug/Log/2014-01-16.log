@@ -1,0 +1,24 @@
+发生时间：2014/1/16 20:49:40
+异常信息：无法访问已关闭的文件。
+   在 MatchStall.AppForm.btnChooseExcelFile_Click(Object sender, EventArgs e) 位置 g:\baiduyundownload\MatchStall V1.0\MatchStall\AppForm.cs:行号 52
+
+发生时间：2014/1/16 21:00:48
+异常信息：名为“工作年限”的列已属于此 DataTable。
+   在 MatchStall.AppForm.btnChooseExcelFile_Click(Object sender, EventArgs e) 位置 g:\baiduyundownload\MatchStall V1.0\MatchStall\AppForm.cs:行号 52
+
+发生时间：2014/1/16 21:03:04
+异常信息：名为“工作年限”的列已属于此 DataTable。
+   在 MatchStall.AppForm.btnChooseExcelFile_Click(Object sender, EventArgs e) 位置 g:\baiduyundownload\MatchStall V1.0\MatchStall\AppForm.cs:行号 52
+
+发生时间：2014/1/16 21:06:12
+异常信息：名为“工作年限”的列已属于此 DataTable。
+   在 MatchStall.AppForm.btnChooseExcelFile_Click(Object sender, EventArgs e) 位置 g:\baiduyundownload\MatchStall V1.0\MatchStall\AppForm.cs:行号 51
+
+发生时间：2014/1/16 21:07:12
+异常信息：文件“C:\Users\yanghenglian\Desktop\sql查询Excel\网站招聘信息.xls”正由另一进程使用，因此该进程无法访问该文件。
+   在 MatchStall.AppForm.btnChooseExcelFile_Click(Object sender, EventArgs e) 位置 g:\baiduyundownload\MatchStall V1.0\MatchStall\AppForm.cs:行号 51
+
+发生时间：2014/1/16 21:07:43
+异常信息：未能找到路径“C:\Users\yanghenglian\Documents\2014\1\16统计打票.xls”的一部分。
+   在 MatchStall.AppForm.btnExportToExcel_Click(Object sender, EventArgs e) 位置 g:\baiduyundownload\MatchStall V1.0\MatchStall\AppForm.cs:行号 87
+

@@ -1,0 +1,3 @@
+ConnectionString="USER ID=mitu;PASSWORD=hello;INITIAL CATALOG=mitu.hello;DATA SOURCE=192.168.1.8;CONNECT TIMEOUT=30"
+
+connectionString="Data Source=A;Initial Catalog=mitu.hello;Integrated Security=True"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen (eb) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/WpfCommonType.xsd"/>
+  <xs:complexType name="BehaviorType">
+    <xs:sequence>
+      <xs:element name="FileBehavior" type="WpfFileType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="SingleCommandBehavior" type="CommandPatternType" minOccurs="0"/>
+      <xs:element name="DataModuleCommand" type="CommandPatternType" minOccurs="0"/>
+      <xs:element name="SearchCommandBehavior" type="CommandPatternType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CommandPatternType">
+    <xs:attribute name="SearchPattern" type="SearchPatternType"/>
+  </xs:complexType>
+</xs:schema>

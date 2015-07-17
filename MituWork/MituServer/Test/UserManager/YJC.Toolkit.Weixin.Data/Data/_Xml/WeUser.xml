@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="WE_USER" NameField="nickname">
+    <tk:Field DataType="string" IsKey="true" IsEmpty="false">
+      <tk:FieldName>WU_OPEN_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>OpenId</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>openid</tk:NickName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WU_NICK_NAME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>昵称</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>nickname</tk:NickName>
+      <tk:Length>128</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WU_SEX</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>性别</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>sex</tk:NickName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WU_LANGUAGE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>语言</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>language</tk:NickName>
+      <tk:Length>20</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WU_CITY</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>城市</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>city</tk:NickName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WU_PROVINCE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>身份</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>province</tk:NickName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WU_COUNTRY</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>国家</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>country</tk:NickName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WU_HEAD_IMG_URL</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>头像地址</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>headimgurl</tk:NickName>
+      <tk:Length>255</tk:Length>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>WU_SUBSCRIBE_TIME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>订阅时间</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>subscribe_time</tk:NickName>
+    </tk:Field>
+    <tk:Field DataType="short">
+      <tk:FieldName>WU_SUBSCRIBE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>是否订阅</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>subscribe</tk:NickName>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>WU_UNION_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>UnionId</tk:Content>
+      </tk:DisplayName>
+      <tk:NickName>unionid</tk:NickName>
+      <tk:Length>64</tk:Length>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

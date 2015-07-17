@@ -1,0 +1,8 @@
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\_lib\tk5\YJC.Toolkit.Weixin.dll
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\_lib\tk5\YJC.Toolkit.Weixin.pdb
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Weixin\obj\Debug\YJC.Toolkit.Weixin.dll
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Weixin\obj\Debug\YJC.Toolkit.Weixin.pdb
+D:\WorkSpace\MyGitRep\mituwork\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Weixin\obj\Debug\YJC.Toolkit.Weixin.csprojResolveAssemblyReference.cache
+D:\WorkSpace\MyGitRep\mituwork\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Weixin\obj\Debug\YJC.Toolkit.Weixin.dll
+D:\WorkSpace\MyGitRep\mituwork\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Weixin\obj\Debug\YJC.Toolkit.Weixin.pdb
+D:\WorkSpace\MyGitRep\MituWork\MituServer\Test\UserManager\YJC.Toolkit.Weixin\obj\Debug\YJC.Toolkit.Weixin.csprojResolveAssemblyReference.cache

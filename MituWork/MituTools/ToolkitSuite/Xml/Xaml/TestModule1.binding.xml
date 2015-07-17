@@ -1,0 +1,10 @@
+<Toolkit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\schema\v4\CommandBinding.xsd" version="4.0">
+<Module SearchPattern="Logical">
+	<Commands>
+		<Command Name="CloseMe"><Close/></Command>
+	</Commands>
+	<CommandBindings>
+		<CommandBinding CommandName="CloseMe" ElementName="CloseMe"></CommandBinding>
+	</CommandBindings>
+</Module>
+</Toolkit>

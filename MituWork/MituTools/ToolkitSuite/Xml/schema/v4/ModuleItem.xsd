@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen Jiangyong (mitu) -->
+<xs:schema xmlns:tk="http://www.qdocuments.net" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.qdocuments.net" elementFormDefault="qualified">
+  <xs:import schemaLocation="Module.xsd"/>
+  <xs:element name="Module">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DataModule" minOccurs="0"/>
+        <xs:element ref="UIElement"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RegItem"/>
+      <xs:attribute name="Order" type="xs:unsignedInt"/>
+      <xs:attribute name="DisplayName" type="xs:string" use="required"/>
+      <xs:attribute name="Category" type="xs:Name" use="required"/>
+      <xs:attribute name="IconName" type="xs:string"/>
+      <xs:attribute name="Type">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Normal"/>
+            <xs:enumeration value="Dialog"/>
+            <xs:enumeration value="None"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

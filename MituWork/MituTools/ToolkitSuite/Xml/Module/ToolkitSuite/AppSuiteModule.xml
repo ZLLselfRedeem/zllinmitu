@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkWebApp" DisplayName="应用生成工具" RegName="AppSuiteModule" Order="10" Author="YJC" CreateDate="2011-12-05" Description="Toolkit应用程序生成工具" IconName="Images/png/040验收.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>AppSuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <SimpleModel TypeAliasName="AppSuite" DataName="AppSuite" ColumnCount="2"/>
+    </UIElement>
+  </tk:Module>
+</Toolkit>

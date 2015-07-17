@@ -1,0 +1,15 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssEditTemplate
+@using System.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    DataRow mainRow = HtmlUtil.GetMainRow(Model, ViewBag);
+    ViewBag.PageData.ShowCaption = false;
+    ViewBag.PageData.SaveButtonCaption = "发送";
+}
+@section Header 
+{
+    <div class="mt15">
+        <p>米兔网球的存在和发展离不开您的关心和支持，如果您在使用过程中发现了各种错误，或者有任何意见和建议，请务必反馈给我们，让我们共同努力做得更好！您也可以把我们添加为微信好友（微信号：mitukf），以方便个对个的互动交流。</p>
+    </div>
+}

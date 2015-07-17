@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>设置</tk:Content>
+    </tk:Title>
+    <tk:MetaData>
+      <tk:AccountMetaData DataXml="Report/ProfitAppropriation.xml" ColumnCount="1" JsonDataType="Object"/>
+    </tk:MetaData>
+    <tk:Source>
+      <!--<tk:EmptySource UseCallerInfo="true"/>-->
+      <tk:RegNameSource>AccountData</tk:RegNameSource>
+    </tk:Source>
+    <tk:PostObjectCreator>
+      <tk:JsonObjectCreator RegClassName="InputObject"/>
+    </tk:PostObjectCreator>
+    <tk:PageMaker>
+      <tk:RazorPageMaker Template="AccountEdit">
+       
+      </tk:RazorPageMaker>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>财税文档</tk:Content>
+    </tk:Title>
+    <tk:Source>
+      <tk:RegNameSource>SendMassMessage</tk:RegNameSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:SourceOutputPageMaker/>
+    </tk:PageMaker>
+  </tk:Module>
+</tk:Toolkit>

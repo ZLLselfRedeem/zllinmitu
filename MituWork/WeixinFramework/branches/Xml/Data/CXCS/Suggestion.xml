@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Table TableName="CS_SUGGESTION">
+    <tk:TableDesc>
+      <tk:Content>意见咨询</tk:Content>
+    </tk:TableDesc>
+    <tk:Field DataType="int" IsKey="true" IsEmpty="false">
+      <tk:FieldName>CS_SUG_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>ID</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="10" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="short">
+      <tk:FieldName>CS_DATA_TYPE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>内容种类</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="20" DefaultShow="Insert"/>
+    </tk:Field>
+    <tk:Field DataType="string" IsEmpty="false">
+      <tk:FieldName>CS_CATEGORY</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>咨询类别</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>2</tk:Length>
+      <tk:CodeTable RegName="ConsultType"/>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Combo" Order="30" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string" IsEmpty="false">
+      <tk:FieldName>CS_CONTENT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>意见内容</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>1000</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="TextArea" Order="40" DefaultShow="All"/>
+      <tk:Edit>
+        <tk:Attribute Name="Rows" Value="6"/>
+      </tk:Edit>
+    </tk:Field>
+    <tk:Field DataType="string" IsEmpty="false">
+      <tk:FieldName>CS_ORG_NAME</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>单位姓名</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>50</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="50" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string" IsEmpty="false">
+      <tk:FieldName>CS_CONTACT</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>联系方式</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>50</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Text" Order="60" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="string">
+      <tk:FieldName>CS_OPEN_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>OpenId</tk:Content>
+      </tk:DisplayName>
+      <tk:Length>50</tk:Length>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="70" DefaultShow="All"/>
+    </tk:Field>
+    <tk:Field DataType="DateTime">
+      <tk:FieldName>CS_CREATE_DATE</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>创建时间</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="80" DefaultShow="Insert"/>
+    </tk:Field>
+    <tk:Field DataType="int">
+      <tk:FieldName>CS_CREATE_ID</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>创建人</tk:Content>
+      </tk:DisplayName>
+      <tk:Layout Layout="PerUnit" UnitNum="1"/>
+      <tk:Control Control="Hidden" Order="90" DefaultShow="Insert"/>
+    </tk:Field>
+  </tk:Table>
+</tk:Toolkit>

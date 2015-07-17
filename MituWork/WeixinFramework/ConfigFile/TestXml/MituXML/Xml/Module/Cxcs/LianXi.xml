@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>联系方式</tk:Content>
+    </tk:Title>
+    <!--<tk:MetaData>
+      <tk:SingleXmlMetaData DataXml="CXCS/Document.xml"/>
+    </tk:MetaData>
+    <tk:Source>
+      <tk:SingleDbSource UseMetaData="false" DisablePage="Insert Update Delete">
+        <tk:Resolver>
+          <tk:RegResolver>TaxDocument</tk:RegResolver>
+        </tk:Resolver>
+        <tk:FilterSql>DOC_CATELOG='05'</tk:FilterSql>
+      </tk:SingleDbSource>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:CompositePageMaker>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="List"/>
+          <tk:ListRazorPageMaker Template="BootcssList" RazorFile="CXCS/DocumentList.cshtml">
+            <tk:RazorData>
+              <tk:BootcssListData>
+                <tk:ListField NickName="Title" Col="12"/>
+              </tk:BootcssListData>
+            </tk:RazorData>
+          </tk:ListRazorPageMaker>
+        </tk:Item>
+        <tk:Item>
+          <tk:Condition SearchType="Style" Style="Detail"/>
+          <tk:FreeRazorPageMaker RazorFile="Razor/CXCS/DocumentDetail.cshtml"/>
+        </tk:Item>
+      </tk:CompositePageMaker>
+    </tk:PageMaker>-->
+    <tk:Source>
+      <tk:EmptySource/>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:FreeRazorPageMaker RazorFile="Razor/cxcs/Lianxi.cshtml" Position="Xml"/>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

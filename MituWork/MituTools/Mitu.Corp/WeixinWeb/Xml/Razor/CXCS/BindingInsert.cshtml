@@ -1,0 +1,7 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssEditTemplate
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@section Header{
+    @RenderLocalPartial("EditTitle.cshtml", Model)
+    <div class="well mt20">请输入您和所在企业的基本信息，经审核后把微信号与该企业绑定，以后您将可以通过微信接收该企业相关的通知信息</div>
+}

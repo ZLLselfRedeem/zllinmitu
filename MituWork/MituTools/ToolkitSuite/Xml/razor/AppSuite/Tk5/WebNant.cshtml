@@ -1,0 +1,59 @@
+﻿@using System;
+@using System.Collections.Generic;
+@{
+    Dictionary<string, string> dict = Model as Dictionary<string, string>;
+    string projName = dict["SubProjectName"];
+}
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://nant.sf.net/release/0.91/nant.xsd" default="run" name="Hello">
+  <property name="TempPath" value="@(projName)Temp" />
+  <property name="ZipFile" value="@(projName).zip" />
+  <target name="run">
+    <delete dir="${TempPath}" includeemptydirs="true"/>
+    <copy includeemptydirs="true" todir="${TempPath}" overwrite="true">
+      <fileset basedir="../@(projName)">
+        <include name="Xml\**.*"/>
+        <include name="WebSite\Bin\**.*"/>
+        <exclude name="WebSite\Bin\**.pdb"/>
+        <exclude name="Xml\*.*"/>
+        <exclude name="Xml\obj\**.*"/>
+        <exclude name="Xml\Razor\_temp\**.*"/>
+      </fileset>
+    </copy>
+    <copy includeemptydirs="true" todir="${TempPath}/WebSite/Bin" overwrite="true">
+      <fileset basedir="../../_lib/tk5">
+        <include name="System.Web.Razor.dll"/>
+      </fileset>
+    </copy>
+    <delete includeemptydirs="true">
+      <fileset basedir="${TempPath}\WebSite\Bin\Modules">
+        <include name="YJC.Toolkit.Core.dll"/>
+        <include name="YJC.Toolkit.Core.Extension.dll"/>
+        <include name="YJC.Toolkit.AdoData.dll"/>
+        <include name="YJC.Toolkit.Data.dll"/>
+        <include name="YJC.Toolkit.MetaData.dll"/>
+        <include name="YJC.Toolkit.WebApp.dll"/>
+        <include name="YJC.Toolkit.Weixin.dll"/>
+        <include name="YJC.Toolkit.BaiduMap.dll"/>
+        <include name="YJC.Toolkit.Weixin.Data.dll"/>
+        <include name="YJC.Toolkit.LogOn.dll"/>
+        <include name="YJC.Toolkit.SimpleRight.dll"/>
+        <include name="en\**.*"/>
+        <include name="zh-CHS\**.*"/>
+      </fileset>
+    </delete>
+    <delete includeemptydirs="true">
+      <fileset basedir="${TempPath}\Xml">
+        <include name="Test\**.*"/>
+        <include name="weixin\*.json"/>
+      </fileset>
+    </delete>
+    <delete file="${ZipFile}"/>
+    <zip includeemptydirs="false" zipfile="${ZipFile}">
+      <fileset basedir="${TempPath}">
+        <include name="**.*"/>
+      </fileset>
+    </zip>
+    <delete dir="${TempPath}" includeemptydirs="true"/>
+  </target>
+</project>

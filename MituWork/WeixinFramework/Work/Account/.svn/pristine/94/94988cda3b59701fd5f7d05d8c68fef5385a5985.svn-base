@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net file:///D:/WorkSpace/MyGitRep/MituWork/WeixinFramework/Work/Account/ManageWeb/Xml/schema/v5/AccountDataXml.xsd">
+	<tk:Table IdName="IncomeStatement">
+	<tk:TableDesc>
+    <tk:Content>利润表</tk:Content>
+  </tk:TableDesc>
+		<tk:Field DataType="int" OrderNumber="1">
+      <tk:FieldName>主营业收入</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>一、主营业务收入</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="10">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="4">
+      <tk:FieldName>主营业务成本</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：主营业务成本</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="20">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="5">
+      <tk:FieldName>主营业务税金及附加</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>主营业务税金及附加</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="30">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="10">
+      <tk:FieldName>主营业务利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>二、主营业务利润(亏损以“-”号填列)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="40">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="11">
+      <tk:FieldName>其他业务利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>加：其他业务利润(亏损以“-”号填列)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="50">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="14">
+      <tk:FieldName>营业费用</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：营业费用</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="60">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="15">
+      <tk:FieldName>管理费用</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>管理费用</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="70">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="16">
+      <tk:FieldName>财务费用</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>财务费用</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="80">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="18">
+      <tk:FieldName>营业利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>三、营业利润(亏损以“-”号填列)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="90">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="19">
+      <tk:FieldName>投资收益</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>加：投资收益(损失以“ -” 号填列)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="100">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="22">
+      <tk:FieldName>补贴收入</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>补贴收入</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="110">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="4" OrderNumber="23">
+      <tk:FieldName>营业外收入</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>营业外收入</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="120">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="25">
+      <tk:FieldName>营业外支出</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：营业外支出</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="130">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="27">
+      <tk:FieldName>利润总额</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>四、利润总额(亏损总额以“-”号填列)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="140">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" Indent="2" OrderNumber="28">
+      <tk:FieldName>所得税</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>减：所得税</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="150">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+    <tk:Field DataType="int" OrderNumber="30">
+      <tk:FieldName>净利润</tk:FieldName>
+      <tk:DisplayName>
+        <tk:Content>五、净利润(净亏损以“-”号填列)</tk:Content>
+      </tk:DisplayName>
+      <tk:Control Control="Text" Order="160">
+        <tk:Attribute Name="pattern" Value="^[-+]?\d+(\.\d+)?$"/>
+      </tk:Control>
+    </tk:Field>
+	</tk:Table>
+</tk:Toolkit>

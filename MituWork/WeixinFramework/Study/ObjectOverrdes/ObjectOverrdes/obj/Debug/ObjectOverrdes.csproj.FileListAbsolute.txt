@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\ObjectOverrdes\ObjectOverrdes\bin\Debug\ObjectOverrdes.exe
+D:\ZhouLL\trunk\Study\ObjectOverrdes\ObjectOverrdes\bin\Debug\ObjectOverrdes.pdb
+D:\ZhouLL\trunk\Study\ObjectOverrdes\ObjectOverrdes\obj\Debug\ObjectOverrdes.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\ObjectOverrdes\ObjectOverrdes\obj\Debug\ObjectOverrdes.exe
+D:\ZhouLL\trunk\Study\ObjectOverrdes\ObjectOverrdes\obj\Debug\ObjectOverrdes.pdb

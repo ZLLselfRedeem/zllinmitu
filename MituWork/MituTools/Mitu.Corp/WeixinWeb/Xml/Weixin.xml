@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk:Toolkit version="5.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.qdocuments.net schema\v5\Weixin.xsd">
+  <!--测试号码-->
+  <!--<tk:Weixin AppId="wxbecc5c76d695d14e">
+    <tk:Normal Token="mitu2014" Secret="ebd50d296451210d3382c4e95473ca64" OpenId="gh_45677552d1de" MessageMode="Normal">-->
+  <!--米兔云助手-->
+  <!--<tk:Weixin AppId="wxf3f273709c656249">
+    <tk:Normal Token="mitu2014" Secret="26ede0fe047b53f13a492d71db99530b" OpenId="gh_e3823dd4de81" EncodingAESKey="D2jZkkUx5U9iO0kN1oz1TO7QgPI6SFVlcoavVt1X3vi" MessageMode="Secure">-->
+  <tk:Weixin AppId="wxbecc5c76d695d14e" LogRawMessage="true">
+    <tk:Normal Token="mitu2014" Secret="ebd50d296451210d3382c4e95473ca64" OpenId="gh_45677552d1de" MessageMode="Normal">
+      <tk:Menu FileName="weixin/menu.bak.xml"/>
+      <tk:DefaultMessage>
+        <tk:Global>
+          <tk:TextMessage>
+            <tk:Content>
+              <tk:Content><![CDATA[更多功能请轻触屏幕左下角小图标，切换到菜单进行操作]]></tk:Content>
+            </tk:Content>
+          </tk:TextMessage>
+        </tk:Global>
+        <tk:TypeDefault MessageType="Image">
+          <tk:TextMessage>
+            <tk:Content>
+              <tk:Content><![CDATA[你上传的是Image吧，呵呵]]></tk:Content>
+            </tk:Content>
+          </tk:TextMessage>
+        </tk:TypeDefault>
+      </tk:DefaultMessage>
+    </tk:Normal>
+    <tk:MessageLog>
+      <tk:DbMessageLog/>
+    </tk:MessageLog>
+  </tk:Weixin>
+</tk:Toolkit>

@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\CustomEnumerator\CustomEnumerator\bin\Debug\CustomEnumerator.exe
+D:\ZhouLL\trunk\Study\CustomEnumerator\CustomEnumerator\bin\Debug\CustomEnumerator.pdb
+D:\ZhouLL\trunk\Study\CustomEnumerator\CustomEnumerator\obj\Debug\CustomEnumerator.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\CustomEnumerator\CustomEnumerator\obj\Debug\CustomEnumerator.exe
+D:\ZhouLL\trunk\Study\CustomEnumerator\CustomEnumerator\obj\Debug\CustomEnumerator.pdb

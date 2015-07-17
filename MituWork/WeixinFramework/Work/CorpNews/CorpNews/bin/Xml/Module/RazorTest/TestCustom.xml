@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Module>
+    <tk:Title>
+      <tk:Content>设置</tk:Content>
+    </tk:Title>
+    <tk:Source>
+      <tk:EmptySource/>
+    </tk:Source>
+    <tk:PageMaker>
+      <tk:RazorPageMaker Template="BootcssCustom" RazorFile="RazorTest/TestCustom.cshtml">
+        <!--<tk:Script>toolkitjs/v5/lib/URI.js</tk:Script>-->
+        <tk:Script>userjs/testuri.js</tk:Script>
+      </tk:RazorPageMaker>
+    </tk:PageMaker>
+    <tk:WebPage SupportLogOn="false"/>
+  </tk:Module>
+</tk:Toolkit>

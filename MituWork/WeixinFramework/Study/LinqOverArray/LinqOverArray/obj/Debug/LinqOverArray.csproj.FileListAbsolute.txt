@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\LinqOverArray\LinqOverArray\bin\Debug\LinqOverArray.exe
+D:\ZhouLL\trunk\Study\LinqOverArray\LinqOverArray\bin\Debug\LinqOverArray.pdb
+D:\ZhouLL\trunk\Study\LinqOverArray\LinqOverArray\obj\Debug\LinqOverArray.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\LinqOverArray\LinqOverArray\obj\Debug\LinqOverArray.exe
+D:\ZhouLL\trunk\Study\LinqOverArray\LinqOverArray\obj\Debug\LinqOverArray.pdb

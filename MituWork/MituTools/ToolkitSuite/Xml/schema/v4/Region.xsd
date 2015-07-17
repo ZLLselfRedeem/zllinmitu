@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Chen (eb) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="../bin/WpfCommonType.xsd"/>
+  <xs:include schemaLocation="Layout.xsd"/>
+  <xs:include schemaLocation="ViewBinding.xsd"/>
+  <xs:element name="Behavior" type="BehaviorType"/>
+  <xs:element name="BindingFile" type="WpfFileType"/>
+  <xs:complexType name="BaseModelType">
+    <xs:sequence>
+      <xs:element ref="Fetchor"/>
+      <xs:choice>
+        <xs:element name="TypeAliasName" type="xs:Name"/>
+        <xs:element name="XamlType" type="xs:anyType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Model" type="xs:Name"/>
+  </xs:complexType>
+  <xs:element name="Fetchor">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="SimpleDataName" type="xs:Name"/>
+        <xs:element name="BindingName">
+          <xs:complexType>
+            <xs:attribute name="DataName" type="xs:Name" use="required"/>
+            <xs:attribute name="BindingPath" type="xs:Name" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegionContainer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Layout">
+          <xs:annotation>
+            <xs:documentation>该节点为动态节点</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="Region" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Layout" type="LayoutType"/>
+  <xs:element name="Region">
+    <xs:annotation>
+      <xs:documentation>该节点为动态节点</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="FileRegion"/>
+        <xs:element ref="NormalTypeRegion"/>
+        <xs:element ref="TableTypeRegion"/>
+        <xs:element ref="TabPageContainer"/>
+        <xs:element ref="RegionContainer"/>
+        <xs:element ref="ImageRegion"/>
+        <xs:element ref="TreeViewRegion"/>
+        <xs:element ref="TypeSearchRegion"/>
+        <xs:element ref="DataModuleCommandBar"/>
+        <xs:element ref="DataModuleToolbar"/>
+        <xs:element ref="SingleToolBar"/>
+      </xs:choice>
+      <xs:attribute name="Name" type="xs:Name"/>
+      <xs:attribute name="IsCommandRegion" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreeViewRegion">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element name="StyleXaml" type="xs:anyType"/>
+      </xs:sequence>
+      <xs:attribute name="DataName" type="xs:Name" use="required"/>
+      <xs:attribute name="ControlName" type="xs:Name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SingleToolBar">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ExcludeButton">
+          <xs:complexType>
+            <xs:attribute name="Name" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="New"/>
+                  <xs:enumeration value="Save"/>
+                  <xs:enumeration value="Delete"/>
+                  <xs:enumeration value="Cancel"/>
+                  <xs:enumeration value="Refresh"/>
+                  <xs:enumeration value="First"/>
+                  <xs:enumeration value="Previous"/>
+                  <xs:enumeration value="Next"/>
+                  <xs:enumeration value="Last"/>
+                  <xs:enumeration value="Close"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileRegion" type="WpfFileType"/>
+  <xs:element name="NormalTypeRegion">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="BaseModelType">
+          <xs:attributeGroup ref="NormalAttrGroup"/>
+          <xs:attribute name="ReadOnlyBinding" type="xs:boolean"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TableTypeRegion">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="BaseModelType">
+          <xs:attribute name="ControlName" type="xs:Name" use="required"/>
+          <xs:attribute name="ItemsSource" type="xs:string"/>
+          <xs:attribute name="UIVirualization" type="xs:boolean"/>
+          <xs:attribute name="CanInsert" type="xs:boolean"/>
+          <xs:attribute name="CanUpdate" type="xs:boolean"/>
+          <xs:attribute name="CanDelete" type="xs:boolean"/>
+          <xs:attribute name="CanGroup" type="xs:boolean"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TabPageContainer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Page" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="RegionContainer"/>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:Name" use="required"/>
+            <xs:attribute name="DisplayName" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="TabStripPlacement" type="DockType"/>
+      <xs:attribute name="ControlName" type="xs:Name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataModuleCommandBar"/>
+  <xs:element name="ImageRegion">
+    <xs:complexType>
+      <xs:attribute name="FileName" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataModuleToolbar"/>
+  <xs:element name="TypeSearchRegion">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="BaseModelType">
+          <xs:attribute name="ColumnCount" type="xs:unsignedInt" default="1"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="NormalAttrGroup">
+    <xs:attribute name="ColumnCount" type="xs:unsignedInt" default="1"/>
+    <xs:attribute name="Margin" type="xs:string" default="40"/>
+  </xs:attributeGroup>
+</xs:schema>

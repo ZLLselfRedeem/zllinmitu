@@ -1,0 +1,6 @@
+﻿@inherits YJC.Toolkit.Razor.BootcssEditTemplate
+@section Main {
+    <div class="well" style="border: 1px solid #c7deee; background: #fff; margin-top:15px">
+        @RenderLayoutPartial("main.cshtml", Model)
+    </div>
+}

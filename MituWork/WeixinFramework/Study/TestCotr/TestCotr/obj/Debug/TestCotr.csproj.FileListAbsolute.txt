@@ -1,0 +1,6 @@
+D:\ZhouLL\trunk\Study\TestCotr\TestCotr\bin\Debug\TestCotr.exe.config
+D:\ZhouLL\trunk\Study\TestCotr\TestCotr\bin\Debug\TestCotr.exe
+D:\ZhouLL\trunk\Study\TestCotr\TestCotr\bin\Debug\TestCotr.pdb
+D:\ZhouLL\trunk\Study\TestCotr\TestCotr\obj\Debug\TestCotr.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\TestCotr\TestCotr\obj\Debug\TestCotr.exe
+D:\ZhouLL\trunk\Study\TestCotr\TestCotr\obj\Debug\TestCotr.pdb

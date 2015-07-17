@@ -1,0 +1,5 @@
+D:\ZhouLL\trunk\Study\DelegateStudy\DelegateStudy\bin\Debug\DelegateStudy.exe
+D:\ZhouLL\trunk\Study\DelegateStudy\DelegateStudy\bin\Debug\DelegateStudy.pdb
+D:\ZhouLL\trunk\Study\DelegateStudy\DelegateStudy\obj\Debug\DelegateStudy.csprojResolveAssemblyReference.cache
+D:\ZhouLL\trunk\Study\DelegateStudy\DelegateStudy\obj\Debug\DelegateStudy.exe
+D:\ZhouLL\trunk\Study\DelegateStudy\DelegateStudy\obj\Debug\DelegateStudy.pdb

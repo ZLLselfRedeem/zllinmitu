@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{489E2892-4030-449C-91C4-C9931C4BDF05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YJC.Toolkit.Weixin</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YJC.Toolkit.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Core.Extension, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Core.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.MetaData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.MetaData.dll</HintPath>
+    </Reference>
+    <Reference Include="YJC.Toolkit.Weixin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=dcd89483ee33cb8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Tk5\YJC.Toolkit.Weixin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShakeAround\Page\InternalShakePage.cs" />
+    <Compile Include="ShakeAround\Page\WePageData.cs" />
+    <Compile Include="ShakeAround\Page\WePageId.cs" />
+    <Compile Include="ShakeAround\Page\WePageIdList.cs" />
+    <Compile Include="ShakeAround\Page\WePageQuery.cs" />
+    <Compile Include="ShakeAround\Page\WePicUrl.cs" />
+    <Compile Include="ShakeAround\Page\WeShakePage.cs" />
+    <Compile Include="ShakeAround\Page\WeTargetPageList.cs" />
+    <Compile Include="ShakeAround\WeShakeConst.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAgent.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAgentSet.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAllowUserInfo.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAuth.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAuthCorp.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyAuthInfosResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyConst.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyCorpTokenResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyCorpType.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyDepartment.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyGetAgentRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyGetAgentResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyLocationFlag.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPartyids.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPermanentCodeRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPermanentCodeResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPreAuthCodeRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyPreAuthCodeResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartySetAgentRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartySuiteTokenRequest.cs" />
+    <Compile Include="ThirdParty\WeThirdPartySuiteTokenResponse.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyTagids.cs" />
+    <Compile Include="ThirdParty\WeThirdPartyUser.cs" />
+    <Compile Include="ThirdParty\WeThitdPartyAgentSet.cs" />
+    <Compile Include="_AutoReply\AutoReplyRule.cs" />
+    <Compile Include="_AutoReply\KeywordInfo.cs" />
+    <Compile Include="_AutoReply\KeywordMatch.cs" />
+    <Compile Include="_AutoReply\KeywordRuleInfo.cs" />
+    <Compile Include="_AutoReply\NewsReplyInfo.cs" />
+    <Compile Include="_AutoReply\ReplyType.cs" />
+    <Compile Include="_AutoReply\SimpleReplyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

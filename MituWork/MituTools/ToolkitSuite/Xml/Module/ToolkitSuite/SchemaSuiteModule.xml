@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toolkit version="4.0" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\schema\v4\Module.xsd">
+  <tk:Module Category="_TkSuite" DisplayName="Schema生成工具" RegName="SchemaCodeSuiteModule" Order="10" Author="WDW" CreateDate="2012-02-24" Description="代码生成工具" IconName="Images/openicon/png/system-settings-2.png">
+    <DataModule>
+      <RegDataModule>
+        <RegName>SchemaSuite</RegName>
+      </RegDataModule>
+    </DataModule>
+    <UIElement>
+      <ViewModel>
+        <RegionContainer>
+          <Layout>
+            <TwoAreaLayout FirstLength="3*" FirstPosition="Left" ShowCommandBar="true" ShowSplitter="true"/>
+          </Layout>
+          <Region>
+            <TreeViewRegion DataName="Tree">
+              <StyleXaml>
+                <wpf:HierarchicalDataTemplate xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ItemsSource="{wpf:Binding Path=Children}" DataType="{x:Type tk:TreeNodeModel}">
+                  <wpf:StackPanel Orientation="Horizontal">
+                    <wpf:CheckBox IsChecked="{wpf:Binding TreeNode.IsChecked, Mode=TwoWay}"/>
+                    <wpf:TextBlock Text="{wpf:Binding Name}"/>
+                  </wpf:StackPanel>
+                </wpf:HierarchicalDataTemplate>
+              </StyleXaml>
+            </TreeViewRegion>
+          </Region>
+          <Region>
+            <NormalTypeRegion ColumnCount="2">
+              <Fetchor>
+                <SimpleDataName>SchemaData</SimpleDataName>
+              </Fetchor>
+              <TypeAliasName>SchemaSuite</TypeAliasName>
+            </NormalTypeRegion>
+          </Region>
+          <Region IsCommandRegion="true">
+            <DataModuleCommandBar/>
+          </Region>
+        </RegionContainer>
+        <Behavior>
+          <DataModuleCommand/>
+        </Behavior>
+      </ViewModel>
+<!--      <XamlFile>
+        <Position>ModuleInterface</Position>
+        <FileName>ToolkitSuite\SchemaSuiteModule.xaml</FileName>
+        <BindingFileName>ToolkitSuite\SchemaSuite.binding.xml</BindingFileName>
+      </XamlFile>-->
+    </UIElement>
+  </tk:Module>
+</Toolkit>
